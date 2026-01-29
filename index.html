@@ -1,387 +1,853 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smith Ribbon - Premium Ribbon Manufacturer & Supplier</title>
-    <meta name="description" content="Professional ribbon manufacturer offering high-quality satin, grosgrain, velvet, and organza ribbons. Custom printing available. Global shipping.">
+    <title>Smith Ribbon - 专业织带制造商 | Professional Ribbon Manufacturer</title>
+    <meta name="description" content="Smith Ribbon - 20年专业织带制造商，提供高品质织带产品定制服务">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57c5b6;
+            --dark-color: #002B5B;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --text-light: #666;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        /* Language Switch */
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Content Display */
+        .zh-content { display: block; }
+        .en-content { display: none; }
+        
+        body.lang-zh .zh-content { display: block; }
+        body.lang-zh .en-content { display: none; }
+        body.lang-en .zh-content { display: none; }
+        body.lang-en .en-content { display: block; }
         
         /* Header */
-        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1200px; margin: 0 auto; }
-        .logo { font-size: 24px; font-weight: bold; color: #2563eb; text-decoration: none; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        .nav-links a:hover { color: #2563eb; }
-        .cta-btn { background: #2563eb; color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
-        .cta-btn:hover { background: #1d4ed8; }
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
         
-        /* Hero */
-        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 160px 20px 120px; text-align: center; }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; }
-        .hero p { font-size: 24px; opacity: 0.9; margin-bottom: 40px; }
-        .hero-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .hero-btn { padding: 16px 32px; border-radius: 10px; font-size: 18px; font-weight: 600; text-decoration: none; transition: transform 0.3s; }
-        .hero-btn:hover { transform: scale(1.05); }
-        .hero-btn.primary { background: white; color: #2563eb; }
-        .hero-btn.secondary { background: rgba(255,255,255,0.2); color: white; border: 2px solid white; }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
         
         /* Features */
-        .features { padding: 80px 20px; background: #f9fafb; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
-        .feature { text-align: center; }
-        .feature-icon { font-size: 48px; margin-bottom: 15px; }
-        .feature h3 { font-size: 20px; margin-bottom: 10px; }
-        .feature p { color: #6b7280; }
+        .features {
+            padding: 100px 20px;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 42px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 15px;
+            background: var(--light-color);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 36px;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
         
         /* Products */
-        .section { padding: 80px 20px; }
-        .section-title { text-align: center; font-size: 36px; margin-bottom: 15px; }
-        .section-subtitle { text-align: center; color: #6b7280; max-width: 600px; margin: 0 auto 50px; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .product-card { background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
-        .product-img { height: 200px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); display: flex; align-items: center; justify-content: center; font-size: 80px; }
-        .product-info { padding: 20px; }
-.product-info h3 { font-size: 18px; margin-bottom: 8px; }
-        .product-info p { color: #6b7280; font-size: 14px; margin-bottom: 15px; }
-        .product-footer { display: flex; justify-content: space-between; align-items: center; }
-        .product-price { color: #2563eb; font-size: 20px; font-weight: bold; }
-        .product-link { color: #2563eb; font-weight: 600; text-decoration: none; }
+        .products {
+            padding: 100px 20px;
+            background: var(--light-color);
+        }
+        
+        .products-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .product-info p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .product-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s;
+        }
+        
+        .product-link:hover {
+            gap: 15px;
+        }
         
         /* News */
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .news-card { background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
-        .news-img { height: 180px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); display: flex; align-items: center; justify-content: center; font-size: 64px; }
-        .news-content { padding: 25px; }
-        .news-meta { display: flex; gap: 15px; margin-bottom: 12px; }
-        .news-tag { color: #2563eb; font-size: 13px; font-weight: 600; }
-        .news-date { color: #9ca3af; font-size: 13px; }
-        .news-title { font-size: 18px; margin-bottom: 10px; line-height: 1.4; }
-        .news-summary { color: #6b7280; font-size: 14px; line-height: 1.6; }
+        .news {
+            padding: 100px 20px;
+            background: white;
+        }
         
-        /* CTA */
-        .cta { background: #2563eb; color: white; padding: 80px 20px; text-align: center; }
-        .cta h2 { font-size: 36px; margin-bottom: 15px; }
-        .cta p { font-size: 20px; opacity: 0.9; margin-bottom: 30px; }
-        .cta-btn-large { background: white; color: #2563eb; padding: 18px 40px; border-radius: 10px; font-size: 18px; font-weight: 600; text-decoration: none; display: inline-block; transition: transform 0.3s; }
-        .cta-btn-large:hover { transform: scale(1.05); }
+        .news-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .news-card {
+            padding: 30px;
+            border-radius: 15px;
+            background: var(--light-color);
+            transition: all 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .news-date {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .news-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .news-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .news-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
         
         /* Contact */
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; max-width: 1000px; margin: 0 auto; }
-        .contact-form { background: #f9fafb; padding: 40px; border-radius: 16px; }
-        .form-title { font-size: 24px; margin-bottom: 30px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 16px; transition: border-color 0.3s, box-shadow 0.3s; }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .submit-btn { width: 100%; background: #2563eb; color: white; padding: 16px; border: none; border-radius: 10px; font-size: 18px; font-weight: 600; cursor: pointer; transition: background 0.3s; }
-        .submit-btn:hover { background: #1d4ed8; }
+        .contact {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%);
+            color: white;
+        }
         
-        .contact-info { padding: 20px; }
-        .contact-info h3 { font-size: 24px; margin-bottom: 25px; }
-        .contact-item { display: flex; gap: 20px; margin-bottom: 25px; }
-        .contact-item-icon { font-size: 28px; }
-        .contact-item h4 { font-weight: 600; margin-bottom: 5px; }
-        .contact-item p { color: #6b7280; }
+        .contact .section-title h2,
+        .contact .section-title p {
+            color: white;
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item .icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 24px;
+        }
+        
+        .contact-item h4 {
+            margin-bottom: 8px;
+        }
+        
+        .contact-item p {
+            opacity: 0.9;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
         
         /* Footer */
-        footer { background: #1f2937; color: white; padding: 60px 20px 30px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
-        .footer h3 { font-size: 20px; margin-bottom: 20px; }
-        .footer p { color: #9ca3af; }
-        .footer ul { list-style: none; }
-        .footer ul li { margin-bottom: 12px; }
-        .footer ul a { color: #9ca3af; text-decoration: none; transition: color 0.3s; }
-        .footer ul a:hover { color: white; }
-        .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid #374151; text-align: center; color: #9ca3af; }
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 20px 30px;
+        }
         
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 18px; }
-            .form-row { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; }
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+            
+            .lang-switch {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .lang-btn {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            animation: fadeInUp 0.6s ease forwards;
         }
     </style>
 </head>
 <body>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('zh')">🇨🇳 中文</button>
+        <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+    </div>
+
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">Smith Ribbon</a>
+            <a href="#" class="logo">Smith<span>Ribbon</span></a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="zh-content">首页</a><a href="#home" class="en-content">Home</a></li>
+                <li><a href="#features" class="zh-content">优势</a><a href="#features" class="en-content">Features</a></li>
+                <li><a href="#products" class="zh-content">产品</a><a href="#products" class="en-content">Products</a></li>
+                <li><a href="#news" class="zh-content">新闻</a><a href="#news" class="en-content">News</a></li>
+<li><a href="#contact" class="zh-content">联系我们</a><a href="#contact" class="en-content">Contact Us</a></li>
             </ul>
-            <a href="#contact" class="cta-btn">Get Quote</a>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Premium Ribbon Manufacturer</h1>
-            <p>High-quality ribbons for gift wrapping, fashion, and decoration</p>
-            <div class="hero-btns">
-                <a href="#products" class="hero-btn primary">View Products</a>
-                <a href="#contact" class="hero-btn secondary">Get Quote</a>
-            </div>
+            <h1 class="zh-content">专业织带制造商</h1><h1 class="en-content">Professional Ribbon Manufacturer</h1>
+            <p class="zh-content">20年专注织带生产与研发，为全球客户提供高品质织带解决方案</p>
+            <p class="en-content">20 years of dedicated ribbon manufacturing and R&D, providing high-quality ribbon solutions for global customers</p>
+            <a href="#contact" class="cta-btn">
+                <span class="zh-content">立即咨询</span><span class="en-content">Get Quote Now</span>
+            </a>
         </div>
     </section>
 
     <!-- Features -->
-    <section class="features">
+    <section id="features" class="features">
+        <div class="section-title">
+            <h2 class="zh-content">我们的优势</h2><h2 class="en-content">Our Advantages</h2>
+            <p class="zh-content">为什么选择Smith Ribbon？</p>
+            <p class="en-content">Why Choose Smith Ribbon?</p>
+        </div>
         <div class="features-grid">
-            <div class="feature">
+            <div class="feature-card">
                 <div class="feature-icon">🏭</div>
-                <h3>Factory Direct</h3>
-                <p>Competitive prices</p>
+                <h3 class="zh-content">20年行业经验</h3><h3 class="en-content">20 Years Experience</h3>
+                <p class="zh-content">自2004年成立以来，我们积累了丰富的织带生产经验，服务过全球1000+客户</p>
+                <p class="en-content">Since our founding in 2004, we have accumulated rich ribbon manufacturing experience serving 1000+ global customers</p>
             </div>
-            <div class="feature">
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h3 class="zh-content">研发创新</h3><h3 class="en-content">R&D Innovation</h3>
+                <p class="zh-content">拥有专业研发团队，不断推出符合市场需求的新产品</p>
+                <p class="en-content">Professional R&D team continuously launching new products that meet market demands</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3 class="zh-content">品质保证</h3><h3 class="en-content">Quality Assurance</h3>
+                <p class="zh-content">严格的质量控制体系，通过ISO9001认证，确保每一米织带都符合标准</p>
+                <p class="en-content">Strict quality control system, ISO9001 certified, ensuring every meter of ribbon meets standards</p>
+            </div>
+            <div class="feature-card">
                 <div class="feature-icon">🌍</div>
-                <h3>Global Shipping</h3>
-                <p>Worldwide delivery</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🎨</div>
-                <h3>Custom Printing</h3>
-                <p>Logo & design</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">✨</div>
-                <h3>Quality Assured</h3>
-                <p>ISO certified</p>
+                <h3 class="zh-content">全球服务</h3><h3 class="en-content">Global Service</h3>
+                <p class="zh-content">产品出口欧美、东南亚、中东等地区，满足不同客户的定制需求</p>
+                <p class="en-content">Products exported to Europe, America, Southeast Asia, Middle East, meeting customized needs of different clients</p>
             </div>
         </div>
     </section>
 
     <!-- Products -->
-    <section id="products" class="section">
-        <h2 class="section-title">Our Products</h2>
-        <p class="section-subtitle">Wide range of premium ribbons for every occasion</p>
+    <section id="products" class="products">
+        <div class="section-title">
+            <h2 class="zh-content">我们的产品</h2><h2 class="en-content">Our Products</h2>
+            <p class="zh-content">高品质织带产品，满足各种应用场景</p>
+            <p class="en-content">High-quality ribbon products for various applications</p>
+        </div>
         <div class="products-grid">
             <div class="product-card">
-                <div class="product-img">🎀</div>
+                <div class="product-image">🎀</div>
                 <div class="product-info">
-                    <h3>Red Satin Ribbon</h3>
-                    <p>High quality red satin ribbon</p>
-                    <div class="product-footer">
-                        <span class="product-price">$5.99</span>
-                        <a href="#contact" class="product-link">Inquiry →</a>
-                    </div>
+                    <h3 class="zh-content">印刷织带</h3><h3 class="en-content">Printed Ribbons</h3>
+                    <p class="zh-content">可定制各种图案和LOGO，适用于包装、礼品、装饰等行业</p>
+                    <p class="en-content">Customizable patterns and LOGO, suitable for packaging, gifts, decoration industries</p>
+                    <a href="#contact" class="product-link">
+                        <span class="zh-content">了解更多</span><span class="en-content">Learn More</span> →
+                    </a>
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-img">🧵</div>
+                <div class="product-image">🎗️</div>
                 <div class="product-info">
-                    <h3>White Grosgrain Ribbon</h3>
-                    <p>Durable white grosgrain ribbon</p>
-                    <div class="product-footer">
-                        <span class="product-price">$4.49</span>
-                        <a href="#contact" class="product-link">Inquiry →</a>
-                    </div>
+                    <h3 class="zh-content">缎带系列</h3><h3 class="en-content">Satin Ribbons</h3>
+                    <p class="zh-content">光滑细腻的缎面质感，适合高端礼品包装和婚纱配饰</p>
+                    <p class="en-content">Smooth and delicate satin texture, perfect for high-end gift packaging and wedding accessories</p>
+                    <a href="#contact" class="product-link">
+                        <span class="zh-content">了解更多</span><span class="en-content">Learn More</span> →
+                    </a>
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-img">✨</div>
+                <div class="product-image">🎖️</div>
                 <div class="product-info">
-                    <h3>Blue Velvet Ribbon</h3>
-                    <p>Luxurious blue velvet ribbon</p>
-                    <div class="product-footer">
-                        <span class="product-price">$8.99</span>
-                        <a href="#contact" class="product-link">Inquiry →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-img">💫</div>
-                <div class="product-info">
-                    <h3>Gold Organza Ribbon</h3>
-                    <p>Shimmery gold organza ribbon</p>
-                    <div class="product-footer">
-                        <span class="product-price">$6.49</span>
-                        <a href="#contact" class="product-link">Inquiry →</a>
-                    </div>
+                    <h3 class="zh-content">提花织带</h3><h3 class="en-content">Jacquard Ribbons</h3>
+                    <p class="zh-content">立体提花工艺，图案精美耐用，适用于服装辅料和工艺品</p>
+                    <p class="en-content">3D jacquard craft, beautiful and durable patterns, suitable for garment accessories and crafts</p>
+                    <a href="#contact" class="product-link">
+                        <span class="zh-content">了解更多</span><span class="en-content">Learn More</span> →
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- News -->
-    <section id="news" class="section" style="background: #f9fafb;">
-        <h2 class="section-title">Latest News</h2>
-        <p class="section-subtitle">Stay updated with industry trends and company news</p>
+    <section id="news" class="news">
+        <div class="section-title">
+            <h2 class="zh-content">公司新闻</h2><h2 class="en-content">Company News</h2>
+            <p class="zh-content">了解Smith Ribbon最新动态</p>
+            <p class="en-content">Stay Updated with Smith Ribbon</p>
+        </div>
         <div class="news-grid">
             <div class="news-card">
-                <div class="news-img">📰</div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span class="news-tag">Industry Trends</span>
-                        <span class="news-date">2026-01-27</span>
-                    </div>
-                    <h3 class="news-title">2026 Ribbon Industry Trends: Sustainability and Customization</h3>
-                    <p class="news-summary">As environmental awareness grows globally, the ribbon industry is embracing sustainable materials.</p>
-                </div>
+                <div class="news-date">2025-01-15</div>
+                <h3 class="zh-content">Smith Ribbon 2025年新品发布会圆满成功</h3>
+                <h3 class="en-content">Smith Ribbon 2025 New Product Launch Success</h3>
+                <p class="zh-content">我们很高兴地宣布，2025年新品发布会已成功举办，展示了多款创新织带产品</p>
+                <p class="en-content">We are pleased to announce that our 2025 new product launch was successfully held, showcasing multiple innovative ribbon products</p>
+                <a href="#" class="news-link">
+                    <span class="zh-content">阅读更多</span><span class="en-content">Read More</span> →
+                </a>
             </div>
             <div class="news-card">
-                <div class="news-img">🌿</div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span class="news-tag">Product Innovation</span>
-                        <span class="news-date">2026-01-20</span>
-                    </div>
-<h3 class="news-title">New Eco-Friendly Materials in Ribbon Manufacturing</h3>
-                    <p class="news-summary">We are introducing recycled polyester ribbons for eco-conscious customers.</p>
-                </div>
+                <div class="news-date">2025-01-08</div>
+                <h3 class="zh-content">织带行业2024年度回顾与2025年趋势展望</h3>
+                <h3 class="en-content">Ribbon Industry 2024 Review & 2025 Outlook</h3>
+                <p class="zh-content">回顾过去一年织带行业的发展，分析2025年市场趋势和机遇</p>
+                <p class="en-content">Reviewing the ribbon industry's development in the past year and analyzing 2025 market trends and opportunities</p>
+                <a href="#" class="news-link">
+                    <span class="zh-content">阅读更多</span><span class="en-content">Read More</span> →
+                </a>
             </div>
             <div class="news-card">
-                <div class="news-img">🎨</div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span class="news-tag">Product Update</span>
-                        <span class="news-date">2026-01-13</span>
-                    </div>
-                    <h3 class="news-title">Expanded Color Range for Satin Ribbon Collection</h3>
-                    <p class="news-summary">Over 50 new colors added to our popular satin ribbon collection.</p>
-                </div>
+                <div class="news-date">2024-12-20</div>
+                <h3 class="zh-content">环保材料织带成为行业发展新方向</h3>
+                <h3 class="en-content">Eco-Friendly Ribbons: New Industry Direction</h3>
+                <p class="zh-content">随着环保意识提升，可降解和再生材料织带需求持续增长</p>
+                <p class="en-content">With increasing environmental awareness, demand for biodegradable and recycled material ribbons continues to grow</p>
+                <a href="#" class="news-link">
+                    <span class="zh-content">阅读更多</span><span class="en-content">Read More</span> →
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="section-subtitle">Get in touch for quotes, samples, or any questions</p>
-        <div class="contact-grid">
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <h3 class="form-title">Send us a message</h3>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Name *</label>
-                        <input type="text" name="name" required placeholder="Your name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" name="email" required placeholder="your@email.com">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Company</label>
-                        <input type="text" name="company" placeholder="Company name">
-                    </div>
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" name="phone" placeholder="Phone number">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Product Interest</label>
-                    <select name="product">
-                        <option value="">Select a product category</option>
-                        <option value="satin">Satin Ribbon</option>
-                        <option value="grosgrain">Grosgrain Ribbon</option>
-                        <option value="velvet">Velvet Ribbon</option>
-                        <option value="organza">Organza Ribbon</option>
-                        <option value="custom">Custom Order</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Message *</label>
-                    <textarea name="message" rows="5" required placeholder="Tell us about your requirements..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2 class="zh-content">联系我们</h2><h2 class="en-content">Contact Us</h2>
+            <p class="zh-content">期待与您合作，共创美好未来</p>
+            <p class="en-content">Looking forward to cooperating with you for a better future</p>
+        </div>
+        <div class="contact-container">
             <div class="contact-info">
-                <h3>Contact Information</h3>
                 <div class="contact-item">
-                    <div class="contact-item-icon">📧</div>
-                    <div>
-                        <h4>Email</h4>
-                        <p>info@smithribbon.com</p>
-                    </div>
+                    <div class="icon">📍</div>
+                    <h4 class="zh-content">公司地址</h4><h4 class="en-content">Address</h4>
+                    <p class="zh-content">浙江省义乌市</p>
+                    <p class="en-content">Yiwu, Zhejiang, China</p>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-item-icon">📞</div>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+86-XXX-XXXXXXX</p>
-                    </div>
+                    <div class="icon">📞</div>
+                    <h4 class="zh-content">联系电话</h4><h4 class="en-content">Phone</h4>
+                    <p>+86 579-XXXX-XXXX</p>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-item-icon">🏭</div>
-                    <div>
-                        <h4>Factory</h4>
-                        <p>Xiamen, Fujian Province, China</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">🕐</div>
-                    <div>
-                        <h4>Business Hours</h4>
-                        <p>Mon-Fri: 9AM-6PM | Sat: 9AM-1PM</p>
-                    </div>
+                    <div class="icon">✉️</div>
+                    <h4 class="zh-content">电子邮箱</h4><h4 class="en-content">Email</h4>
+                    <p>info@smithribbon.com</p>
                 </div>
             </div>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label class="zh-content">您的姓名</label><label class="en-content">Your Name</label>
+                    <input type="text" required placeholder="zh-content">John Doe</input>
+                </div>
+                <div class="form-group">
+                    <label class="zh-content">电子邮箱</label><label class="en-content">Email Address</label>
+                    <input type="email" required placeholder="zh-content">john@example.com</input>
+                </div>
+                <div class="form-group">
+                    <label class="zh-content">公司名称</label><label class="en-content">Company Name</label>
+                    <input type="text" placeholder="zh-content">ABC Company</input>
+                </div>
+                <div class="form-group">
+                    <label class="zh-content">您的留言</label><label class="en-content">Your Message</label>
+                    <textarea required placeholder="zh-content">请告诉我们您的需求...</textarea><textarea required placeholder="en-content">Please tell us your requirements...</textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="zh-content">发送留言</span><span class="en-content">Send Message</span>
+                </button>
+            </form>
         </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <h2>Ready to Start Your Order?</h2>
-        <p>Contact us for a free quote and samples</p>
-        <a href="#contact" class="cta-btn-large">Contact Us Now</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-grid">
-            <div class="footer">
-                <h3>Smith Ribbon</h3>
-                <p>Professional ribbon manufacturer since 2007. Quality products, competitive prices, global shipping.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 class="zh-content">关于Smith Ribbon</h4><h4 class="en-content">About Smith Ribbon</h4>
+                <p class="zh-content">20年专业织带制造商，致力于为全球客户提供高品质织带产品和服务</p>
+                <p class="en-content">20 years professional ribbon manufacturer, committed to providing high-quality ribbon products and services to global customers</p>
             </div>
-            <div class="footer">
-                <h3>Products</h3>
-                <ul>
-                    <li><a href="#products">Satin Ribbon</a></li>
-                    <li><a href="#products">Grosgrain Ribbon</a></li>
-                    <li><a href="#products">Velvet Ribbon</a></li>
-                    <li><a href="#products">Organza Ribbon</a></li>
-                </ul>
+            <div class="footer-section">
+                <h4 class="zh-content">快速链接</h4><h4 class="en-content">Quick Links</h4>
+                <a href="#home" class="zh-content">首页</a><a href="#home" class="en-content">Home</a>
+                <a href="#products" class="zh-content">产品中心</a><a href="#products" class="en-content">Products</a>
+                <a href="#news" class="zh-content">新闻动态</a><a href="#news" class="en-content">News</a>
+                <a href="#contact" class="zh-content">联系我们</a><a href="#contact" class="en-content">Contact Us</a>
             </div>
-            <div class="footer">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer">
-                <h3>Contact</h3>
-                <p>Email: info@smithribbon.com</p>
-                <p>Phone: +86-XXX-XXXXXXX</p>
+            <div class="footer-section">
+                <h4 class="zh-content">产品分类</h4><h4 class="en-content">Product Categories</h4>
+                <a href="#products" class="zh-content">印刷织带</a><a href="#products" class="en-content">Printed Ribbons</a>
+                <a href="#products" class="zh-content">缎带系列</a><a href="#products" class="en-content">Satin Ribbons</a>
+                <a href="#products" class="zh-content">提花织带</a><a href="#products" class="en-content">Jacquard Ribbons</a>
             </div>
         </div>
         <div class="footer-bottom">
-            © 2026 Smith Ribbon. All rights reserved.
+            <p>© 2024 Smith Ribbon. <span class="zh-content">版权所有</span><span class="en-content">All Rights Reserved</span></p>
         </div>
     </footer>
 
     <script>
+        // Language Switch Function
+        function switchLang(lang) {
+            document.body.className = 'lang-' + lang;
+            localStorage.setItem('lang', lang);
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        
+        // Load saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('lang') || 'zh';
+            document.body.className = 'lang-' + savedLang;
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if ((savedLang === 'zh' && btn.textContent.includes('中文')) || 
+                    (savedLang === 'en' && btn.textContent.includes('English'))) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Form Submit Handler
         function handleSubmit(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you within 24 hours.');
+            const isZh = document.body.classList.contains('lang-zh');
+            alert(isZh ? '感谢您的留言，我们会尽快与您联系！' : 'Thank you for your message! We will contact you soon.');
             e.target.reset();
         }
+        
+        // Mobile Menu Toggle (basic functionality)
+        document.querySelector('.mobile-menu')?.addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '70px';
+            navLinks.style.left = '0';
+            navLinks.style.width = '100%';
+            navLinks.style.background = 'white';
+            navLinks.style.padding = '20px';
+            navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+        });
     </script>
 </body>
 </html>
