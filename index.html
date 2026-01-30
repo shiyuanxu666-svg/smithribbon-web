@@ -841,42 +841,40 @@
                     <p>86-13779951780</p>
                 </div>
             </div>
-            <!-- Contact Form with Formspree Integration -->
-            <!-- Formspree是一个免费的静态网站表单服务，将表单数据转发到您的邮箱 -->
-            <!-- 注册地址: https://formspree.io/ (免费每月50次提交) -->
+            <!-- Contact Form with Web3Forms Integration -->
+            <!-- Web3Forms是一个免费的静态网站表单服务，将表单数据转发到您的邮箱 -->
+            <!-- 访问 https://web3forms.com 获取免费API密钥 (每月250次提交) -->
             <form class="contact-form" 
-                  action="https://formspree.io/f/xmgndqrl" 
+                  action="https://api.web3forms.com/submit" 
                   method="POST"
                   id="contactForm"
                   onsubmit="return handleFormSubmit(event)">
-                <!-- Hidden fields for Formspree -->
-                <input type="hidden" name="_subject" value="【厦门思蜜丝织带】新的询盘请求">
-                <input type="hidden" name="_next" value="https://smithribbon.com/thank-you.html">
-                <input type="hidden" name="_language" value="zh">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="9d569b88-13ba-4412-9b3d-8fb8b57d6b8a">
+                <!-- Email subject -->
+                <input type="hidden" name="subject" value="【厦门思蜜丝织带】新的询盘请求">
+                <!-- Redirect after submission -->
+                <input type="hidden" name="redirect" value="https://smithribbon.com/thank-you.html">
                 
                 <div class="form-group">
                     <label class="zh-content">您的姓名 *</label>
                     <label class="en-content">Your Name *</label>
-                    <input type="text" name="name" required 
-                           placeholder="zh-content">请输入您的姓名</input>
+                    <input type="text" name="name" required placeholder="请输入您的姓名">
                 </div>
                 <div class="form-group">
                     <label class="zh-content">电子邮箱 *</label>
                     <label class="en-content">Email Address *</label>
-                    <input type="email" name="email" required 
-                           placeholder="zh-content">your@email.com</input>
+                    <input type="email" name="email" required placeholder="your@email.com">
                 </div>
                 <div class="form-group">
                     <label class="zh-content">公司名称</label>
                     <label class="en-content">Company Name</label>
-                    <input type="text" name="company" 
-                           placeholder="zh-content">公司名称（选填）</input>
+                    <input type="text" name="company" placeholder="公司名称（选填）">
                 </div>
                 <div class="form-group">
                     <label class="zh-content">联系电话</label>
                     <label class="en-content">Phone Number</label>
-                    <input type="tel" name="phone" 
-                           placeholder="zh-content">联系电话（选填）</input>
+                    <input type="tel" name="phone" placeholder="联系电话（选填）">
                 </div>
                 <div class="form-group">
                     <label class="zh-content">产品咨询</label>
