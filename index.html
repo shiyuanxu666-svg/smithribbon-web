@@ -841,25 +841,72 @@
                     <p>86-13779951780</p>
                 </div>
             </div>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
+            <!-- Contact Form with Formspree Integration -->
+            <!-- Formspree是一个免费的静态网站表单服务，将表单数据转发到您的邮箱 -->
+            <!-- 注册地址: https://formspree.io/ (免费每月50次提交) -->
+            <form class="contact-form" 
+                  action="https://formspree.io/f/xmgndqrl" 
+                  method="POST"
+                  id="contactForm"
+                  onsubmit="return handleFormSubmit(event)">
+                <!-- Hidden fields for Formspree -->
+                <input type="hidden" name="_subject" value="【厦门思蜜丝织带】新的询盘请求">
+                <input type="hidden" name="_next" value="https://smithribbon.com/thank-you.html">
+                <input type="hidden" name="_language" value="zh">
+                
                 <div class="form-group">
-                    <label class="zh-content">您的姓名</label><label class="en-content">Your Name</label>
-                    <input type="text" required placeholder="zh-content">John Doe</input>
+                    <label class="zh-content">您的姓名 *</label>
+                    <label class="en-content">Your Name *</label>
+                    <input type="text" name="name" required 
+                           placeholder="zh-content">请输入您的姓名</input>
                 </div>
                 <div class="form-group">
-                    <label class="zh-content">电子邮箱</label><label class="en-content">Email Address</label>
-                    <input type="email" required placeholder="zh-content">john@example.com</input>
+                    <label class="zh-content">电子邮箱 *</label>
+                    <label class="en-content">Email Address *</label>
+                    <input type="email" name="email" required 
+                           placeholder="zh-content">your@email.com</input>
                 </div>
                 <div class="form-group">
-                    <label class="zh-content">公司名称</label><label class="en-content">Company Name</label>
-                    <input type="text" placeholder="zh-content">ABC Company</input>
+                    <label class="zh-content">公司名称</label>
+                    <label class="en-content">Company Name</label>
+                    <input type="text" name="company" 
+                           placeholder="zh-content">公司名称（选填）</input>
                 </div>
                 <div class="form-group">
-                    <label class="zh-content">您的留言</label><label class="en-content">Your Message</label>
-                    <textarea required placeholder="zh-content">请告诉我们您的需求...</textarea><textarea required placeholder="en-content">Please tell us your requirements...</textarea>
+                    <label class="zh-content">联系电话</label>
+                    <label class="en-content">Phone Number</label>
+                    <input type="tel" name="phone" 
+                           placeholder="zh-content">联系电话（选填）</input>
                 </div>
-                <button type="submit" class="submit-btn">
-                    <span class="zh-content">发送留言</span><span class="en-content">Send Message</span>
+                <div class="form-group">
+                    <label class="zh-content">产品咨询</label>
+                    <label class="en-content">Product Inquiry</label>
+                    <select name="product" style="width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 10px; font-size: 16px;">
+                        <option value="general" class="zh-content">一般咨询</option>
+                        <option value="printed-ribbons" class="zh-content">印刷织带</option>
+                        <option value="satin-ribbons" class="zh-content">缎带系列</option>
+                        <option value="jacquard-ribbons" class="zh-content">提花织带</option>
+                        <option value="polyester-ribbons" class="zh-content">涤纶织带</option>
+                        <option value="nylon-ribbons" class="zh-content">尼龙织带</option>
+                        <option value="elastic-bands" class="zh-content">松紧带</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="zh-content">您的留言 *</label>
+                    <label class="en-content">Your Message *</label>
+                    <textarea name="message" required 
+                              placeholder="zh-content">请描述您的需求，例如：产品类型、数量、规格要求等...</textarea>
+                </div>
+                
+                <!-- Anti-spam honeypot (hidden field - leave empty) -->
+                <div style="display: none;">
+                    <label>Don't fill this out if you're human:</label>
+                    <input type="text" name="_gotcha" autocomplete="off">
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="zh-content">发送询盘</span>
+                    <span class="en-content">Send Inquiry</span>
                 </button>
             </form>
         </div>
@@ -937,12 +984,49 @@
             });
         });
         
-        // Form Submit Handler
-        function handleSubmit(e) {
-            e.preventDefault();
+        // Form Submit Handler - Integrated with Formspree
+        function handleFormSubmit(event) {
+            const form = event.target;
+            const submitBtn = document.getElementById('submitBtn');
             const isZh = document.body.classList.contains('lang-zh');
-            alert(isZh ? '感谢您的留言，我们会尽快与您联系！' : 'Thank you for your message! We will contact you soon.');
-            e.target.reset();
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = isZh ? '⏳ 发送中...' : '⏳ Sending...';
+            
+            // Formspree will handle the submission automatically
+            // The function returns true to allow the form to submit to Formspree
+            // But we'll also show a message for better UX
+            
+            // If using AJAX submission (optional enhancement):
+            /*
+            event.preventDefault();
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert(isZh ? '✅ 感谢您的询盘！我们会尽快回复您。' : '✅ Thank you for your inquiry! We will reply soon.');
+                    form.reset();
+                } else {
+                    alert(isZh ? '❌ 提交失败，请重试或发送邮件至 xmmsd@126.com' : '❌ Submission failed. Please try again or email us at xmmsd@126.com');
+                }
+            }).catch(error => {
+                alert(isZh ? '❌ 网络错误，请重试' : '❌ Network error. Please try again.');
+            }).finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = isZh ? '发送询盘' : 'Send Inquiry';
+            });
+            return false;
+            */
+            
+            // Default: Let Formspree handle it
+            return true;
         }
         
         // Mobile Menu Toggle (basic functionality)

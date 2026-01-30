@@ -633,10 +633,35 @@
         <h2 class="en-content">Need Custom Printed Ribbons?</h2>
         <p class="zh-content">厦门思蜜丝织带为您提供专业的印刷织带定制服务</p>
         <p class="en-content">Xiamen Smith Ribbon provides professional printed ribbon customization services</p>
-        <a href="index.html#contact" class="cta-btn">
-            <span class="zh-content">立即咨询</span>
-            <span class="en-content">Contact Us Now</span>
-        </a>
+        
+        <!-- Formspree询盘表单 -->
+        <form class="contact-form" action="https://formspree.io/f/xmgndqrl" method="POST" style="max-width: 600px; margin: 30px auto 0; background: white; padding: 30px; border-radius: 20px;">
+            <input type="hidden" name="product" value="印刷织带">
+            <input type="hidden" name="_subject" value="【厦门思蜜丝织带】印刷织带询盘">
+            <input type="hidden" name="_language" value="zh">
+            <input type="hidden" name="_next" value="https://smithribbon.com/thank-you.html">
+            
+            <div class="form-group">
+                <label class="zh-content">您的姓名 *</label>
+                <input type="text" name="name" required placeholder="请输入您的姓名">
+            </div>
+            <div class="form-group">
+                <label class="zh-content">电子邮箱 *</label>
+                <input type="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+                <label class="zh-content">公司名称</label>
+                <input type="text" name="company" placeholder="公司名称（选填）">
+            </div>
+            <div class="form-group">
+                <label class="zh-content">您的留言 *</label>
+                <textarea name="message" required placeholder="请描述您的具体需求，如数量、规格、印刷要求等..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+                <span class="zh-content">发送询盘</span>
+                <span class="en-content">Send Inquiry</span>
+            </button>
+        </form>
     </section>
 
     <!-- Footer -->
