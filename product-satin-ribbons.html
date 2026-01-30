@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="厦门思蜜丝专业缎带制造商，提供高端缎带、丝绸缎带、婚庆缎带定制服务。光滑细腻的缎面质感，适合高端礼品包装、婚纱配饰。20年行业经验，品质保证。">
+    <meta name="keywords" content="缎带,丝绸缎带,高端缎带,婚庆缎带,礼品缎带,婚纱配件,丝带批发,织带制造商">
+    <link rel="canonical" href="https://smithribbon.com/product-satin-ribbons.html">
+    <title>缎带系列定制 | 高端丝绸缎带 | Smith Ribbon专业制造商</title>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --secondary-color: #9c27b0;
+            --accent-color: #ff5722;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+        }
+        /* Reuse same styles as printed ribbons, simplified for brevity */
+        .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 10px; }
+        .lang-btn { padding: 10px 20px; border: none; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s; background: white; color: var(--dark-color); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .lang-btn.active { background: var(--primary-color); color: white; }
+        header { background: white; padding: 20px 0; box-shadow: 0 2px 20px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 28px; font-weight: 700; color: var(--dark-color); text-decoration: none; }
+        .logo span { color: var(--primary-color); }
+        .nav-links { display: flex; list-style: none; gap: 40px; }
+        .nav-links a { color: var(--dark-color); text-decoration: none; font-weight: 500; }
+        .product-header { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); color: white; padding: 80px 20px 60px; text-align: center; }
+        .breadcrumb { margin-bottom: 20px; font-size: 14px; opacity: 0.9; }
+        .breadcrumb a { color: white; text-decoration: none; }
+        .product-header h1 { font-size: 42px; margin-bottom: 15px; }
+        .product-header .tagline { font-size: 20px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+        .product-content { max-width: 1200px; margin: 0 auto; padding: 60px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .product-gallery { position: relative; }
+        .main-image { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); border-radius: 20px; height: 400px; display: flex; align-items: center; justify-content: center; font-size: 120px; margin-bottom: 20px; }
+        .thumbnails { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .thumbnail { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); border-radius: 10px; height: 80px; display: flex; align-items: center; justify-content: center; font-size: 30px; cursor: pointer; transition: all 0.3s; }
+        .thumbnail:hover { transform: scale(1.05); box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+        .product-details { padding: 20px 0; }
+        .product-details h2 { font-size: 28px; color: var(--dark-color); margin-bottom: 20px; }
+        .product-details p { margin-bottom: 20px; font-size: 17px; color: var(--text-color); }
+        .features-list { list-style: none; margin: 30px 0; }
+        .features-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 15px; }
+        .features-list li::before { content: "✓"; color: var(--primary-color); font-weight: bold; font-size: 18px; }
+        .specs-section { background: white; padding: 60px 20px; }
+        .specs-container { max-width: 1000px; margin: 0 auto; }
+        .specs-section h2 { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--dark-color); }
+        .specs-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+        .specs-table th, .specs-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #e0e0e0; }
+        .specs-table th { background: var(--light-color); font-weight: 600; color: var(--dark-color); width: 30%; }
+        .specs-table tr:hover { background: #f9f9f9; }
+        .applications { background: var(--light-color); padding: 60px 20px; }
+        .applications h2 { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--dark-color); }
+        .app-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .app-card { background: white; border-radius: 15px; padding: 30px; text-align: center; transition: all 0.3s; }
+        .app-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .app-card .icon { font-size: 50px; margin-bottom: 20px; }
+        .app-card h4 { color: var(--dark-color); margin-bottom: 10px; }
+        .app-card p { color: #666; font-size: 14px; }
+        .cta-section { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 80px 20px; text-align: center; }
+        .cta-section h2 { font-size: 36px; margin-bottom: 20px; }
+        .cta-section p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-btn { display: inline-block; padding: 18px 50px; background: white; color: var(--primary-color); text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 18px; transition: all 0.3s; }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+        footer { background: var(--dark-color); color: white; padding: 60px 20px 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-size: 20px; margin-bottom: 20px; color: var(--accent-color); }
+        .footer-section p, .footer-section a { color: rgba(255,255,255,0.8); margin-bottom: 10px; display: block; text-decoration: none; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .en-content { display: none; }
+        body.lang-en .zh-content { display: none; }
+        body.lang-en .en-content { display: block; }
+        @media (max-width: 768px) { .product-content { grid-template-columns: 1fr; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('zh')">🇨🇳 中文</button>
+        <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+    </div>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Smith<span>Ribbon</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">首页</a><a href="index.html#home" class="en-content">Home</a></li>
+                <li><a href="index.html#features">优势</a><a href="index.html#features" class="en-content">Features</a></li>
+                <li><a href="index.html#products">产品</a><a href="index.html#products" class="en-content">Products</a></li>
+                <li><a href="index.html#news">新闻</a><a href="index.html#news" class="en-content">News</a></li>
+                <li><a href="index.html#contact">联系我们</a><a href="index.html#contact" class="en-content">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="product-header">
+        <div class="breadcrumb"><a href="index.html">首页</a> / <a href="index.html#products">产品</a> / <span>缎带系列</span></div>
+        <h1 class="zh-content">🎗️ 缎带系列</h1><h1 class="en-content">🎗️ Satin Ribbons Collection</h1>
+        <p class="tagline zh-content">光滑细腻的缎面质感，为高端礼品和婚礼增添优雅气质</p><p class="tagline en-content">Smooth and delicate satin texture adds elegance to gifts and weddings</p>
+    </section>
+    <section class="product-content">
+        <div class="product-gallery"><div class="main-image">🎗️</div><div class="thumbnails"><div class="thumbnail">🎗️</div><div class="thumbnail">💒</div><div class="thumbnail">👰</div><div class="thumbnail">🎁</div></div></div>
+        <div class="product-details">
+            <h2 class="zh-content">产品介绍</h2><h2 class="en-content">Product Introduction</h2>
+            <p class="zh-content">缎带是织带产品中最具优雅气质的产品之一。厦门思蜜丝织带采用高品质涤纶缎面纤维，
+                经过精密织造和特殊后整理工艺，呈现出光滑细腻、光泽柔和的缎面效果。
+                我们的缎带系列产品包括普通缎带、双面缎带、金属光泽缎带等多种规格，
+                广泛应用于高端礼品包装、婚纱礼服配饰、婚礼装饰、节日布置等场合。
+                缎带不仅是实用的包装材料，更是提升产品档次、传递优雅品味的理想选择。</p>
+            <p class="en-content">Satin ribbon is one of the most elegant products in the ribbon category. Xiamen Smith Ribbon uses high-quality polyester satin fibers,
+                processed through precise weaving and special finishing techniques to present a smooth, delicate, and soft luster satin effect.
+                Our satin ribbon products include regular satin, double-sided satin, metallic satin and other specifications,
+                widely used in high-end gift packaging, wedding dress accessories, wedding decorations, holiday arrangements, and other occasions.
+                Satin ribbon is not only a practical packaging material but also an ideal choice for enhancing product grade and conveying elegant taste.</p>
+            <ul class="features-list">
+                <li class="zh-content">100%高品质涤纶缎面，光滑细腻有光泽</li><li class="en-content">100% high-quality polyester satin, smooth, delicate and lustrous</li>
+                <li class="zh-content">双面可用，正反两面同样光滑亮泽</li><li class="en-content">Double-sided usable, both sides equally smooth and shiny</li>
+                <li class="zh-content">多种宽度：6mm-100mm满足不同需求</li><li class="en-content">Multiple widths: 6mm-100mm to meet different needs</li>
+                <li class="zh-content">200+颜色选择，支持Pantone色号定制</li><li class="en-content">200+ color options, support Pantone color customization</li>
+                <li class="zh-content">手感柔软舒适，不易起毛勾丝</li><li class="en-content">Soft and comfortable texture, not easy to fuzz or snag</li>
+                <li class="zh-content">色牢度高，洗涤不褪色</li><li class="en-content">High color fastness, does not fade when washed</li>
+            </ul>
+            <a href="index.html#contact" class="cta-btn"><span class="zh-content">立即咨询</span><span class="en-content">Contact Us Now</span></a>
+        </div>
+    </section>
+    <section class="specs-section">
+        <div class="specs-container">
+            <h2 class="zh-content">产品规格参数</h2><h2 class="en-content">Product Specifications</h2>
+            <table class="specs-table">
+                <tr><th class="zh-content">材质</th><th class="en-content">Material</th><td>100%涤纶缎面纤维</td></tr>
+                <tr><th class="zh-content">宽度</th><th class="en-content">Width</th><td>6mm、10mm、15mm、20mm、25mm、38mm、50mm、75mm、100mm</td></tr>
+                <tr><th class="zh-content">厚度</th><th class="en-content">Thickness</th><td>0.08mm、0.10mm、0.12mm、0.15mm</td></tr>
+                <tr><th class="zh-content">类型</th><th class="en-content">Type</th><td>单面缎带、双面缎带、金属缎带、印花缎带</td></tr>
+                <tr><th class="zh-content">颜色</th><th class="en-content">Colors</th><td>200+标准色，支持Pantone色号定制</td></tr>
+                <tr><th class="zh-content">最小起订量</th><th class="en-content">MOQ</th><td>500米（常规），100米（小批量定制）</td></tr>
+            </table>
+        </div>
+    </section>
+    <section class="applications">
+        <h2 class="zh-content">应用领域</h2><h2 class="en-content">Application Areas</h2>
+        <div class="app-grid">
+            <div class="app-card"><div class="icon">💒</div><h4 class="zh-content">婚礼装饰</h4><h4 class="en-content">Wedding Decoration</h4><p class="zh-content">拱门、桌花、椅背装饰</p><p class="en-content">Arches, table flowers, chair back decorations</p></div>
+            <div class="app-card"><div class="icon">👰</div><h4 class="zh-content">婚纱配饰</h4><h4 class="en-content">Wedding Dress Accessories</h4><p class="zh-content">头花、裙边、捧花装饰</p><p class="en-content">Head flowers, dress edges, bouquet decorations</p></div>
+            <div class="app-card"><div class="icon">🎁</div><h4 class="zh-content">高端礼品</h4><h4 class="en-content">High-end Gifts</h4><p class="zh-content">礼盒包装、丝带蝴蝶结</p><p class="en-content">Gift box packaging, ribbon bows</p></div>
+            <div class="app-card"><div class="icon">🎄</div><h4 class="zh-content">节日装饰</h4><h4 class="en-content">Holiday Decoration</h4><p class="zh-content">圣诞树装饰、节日布置</p><p class="en-content">Christmas tree decorations, holiday setups</p></div>
+            <div class="app-card"><div class="icon">🎭</div><h4 class="zh-content">演出服装</h4><h4 class="en-content">Performance Costumes</h4><p class="zh-content">舞蹈服、演出服配饰</p><p class="en-content">Dance costumes, performance costume accessories</p></div>
+            <div class="app-card"><div class="icon">🏠</div><h4 class="zh-content">家居装饰</h4><h4 class="en-content">Home Decoration</h4><p class="zh-content">窗帘绑带、家居摆件</p><p class="en-content">Curtain ties, home decorations</p></div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <h2 class="zh-content">需要定制缎带？</h2><h2 class="en-content">Need Custom Satin Ribbons?</h2>
+        <p class="zh-content">厦门思蜜丝织带为您提供高品质缎带定制服务</p><p class="en-content">Xiamen Smith Ribbon provides high-quality satin ribbon customization</p>
+        <a href="index.html#contact" class="cta-btn"><span class="zh-content">立即咨询</span><span class="en-content">Contact Us Now</span></a>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h4 class="zh-content">关于思蜜丝</h4><h4 class="en-content">About Smith Ribbon</h4><p class="zh-content">厦门思蜜丝织带饰品有限公司，20年专业织带制造商</p><p class="en-content">Xiamen Smith Ribbon - 20 years professional ribbon manufacturer</p></div>
+            <div class="footer-section"><h4 class="zh-content">快速链接</h4><h4 class="en-content">Quick Links</h4><a href="index.html#home">首页</a><a href="index.html#home" class="en-content">Home</a><a href="index.html#products">产品中心</a><a href="index.html#products" class="en-content">Products</a></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Smith Ribbon. <span class="zh-content">版权所有</span><span class="en-content">All Rights Reserved</span></p></div>
+    </footer>
+    <script>function switchLang(lang) { document.body.className = lang === 'en' ? 'lang-en' : ''; document.querySelectorAll('.lang-btn').forEach(btn => { btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang)); }); localStorage.setItem('preferredLang', lang); } const savedLang = localStorage.getItem('preferredLang') || 'zh'; switchLang(savedLang);</script>
+</body>
+</html>
