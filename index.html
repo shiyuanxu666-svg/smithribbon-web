@@ -150,84 +150,29 @@
             background: var(--primary-color);
         }
         
-        /* Banner Section */
-        .banner-section {
-            margin-top: 80px;
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        .banner-section img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
         /* Company Introduction */
         .company-intro {
-            padding: 80px 20px;
-            background: white;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            text-align: center;
         }
         
         .intro-container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .intro-image {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-        }
-        
-        .intro-image img {
-            width: 100%;
-            height: auto;
-            display: block;
         }
         
         .intro-content h2 {
-            font-size: 36px;
-            color: var(--dark-color);
-            margin-bottom: 25px;
+            font-size: 32px;
+            color: white;
+            margin-bottom: 20px;
         }
         
         .intro-content p {
-            color: var(--text-light);
-            margin-bottom: 20px;
-            line-height: 1.9;
+            color: rgba(255,255,255,0.95);
+            line-height: 1.8;
             font-size: 16px;
         }
-        
-        .intro-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 25px;
-            background: var(--light-color);
-            border-radius: 15px;
-        }
-        
-        .stat-number {
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--primary-color);
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: var(--text-light);
-            margin-top: 5px;
         }
         .hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -678,6 +623,17 @@
             </div>
         </nav>
     </header>
+
+    <!-- Company Introduction -->
+    <section class="company-intro">
+        <div class="intro-container">
+            <div class="intro-content">
+                <h2 class="zh-content">厦门思蜜丝织带饰品有限公司</h2><h2 class="en-content">Xiamen Smith Ribbon&Bow Co.,Ltd</h2>
+                <p class="zh-content">成立于2004年，专注织带制造20年，集研发、生产、销售于一体的专业制造商。</p>
+                <p class="en-content">Founded in 2004, specializing in ribbon manufacturing for 20 years, integrating R&D, production, and sales.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
