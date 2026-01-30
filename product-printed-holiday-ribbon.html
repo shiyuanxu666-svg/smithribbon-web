@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="节日主题印刷织带 - 厦门思蜜丝织带专业生产圣诞、情人节、婚礼等节日主题印刷织带，为您的节日装饰提供完美解决方案。">
+    <meta name="keywords" content="节日织带,圣诞织带,婚礼织带,主题印刷织带,节日装饰">
+    <link rel="canonical" href="https://smithribbon.com/product-printed-holiday-ribbon.html">
+    <title>节日主题印刷织带 | 圣诞婚礼装饰织带 | Smith Ribbon</title>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --secondary-color: #9c27b0;
+            --accent-color: #ff5722;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --text-light: #666;
+        }
+        
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            background: white;
+            color: var(--dark-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        
+        .nav-links a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .product-header {
+            background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .product-header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        
+        .product-header .tagline {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .product-gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .main-image-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            overflow: hidden;
+        }
+        
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        
+        .thumbnail {
+            height: 120px;
+            background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+        
+        .thumbnail:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-details {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .product-info h2 {
+            font-size: 28px;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .product-info p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        .specs-table th,
+        .specs-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .specs-table th {
+            background: var(--light-color);
+            font-weight: 600;
+            color: var(--dark-color);
+            width: 30%;
+        }
+        
+        .specs-table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .features-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .features-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .price-section {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .price-section h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .price {
+            font-size: 36px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .price-note {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .inquiry-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            margin-top: 20px;
+        }
+        
+        .inquiry-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(233,30,99,0.3);
+        }
+        
+        .application-section {
+            background: var(--light-color);
+            padding: 80px 20px;
+        }
+        
+        .application-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--dark-color);
+        }
+        
+        .app-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .app-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .app-card .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .app-card h4 {
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .app-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .video-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .video-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+            border-radius: 20px;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        
+        .video-placeholder {
+            color: white;
+            text-align: center;
+        }
+        
+        .video-placeholder p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .en-content {
+            display: none;
+        }
+        
+        body.lang-en .zh-content {
+            display: none;
+        }
+        
+        body.lang-en .en-content {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .product-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .thumbnail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('zh')">🇨🇳 中文</button>
+        <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+    </div>
+    
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Smith<span>Ribbon</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">首页</a><a href="index.html#home" class="en-content">Home</a></li>
+                <li><a href="index.html#features">优势</a><a href="index.html#features" class="en-content">Features</a></li>
+                <li><a href="index.html#products">产品</a><a href="index.html#products" class="en-content">Products</a></li>
+                <li><a href="index.html#news">新闻</a><a href="index.html#news" class="en-content">News</a></li>
+                <li><a href="index.html#contact">联系我们</a><a href="index.html#contact" class="en-content">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="product-header">
+        <div class="breadcrumb">
+            <a href="index.html">首页</a> / <a href="index.html#products">产品</a> / <a href="product-printed-ribbons.html">印刷织带</a> / <span class="zh-content">节日主题织带</span><span class="en-content">Holiday Theme Ribbon</span>
+        </div>
+        <h1 class="zh-content">🎄 节日主题印刷织带</h1>
+        <h1 class="en-content">🎄 Holiday Theme Printed Ribbon</h1>
+        <p class="tagline zh-content">圣诞、情人节、婚礼等节日主题印刷织带，为您的节日装饰增添色彩</p>
+        <p class="tagline en-content">Christmas, Valentine's Day, Wedding and other holiday theme printed ribbons to add color to your holiday decorations</p>
+    </section>
+    
+    <section class="product-gallery">
+        <div class="main-image-container">
+            <div class="main-image">
+                <img src="https://m.media-amazon.com/images/I/814CR2m40TL.jpg" alt="节日主题印刷织带">
+            </div>
+        </div>
+        <div class="thumbnail-grid">
+            <div class="thumbnail">
+                <img src="https://m.media-amazon.com/images/I/71Tn6yA-QmL.jpg" alt="圣诞织带细节图">
+            </div>
+            <div class="thumbnail">
+                <img src="https://theornamentgirl.com/market/wp-content/uploads/2021/04/gold-edge-christmas-red-satin-narrow-ribbon-for-no-sew-ornaments-1.jpg" alt="婚礼织带细节图">
+            </div>
+            <div class="thumbnail">
+                <img src="https://m.media-amazon.com/images/I/A1yFq35iyfL.jpg" alt="节日装饰应用图">
+            </div>
+            <div class="thumbnail">
+                <img src="https://i.etsystatic.com/10794182/r/il/a62b40/2803446672/il_570xN.2803446672_bczi.jpg" alt="礼品包装应用图">
+            </div>
+        </div>
+    </section>
+    
+    <section class="product-details">
+        <div class="product-info">
+            <h2 class="zh-content">产品介绍</h2>
+            <h2 class="en-content">Product Introduction</h2>
+            <p class="zh-content">节日主题印刷织带是厦门思蜜丝织带的特色产品系列，我们提供圣诞、情人节、婚礼、生日、复活节等各种节日主题的印刷织带。采用高品质材质和精美印刷工艺，色彩鲜艳、图案清晰，为您的节日装饰和礼品包装提供完美的解决方案。无论是商业活动还是个人派对，我们都能为您提供量身定制的节日织带产品。</p>
+            <p class="en-content">Holiday theme printed ribbons are our specialty product series at Smith Ribbon. We provide Christmas, Valentine's Day, Wedding, Birthday, Easter and various other holiday theme printed ribbons. Using high-quality materials and exquisite printing technology, vibrant colors and clear patterns, providing perfect solutions for your holiday decorations and gift packaging.</p>
+            
+            <ul class="features-list">
+                <li class="zh-content">多种节日主题可选：圣诞、情人节、婚礼、生日等</li>
+                <li class="en-content">Multiple holiday themes available: Christmas, Valentine's Day, Wedding, Birthday, etc.</li>
+                <li class="zh-content">精美印刷工艺，色彩鲜艳持久</li>
+                <li class="en-content">Exquisite printing technology, vibrant and lasting colors</li>
+                <li class="zh-content">优质涤纶材质，耐用不易褪色</li>
+                <li class="en-content">Premium polyester material, durable and fade-resistant</li>
+                <li class="zh-content">支持定制图案和颜色</li>
+                <li class="en-content">Support custom patterns and colors</li>
+                <li class="zh-content">适合批量定制，交期准时</li>
+                <li class="en-content">Suitable for bulk customization, on-time delivery</li>
+            </ul>
+        </div>
+        
+        <div class="product-specs">
+            <table class="specs-table">
+                <tr>
+                    <th class="zh-content">材质</th>
+                    <th class="en-content">Material</th>
+                    <td>100%涤纶纤维</td>
+                </tr>
+                <tr>
+                    <th class="zh-content">宽度</th>
+                    <th class="en-content">Width</th>
+                    <td>10mm、15mm、25mm、38mm、50mm</td>
+                </tr>
+                <tr>
+                    <th class="zh-content">长度</th>
+                    <th class="en-content">Length</th>
+                    <td>10码/卷、50码/卷、100码/卷</td>
+                </tr>
+                <tr>
+                    <th class="zh-content">节日主题</th>
+                    <th class="en-content">Holiday Themes</th>
+                    <td>圣诞、情人节、婚礼、生日、复活节、万圣节等</td>
+                </tr>
+                <tr>
+                    <th class="zh-content">最小起订量</th>
+                    <th class="en-content">MOQ</th>
+                    <td>50卷</td>
+                </tr>
+                <tr>
+                    <th class="zh-content">交货期</th>
+                    <th class="en-content">Delivery Time</th>
+                    <td>7-15个工作日</td>
+                </tr>
+            </table>
+            
+            <div class="price-section">
+                <h3 class="zh-content">价格参考</h3>
+                <h3 class="en-content">Price Reference</h3>
+                <div class="price">¥15-45/卷</div>
+                <p class="price-note zh-content">具体价格根据数量和主题复杂度而定</p>
+                <p class="price-note en-content">Specific prices based on quantity and theme complexity</p>
+            </div>
+            
+            <form action="https://formsubmit.co/xmmsd@126.com" method="POST" class="inquiry-form">
+                <input type="hidden" name="_subject" value="【厦门思蜜丝织带】节日主题织带询盘">
+                <input type="hidden" name="_next" value="https://smithribbon.com/thank-you.html">
+                <input type="hidden" name="product" value="节日主题印刷织带">
+                
+                <input type="text" name="name" placeholder="zh-content">您的姓名 *</input type="text" required style="width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 10px; font-size: 16px; margin-bottom: 15px;">
+                <input type="email" name="email" placeholder="zh-content">电子邮箱 *</input type="email" required style="width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 10px; font-size: 16px; margin-bottom: 15px;">
+                <input type="text" name="company" placeholder="zh-content">公司名称（选填）</input type="text" style="width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 10px; font-size: 16px; margin-bottom: 15px;">
+                <textarea name="message" placeholder="zh-content">请描述您的需求：节日主题、数量、宽度要求等...</textarea required style="width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 10px; font-size: 16px; min-height: 100px; margin-bottom: 15px;">
+                
+                <button type="submit" class="inquiry-btn">
+                    <span class="zh-content">立即询盘</span>
+                    <span class="en-content">Send Inquiry</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="application-section">
+        <h2 class="zh-content">应用场景</h2>
+        <h2 class="en-content">Application Scenarios</h2>
+        <div class="app-grid">
+            <div class="app-card">
+                <div class="icon">🎄</div>
+                <h4 class="zh-content">圣诞装饰</h4>
+                <h4 class="en-content">Christmas Decoration</h4>
+                <p class="zh-content">圣诞树装饰、礼物包装、节日派对装饰必备</p>
+                <p class="en-content">Christmas tree decoration, gift wrapping, holiday party decoration essential</p>
+            </div>
+            <div class="app-card">
+                <div class="icon">💒</div>
+                <h4 class="zh-content">婚礼装饰</h4>
+                <h4 class="en-content">Wedding Decoration</h4>
+                <p class="zh-content">婚车装饰、桌花绑带、椅背装饰、礼盒包装</p>
+                <p class="en-content">Car decoration, table flower ribbons, chair back decoration, gift box packaging</p>
+            </div>
+            <div class="app-card">
+                <div class="icon">💝</div>
+                <h4 class="zh-content">情人节礼品</h4>
+                <h4 class="en-content">Valentine's Gifts</h4>
+                <p class="zh-content">巧克力礼盒、玫瑰花束、情侣礼品包装</p>
+                <p class="en-content">Chocolate boxes, rose bouquets, couple gift packaging</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="video-section">
+        <h2 class="zh-content">产品视频</h2>
+        <h2 class="en-content">Product Video</h2>
+        <div class="video-container">
+            <div class="video-placeholder">
+                🎬
+                <p class="zh-content">点击播放节日织带产品展示视频</p>
+                <p class="en-content">Click to play holiday ribbon product showcase video</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 class="zh-content">关于思蜜丝</h4>
+                <h4 class="en-content">About Smith Ribbon</h4>
+                <p class="zh-content">厦门思蜜丝织带饰品有限公司，20年专业织带制造商</p>
+                <p class="en-content">Xiamen Smith Ribbon - 20 years professional ribbon manufacturer</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="zh-content">快速链接</h4>
+                <h4 class="en-content">Quick Links</h4>
+                <a href="index.html#home">首页</a><a href="index.html#home" class="en-content">Home</a>
+                <a href="index.html#products">产品中心</a><a href="index.html#products" class="en-content">Products</a>
+                <a href="index.html#news">新闻动态</a><a href="index.html#news" class="en-content">News</a>
+                <a href="index.html#contact">联系我们</a><a href="index.html#contact" class="en-content">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Smith Ribbon. <span class="zh-content">版权所有</span><span class="en-content">All Rights Reserved</span></p>
+        </div>
+    </footer>
+    
+    <script>
+        function switchLang(lang) {
+            document.body.className = lang === 'en' ? 'lang-en' : '';
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
+            });
+            localStorage.setItem('preferredLang', lang);
+        }
+        
+        const savedLang = localStorage.getItem('preferredLang') || 'zh';
+        switchLang(savedLang);
+    </script>
+</body>
+</html>
