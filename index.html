@@ -845,16 +845,16 @@
             <!-- Web3Forms是一个免费的静态网站表单服务，将表单数据转发到您的邮箱 -->
             <!-- 访问 https://web3forms.com 获取免费API密钥 (每月250次提交) -->
             <form class="contact-form" 
-                  action="https://api.web3forms.com/submit" 
+                  action="https://formsubmit.co/xmmsd@126.com" 
                   method="POST"
                   id="contactForm"
                   onsubmit="return handleFormSubmit(event)">
                 <!-- Web3Forms Access Key -->
-                <input type="hidden" name="access_key" value="9d569b88-13ba-4412-9b3d-8fb8b57d6b8a">
+                
                 <!-- Email subject -->
-                <input type="hidden" name="subject" value="【厦门思蜜丝织带】新的询盘请求">
+                <input type="hidden" name="_subject" value="【厦门思蜜丝织带】新的询盘请求">
                 <!-- Redirect after submission -->
-                <input type="hidden" name="redirect" value="https://smithribbon.com/thank-you.html">
+                <input type="hidden" name="_next" value="https://smithribbon.com/thank-you.html">
                 
                 <div class="form-group">
                     <label class="zh-content">您的姓名 *</label>
@@ -892,8 +892,7 @@
                 <div class="form-group">
                     <label class="zh-content">您的留言 *</label>
                     <label class="en-content">Your Message *</label>
-                    <textarea name="message" required 
-                              placeholder="zh-content">请描述您的需求，例如：产品类型、数量、规格要求等...</textarea>
+                    <textarea name="message" required placeholder="请描述您的需求，例如：产品类型、数量、规格要求等..."></textarea>
                 </div>
                 
                 <!-- Anti-spam honeypot (hidden field - leave empty) -->
