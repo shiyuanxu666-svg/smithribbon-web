@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="感谢您的询盘 - 厦门思蜜丝织带">
+    <title>感谢您的询盘 | Smith Ribbon</title>
+    <style>
+        :root { --primary-color: #e91e63; --secondary-color: #9c27b0; --dark-color: #2c3e50; --light-color: #f8f9fa; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .container { background: white; padding: 60px 40px; border-radius: 20px; text-align: center; max-width: 500px; margin: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+        .icon { font-size: 80px; margin-bottom: 20px; }
+        h1 { color: var(--dark-color); margin-bottom: 20px; font-size: 32px; }
+        .zh-content { display: block; }
+        .en-content { display: none; }
+        body.lang-en .zh-content { display: none; }
+        body.lang-en .en-content { display: block; }
+        p { color: #666; font-size: 18px; line-height: 1.8; margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 15px 40px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 16px; transition: all 0.3s; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(233,30,99,0.3); }
+        .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 10px; }
+        .lang-btn { padding: 10px 20px; border: none; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s; background: white; color: var(--dark-color); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .lang-btn.active { background: var(--primary-color); color: white; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('zh')">🇨🇳 中文</button>
+        <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+    </div>
+    <div class="container">
+        <div class="icon">✅</div>
+        <h1 class="zh-content">感谢您的询盘！</h1>
+        <h1 class="en-content">Thank You for Your Inquiry!</h1>
+        <p class="zh-content">我们已经收到您的询盘请求，我们的销售团队将尽快与您联系。<br><br>通常我们会在24小时内回复您。</p>
+        <p class="en-content">We have received your inquiry request. Our sales team will contact you as soon as possible.<br><br>We typically respond within 24 hours.</p>
+        <a href="index.html" class="btn">
+            <span class="zh-content">返回首页</span>
+            <span class="en-content">Back to Home</span>
+        </a>
+    </div>
+    <script>
+        function switchLang(lang) {
+            document.body.className = lang === 'en' ? 'lang-en' : '';
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
+            });
+            localStorage.setItem('preferredLang', lang);
+        }
+        const savedLang = localStorage.getItem('preferredLang') || 'zh';
+        switchLang(savedLang);
+    </script>
+</body>
+</html>
