@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smith Ribbon博客 - 专业织带制造商分享的行业知识、礼品包装技巧、产品选购指南等内容。厦门思蜜丝织带20年专业经验。">
+    <meta name="keywords" content="织带博客,礼品包装,织带选购,蝴蝶结教程,印刷织带,织带行业知识">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://smithribbon.com/blog.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Smith Ribbon博客 - 织带行业专业知识分享">
+    <meta property="og:description" content="厦门思蜜丝织带专业分享织带行业知识、礼品包装技巧、产品选购指南等精彩内容。">
+    <meta property="og:url" content="https://smithribbon.com/blog.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smith Ribbon博客">
+    <meta name="twitter:description" content="织带行业专业知识分享">
+    
+    <title>Smith Ribbon博客 - 织带行业专业知识分享 | 专业织带制造商</title>
+    
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #57c5b6;
+            --dark-color: #002B5B;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --text-light: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        /* Language Switch */
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Content Display */
+        .zh-content { display: block; }
+        .en-content { display: none; }
+        
+        body.lang-zh .zh-content { display: block; }
+        body.lang-zh .en-content { display: none; }
+        body.lang-en .zh-content { display: none; }
+        body.lang-en .en-content { display: block; }
+        
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Blog Hero */
+        .blog-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 120px 20px 80px;
+            text-align: center;
+            color: white;
+        }
+        
+        .blog-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .blog-hero p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .breadcrumb a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Blog Content */
+        .blog-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card-image {
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        
+        .blog-card-content {
+            padding: 25px;
+        }
+        
+        .blog-card-meta {
+            font-size: 13px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .blog-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.4;
+        }
+        
+        .blog-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        
+        .blog-card-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s;
+        }
+        
+        .blog-card-link:hover {
+            gap: 15px;
+        }
+        
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+        
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: center;
+flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .category-btn {
+            padding: 12px 25px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .blog-hero h1 {
+                font-size: 36px;
+            }
+            
+            .blog-hero p {
+                font-size: 16px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('zh')">🇨🇳 中文</button>
+        <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Smith<span>Ribbon</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html#products">产品</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="index.html#news">新闻</a></li>
+                <li><a href="index.html#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="breadcrumb">
+            <a href="index.html">首页</a> / <span class="zh-content">博客</span><span class="en-content">Blog</span>
+        </div>
+        <h1 class="zh-content">Smith Ribbon博客</h1>
+        <h1 class="en-content">Smith Ribbon Blog</h1>
+        <p class="zh-content">分享织带行业专业知识、礼品包装技巧、产品选购指南，让您的包装更加精美专业</p>
+        <p class="en-content">Sharing professional knowledge about ribbon industry, gift packaging tips, and product selection guides</p>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="section-title">
+            <h2 class="zh-content">精选文章</h2>
+            <h2 class="en-content">Featured Articles</h2>
+            <p class="zh-content">深入了解织带应用与选购技巧</p>
+            <p class="en-content">Deep understanding of ribbon applications and selection tips</p>
+        </div>
+        
+        <div class="categories">
+            <button class="category-btn active">
+                <span class="zh-content">全部文章</span>
+                <span class="en-content">All Articles</span>
+            </button>
+            <button class="category-btn">
+                <span class="zh-content">礼品包装</span>
+                <span class="en-content">Gift Packaging</span>
+            </button>
+            <button class="category-btn">
+                <span class="zh-content">产品选购</span>
+                <span class="en-content">Product Selection</span>
+            </button>
+            <button class="category-btn">
+                <span class="zh-content">装饰技巧</span>
+                <span class="en-content">Decoration Tips</span>
+            </button>
+        </div>
+        
+        <div class="blog-grid">
+            <!-- Article 1 -->
+            <article class="blog-card">
+                <div class="blog-card-image">🎁</div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">2026-02-02 | <span class="zh-content">礼品包装</span><span class="en-content">Gift Packaging</span></div>
+                    <h3 class="zh-content">织带在礼品包装中的艺术应用</h3>
+                    <h3 class="en-content">Artistic Application of Ribbons in Gift Packaging</h3>
+                    <p class="zh-content">在送礼文化日益精致的今天，礼品包装已经成为表达心意的重要组成部分。本文将深入探讨织带在礼品包装中的应用技巧。</p>
+                    <p class="en-content">In today's increasingly refined gift-giving culture, gift packaging has become an important part of expressing care.</p>
+                    <a href="news4.html" class="blog-card-link">
+                        <span class="zh-content">阅读更多</span><span class="en-content">Read More</span> →
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Article 2 -->
+            <article class="blog-card">
+                <div class="blog-card-image">🛒</div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">2026-02-02 | <span class="zh-content">产品选购</span><span class="en-content">Product Selection</span></div>
+                    <h3 class="zh-content">如何选择高品质的印刷织带：专业采购指南</h3>
+                    <h3 class="en-content">How to Choose High-Quality Printed Ribbons</h3>
+                    <p class="zh-content">在当今竞争激烈的商业环境中，个性化定制已成为品牌差异化营销的重要手段。本文提供专业的印刷织带选购指南。</p>
+                    <p class="en-content">In today's competitive business environment, personalized customization has become important for brand differentiation.</p>
+                    <a href="news5.html" class="blog-card-link">
+                        <span class="zh-content">阅读更多</span><span class="en-content">Read More</span> →
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Article 3 -->
+            <article class="blog-card">
+                <div class="blog-card-image">💒</div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">2026-02-02 | <span class="zh-content">装饰技巧</span><span class="en-content">Decoration Tips</span></div>
+                    <h3 class="zh-content">蝴蝶结装饰指南：让家居和婚礼更添浪漫</h3>
+                    <h3 class="en-content">Bow Decoration Guide for Home and Weddings</h3>
+                    <p class="zh-content">蝴蝶结作为经典优雅的装饰元素，广泛应用于婚礼和家居装饰中。本文将深入探讨蝴蝶结的应用技巧。</p>
+                    <p class="en-content">As a classic and elegant decorative element, bows are widely used in wedding and home decoration.</p>
+                    <a href="news6.html" class="blog-card-link">
+                        <span class="zh-content">阅读更多</span><span class="en-content">Read More</span> →
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="zh-content">需要定制织带产品？</h2>
+        <h2 class="en-content">Need Custom Ribbon Products?</h2>
+        <p class="zh-content">Smith Ribbon专业生产各类高品质织带，支持Logo定制</p>
+        <p class="en-content">Smith Ribbon specializes in manufacturing various high-quality ribbons with custom logo support</p>
+        <a href="index.html#contact" class="cta-btn">
+            <span class="zh-content">立即咨询</span>
+            <span class="en-content">Get Quote Now</span>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 class="zh-content">关于思蜜丝</h4>
+                <h4 class="en-content">About Smith Ribbon</h4>
+                <p class="zh-content">厦门思蜜丝织带饰品有限公司，20年专业织带制造商</p>
+                <p class="en-content">Xiamen Smith Ribbon - 20 years professional ribbon manufacturer</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="zh-content">快速链接</h4>
+                <h4 class="en-content">Quick Links</h4>
+                <a href="index.html">首页 Home</a>
+                <a href="index.html#products">产品 Products</a>
+                <a href="blog.html">博客 Blog</a>
+                <a href="index.html#news">新闻 News</a>
+                <a href="index.html#contact">联系我们 Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4 class="zh-content">产品分类</h4>
+                <h4 class="en-content">Product Categories</h4>
+                <a href="index.html#products">印刷织带 Printed Ribbons</a>
+                <a href="index.html#products">缎带系列 Satin Ribbons</a>
+                <a href="index.html#products">蝴蝶结 Bows</a>
+                <a href="index.html#products">装饰织带 Decorative Ribbons</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Smith Ribbon. <span class="zh-content">版权所有</span><span class="en-content">All Rights Reserved</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Language Switch Function
+        function switchLang(lang) {
+            document.body.className = 'lang-' + lang;
+            localStorage.setItem('lang', lang);
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        
+        // Load saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('lang') || 'zh';
+            document.body.className = 'lang-' + savedLang;
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if ((savedLang === 'zh' && btn.textContent.includes('中文')) || 
+                    (savedLang === 'en' && btn.textContent.includes('English'))) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+        
+        // Category filter
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
