@@ -149,6 +149,133 @@
             height: 3px;
             background: var(--primary-color);
         }
+        
+        /* Company Introduction */
+        .company-intro {
+            position: relative;
+            padding: 0;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .company-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .company-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 42, 91, 0.75);
+            z-index: 2;
+        }
+        
+        .intro-container {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+        
+        .intro-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .intro-content h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+        }
+        
+        .intro-content p {
+            color: rgba(255,255,255,0.95);
+            line-height: 1.9;
+            font-size: 17px;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        /* Company stats */
+        .company-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #57c5b6;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            margin-top: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .company-intro {
+                min-height: auto;
+            }
+            
+            .intro-content h2 {
+                font-size: 26px;
+            }
+            
+            .intro-content p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+            
+            .company-stats {
+                gap: 30px;
+                margin-top: 25px;
+                padding-top: 20px;
+            }
+            
+            .stat-number {
+                font-size: 24px;
+            }
+            
+            .stat-label {
+                font-size: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .company-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+            .stat-item {
+                flex: 0 0 45%;
+            }
+        }
+        }
         .hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             min-height: 100vh;
@@ -747,6 +874,42 @@
             </div>
         </nav>
     </header>
+
+    <!-- Company Introduction Banner -->
+    <section class="company-intro">
+        <img src="images/company-banner.jpg" alt="Smith Ribbon Company Banner" class="company-banner">
+        <div class="company-overlay"></div>
+        <div class="intro-container">
+            <div class="intro-content">
+                <h2 class="zh-content">厦门思蜜丝织带饰品有限公司</h2>
+                <h2 class="en-content">Xiamen Smith Ribbon&Bow Co.,Ltd</h2>
+                <p class="zh-content">坐落于厦门市同安区美溪道同安工业园16号楼，是一家集设计、生产、销售于一体的专业织带制造商，专注礼品包装、圣诞装饰、家居配饰领域深耕20年。工厂占地15000㎡，拥有200名专业员工，通过SEDEX验厂认证。</p>
+                <p class="zh-content">我们专注生产各类丝带、节庆装饰蝴蝶结及配套饰件，产品涵盖辅料小花饰、香水瓶花饰、包装结等全品类，支持丝带批量定制、LOGO印刷与打样，承接OEM/ODM定制订单。凭借专业生产实力与贴心服务，与宁波贸易公司、深圳跨境电商建立深度合作，坚持每周上新、严控交期，为海内外客户提供高品质产品与定制解决方案。</p>
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label zh-content">年行业经验</div>
+                        <div class="stat-label en-content">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15000</div>
+                        <div class="stat-label zh-content">㎡工厂面积</div>
+                        <div class="stat-label en-content">㎡ Factory Area</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label zh-content">专业员工</div>
+                        <div class="stat-label en-content">Professional Staff</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label zh-content">服务客户</div>
+                        <div class="stat-label en-content">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
