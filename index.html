@@ -115,10 +115,21 @@
             color: var(--primary-color);
             text-decoration: none;
             margin-top: 38px; /* 下移1cm */
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
         }
         
         .logo span {
             color: var(--secondary-color);
+        }
+        
+        .company-name-full {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--dark-color);
+            margin-top: 4px;
+            letter-spacing: 0.5px;
         }
         
         .nav-links {
@@ -860,7 +871,13 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">Smith<span>Ribbon</span></a>
+            <a href="#" class="logo">
+                Smith<span>Ribbon</span>
+                <div class="company-name-full">
+                    <span class="zh-content">厦门思蜜丝织带饰品有限公司</span>
+                    <span class="en-content">Xiamen Smith Ribbon&Bow Co.,Ltd</span>
+                </div>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home" class="zh-content">首页</a><a href="#home" class="en-content">Home</a></li>
                 <li><a href="#features" class="zh-content">优势</a><a href="#features" class="en-content">Features</a></li>
