@@ -98,15 +98,16 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            padding: 15px 0;
         }
         
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
         }
         
         .logo {
@@ -171,6 +172,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            scroll-margin-top: 140px;
         }
         
         .company-banner {
@@ -251,6 +253,7 @@
         @media (max-width: 768px) {
             .company-intro {
                 min-height: auto;
+                scroll-margin-top: 120px;
             }
             
             .intro-content h2 {
