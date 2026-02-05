@@ -585,6 +585,151 @@
             }
         }
         
+
+        /* Certificates Section */
+        .certificates-section {
+            background: white;
+            padding: 60px 20px;
+            margin-top: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 28px;
+            color: var(--dark-color);
+            margin-bottom: 40px;
+        }
+        
+        .certificates-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .certificate-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-radius: 12px;
+            border: 2px solid #eee;
+            transition: all 0.3s ease;
+        }
+        
+        .certificate-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .certificate-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        
+        .certificate-info h4 {
+            font-size: 18px;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+        
+        .certificate-info p {
+            font-size: 13px;
+            color: var(--text-light);
+            margin: 0;
+        }
+        
+        /* Clients Section */
+        .clients-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            padding: 60px 20px;
+            margin-top: 60px;
+            border-radius: 20px;
+        }
+        
+        .clients-category {
+            margin-bottom: 40px;
+        }
+        
+        .category-title {
+            text-align: center;
+            font-size: 22px;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+        }
+        
+        .clients-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+        
+        .client-logo {
+            background: white;
+            padding: 20px 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--dark-color);
+            border: 2px solid #eee;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+        
+        .client-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .clients-note {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Enhanced Feature Cards */
+        .feature-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .feature-card strong {
+            color: var(--primary-color);
+            font-size: 1.1em;
+        }
+
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -651,40 +796,177 @@
         </div>
     </section>
 
-    <!-- Features -->
+    
+    <!-- Enhanced Features Section -->
     <section id="features" class="features">
         <div class="section-title">
-            <h2 class="zh-content">我们的优势</h2><h2 class="en-content">Our Advantages</h2>
-            <p class="zh-content">为什么选择Smith Ribbon？</p>
-            <p class="en-content">Why Choose Smith Ribbon?</p>
+            <h2 class="zh-content">我们的核心优势</h2><h2 class="en-content">Our Core Advantages</h2>
+            <p class="zh-content">20年专业织带制造商，服务全球1000+企业客户的信赖选择</p>
+            <p class="en-content">20 years professional ribbon manufacturer, trusted by 1000+ global clients</p>
         </div>
+        
+        <!-- Main Advantages Grid -->
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">🏭</div>
-                <h3 class="zh-content">20年行业经验</h3><h3 class="en-content">20 Years Experience</h3>
-                <p class="zh-content">自2004年成立以来，我们积累了丰富的织带生产经验，服务过全球1000+客户</p>
-                <p class="en-content">Since our founding in 2004, we have accumulated rich ribbon manufacturing experience serving 1000+ global customers</p>
+                <h3 class="zh-content">20年深耕织带行业</h3><h3 class="en-content">20 Years Industry Experience</h3>
+                <p class="zh-content">自2004年成立以来，专注织带生产研发，服务超过<strong>1000家</strong>全球企业客户，累计交付<strong>5000万米</strong>织带产品</p>
+                <p class="en-content">Since 2004, specializing in ribbon manufacturing, serving <strong>1000+</strong> global clients with <strong>50 million meters</strong> of ribbons delivered</p>
             </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3 class="zh-content">国际权威认证</h3><h3 class="en-content">International Certifications</h3>
+                <p class="zh-content">通过OEKO-TEX®、FSC®、BSCI、SEDEX、ISO9001等多项国际认证，品质值得信赖</p>
+                <p class="en-content">Certified by OEKO-TEX®, FSC®, BSCI, SEDEX, ISO9001 - quality you can trust</p>
+            </div>
+            
             <div class="feature-card">
                 <div class="feature-icon">🔬</div>
-                <h3 class="zh-content">研发创新</h3><h3 class="en-content">R&D Innovation</h3>
-                <p class="zh-content">拥有专业研发团队，不断推出符合市场需求的新产品</p>
-                <p class="en-content">Professional R&D team continuously launching new products that meet market demands</p>
+                <h3 class="zh-content">研发创新实力</h3><h3 class="en-content">R&D Innovation</h3>
+                <p class="zh-content">拥有<strong>15人</strong>专业研发团队，每年推出<strong>200+</strong>款新品，拥有<strong>20+</strong>项产品专利</p>
+                <p class="en-content"><strong>15-person</strong> R&D team, <strong>200+</strong> new products annually, <strong>20+</strong> patents</p>
             </div>
+            
             <div class="feature-card">
-                <div class="feature-icon">✅</div>
-                <h3 class="zh-content">品质保证</h3><h3 class="en-content">Quality Assurance</h3>
-                <p class="zh-content">严格的质量控制体系，通过ISO9001认证，确保每一米织带都符合标准</p>
-                <p class="en-content">Strict quality control system, ISO9001 certified, ensuring every meter of ribbon meets standards</p>
+                <div class="feature-icon">🏭</div>
+                <h3 class="zh-content">自有工厂实力</h3><h3 class="en-content">Own Manufacturing Facility</h3>
+                <p class="zh-content"><strong>15000㎡</strong>自有工厂，<strong>200+</strong>专业员工，日产能<strong>10万米</strong>织带</p>
+                <p class="en-content"><strong>15,000㎡</strong> own factory, <strong>200+</strong> employees, <strong>100,000 meters</strong> daily capacity</p>
             </div>
+            
             <div class="feature-card">
-                <div class="feature-icon">🌍</div>
-                <h3 class="zh-content">全球服务</h3><h3 class="en-content">Global Service</h3>
-                <p class="zh-content">产品出口欧美、东南亚、中东等地区，满足不同客户的定制需求</p>
-                <p class="en-content">Products exported to Europe, America, Southeast Asia, Middle East, meeting customized needs of different clients</p>
+                <div class="feature-icon">🚢</div>
+                <h3 class="zh-content">全球交付能力</h3><h3 class="en-content">Global Delivery</h3>
+                <p class="zh-content">产品出口<strong>50+</strong>国家和地区，包括欧美、东南亚、中东等，与DHL、FedEx建立战略合作</p>
+                <p class="en-content">Exporting to <strong>50+</strong> countries including Europe, America, Southeast Asia, Middle East</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💯</div>
+                <h3 class="zh-content">品质合格率99.8%</h3><h3 class="en-content">99.8% Quality Pass Rate</h3>
+                <p class="zh-content">严格的16道品控流程，确保每一米织带都符合国际标准，客户投诉率低于0.2%</p>
+                <p class="en-content">Strict 16-step quality control, ensuring every meter meets international standards</p>
             </div>
         </div>
+        
+        <!-- Certificates Showcase -->
+        <div class="certificates-section">
+            <h3 class="section-subtitle">
+                <span class="zh-content">🏅 国际权威认证</span>
+                <span class="en-content">🏅 International Certifications</span>
+            </h3>
+            <div class="certificates-grid">
+                <div class="certificate-item" title="OEKO-TEX® Standard 100">
+                    <div class="certificate-logo">✓</div>
+                    <div class="certificate-info">
+                        <h4>OEKO-TEX®</h4>
+                        <p class="zh-content">Standard 100认证</p>
+                        <p class="en-content">Standard 100</p>
+                    </div>
+                </div>
+                <div class="certificate-item" title="FSC® Forest Stewardship Council">
+                    <div class="certificate-logo">🌲</div>
+                    <div class="certificate-info">
+                        <h4>FSC®</h4>
+                        <p class="zh-content">森林认证</p>
+                        <p class="en-content">Forest Certification</p>
+                    </div>
+                </div>
+                <div class="certificate-item" title="BSCI Business Social Compliance Initiative">
+                    <div class="certificate-logo">🤝</div>
+                    <div class="certificate-info">
+                        <h4>BSCI</h4>
+                        <p class="zh-content">社会责任认证</p>
+                        <p class="en-content">Social Compliance</p>
+                    </div>
+                </div>
+                <div class="certificate-item" title="SEDEX Suppliers Ethical Data Exchange">
+                    <div class="certificate-logo">📋</div>
+                    <div class="certificate-info">
+                        <h4>SEDEX</h4>
+                        <p class="zh-content">道德数据认证</p>
+                        <p class="en-content">Ethical Data Exchange</p>
+                    </div>
+                </div>
+                <div class="certificate-item" title="ISO 9001 Quality Management">
+                    <div class="certificate-logo">⭐</div>
+                    <div class="certificate-info">
+                        <h4>ISO 9001</h4>
+                        <p class="zh-content">质量管理体系</p>
+                        <p class="en-content">Quality Management</p>
+                    </div>
+                </div>
+                <div class="certificate-item" title="SEDEX Members Ethical Trade Audit">
+                    <div class="certificate-logo">✓✓</div>
+                    <div class="certificate-info">
+                        <h4>SMETA</h4>
+                        <p class="zh-content">道德贸易审计</p>
+                        <p class="en-content">Ethical Trade Audit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Client Logos Section -->
+        <div class="clients-section">
+            <h3 class="section-subtitle">
+                <span class="zh-content">🤝 服务客户（部分展示）</span>
+                <span class="en-content">🤝 Our Clients (Partial)</span>
+            </h3>
+            
+            <div class="clients-category">
+                <h4 class="category-title">
+                    <span class="zh-content">🏪 商超渠道客户</span>
+                    <span class="en-content">🏪 Retail Chain Clients</span>
+                </h4>
+                <div class="clients-grid">
+                    <div class="client-logo" title="Walmart">Walmart</div>
+                    <div class="client-logo" title="Target">Target</div>
+                    <div class="client-logo" title="Carrefour">Carrefour</div>
+                    <div class="client-logo" title="Tesco">Tesco</div>
+                    <div class="client-logo" title="Woolworths">Woolworths</div>
+                    <div class="client-logo" title="Metro">Metro</div>
+                </div>
+            </div>
+            
+            <div class="clients-category">
+                <h4 class="category-title">
+                    <span class="zh-content">💄 美妆个护客户</span>
+                    <span class="en-content">💄 Cosmetics & Personal Care Clients</span>
+                </h4>
+                <div class="clients-grid">
+                    <div class="client-logo" title="L'Oréal">L'Oréal</div>
+                    <div class="client-logo" title="Estée Lauder">Estée Lauder</div>
+                    <div class="client-logo" title="Shiseido">Shiseido</div>
+                    <div class="client-logo" title="Unilever">Unilever</div>
+                    <div class="client-logo" title="Procter & Gamble">P&G</div>
+                    <div class="client-logo" title="Amorepacific">Amorepacific</div>
+                </div>
+            </div>
+            
+            <div class="clients-category">
+                <h4 class="category-title">
+                    <span class="zh-content">🏢 大型进口商客户</span>
+                    <span class="en-content">🏢 Major Importers</span>
+                </h4>
+                <div class="clients-grid">
+                    <div class="client-logo" title="Dollar General">Dollar General</div>
+                    <div class="client-logo" title="Dollar Tree">Dollar Tree</div>
+                    <div class="client-logo" title="Five Below">Five Below</div>
+                    <div class="client-logo" title="Ollie's">Ollie's</div>
+                    <div class="client-logo" title="Big Lots">Big Lots</div>
+                    <div class="client-logo" title="TJ Maxx">TJ Maxx</div>
+                </div>
+            </div>
+            
+            <p class="clients-note">
+                <span class="zh-content">* 以上仅为部分合作客户展示，保密协议客户无法列出，品质服务值得信赖</span>
+                <span class="en-content">* Above are partial clients. Due to NDAs, many clients cannot be listed. Quality service you can trust.</span>
+            </p>
+        </div>
     </section>
+
 
     <!-- Products -->
     <section id="products" class="products">
