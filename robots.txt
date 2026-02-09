@@ -1,0 +1,10 @@
+# robots.txt for Smith Ribbon
+User-agent: *
+Allow: /
+Sitemap: https://smithribbon.com/sitemap.xml
+Crawl-delay: 10
+
+# Disallow admin/private directories
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
