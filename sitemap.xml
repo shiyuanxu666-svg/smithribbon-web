@@ -193,6 +193,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://smithribbon.com/news25.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://smithribbon.com/product-black-organza-bow.html</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
