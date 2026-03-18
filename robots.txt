@@ -4,6 +4,11 @@ Allow: /
 Sitemap: https://smithribbon.com/sitemap.xml
 Crawl-delay: 10
 
+# 百度优化规则
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
 # Disallow admin/private directories
 Disallow: /cgi-bin/
 Disallow: /tmp/
