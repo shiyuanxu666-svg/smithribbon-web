@@ -1,126 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://smithribbon.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/en-index.html</loc><priority>0.9</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/blog.html</loc><priority>0.8</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-printed-ribbons.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-satin-ribbons.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-jacquard-ribbons.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-organza-ribbon.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-polyester-ribbons.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-hair-bow.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-printed-logo-ribbon.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-printed-satin-ribbon.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-custom-logo-ribbon.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-wholesale-christmas-ribbon.html</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-pre-tied-bow.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-black-organza-bow.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-curly-ribbon.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-easter-pull-bow.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-eco-friendly-ribbon.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-elastic-bands.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-glitter-velvet-ribbon.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-metallic-velvet-ribbon.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-nylon-ribbons.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-poly-pull-bow.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-poly-star-bow.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-printed-birthday-ribbon.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-printed-christmas-glitter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-printed-grossgrain-ribbon.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-printed-holiday-ribbon.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-satin-rosette-bow.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/product-velvet-bow.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/article-choosing-printed-ribbons.html</loc><priority>0.7</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/article-ribbon-gift-wrapping.html</loc><priority>0.7</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/article-ribbon-bow-decoration.html</loc><priority>0.7</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news42.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news41.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news40.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news39.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news38.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news37.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news36.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news35.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news34.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news33.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news32.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news31.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news30.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news29.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news28.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news27.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news26.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news25.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news24.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news23.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news22.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news21.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news20.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news19.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news18.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news17.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news16.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news15.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news14.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news13.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news12.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news11.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news10.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news9.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news8.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news7.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news6.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news5.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news4.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news3.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news2.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news1.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/keywords.html</loc><priority>0.4</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/sitemap.html</loc><priority>0.3</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/blog-ribbon-trends-2026.html</loc><priority>0.8</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/blog-wholesale-satin-ribbons-guide.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/blog-wholesale-christmas-ribbon-guide.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/blog-choosing-ribbon-manufacturer-guide.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/blog-easter-spring-ribbon-trends-2026.html</loc><priority>0.8</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/blog-eco-friendly-ribbon-guide-2026.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2026-04-01</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- Homepage -->
   <url>
-    <loc>https://smithribbon.com/blog-how-to-choose-ribbon-supplier.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://smithribbon.com/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
+  <!-- Product Pages -->
   <url>
-    <loc>https://smithribbon.com/en-product-jacquard-ribbon.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://smithribbon.com/en-product-printed-ribbons.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smithribbon.com/en-product-nylon-ribbon.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://smithribbon.com/en-product-satin-ribbons.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/en-product-jacquard-ribbons.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://smithribbon.com/en-product-polyester-ribbon.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/en-product-nylon-ribbon.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/en-product-bows.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://smithribbon.com/en-product-holiday-printed-ribbon.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smithribbon.com/en-product-custom-printed-ribbon.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://smithribbon.com/en-product-velvet-ribbons.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-  <url><loc>https://smithribbon.com/news43.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-01</lastmod></url>
-  <url><loc>https://smithribbon.com/news44.html</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-02</lastmod></url>
+
+  <!-- Blog / Articles -->
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-trends-2026.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog-wholesale-satin-ribbons-guide.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog-wholesale-christmas-ribbon-guide.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog-eco-friendly-ribbon-guide-2026.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog-easter-spring-ribbon-trends-2026.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog-choosing-ribbon-manufacturer-guide.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog-how-to-choose-ribbon-supplier.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Info Pages -->
+  <url>
+    <loc>https://smithribbon.com/blog.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
