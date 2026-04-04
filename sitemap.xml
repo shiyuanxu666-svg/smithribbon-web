@@ -375,4 +375,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Gift Wrapping Paper Product Page -->
+  <url>
+    <loc>https://smithribbon.com/en-product-wrapping-paper.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
