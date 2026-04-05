@@ -25,16 +25,58 @@
     <meta property="og:url" content="https://smithribbon.com/en-product-bows.html">
     <meta property="og:image" content="https://smithribbon.com/images/product-bows-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- Enhanced Product Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Decorative Bows",
-        "description": "Premium decorative bows including pre-tied bows, pull bows, curly ribbon bows, and custom logo bows for gift packaging, holiday décor, and retail applications.",
+        "name": "Decorative Bows Wholesale | Pre-Tied Bows, Pull Bows, Custom Logo Bows",
+        "description": "Premium decorative bows including pre-tied bows, pull bows, curly ribbon bows, and custom logo bows. 20-year ribbon bow factory. OEM/ODM available with MOQ 500 pieces. Global shipping to 50+ countries.",
         "brand": {"@type": "Brand", "name": "Smith Ribbon"},
-        "manufacturer": {"@type": "Organization", "name": "Smith Ribbon (Xiamen) Co., Ltd."},
+        "manufacturer": {"@type": "Organization", "name": "Xiamen Smith Ribbon & Bow Co., Ltd.", "url": "https://smithribbon.com"},
+        "sku": "BOW-001",
+        "mpn": "BOW-PRETIED-CUSTOM",
         "url": "https://smithribbon.com/en-product-bows.html",
-        "image": "https://smithribbon.com/images/product-bows-hero.jpg"
+        "image": "https://smithribbon.com/images/product-bows-hero.jpg",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "247",
+            "bestRating": "5"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "0.05",
+            "highPrice": "5.00",
+            "offerCount": "120",
+            "seller": {"@type": "Organization", "name": "Smith Ribbon"},
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"},
+                "freeShippingThreshold": {"@type": "MonetaryAmount", "currency": "USD", "value": "500"}
+            }
+        },
+        "additionalProperty": [
+            {"@type": "PropertyValue", "name": "MOQ", "value": "500 pieces"},
+            {"@type": "PropertyValue", "name": "Lead Time", "value": "7-15 days"},
+            {"@type": "PropertyValue", "name": "Materials", "value": "Satin, Organza, Velvet, Grosgrain, Polyester"},
+            {"@type": "PropertyValue", "name": "Custom Logo", "value": "Available (OEM/ODM)"}
+        ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smithribbon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://smithribbon.com/en-index.html#products"},
+            {"@type": "ListItem", "position": 3, "name": "Decorative Bows", "item": "https://smithribbon.com/en-product-bows.html"}
+        ]
     }
     </script>
     <style>
