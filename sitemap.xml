@@ -245,6 +245,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://smithribbon.com/en-blog.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://smithribbon.com/blog-ribbon-trends-2026.html</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
