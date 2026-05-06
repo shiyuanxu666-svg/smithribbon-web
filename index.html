@@ -1110,7 +1110,7 @@
     </section>
         <div class="intro-container">
             <div class="intro-content">
-                <h1 id="main-title">专业织带与节庆装饰蝴蝶结OEM制造商 — 厦门思蜜丝织带饰品有限公司</h1>
+                <h1 id="main-title">专业织带与节庆装饰蝴蝶结OEM制造商 | 源头工厂直销 — Smith Ribbon</h1>
                 <p class="zh-content">坐落于厦门市同安区美溪道同安工业园16号楼，是一家集设计、生产、销售于一体的专业织带制造商，专注礼品包装、圣诞装饰、家居配饰领域深耕20年。工厂占地15000㎡，拥有200名专业员工，通过SEDEX验厂认证。</p>
                 <p class="zh-content">我们专注生产各类丝带、节庆装饰蝴蝶结及配套饰件，产品涵盖辅料小花饰、香水瓶花饰、包装结等全品类，支持丝带批量定制、LOGO印刷与打样，承接OEM/ODM定制订单。凭借专业生产实力与贴心服务，与宁波贸易公司、深圳跨境电商建立深度合作，坚持每周上新、严控交期，为海内外客户提供高品质产品与定制解决方案。</p>
                 <div class="company-stats">
@@ -2046,7 +2046,7 @@
             const h1 = document.getElementById('main-title');
             if (h1) {
                 h1.textContent = lang === 'zh'
-                    ? '厦门思蜜丝织带饰品有限公司'
+                    ? '专业织带与节庆装饰蝴蝶结OEM制造商 | 源头工厂直销 — Smith Ribbon'
                     : 'Professional Ribbon & Bow Manufacturer | Wholesale Ribbons Factory China — Smith Ribbon';
             }
         }
@@ -2058,8 +2058,10 @@
             
             // Sync H1 on load
             const h1 = document.getElementById('main-title');
-            if (h1 && savedLang === 'en') {
-                h1.textContent = 'Professional Ribbon & Bow Manufacturer | Wholesale Ribbons Factory China — Smith Ribbon';
+            if (h1) {
+                h1.textContent = savedLang === 'zh'
+                    ? '专业织带与节庆装饰蝴蝶结OEM制造商 | 源头工厂直销 — Smith Ribbon'
+                    : 'Professional Ribbon & Bow Manufacturer | Wholesale Ribbons Factory China — Smith Ribbon';
             }
             
             // Update button states
