@@ -1,207 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S007NYFQ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3S007NYFQ5');
+    </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How Ribbon Artwork Pre-Press Works — Color Separation, Print-Ready Files, and Proof Approval for Brand Buyers | Smith Ribbon</title>
-<meta name="description" content="A practical guide to ribbon OEM artwork pre-press: color separation for flexo/screen printing, print-ready file requirements, Pantone-to-process conversion, proof approval workflow, and common artwork errors that cause production delays and cost overruns.">
-<meta name="keywords" content="ribbon artwork pre-press, ribbon print-ready files, Pantone color matching ribbon, ribbon screen printing, ribbon flexo printing, ribbon OEM artwork setup, ribbon color separation, ribbon proof approval, ribbon artwork checklist, ribbon print production guide">
+<title>Ribbon Artwork Pre-Press Setup: Bleed, Safe Zone & File Format Checklist for Brand Buyers | Smith Ribbon</title>
+<meta name="description" content="The step-by-step artwork setup checklist every brand buyer needs before sending ribbon designs to production. Covers bleed, safe zones, file formats, colour modes, and common pre-press mistakes that cause rejection.">
+<meta name="keywords" content="ribbon artwork setup, pre-press ribbon, ribbon file format, AI ribbon artwork, bleed ribbon printing, Pantone spot colour ribbon, ribbon design CMYK, ribbon print production checklist, brand ribbon artwork guide">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://smithribbon.com/blog-ribbon-artwork-pre-press-workflow-guide-2026.html">
-<meta property="og:title" content="How Ribbon Artwork Pre-Press Works — Color Separation, Print-Ready Files, and Proof Approval">
-<meta property="og:description" content="Color separation, file formats, and proof approval for ribbon OEM printed artwork. A technical guide for brand buyers who want to avoid costly reprints.">
+<meta property="og:title" content="Ribbon Artwork Pre-Press Setup: Bleed, Safe Zone & File Format Checklist">
+<meta property="og:description" content="The step-by-step artwork setup checklist every brand buyer needs before sending ribbon designs to production. Covers bleed, safe zones, file formats and common mistakes.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://smithribbon.com/blog-ribbon-artwork-pre-press-workflow-guide-2026.html">
 <meta property="og:image" content="https://smithribbon.com/banner.png">
 <meta property="og:site_name" content="Smith Ribbon">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How Ribbon Artwork Pre-Press Works — A Brand Buyer's Guide">
-<meta name="twitter:description" content="Ribbon print artwork guide: color separation, Pantone matching, print-ready files, and proof approval workflow.">
+<meta name="twitter:title" content="Ribbon Artwork Pre-Press Setup: Bleed, Safe Zone & File Format Checklist">
+<meta name="twitter:description" content="The step-by-step artwork setup checklist every brand buyer needs before sending ribbon designs to production.">
 <meta name="twitter:image" content="https://smithribbon.com/banner.png">
+<meta name="baidu-site-verification" content="codeva-GNoeUcsIDc">
+<meta name="google-site-verification" content="BYcK-w4SYVEjTT9PHjXBP_KeIBrGtAr9rSXwwJrlNJo">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "How Ribbon Artwork Pre-Press Works — Color Separation, Print-Ready Files, and Proof Approval for Brand Buyers",
-  "description": "A practical guide to ribbon OEM artwork pre-press: color separation for flexo/screen printing, print-ready file requirements, Pantone-to-process conversion, proof approval workflow, and common artwork errors that cause production delays and cost overruns.",
-  "author": { "@type": "Organization", "name": "Smith Ribbon", "url": "https://smithribbon.com" },
-  "publisher": { "@type": "Organization", "name": "Smith Ribbon", "logo": { "@type": "ImageObject", "url": "https://smithribbon.com/banner.png" } },
-  "datePublished": "2026-05-21",
-  "dateModified": "2026-05-21",
+  "headline": "Ribbon Artwork Pre-Press Setup: Bleed, Safe Zone & File Format Checklist for Brand Buyers",
+  "description": "The step-by-step artwork setup checklist every brand buyer needs before sending ribbon designs to production. Covers bleed, safe zones, file formats, colour modes, and common pre-press mistakes.",
+  "author": {
+    "@type": "Organization",
+    "name": "Smith Ribbon",
+    "url": "https://smithribbon.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Smith Ribbon",
+    "logo": { "@type": "ImageObject", "url": "https://smithribbon.com/banner.png" }
+  },
+  "datePublished": "2026-05-23",
+  "dateModified": "2026-05-23",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://smithribbon.com/blog-ribbon-artwork-pre-press-workflow-guide-2026.html" },
-  "wordCount": 1380,
-  "articleSection": "OEM Production Guide",
-  "keywords": ["ribbon artwork pre-press", "ribbon print-ready files", "Pantone color matching ribbon", "ribbon screen printing", "ribbon flexo printing", "ribbon OEM artwork setup", "ribbon color separation"]
+  "image": { "@type": "ImageObject", "url": "https://smithribbon.com/banner.png" },
+  "articleSection": "Brand Design & Production",
+  "keywords": ["ribbon artwork setup", "pre-press ribbon", "ribbon file format", "bleed ribbon printing", "Pantone spot colour ribbon"]
 }
 </script>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',Arial,sans-serif;background:#f8f9fa;color:#222;line-height:1.7}
-.header{background:#1a3c34;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.header .logo{color:#f5c842;font-size:22px;font-weight:700;text-decoration:none;padding:14px 0}
-.header nav a{color:#fff;text-decoration:none;padding:0 14px;font-size:14px;opacity:.9}
-.header nav a:hover{opacity:1}
-.nav-wrap{display:flex;align-items:center}
-.container{max-width:900px;margin:0 auto;padding:20px 16px}
-.article-header{border-bottom:2px solid #e8e0c8;padding-bottom:20px;margin-bottom:32px}
-.article-category{display:inline-block;background:#1a3c34;color:#f5c842;font-size:12px;font-weight:600;padding:3px 10px;border-radius:3px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
-.article-title{font-size:30px;font-weight:700;color:#1a3c34;line-height:1.25;margin-bottom:14px}
-.article-meta{font-size:13px;color:#666}
-.article-meta span{margin-right:16px}
-.article-content h2{font-size:20px;color:#1a3c34;margin:30px 0 14px;border-left:4px solid #f5c842;padding-left:12px}
-.article-content h3{font-size:16px;color:#333;margin:22px 0 10px}
-.article-content p{font-size:15px;margin-bottom:14px;color:#333}
-.article-content ul,.article-content ol{margin:0 0 16px 22px}
-.article-content li{margin-bottom:8px;font-size:15px;color:#333}
-.article-content strong{color:#1a3c34}
-.article-content .highlight{background:#fdf6e3;border:1px solid #f0d070;padding:14px 18px;border-radius:6px;margin:20px 0;font-size:14px;color:#555}
-.article-content .tip{background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0;font-size:14px;color:#1b5e20}
-.article-content .warning{background:#fff3e0;border-left:4px solid #e65100;padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0;font-size:14px;color:#bf360c}
-</style>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.7; color: #222; background: #f8f9fa; }
+        .header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5em; font-weight: bold; color: #d4367c; text-decoration: none; }
+        .logo span { color: #333; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav a { text-decoration: none; color: #555; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #d4367c; }
+        .lang-switch { font-size: 0.85em; color: #888; text-decoration: none; padding: 5px 12px; border: 1px solid #ddd; border-radius: 20px; }
+        .lang-switch:hover { border-color: #d4367c; color: #d4367c; }
+        .hero { background: linear-gradient(135deg, #4a1a7a, #6c3483); color: #fff; padding: 70px 20px 50px; }
+        .hero-inner { max-width: 860px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85em; opacity: 0.7; margin-bottom: 15px; }
+        .breadcrumb a { color: #fff; text-decoration: none; }
+        .hero h1 { font-size: 2em; line-height: 1.3; margin-bottom: 15px; }
+        .hero-meta { font-size: 0.9em; opacity: 0.8; }
+        .container { max-width: 860px; margin: 0 auto; padding: 40px 20px 60px; }
+        .article-meta { display: flex; gap: 20px; margin-bottom: 35px; padding-bottom: 20px; border-bottom: 1px solid #eee; flex-wrap: wrap; }
+        .article-meta-item { font-size: 0.88em; color: #777; }
+        .article-meta-item strong { color: #333; }
+        h2 { font-size: 1.5em; color: #2c3e50; margin: 40px 0 15px; padding-top: 10px; }
+        h3 { font-size: 1.2em; color: #4a1a7a; margin: 25px 0 10px; }
+        p { margin-bottom: 18px; color: #333; }
+        ul, ol { margin: 0 0 20px 25px; }
+        li { margin-bottom: 10px; color: #333; }
+        .step-box { background: #f7f2ff; border-left: 4px solid #6c3483; padding: 22px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+        .step-box h4 { color: #4a1a7a; margin-bottom: 10px; font-size: 1.05em; }
+        .checklist { background: #f0fdf4; border-left: 4px solid #27ae60; padding: 20px 22px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .checklist h4 { color: #1a7a3a; margin-bottom: 10px; }
+        .checklist li { list-style: none; margin-left: 0; padding-left: 28px; position: relative; }
+        .checklist li::before { content: "✅"; position: absolute; left: 0; }
+        .warning-box { background: #fff8e6; border-left: 4px solid #e67e22; padding: 18px 22px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+        .warning-box strong { color: #d35400; }
+        .file-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.92em; }
+        .file-table th { background: #4a1a7a; color: #fff; padding: 10px 14px; text-align: left; }
+        .file-table td { padding: 9px 14px; border-bottom: 1px solid #e8e8e8; }
+        .file-table tr:nth-child(even) { background: #f9f5ff; }
+        .color-box { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .color-card { padding: 15px; border-radius: 8px; text-align: center; font-weight: 600; font-size: 0.9em; }
+        .color-cmyk { background: #e8f4fd; color: #154360; }
+        .color-pantone { background: #fde8d8; color: #7d3c00; }
+        .diagram-box { background: #f8f9fa; border: 2px dashed #ccc; border-radius: 8px; padding: 30px; margin: 25px 0; text-align: center; font-size: 0.88em; color: #666; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; color: #c0392b; }
+        .cta-section { background: linear-gradient(135deg, #4a1a7a, #2c3e50); color: #fff; padding: 45px 20px; text-align: center; border-radius: 14px; margin: 50px 0 30px; }
+        .cta-section h2 { color: #fff; font-size: 1.6em; margin: 0 0 10px; }
+        .cta-section p { opacity: 0.85; margin-bottom: 20px; }
+        .cta-section a { display: inline-block; background: #d4367c; color: #fff; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; }
+        .cta-section a:hover { background: #b8296a; }
+        .share-section { margin-top: 40px; padding-top: 25px; border-top: 1px solid #eee; }
+        .share-section h4 { margin-bottom: 12px; color: #555; font-size: 0.95em; }
+        .share-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .share-links a { padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 0.85em; font-weight: 600; }
+        .share-links .linkedin { background: #0077b5; color: #fff; }
+        .share-links .twitter { background: #1da1f2; color: #fff; }
+    </style>
 </head>
 <body>
-<div class="header">
-    <a href="index.html" class="logo">Smith Ribbon</a>
-    <div class="nav-wrap">
+<header>
+    <div class="header-inner">
+        <a href="en-index.html" class="logo">Smith <span>Ribbon</span></a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="en-product-satin-ribbons.html">Products</a>
-            <a href="blog.html">Blog</a>
-            <a href="article-ribbon-bow-decoration.html">Guides</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a href="en-index.html">Home</a></li>
+                <li><a href="en-blog.html" class="active">Blog</a></li>
+                <li><a href="en-index.html#products">Products</a></li>
+                <li><a href="en-index.html#about">About</a></li>
+                <li><a href="en-index.html#contact">Contact</a></li>
+            </ul>
         </nav>
+        <a href="en-index.html#get-quote" class="lang-switch">Get a Quote →</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <div class="breadcrumb"><a href="en-index.html">Home</a> / <a href="en-blog.html">Blog</a> / Brand Design & Production</div>
+        <h1>Ribbon Artwork Pre-Press Setup: Bleed, Safe Zone & File Format Checklist for Brand Buyers</h1>
+        <div class="hero-meta">📅 Published: May 23, 2026 &nbsp;|&nbsp; ⏱️ 15 min read &nbsp;|&nbsp; 🏷️ Brand Design & Production</div>
+    </div>
+</section>
+
+<main class="container">
+<div class="article-meta">
+    <div class="article-meta-item"><strong>Author:</strong> Smith Ribbon Design Studio</div>
+    <div class="article-meta-item"><strong>Updated:</strong> May 2026</div>
+    <div class="article-meta-item"><strong>Target:</strong> Brand Managers, Packaging Designers, Procurement Teams</div>
+</div>
+
+<p>You've signed off on your brand ribbon design. The colours look perfect in your mock-up. The logo is crisp. But when the first production rolls arrive, something is off — colours are muddy, text is too close to the edge, or critical elements have been cut off entirely.</p>
+
+<p>This is almost always an artwork pre-press problem, not a print problem. Setting up your ribbon artwork files correctly before submitting them to production is the single most impactful thing a brand buyer can do to protect print quality. This guide covers everything you need to know.</p>
+
+<h2>1. Understand How Ribbon Printing Differs from Paper Printing</h2>
+
+<p>Ribbon is a continuous flexible substrate printed in cylindrical repeat units. This creates unique constraints that don't apply to flat sheet printing:</p>
+
+<ul>
+<li><strong>Repeat length:</strong> The design must repeat perfectly every N centimetres (the "circumference" of the cylinder the ribbon is printed on). If your design doesn't tile seamlessly, you'll see a visible seam at every repeat boundary.</li>
+<li><strong>Tension and distortion:</strong> Ribbons are printed under tension and often undergo heat-setting. Designs can stretch slightly — especially near the edges.</li>
+<li><strong>Limited bleed area:</strong> Unlike sheet-fed printing where you can bleed to the edge of the paper, ribbon printing has practical limits near the selvedge edges. Critical design elements should never approach within 3mm of either ribbon edge.</li>
+<li><strong>Colour-on-colour limitations:</strong> Overlapping semitransparent elements create unpredictable results on textile substrates. Spot colours behave differently than CMYK process colours.</li>
+</ul>
+
+<h2>2. Set Your Colour Mode Correctly</h2>
+
+<div class="color-box">
+    <div class="color-card color-cmyk">
+        <div style="font-size:1.2em;">🎨</div>
+        <div>CMYK Process</div>
+        <div style="font-size:0.8em;margin-top:6px;">Photorealistic images, gradients, full-colour photography. Colour mixing from 4 inks.</div>
+    </div>
+    <div class="color-card color-pantone">
+        <div style="font-size:1.2em;">🔲</div>
+        <div>Pantone Spot Colour</div>
+        <div style="font-size:0.8em;margin-top:6px;">Logos, brand colours, solid areas. One precise pre-mixed ink per colour.</div>
     </div>
 </div>
 
-<div class="container">
-    <article>
-        <header class="article-header">
-            <span class="article-category">OEM Production Guide</span>
-            <h1 class="article-title">How Ribbon Artwork Pre-Press Works — Color Separation, Print-Ready Files, and Proof Approval for Brand Buyers</h1>
-            <div class="article-meta">
-                <span>Published: May 21, 2026</span>
-                <span>Reading time: 7 min</span>
-                <span>Smith Ribbon</span>
-            </div>
-        </header>
-
-        <div class="article-content">
-
-<p>When a brand sends an artwork file to a ribbon OEM factory, the file doesn't go directly to a printing machine. It passes through a pre-press stage — a sequence of technical steps that convert a design concept into print plates or screens. Misunderstanding this process is one of the leading causes of delayed orders, wasted samples, and unexpected cost overruns in ribbon OEM programs.</p>
-
-<p>This guide explains how the pre-press workflow actually works for ribbon printing, what file specifications to follow, and how to approve proofs without second-guessing the factory every step of the way.</p>
-
-<h2>Understanding the Two Main Ribbon Printing Methods</h2>
-
-<p>Ribbon printing uses two primary technologies, each with different pre-press requirements:</p>
-
+<p>For brand ribbon work, <strong>Pantone spot colours are almost always preferred over CMYK</strong> for the following reasons:</p>
 <ul>
-<li><strong>Flexography (flexo):</strong> The most common method for large-volume printed ribbons. Uses a flexible photopolymer plate wrapped around a cylinder. Best for simple designs with up to 6 colors. Cost-effective at high volumes (10,000+ meters).</li>
-<li><strong>Rotary screen printing:</strong> Uses a mesh screen with squeegee, suitable for heavier ink deposits and specialty effects (metallic inks, high-build textures). More expensive per print run but handles more complex artwork with finer detail.</li>
+<li>Pantone colours are consistent and reproducible across print runs — even in different factories years apart.</li>
+<li>CMYK printing on polyester ribbon often produces duller, less vibrant results than on paper due to the fibre surface.</li>
+<li>CMYK process colour variation between print runs (particularly on long orders where ink density drifts) can cause noticeable colour inconsistency across rolls from the same order.</li>
 </ul>
 
-<p>Your factory will recommend the most suitable method based on your design complexity, order quantity, and ribbon material. Always confirm the printing method before finalizing your artwork — switching it after proof approval can require starting the pre-press process over.</p>
-
-<div class="highlight">
-<strong>Key concept:</strong> Both flexo and screen printing are spot-color processes — they are not full-color (CMYK) processes like offset or digital printing. If your artwork contains gradients, photographic images, or complex blends, you'll need a different approach (usually simplified to a limited spot-color palette) or the factory may need to print a solid color design instead.
+<div class="warning-box">
+<strong>⚠️ "We printed it in CMYK and it looks different from our mock-up."</strong><br>
+This is the most common artwork complaint. Your design software screen uses RGB which has a much wider gamut than CMYK ink on polyester. Always specify Pantone solid coating references for brand-critical colours and ask your supplier to provide a printed lab dip before mass production.
 </div>
 
-<h2>Step 1 — Setting Up Your Print-Ready Artwork File</h2>
+<h2>3. Define the Bleed Correctly</h2>
 
-<p>The most common file format for ribbon OEM artwork is <strong>Adobe Illustrator (AI)</strong>, followed by PDF (print-ready, not web export), CorelDRAW (CDR), or EPS. Always confirm with your factory which format they prefer before starting.</p>
-
-<h3>Essential artwork file requirements:</h3>
+<p>For ribbon printing, the standard bleed setup differs from sheet printing. Your supplier will typically handle bleed extension based on the repeat unit, but you need to understand the concept:</p>
 
 <ul>
-<li><strong>Color mode:</strong> Spot colors only — specify the exact Pantone color name and number for each color in the design. Do not use CMYK values as a substitute; CMYK is a print process, not a spot color specification, and will yield different results on different machines.</li>
-<li><strong>Artwork size:</strong> Set the document at exactly 1:1 with the intended printed width. If your ribbon is 25mm wide, the artwork should be exactly 25mm wide (or a repeat length dimension matching your order specification).</li>
-<li><strong>Bleed:</strong> For designs that bleed to the edge, extend the artwork 1–2mm beyond the cutting line on each side. Ribbon printing has ±0.5mm tolerance — without bleed, white edge gaps will be visible.</li>
-<li><strong>Font handling:</strong> Convert all text to outlines (vector paths). Never send live text that depends on the factory having the same fonts installed.</li>
-<li><strong>Stroke and outline:</strong> Convert strokes to outlines or expand them so line weights remain consistent. A 0.5pt stroke in a live file may render differently depending on software versions.</li>
-<li><strong>No embedded images:</strong> High-resolution images (300+ DPI) should be linked, not embedded. Confirm that all linked files are included when sending the package.</li>
+<li><strong>Full bleed artwork:</strong> Design extends edge to edge. Your supplier adds bleed beyond the design limit internally.</li>
+<li><strong>Design safe zone:</strong> All critical elements (logo, text, icons) must sit at least <strong>5mm away from either ribbon edge</strong>.</li>
+<li><strong>Seam alignment:</strong> If your design has a continuous background that must appear seamless (e.g., an all-over pattern), specify the exact repeat length so your supplier can build a seamless repeat file.</li>
 </ul>
 
-<div class="tip">
-<strong>Best practice:</strong> Package your artwork file with a printed proof (PDF) and a separate color swatch note listing the exact Pantone numbers used. Send a layered file — with a visible layers folder and a separate production-ready layer — so the factory's pre-press technician can understand the design structure.
+<div class="diagram-box">
+📐 Safe Zone Diagram — Ribbon Width: 25mm example<br>
+<br>
+Edge ← 5mm safe → | [DESIGN ZONE] | ← 5mm safe → Edge<br>
+<br>
+Logo / Text must sit inside [DESIGN ZONE] only.<br>
+Background can extend to within 2–3mm of edge.
 </div>
 
-<h2>Step 2 — Color Separation</h2>
+<h2>4. Font and Text Requirements</h2>
 
-<p>Color separation is the process of taking a multi-color design and generating individual printing plates (for flexo) or screens (for screen printing) for each color. A design with 3 spot colors will require 3 separate plates/screens.</p>
-
-<p>For each color in your artwork, the factory's pre-press team will:</p>
+<p>Text is the element most likely to cause problems in ribbon production. Follow these rules rigorously:</p>
 
 <ul>
-<li>Isolate the color as a separate layer</li>
-<li>Convert it to a halftone or solid fill depending on the design</li>
-<li>Generate a film positive or CTP (computer-to-plate) output for the press</li>
+<li><strong>Convert all text to outlines (paths)</strong> before exporting. Embedded fonts may not be available on the print server — text can fall back to a default typeface.</li>
+<li><strong>Minimum font size:</strong> At actual production size, no text smaller than 4mm tall should be used on ribbons for manual applications. For machine-dispensed ribbon, consult your supplier on minimum legible sizes for your specific equipment.</li>
+<li><strong>Avoid fine text in all-capitals on printed ribbon:</strong> Small caps are more legible than uppercase at small sizes on textured surfaces.</li>
+<li><strong>Test readability:</strong> Print a proof at actual size on a laser printer using plain paper first to check text legibility before committing to production.</li>
 </ul>
 
-<p>Complex designs with more than 6 colors will be expensive to print and may require simplification to a 4–5 color palette. If your brand colors require more than 6 spot colors, consider switching to a digital printing method (available for shorter runs of 500–2,000 meters) or simplifying the design.</p>
+<h2>5. Logo and Brand Mark Considerations</h2>
 
-<h3>Pantone Matching on Ribbon Substrates</h3>
+<p>Your brand logo is the highest-stakes element on any ribbon. Here's how to protect it in production:</p>
 
-<p>A critical difference from paper printing: ribbon materials (polyester, grosgrain, satin, velvet) are not white like paper. A Pantone color that looks correct on a printed proof may look noticeably different when printed on a colored or slightly textured ribbon substrate.</p>
-
-<p>Always request a <strong>strike-off sample</strong> (a short printed length, typically 5–10 meters) on the actual ribbon substrate before the full production run begins. This is the single most effective way to avoid color mismatch at scale.</p>
-
-<div class="warning">
-<strong>Common mistake:</strong> Approving a color based on a paper proof (a printed sheet of paper simulating the ribbon color) and then finding the production run looks different on the actual polyester ribbon. Always insist on a fabric/strike-off sample on the actual ribbon material, not just a paper proof.
+<div class="step-box">
+<h4>📋 Logo Submission Checklist</h4>
+<ol>
+<li>Provide the logo as an <strong>Adobe Illustrator (.ai) or PDF/X-1a file</strong>, not a low-resolution PNG or JPG.</li>
+<li>Ensure the logo file has a <strong>embedded ICC profile</strong> (ISO Coated v2 is standard for textile-adjacent work).</li>
+<li>State the <strong>intended print size in mm</strong> — e.g., "Logo height = 8mm on a 25mm wide ribbon."</li>
+<li>Confirm the <strong>minimum legible size</strong> with your supplier before submitting. Logos that look fine on paper may be illegibly small when printed on a 10mm or 16mm ribbon.</li>
+<li>If using a multicolor logo, confirm whether it should be <strong>printed as CMYK process or Pantone spot colours</strong>.</li>
+<li>Ask your supplier for a <strong>reduced-scale mock-up proof</strong> showing the logo at actual production size before going to mass production.</li>
+</ol>
 </div>
 
-<h2>Step 3 — Artwork Proof Approval Workflow</h2>
+<h2>6. File Format Reference for Ribbon Suppliers</h2>
 
-<p>A professional ribbon OEM factory will provide a formal proof approval stage before starting the production run. Here is the standard workflow:</p>
+<table class="file-table">
+<thead><tr><th>Format</th><th>Preferred?</th><th>Best Use Case</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>.AI (Adobe Illustrator)</td><td>✅ YES — preferred</td><td>Logos, vector artwork, spot colour designs</td><td>Embed all fonts or convert to outlines</td></tr>
+<tr><td>.PDF/X-1a</td><td>✅ YES</td><td>Final approved artwork, press-ready files</td><td>ISO standard for print exchange</td></tr>
+<tr><td>.EPS</td><td>✅ Acceptable</td><td>Legacy workflows, some design software</td><td>Convert text to outlines</td></tr>
+<tr><td>.PSD / .TIF</td><td>⚠️ Limited</td><td>Photorealistic imagery only</td><td>Avoid for logo and text elements</td></tr>
+<tr><td>.JPG / PNG / BMP</td><td>❌ NO</td><td>Not suitable for print production</td><td>Low resolution, colour management issues</td></tr>
+<tr><td>.SVG</td><td>⚠️ Only if requested</td><td>Simple vector graphics</td><td>Confirm with supplier before using</td></tr>
+</tbody>
+</table>
+
+<div class="checklist">
+<h4>✅ Pre-Submission Artwork Checklist (send to your supplier or internal design team)</h4>
+<ul>
+<li>All text converted to outlines/paths in the .AI or .EPS file</li>
+<li>Colour mode confirmed: Pantone (spot) or CMYK — not RGB</li>
+<li>Pantone colour numbers included (e.g., Pantone 186 C, Pantone 655 C)</li>
+<li>Design safe zone respected — no critical elements within 5mm of ribbon edge</li>
+<li>Seamless repeat length confirmed if design has continuous background</li>
+<li>All embedded images at minimum 300 DPI at actual print size</li>
+<li>File exported at the correct dimensions (in mm, not pixels)</li>
+<li>ICC profile embedded (ISO Coated v2 or equivalent)</li>
+<li>Export format: .AI or .PDF/X-1a (preferred)</li>
+<li>Soft proof / reduced-scale mock-up reviewed and approved internally</li>
+</ul>
+</div>
+
+<h2>7. The Pre-Production Sample (Strike-Off) Workflow</h2>
+
+<p>The single most effective quality safeguard in ribbon printing is the <strong>pre-production sample</strong> — also called a "strike-off," "lab dip," or "pre-production approval sample."</p>
+
+<p>Standard workflow:</p>
 
 <ol>
-<li><strong>Digital proof:</strong> PDF layout showing the design as it will print, with color callouts. This is a flat-color proof — it shows placement and layout, not the actual print color result.</li>
-<li><strong>Strike-off sample:</strong> A physical printed sample on the actual ribbon, typically 3–5 meters long, showing the real color, texture, and registration. This is your primary approval document.</li>
-<li><strong>Approval form:</strong> Factory sends an approval form listing color values, repeat length, ribbon width, and any other critical specifications. You must sign and return this before production starts.</li>
+<li><strong>Artwork submitted</strong> (AI or PDF/X-1a) to the factory along with a written approval note.</li>
+<li><strong>Factory produces a short test run</strong> — typically 5–10 metres of ribbon printed with your approved artwork.</li>
+<li><strong>Sample shipped to buyer</strong> for physical inspection. This is your opportunity to verify colour accuracy, text legibility, design placement, and material feel.</li>
+<li><strong>Buyer approves or requests changes</strong> in writing (email is sufficient). Changes require a new test run if colour or registration is affected.</li>
+<li><strong>Written approval triggers mass production</strong>.</li>
 </ol>
 
-<p>Build in 5–7 business days for the proof cycle. Rushing proof approval is the number one cause of errors making it into production runs.</p>
-
-<div class="tip">
-<strong>Timeline for a typical ribbon OEM print order:</strong><br>
-Artwork submission → Pre-press (3–5 days) → Strike-off sample (3–5 days) → Approval → Production (15–25 days) → QC and shipment (3–5 days)<br>
-Total from artwork approval to shipment ready: 25–40 days.
+<div class="warning-box">
+<strong>⏱️ Build 5–7 extra business days into your timeline for pre-production sampling.</strong><br>
+This step is the most commonly skipped when timelines are tight — and the most expensive to skip. A colour deviation discovered after 50,000 metres have been printed cannot be corrected without rejecting the entire order.
 </div>
 
-<h2>Step 4 — Print Registration and Repeat Length</h2>
+<h2>8. Common Artwork Mistakes That Cause Rejection</h2>
 
-<p>For continuous ribbon printing, the design must be set up as a <strong>repeat pattern</strong> — the design repeats at a set interval along the length of the ribbon. The factory sets the print cylinder or screen for the exact repeat length, and the design must be created to align perfectly within that repeat.</p>
+<table class="file-table">
+<thead><tr><th>Mistake</th><th>Symptom in Production</th><th>Solution</th></tr></thead>
+<tbody>
+<tr><td>Text too close to ribbon edge</td><td>Text cut off during finishing / heat-cut</td><td>Maintain 5mm safe zone from all edges</td></tr>
+<tr><td>RGB file submitted instead of CMYK/Pantone</td><td>Dull, washed-out colours on ribbon surface</td><td>Convert to CMYK or specify Pantone references</td></tr>
+<tr><td>Low-resolution embedded images</td><td>Blurry, pixelated print, especially on close-up shots</td><td>All images minimum 300 DPI at actual print size</td></tr>
+<tr><td>Font not converted to outlines</td><td>Font substituted by print server — wrong typeface</td><td>Select all text → Create Outlines in Illustrator</td></tr>
+<tr><td>No repeat length specified</td><td>Visible seam between printed sections</td><td>State repeat length in mm on submission note</td></tr>
+<tr><td>White logo on light-coloured ribbon</td><td>Insufficient contrast — logo barely visible</td><td>Add outline/stroke to logo or request base colour</td></tr>
+<tr><td>Overlapping transparent elements</td><td>Muddy mixed colour in overlap areas</td><td>Set opacity to 100% or use multiply blend mode</td></tr>
+</tbody>
+</table>
 
-<p>If your design has a specific repeat requirement (e.g., a logo needs to appear every 50cm, aligned precisely with the ribbon edge), this must be specified in the purchase order. The factory will calibrate the print machine to match your repeat specification, and this is verified on the strike-off sample.</p>
-
-<p>Repeat length tolerances in professional ribbon printing are typically ±1mm. For designs where visual alignment at the seam is critical (e.g., logo patterns), request a printed sample showing the seam between two repeat units and verify the alignment before approval.</p>
-
-<h2>Common Artwork Errors That Cause Production Delays</h2>
-
-<ul>
-<li><strong>Using CMYK instead of spot colors:</strong> The factory will ask you to re-specify the colors as Pantone values, adding 1–3 days to the schedule.</li>
-<li><strong>Low-resolution images:</strong> Images below 300 DPI at the final print size will appear pixelated or blurry when printed at ribbon width. Vector logos are preferred.</li>
-<li><strong>Missing bleed:</strong> Edges of designs will show white gaps after cutting. Requires reprinting or a new proof cycle.</li>
-<li><strong>Inconsistent stroke weights:</strong> Fine lines may drop out during printing. Any stroke under 0.3mm at print width is at risk.</li>
-<li><strong>Design exceeding print capabilities:</strong> Asking for photographic quality or 4-color process printing on a ribbon press will result in a factory rejection or poor quality output. Know your printing method's limitations before designing.</li>
-</ul>
-
-<h2>Smith Ribbon — Pre-Press Support for Brand Buyers</h2>
-
-<p>Smith Ribbon provides full pre-press support for every printed ribbon OEM order, including artwork file review, color separation, strike-off samples, and formal proof approval documentation. Our pre-press team reviews every artwork file within 24 hours of receipt and flags potential issues before production begins.</p>
-
-<p>For brands sending new artwork for the first time, we recommend a pre-press consultation call to review your design against our print specifications before you finalize the file. This is a complimentary service for active OEM customers.</p>
-
-<p><strong>Contact us:</strong> xmmsd@126.com | +86-592-5095373 | +86 13779951780 (WhatsApp)</p>
-
-        </div>
-    </article>
+<div class="cta-section">
+    <h2>Need Help Setting Up Your Ribbon Artwork?</h2>
+    <p>Our design studio team reviews artwork files before production — at no cost for active buyers. We also provide pre-production strike-off samples for every custom order to ensure what you approve is exactly what arrives.</p>
+    <a href="en-index.html#get-quote">Upload Your Artwork for a Free Review →</a>
 </div>
 
-<footer style="background:#1a3c34;color:#fff;padding:28px 20px;text-align:center;font-size:13px">
-    <p style="margin-bottom:6px"><strong>Smith Ribbon — Xiamen Meisida Decoration Co., Ltd.</strong> | Est. 2004 | B2B Ribbon OEM Manufacturer</p>
-    <p>Email: xmmsd@126.com | Tel: +86-592-5095373 | Mob/WhatsApp: +86 13779951780</p>
-    <p style="margin-top:10px;opacity:0.6">© 2026 Smith Ribbon. All rights reserved.</p>
+<div class="share-section">
+    <h4>Share this guide:</h4>
+    <div class="share-links">
+        <a href="https://www.linkedin.com/shareArticle?url=https://smithribbon.com/blog-ribbon-artwork-pre-press-workflow-guide-2026.html" class="linkedin">LinkedIn</a>
+        <a href="https://twitter.com/intent/tweet?url=https://smithribbon.com/blog-ribbon-artwork-pre-press-workflow-guide-2026.html&text=Ribbon Artwork Pre-Press Setup: The Checklist Every Brand Buyer Needs" class="twitter">Twitter / X</a>
+    </div>
+</div>
+</main>
+
+<footer style="background:#2c3e50; color:rgba(255,255,255,0.6); text-align:center; padding:25px 20px; font-size:0.85em;">
+<p>© 2026 Smith Ribbon Co., Ltd. | <a href="en-index.html" style="color:rgba(255,255,255,0.7);">Home</a> | <a href="en-blog.html" style="color:rgba(255,255,255,0.7);">Blog</a> | <a href="en-index.html#get-quote" style="color:rgba(255,255,255,0.9);">Get a Quote</a></p>
 </footer>
 </body>
 </html>
