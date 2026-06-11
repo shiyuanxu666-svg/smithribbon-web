@@ -1860,4 +1860,16 @@
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.8</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://smithribbon.com/blog-ribbon-oem-freight-cost-optimization-2026.html</ns0:loc><ns0:lastmod>2026-06-11</ns0:lastmod><ns0:changefreq>monthly</ns0:changefreq><ns0:priority>0.8</ns0:priority></ns0:url></ns0:urlset>
+  <ns0:url>
+    <ns0:loc>https://smithribbon.com/blog/blog-ai-demand-forecasting-ribbon-procurement-2026.html</ns0:loc>
+    <ns0:lastmod>2026-06-11</ns0:lastmod>
+    <ns0:changefreq>monthly</ns0:changefreq>
+    <ns0:priority>0.8</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://smithribbon.com/blog/blog-webhook-edi-ribbon-supply-chain-automation-2026.html</ns0:loc>
+    <ns0:lastmod>2026-06-11</ns0:lastmod>
+    <ns0:changefreq>monthly</ns0:changefreq>
+    <ns0:priority>0.8</ns0:priority>
+  </ns0:url>
+</ns0:urlset>
