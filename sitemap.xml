@@ -2172,4 +2172,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-new-supplier-onboarding-playbook-2026-07-05-am.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-demand-forecasting-peak-capacity-reservation-playbook-2026-07-05-pm.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
