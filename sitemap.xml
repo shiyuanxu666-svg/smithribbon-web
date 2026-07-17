@@ -2399,15 +2399,15 @@
 <priority>0.8</priority>
 </url>
 <url>
-<loc>https://smithribbon.com/blog-ribbon-oem-contract-clause-library-25-must-have-brand-buyer-2026-07-17-am.html</loc>
-<lastmod>2026-07-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
 <loc>https://smithribbon.com/blog-ribbon-sku-rationalization-playbook-brand-procurement-2026-07-17-pm.html</loc>
 <lastmod>2026-07-17</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-sustainable-fsc-paper-packaging-loop-2026-07-18-am.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
