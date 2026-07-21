@@ -2502,4 +2502,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://smithribbon.com/blog/blog-ribbon-oem-line-side-sampling-in-line-qc-playbook-brand-procurement-2026-07-21-pm.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog/blog-ribbon-oem-holiday-repeat-order-cycle-planning-90-day-brand-procurement-2026-07-21-am.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
