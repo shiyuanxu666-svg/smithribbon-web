@@ -2583,4 +2583,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-digital-twin-demand-sensing-7-layer-stack-global-brand-procurement-2026-07-24-am.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-sub-tier-subcontracting-transparency-4-tier-mapping-2026-07-24-pm.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
