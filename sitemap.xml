@@ -2595,4 +2595,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-7-stage-customization-roadmap-90-day-brief-to-shelf-global-brand-procurement-2026-07-25-am.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-38-point-factory-audit-checklist-global-brand-procurement-2026-07-25-pm.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
