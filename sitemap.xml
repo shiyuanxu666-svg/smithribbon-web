@@ -2615,4 +2615,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-4-tier-sub-tier-mapping-subcontracting-transparency-global-brand-procurement-2026-07-26-am.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-ai-vision-quality-inspection-defect-control-global-brand-procurement-2026-07-26-pm.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
