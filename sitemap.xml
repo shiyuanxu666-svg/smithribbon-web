@@ -2765,4 +2765,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-12-module-brand-owned-tooling-asset-custody-architecture-global-brand-procurement-2026-08-02-am.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-11-module-incoming-quality-inspection-first-article-approval-architecture-global-brand-procurement-2026-08-02-pm.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
