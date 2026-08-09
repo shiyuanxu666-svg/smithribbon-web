@@ -2959,4 +2959,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-30-module-factory-occupational-health-safety-ehs-architecture-global-brand-procurement-2026-08-09-am.html</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-31-module-data-governance-mill-data-lakehouse-architecture-global-brand-procurement-2026-08-09-pm.html</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
