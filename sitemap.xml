@@ -3037,4 +3037,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-42-module-vendor-managed-inventory-vmi-replenishment-architecture-global-brand-procurement-2026-08-12-am.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog-ribbon-oem-43-module-omnichannel-fulfillment-architecture-d2c-b2b-b2b2c-amazon-walmart-marketplace-global-brand-procurement-2026-08-12-pm.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
