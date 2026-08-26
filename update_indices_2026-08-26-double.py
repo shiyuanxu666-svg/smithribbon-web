@@ -38,11 +38,11 @@ SITEMAP = os.path.join(WEB, "sitemap.xml")
 with open(INDEX_HTML, "r", encoding="utf-8") as f:
     html = f.read()
 
-# Anchor on the 88-pm card (latest 2026-08-25)
-anchor = '<a href="blog/blog-ribbon-oem-88-module-mill-side-yarn-blending-twist-texture-engineering-hand-feel-drape-premium-brand-finish-library-architecture-global-brand-procurement-2026-08-25-pm.html" class="news-link"><span class="en-content">Read More</span> &rarr;</a>'
+# Anchor on the 87-am card (latest in index.html)
+anchor = '<a href="blog/blog-ribbon-oem-87-module-brand-buyer-sku-rationalization-assortment-optimization-moq-engineering-multi-market-retail-procurement-architecture-global-brand-procurement-2026-08-25-am.html" class="news-link"><span class="en-content">Read More</span> &rarr;</a>'
 
 if anchor not in html:
-    raise SystemExit("anchor 88-pm not found in index.html")
+    raise SystemExit("anchor 87-am not found in index.html")
 
 pattern = re.escape(anchor) + r"\s*</div>"
 for e in ENTRIES:
@@ -68,11 +68,11 @@ print("index.html updated")
 with open(BLOG_HTML, "r", encoding="utf-8") as f:
     blog = f.read()
 
-# Anchor: 88-pm blog-card heading (latest 2026-08-25)
-anchor_blog = '<h3><a href="blog/blog-ribbon-oem-88-module-mill-side-yarn-blending-twist-texture-engineering-hand-feel-drape-premium-brand-finish-library-architecture-global-brand-procurement-2026-08-25-pm.html">Ribbon OEM 88-Module Mill-Side Yarn-Blending Twist Texture Engineering Hand-Feel Drape Premium-Brand Finish Library Architecture 2026</a></h3>'
+# Anchor: 87-am blog-card heading (latest in blog.html)
+anchor_blog = '<h3><a href="blog/blog-ribbon-oem-87-module-brand-buyer-sku-rationalization-assortment-optimization-moq-engineering-multi-market-retail-procurement-architecture-global-brand-procurement-2026-08-25-am.html">Ribbon OEM 87-Module Brand-Buyer SKU Rationalization Assortment Optimization MOQ Engineering Multi-Market Retail Procurement Architecture 2026</a></h3>'
 
 if anchor_blog not in blog:
-    raise SystemExit("anchor 88-pm not found in blog.html")
+    raise SystemExit("anchor 87-am not found in blog.html")
 
 # Find the FIRST occurrence (top of blog list)
 idx = blog.index(anchor_blog)
@@ -103,7 +103,10 @@ with open(SITEMAP, "r", encoding="utf-8") as f:
 anchor_url = "https://smithribbon.com/blog/blog-ribbon-oem-88-module-mill-side-yarn-blending-twist-texture-engineering-hand-feel-drape-premium-brand-finish-library-architecture-global-brand-procurement-2026-08-25-pm.html"
 
 if anchor_url not in sm:
-    raise SystemExit("anchor 88-pm not found in sitemap.xml")
+    # fallback: 87-am
+    anchor_url = "https://smithribbon.com/blog/blog-ribbon-oem-87-module-brand-buyer-sku-rationalization-assortment-optimization-moq-engineering-multi-market-retail-procurement-architecture-global-brand-procurement-2026-08-25-am.html"
+    if anchor_url not in sm:
+        raise SystemExit("anchor not found in sitemap.xml")
 
 sm_entries = []
 for e in ENTRIES:
