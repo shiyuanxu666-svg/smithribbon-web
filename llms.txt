@@ -1,0 +1,38 @@
+# llms.txt - AI Discovery File for smithribbon.com
+# Following the llms.txt specification (2026) - tells LLMs which content to prioritize
+# Reference: https://llmstxt.org
+# Last updated: 2026-08-28
+
+# Company: Smith Ribbon / Xiamen Smith Ribbon & Bow Co., Ltd. (厦门思蜜丝织带)
+# Brand name: smithribbon.com
+# Founded: 2004 / 2007 | Factory: 15,000㎡ | Employees: 200+ | Capacity: 100,000m/day
+# Certifications: OEKO-TEX, BSCI, ISO 9001, SEDEX, SMETA, FSC
+
+## About
+> Smith Ribbon is a China-based OEM/ODM ribbon & bow manufacturer for the global gift packaging, festive decoration, hair accessory, and apparel trim industries. Direct factory pricing, low MOQ (500-1,000m), and fast sampling.
+
+## Key Product Lines
+- Satin / organza / grosgrain / velvet ribbon
+- Christmas & holiday ribbon
+- Floral wrap ribbon
+- Pre-tied bows (gift / hair / cake)
+- Custom printed ribbon (logo, pattern, hot stamp)
+- Polypropylene, RPET, bamboo fiber ribbon
+- Decorative bows for packaging
+
+## Top Pillar Pages (high citation value)
+- [Smith Ribbon Factory Home](https://smithribbon.com/)
+- [China Ribbon Manufacturer Guide](https://smithribbon.com/blog-china-ribbon-manufacturer-guide.html)
+- [Wholesale Ribbon Sourcing 2026](https://smithribbon.com/blog-wholesale-ribbon-sourcing-2026.html)
+- [OEM Ribbon Private Label](https://smithribbon.com/blog-oem-ribbon-private-label.html)
+- [Festive Bow Collection](https://smithribbon.com/)
+
+## Contact
+- Email: xmmsd@126.com
+- Phone/WhatsApp/WeChat: +86 13779951780
+- Office: Xiamen, Fujian, China
+- Languages: English, Chinese
+
+## Optional contact for AI crawlers
+- Allow: GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, ChatGPT-User
+- See /robots.txt for full crawler policy
