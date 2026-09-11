@@ -3434,4 +3434,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://smithribbon.com/blog/blog-ribbon-oem-113-module-brand-buyer-vendor-managed-inventory-vmi-hub-and-spoke-replenishment-auto-reorder-architecture-global-brand-procurement-2026-09-11-am.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog/blog-ribbon-oem-114-module-brand-buyer-q4-holiday-peak-cascade-multi-market-production-capacity-pre-booking-architecture-global-brand-procurement-2026-09-11-pm.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

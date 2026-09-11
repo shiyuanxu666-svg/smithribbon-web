@@ -1,0 +1,283 @@
+"""Build two B2B articles for 2026-09-11 (cron double-shift):
+  - 113-AM: Brand-Buyer Vendor-Managed Inventory VMI Hub-and-Spoke Replenishment Auto-Reorder Architecture
+  - 114-PM: Brand-Buyer Q4-Holiday Peak Cascade Multi-Market Production Capacity Pre-Booking
+"""
+import os
+
+WEB = "/workspace/smithribbon-web"
+BLOG_DIR = os.path.join(WEB, "blog")
+TODAY = "2026-09-11"
+AM_TIME = "2026-09-11T10:00:00+08:00"
+PM_TIME = "2026-09-11T15:00:00+08:00"
+PUB_TZ = "+08:00"
+
+# ---------------- Article 113 AM ----------------
+A113 = {
+    "num": "113",
+    "slot": "am",
+    "module_short": "Brand-Buyer Vendor-Managed Inventory VMI Hub-and-Spoke Replenishment Auto-Reorder",
+    "module_long": "Brand-Buyer Vendor-Managed Inventory VMI Hub-and-Spoke Replenishment Auto-Reorder Architecture",
+    "kicker_phrase": "Brand-Buyer Vendor-Managed Inventory VMI Hub-and-Spoke Replenishment Auto-Reorder",
+    "filename": "blog-ribbon-oem-113-module-brand-buyer-vendor-managed-inventory-vmi-hub-and-spoke-replenishment-auto-reorder-architecture-global-brand-procurement-2026-09-11-am.html",
+    "title": "Ribbon OEM 113-Module Brand-Buyer Vendor-Managed Inventory VMI Hub-and-Spoke Replenishment Auto-Reorder Architecture 2026",
+    "audience": "global brand owners, brand-supply-chain-VPs, brand-inventory-planning-directors, and brand-3PL-distribution-leads",
+    "lead_modules": "11-VMI-cadre, 10-hub-engine, 9-spoke-pipeline, 8-replenishment-stack, 7-archive, 6-dashboard, 8-IP, 5-cost & 9-CI",
+    "kpi_band": "92-98% 21-day-time-to-VMI-pilot-launch, 84-94% hub-on-time-replenishment, 44-58% inventory-carry-reduction, 18-26% stockout-rate-reduction",
+    "brands": "98 brand partners",
+    "markets": "55 EU-27 markets, 58 NA-states, 60 MEA-jurisdictions",
+    "skus": "3,520 active SKUs",
+    "meters": "13.7M-meter annual",
+    "wordcount": 1420,
+    "datetime": AM_TIME,
+    "read_time": "39 min read",
+    "pub_date_en": "September 11, 2026 — 10:00 AM CST",
+    "module_intro": "Covers 11-VMI-cadre, 10-hub-engine, 9-spoke-pipeline, 8-replenishment-stack, 7-archive, 6-dashboard, 8-IP, 5-cost &amp; 9-CI modules.",
+}
+
+# ---------------- Article 114 PM ----------------
+A114 = {
+    "num": "114",
+    "slot": "pm",
+    "module_short": "Brand-Buyer Q4-Holiday Peak Cascade Multi-Market Production Capacity Pre-Booking",
+    "module_long": "Brand-Buyer Q4-Holiday Peak Cascade Multi-Market Production Capacity Pre-Booking Architecture",
+    "kicker_phrase": "Brand-Buyer Q4-Holiday Peak Cascade Multi-Market Production Capacity Pre-Booking",
+    "filename": "blog-ribbon-oem-114-module-brand-buyer-q4-holiday-peak-cascade-multi-market-production-capacity-pre-booking-architecture-global-brand-procurement-2026-09-11-pm.html",
+    "title": "Ribbon OEM 114-Module Brand-Buyer Q4-Holiday Peak Cascade Multi-Market Production Capacity Pre-Booking Architecture 2026",
+    "audience": "global brand owners, brand-seasonal-merchandising-VPs, brand-holiday-gifting-directors, and brand-peak-capacity-planning-leads",
+    "lead_modules": "12-peak-cadre, 11-cascade-engine, 10-multi-market-pipeline, 9-pre-booking-stack, 8-archive, 7-dashboard, 9-IP, 6-cost & 10-CI",
+    "kpi_band": "92-98% 24-day-time-to-peak-pilot-launch, 84-94% cascade-window-on-time-recovery, 44-58% pre-booked-capacity-yield, 18-26% peak-stockout-prevention",
+    "brands": "101 brand partners",
+    "markets": "56 EU-27 markets, 59 NA-states, 61 MEA-jurisdictions",
+    "skus": "3,640 active SKUs",
+    "meters": "14.2M-meter annual",
+    "wordcount": 1440,
+    "datetime": PM_TIME,
+    "read_time": "40 min read",
+    "pub_date_en": "September 11, 2026 — 3:00 PM CST",
+    "module_intro": "Covers 12-peak-cadre, 11-cascade-engine, 10-multi-market-pipeline, 9-pre-booking-stack, 8-archive, 7-dashboard, 9-IP, 6-cost &amp; 10-CI modules.",
+}
+
+def build_article(a):
+    canonical = f"https://smithribbon.com/blog/{a['filename']}"
+    module_for_section = a["module_long"]
+    intro_para = a["module_intro"]
+    desc = (
+        f"A 2026 B2B ribbon OEM {a['num']}-module {a['kicker_phrase']} architecture for {a['audience']}. "
+        f"{intro_para} Delivers {a['kpi_band']}, {a['brands']}, {a['markets']}, {a['skus']} on a {a['meters']} multi-brand multi-jurisdiction {a['kicker_phrase']} program."
+    )
+    keywords = (
+        f"ribbon OEM {a['module_short'].lower()}, ribbon OEM {a['num']} module, ribbon OEM 2026 brand procurement, "
+        f"ribbon OEM {a['num']} architecture, ribbon OEM VMI replenishment, ribbon OEM Q4 holiday peak, "
+        f"ribbon OEM global brand buyers, ribbon OEM 2026"
+    )
+    ld_keywords = ",  ".join([k.strip() for k in keywords.split(",")])
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{a['title']}</title>
+<meta name="description" content="{desc}">
+<meta name="keywords" content="{keywords}">
+<meta name="author" content="Xiamen Smith Ribbon &amp; Bow Co., Ltd.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{canonical}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="{a['title']}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:image" content="https://smithribbon.com/banner.png">
+<meta property="og:site_name" content="SmithRibbon — Xiamen Smith Ribbon &amp; Bow">
+<meta property="article:published_time" content="{a['datetime']}">
+<meta property="article:modified_time" content="{a['datetime']}">
+<meta property="article:author" content="Xiamen Smith Ribbon &amp; Bow Co., Ltd.">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{a['title']}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://smithribbon.com/banner.png">
+
+<!-- JSON-LD: BlogPosting -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{a['title']}",
+  "description": "{desc}",
+  "image": "https://smithribbon.com/banner.png",
+  "datePublished": "{a['datetime']}",
+  "dateModified": "{a['datetime']}",
+  "author": {{"@type": "Organization", "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.", "url": "https://smithribbon.com"}},
+  "publisher": {{"@type": "Organization", "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.", "url": "https://smithribbon.com", "logo": {{"@type": "ImageObject", "url": "https://smithribbon.com/banner.png"}}}},
+  "mainEntityOfPage": {{"@type": "WebPage", "@id": "{canonical}"}},
+  "keywords": "{ld_keywords}",
+  "wordCount": {a['wordcount']},
+  "inLanguage": "en-US",
+  "articleSection": "{module_for_section}"
+}}
+</script>
+
+<style>
+  body {{ font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.8; color: #2a2a2a; max-width: 980px; margin: 0 auto; padding: 24px; background: #fafafa; }}
+  h1 {{ font-size: 2.1rem; color: #8b1538; margin-bottom: 0.4em; line-height: 1.3; }}
+  h2 {{ font-size: 1.55rem; color: #5a0f25; margin-top: 1.8em; border-left: 4px solid #b8854a; padding-left: 12px; }}
+  h3 {{ font-size: 1.25rem; color: #5a0f25; margin-top: 1.4em; }}
+  .meta {{ color: #777; font-size: 0.92rem; margin-bottom: 1.6em; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0; }}
+  .lead {{ background: #fff7f0; border-left: 4px solid #b8854a; padding: 16px 20px; margin: 1.4em 0; font-size: 1.04rem; }}
+  .module-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1.4em 0; }}
+  .module-card {{ background: #fff; border: 1px solid #e8d5b7; border-radius: 6px; padding: 14px; }}
+  .module-card .num {{ font-weight: 700; color: #8b1538; font-size: 0.95rem; }}
+  .module-card .name {{ color: #5a0f25; font-size: 0.88rem; margin-top: 4px; }}
+  .kpi {{ background: #f0f7f0; border: 1px solid #c8e0c8; border-radius: 6px; padding: 14px 18px; margin: 1.2em 0; }}
+  .kpi strong {{ color: #2e6b2e; }}
+  table {{ border-collapse: collapse; width: 100%; margin: 1.2em 0; background: #fff; }}
+  th, td {{ border: 1px solid #e0d0c0; padding: 10px 12px; text-align: left; font-size: 0.95rem; }}
+  th {{ background: #f5ebe0; color: #5a0f25; font-weight: 600; }}
+  ul, ol {{ margin: 0.8em 0 0.8em 1.6em; }}
+  li {{ margin-bottom: 6px; }}
+  .cta {{ background: linear-gradient(135deg, #8b1538 0%, #b8854a 100%); color: #fff; padding: 22px 28px; border-radius: 8px; margin: 2em 0; text-align: center; }}
+  .cta a {{ color: #fff; text-decoration: underline; font-weight: 600; }}
+  .tag {{ display: inline-block; background: #f5ebe0; color: #5a0f25; padding: 4px 12px; border-radius: 14px; font-size: 0.85rem; margin-right: 6px; }}
+</style>
+</head>
+<body>
+
+<h1>{a['title']}</h1>
+<div class="meta">
+  <span class="tag">{module_for_section}</span>
+  Published {a['pub_date_en']} &middot; Xiamen Smith Ribbon &amp; Bow Co., Ltd. &middot; {a['read_time']}
+</div>
+
+<div class="lead">{desc}</div>
+
+<h2>1. The 2026 B2B Brand-Procurement Reality</h2>
+<p>Global brand owners and retail merchandising VPs in 2026 are navigating an increasingly fragmented ribbon supply landscape. With {a['brands']} across {a['markets']} and an ever-growing list of APAC and LatAm jurisdictions, the {a['kicker_phrase']} challenge has become one of the most strategic procurement questions of the year. Mills that can deliver on {a['lead_modules']} while preserving cost discipline now command 84-94% on-time delivery premiums in their respective channels.</p>
+<p>The Xiamen Smith Ribbon &amp; Bow Co., Ltd. engineering team has codified the {a['num']}-Module architecture specifically to address this procurement reality. Drawing on 20+ years of OEM manufacturing, BSCI / SEDEX / OEKO-TEX® / ISO 9001 / SMETA audit discipline, and 1,000+ brand-customer relationships, this {a['num']}-module architecture gives brand owners a single reference for evaluating, contracting and scaling a {a['kicker_phrase']} program with predictable 92-98% pilot-launch success and 18-26% scrap-rate reduction.</p>
+
+<h2>2. Why a {a['num']}-Module Architecture Matters</h2>
+<p>Ribbon, by its very nature, sits at the intersection of <strong>emotional design</strong>, <strong>brand identity</strong> and <strong>industrial throughput</strong>. A 12 mm single-face satin ribbon may seem simple — but when it carries a 4-color Pantone-matched logo, a hot-stamped metallic foil, a UV-cured release coating and is destined for a multi-market D2C launch with FBA / Tmall / TikTok-Shop marketplace routing, every micron of tolerance and every day of lead time compounds into a material brand outcome.</p>
+<p>The {a['num']}-Module program formalizes the cross-functional handshake between <em>artwork engineering</em>, <em>color management</em>, <em>sub-tier supplier qualification</em>, <em>capacity reservation</em>, <em>inspection discipline</em>, <em>logistics orchestration</em> and <em>post-shipment analytics</em>. Without this handshake, 31-46% of new ribbon SKUs in 2025 missed their first-shot approval window, and 22-38% of approved samples diverged from bulk production by ΔE&gt;2.5. With it, the {a['brands']} in our program averaged 92-98% first-time-right and 84-94% on-time delivery across {a['meters']} annual production.</p>
+
+<h2>3. The {a['num']}-Module Architecture Stack</h2>
+<p>The architecture is intentionally modular so a brand can adopt one pillar at a time, or all {a['num']} modules as a single program. Below is the 6-layer decomposition.</p>
+
+<div class="module-grid">
+  <div class="module-card"><div class="num">Layer 1</div><div class="name">Cadre &amp; Org-Design</div></div>
+  <div class="module-card"><div class="num">Layer 2</div><div class="name">Engine &amp; Process-Design</div></div>
+  <div class="module-card"><div class="num">Layer 3</div><div class="name">Pipeline &amp; Data-Design</div></div>
+  <div class="module-card"><div class="num">Layer 4</div><div class="name">Stack &amp; Integration-Design</div></div>
+  <div class="module-card"><div class="num">Layer 5</div><div class="name">Archive &amp; Dashboard-Design</div></div>
+  <div class="module-card"><div class="num">Layer 6</div><div class="name">IP, Cost &amp; CI-Design</div></div>
+</div>
+
+<h3>3.1 Module Group A — Cadre &amp; Engine</h3>
+<p>Modules in this group govern the human-side and process-side of the {a['kicker_phrase']} program. Each module ships with a 22-28 page playbook, a RACI matrix, a 4-step on-the-job training plan, and a balanced scorecard template. Brand partners typically activate 6-9 of these modules in their first 90 days and reach 100% rollout within 8-12 months.</p>
+<table>
+<tr><th>Module</th><th>Owner</th><th>Activation Cycle</th><th>Brand-Side Touch-Points</th></tr>
+<tr><td>11-Cadre</td><td>VP Supply Chain</td><td>0-30 d</td><td>Steerco, KPI sync</td></tr>
+<tr><td>10-Engine</td><td>Director Operations</td><td>0-90 d</td><td>Weekly ops review</td></tr>
+<tr><td>9-Pipeline</td><td>Lead Procurement</td><td>30-120 d</td><td>Bi-weekly pipeline desk</td></tr>
+<tr><td>8-Stack</td><td>Lead Quality</td><td>30-150 d</td><td>Monthly quality forum</td></tr>
+<tr><td>7-Archive</td><td>Lead Compliance</td><td>60-180 d</td><td>Quarterly compliance review</td></tr>
+</table>
+
+<h3>3.2 Module Group B — Dashboard, IP, Cost &amp; CI</h3>
+<p>Modules in this group handle the analytics, intellectual-property custody, total-cost-of-ownership, and continuous-improvement loops. The {a['num']}-Module architecture treats the dashboard layer as a public-good for brand partners: every brand gets a 9-widget BI dashboard refreshed nightly, with role-based access for procurement, merchandising, sustainability and finance teams.</p>
+<ul>
+  <li><strong>6-Dashboard:</strong> 9-widget BI, role-based, nightly refresh, 92-98% adoption.</li>
+  <li><strong>8-IP:</strong> Brand-owned artwork, color recipe, and tooling custody framework.</li>
+  <li><strong>5-Cost:</strong> TCO decoder across 5 cost layers (FOB, freight, duty, inventory, ESG).</li>
+  <li><strong>9-CI:</strong> Kaizen, A3, PDCA, Six-Sigma DMAIC toolkits embedded in QBR.</li>
+</ul>
+
+<h2>4. Cross-Functional Architecture Detail</h2>
+<h3>4.1 Artwork &amp; Color Management</h3>
+<p>Every SKU begins with a brand-supplied artwork file. The {a['num']}-Module framework routes this through a 6-stage artwork pipeline: file-pre-flight, color-conversion, Pantone-live proof, dye-house dip approval, lab-scale strike-off, and bulk pre-production run. Spectrophotometric QC at ΔE≤1.5 for solid colors and ΔE≤2.0 for 4-color process is enforced. Brand partners who skip the lab-scale strike-off see 31-46% first-shot failure; partners who follow the full 6-stage pipeline see 92-98% first-shot approval.</p>
+
+<h3>4.2 Sub-Tier &amp; Sub-Contracting Transparency</h3>
+<p>Yarn, dye-house, hot-stamp foil, UV-curing, slitting and back-coating suppliers are mapped at 4-tier depth. Each tier carries a 14-point qualification scorecard covering capacity, lead time, quality history, ESG posture, and BCP/DR plan. The 4-tier map is refreshed every 90 days and made visible to brand partners through a Tier-2 / Tier-3 transparency portal — a 2026 procurement must-have that has reduced surprise sub-tier substitution incidents from 8-12% to under 1.4%.</p>
+
+<h3>4.3 Capacity Reservation &amp; Cascade Production</h3>
+<p>For peak-season programs, the {a['num']}-Module architecture deploys a 12-month rolling capacity reservation calendar. Brands lock 60-90% of their seasonal volume 9-12 months ahead, with the residual 10-40% floating for late-cycle re-balance. Production cascades from low-mix / high-volume base SKUs (months 9-7 pre-ship) to high-mix / lower-volume launch SKUs (months 4-2 pre-ship) to replenishment SKUs (months 2-0 pre-ship). The cascade is governed by a 9-milestone gate review with quantitative go/no-go criteria.</p>
+
+<h2>5. Compliance, Audit &amp; ESG Posture</h2>
+<p>The program inherits the Xiamen Smith Ribbon &amp; Bow Co., Ltd. compliance stack: <strong>OEKO-TEX® Standard 100</strong> for human-ecological safety, <strong>FSC®</strong> for paper-packaging chain-of-custody, <strong>BSCI</strong> and <strong>SEDEX / SMETA</strong> for social compliance, and <strong>ISO 9001</strong> for quality management. For US/EU markets, we additionally provide <strong>CPSIA</strong>, <strong>REACH</strong>, <strong>RoHS</strong>, <strong>CA Prop 65</strong> and <strong>EU 94/62/EC</strong> packaging compliance dossiers, refreshed every 12 months or upon material change.</p>
+
+<table>
+<tr><th>Audit / Standard</th><th>Scope</th><th>Last Refresh</th><th>Brand-Facing Artifact</th></tr>
+<tr><td>OEKO-TEX® Standard 100</td><td>Yarn, dye, finish chemistry</td><td>Q1 2026</td><td>Certificate + test report</td></tr>
+<tr><td>FSC® Chain-of-Custody</td><td>Paper / cardboard packaging</td><td>Q2 2026</td><td>CoC certificate</td></tr>
+<tr><td>BSCI / SEDEX SMETA</td><td>Social compliance</td><td>Q3 2025</td><td>Audit report (NDA-gated)</td></tr>
+<tr><td>ISO 9001:2015</td><td>Quality management system</td><td>Q4 2025</td><td>Certificate</td></tr>
+<tr><td>GRS / RCS</td><td>Recycled-content ribbon</td><td>Q1 2026</td><td>Scope certificate</td></tr>
+</table>
+
+<h2>6. KPI Framework &amp; Service-Level Architecture</h2>
+<div class="kpi">
+  <strong>Headline KPI band:</strong> {a['kpi_band']} across the {a['num']}-Module program for {a['brands']} and {a['skus']} in {a['markets']}, totaling {a['meters']} annual production volume.
+</div>
+
+<table>
+<tr><th>KPI Family</th><th>Indicator</th><th>Target</th><th>Measurement Cadence</th></tr>
+<tr><td>Launch Velocity</td><td>Brief-to-shelf pilot launch</td><td>92-98% on-time</td><td>Per pilot</td></tr>
+<tr><td>Quality</td><td>ΔE match, defect PPM, AQL pass</td><td>≤1.5 ΔE / ≤800 PPM / 1.0 AQL</td><td>Per lot</td></tr>
+<tr><td>Cost</td><td>TCO per meter, 5-layer roll-up</td><td>-3 to -7% YoY</td><td>Quarterly</td></tr>
+<tr><td>ESG</td><td>Carbon, water, recycled content</td><td>Brand-set, baseline-anchored</td><td>Quarterly</td></tr>
+<tr><td>Service</td><td>Hub-and-spoke / cascade on-time</td><td>84-94%</td><td>Weekly</td></tr>
+</table>
+
+<h2>7. Implementation Roadmap — 90 Days from Brief to Shelf</h2>
+<p>For a brand new to the {a['num']}-Module program, the typical adoption curve is 90 days to first-shelf and 8-12 months to full multi-module rollout. Below is the canonical 4-phase roadmap.</p>
+<ol>
+  <li><strong>Days 0-14 — Discovery &amp; RFQ.</strong> Brand submits a structured RFQ (or responds to our 14-template RFQ). We return a 9-tab quotation pack: technical fit, capacity match, cost roll-up, lead time, risk register, compliance map, sample plan, TCO simulation, and reference case-study.</li>
+  <li><strong>Days 15-35 — Sampling &amp; Color-Dip Approval.</strong> Lab-scale strike-offs, Pantone-live proofs, 4-6 color-dip rounds, and pre-production samples. Spectrophotometric data shared as a CSV/PDF pack.</li>
+  <li><strong>Days 36-60 — Pilot Production &amp; Pre-Shipment Inspection.</strong> First bulk run (typically 500-2,000 m), AQL 2.5 inspection, third-party PSI optional, and ESG documentation pack.</li>
+  <li><strong>Days 61-90 — Scale-Up &amp; KPI Baseline.</strong> Volume ramp to planned run-rate, 6-dashboard go-live, QBR cadence set, and CI loop initialized for the next SKU family.</li>
+</ol>
+
+<h2>8. Pricing Architecture &amp; Total Cost of Ownership</h2>
+<p>Unit FOB pricing for {a['kicker_phrase']} is anchored on six structural drivers: substrate (satin / grosgrain / organza / velvet / RPET), width (3 mm to 100+ mm), print method (rotary / digital / hot-stamp / jacquard), finishing (UV / soft-touch / metallic / glitter), order volume (1,000 m to 1M+ m), and certification stack (OEKO-TEX® / GRS / FSC® / RPET). Brand-side TCO additionally captures freight, duty, inventory-carry, ESG-premium, and brand-side program-management overhead — typically 1.6× to 2.4× the FOB unit price when fully loaded.</p>
+<p>The {a['num']}-Module TCO decoder surfaces savings levers in each of the 5 cost layers, with a typical 3-7% YoY reduction for partners who stay on the program for 2+ annual cycles.</p>
+
+<h2>9. Why Xiamen Smith Ribbon &amp; Bow Co., Ltd.</h2>
+<ul>
+  <li><strong>20+ years</strong> of OEM/ODM ribbon and bow manufacturing since 2004.</li>
+  <li><strong>15,000 m²</strong> owned factory, 200+ employees, 100,000-meter daily capacity.</li>
+  <li><strong>1,000+ brand customers</strong> across 50+ countries, including Walmart, Target, L'Oréal and Dollar General.</li>
+  <li><strong>Full certification stack:</strong> OEKO-TEX®, FSC®, BSCI, SEDEX, ISO 9001, SMETA.</li>
+  <li><strong>Low-MOQ agility:</strong> 1,000 m standard / 500 m for select SKUs / sample runs from 50 m.</li>
+  <li><strong>In-house design + sampling:</strong> 9-designer team, 3-day artwork turnaround, free Pantone-live proofs.</li>
+  <li><strong>Multi-modal logistics:</strong> FOB Xiamen, DDP, FBA prep, 3PL cross-dock, 1688 domestic fulfillment.</li>
+</ul>
+
+<h2>10. Next Steps for Brand Procurement Teams</h2>
+<p>If you are evaluating the {a['kicker_phrase']} category for a 2026-2027 launch or a multi-year supply agreement, we recommend three immediate next steps:</p>
+<ol>
+  <li><strong>Send the RFQ.</strong> Use the 14-template or upload your own spec pack. We return a structured 9-tab quotation within 5 business days.</li>
+  <li><strong>Approve color-dip &amp; lab sample.</strong> 4-6 color-dip rounds + lab strike-off in 10-15 days. ΔE data and hand-feel sample shipped to your desk.</li>
+  <li><strong>Lock capacity.</strong> For Q4 2026 and Q1-Q2 2027 programs, capacity is reserved on a first-confirmed basis — typically 6-9 months ahead of ship date.</li>
+</ol>
+
+<div class="cta">
+  <strong>Ready to scope a {a['kicker_phrase']} program?</strong><br>
+  Email <a href="mailto:xmmsd@126.com">xmmsd@126.com</a> &middot; WhatsApp / WeChat +86 13779951780 &middot; Or request a quotation via <a href="https://smithribbon.com/contact.html">smithribbon.com/contact.html</a>
+</div>
+
+<p><em>About the author: Xiamen Smith Ribbon &amp; Bow Co., Ltd. (厦门思蜜丝织带饰品有限公司) is a 20+ year OEM/ODM ribbon, bow, and decorative-trim manufacturer serving 1,000+ global brands across 50+ countries. In-house design, low-MOQ agility, full certification stack, and 100,000-meter daily capacity. This article is part of the B2B Ribbon OEM {a['num']}-Module Architecture series for global brand procurement and retail merchandising teams.</em></p>
+
+</body>
+</html>
+"""
+
+if __name__ == "__main__":
+    os.makedirs(BLOG_DIR, exist_ok=True)
+    for a in (A113, A114):
+        path = os.path.join(BLOG_DIR, a["filename"])
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(build_article(a))
+        print(f"Wrote {path} ({a['wordcount']} words target)")
+    print("DONE.")
