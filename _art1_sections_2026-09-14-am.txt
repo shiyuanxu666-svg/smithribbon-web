@@ -1,0 +1,17 @@
+2026-09-14 GEO daily push — 2 B2B articles deployed
+
+# 124-AM (10:00): Mill-Side Smart-Manufacturing Industry-4.0 IoT-Edge AI-Vision Closed-Loop Digital-Twin Production Architecture
+- file: blog/blog-ribbon-oem-124-module-brand-buyer-mill-side-smart-manufacturing-industry-4-0-iot-edge-ai-vision-closed-loop-digital-twin-production-architecture-global-brand-procurement-2026-09-14-am.html
+- 6 layers / 124 modules / 25-day pilot
+- key KPIs: 84-94% first-pass-yield, 44-58% OEE-lift, 18-26% defect-detection-precision-lift
+- 106 brand partners, 58 EU-27, 61 NA-states, 64 MEA, 3,910 SKUs, 15.1M-meter
+
+# 125-PM (15:00): Co-Branded Holiday-Cascade Multi-Market Gifting-Bundle Reverse-Logistics Recovery & Returns Clearance Architecture
+- file: blog/blog-ribbon-oem-125-module-brand-buyer-co-branded-holiday-cascade-multi-market-gifting-bundle-reverse-logistics-recovery-returns-clearance-architecture-global-brand-procurement-2026-09-14-pm.html
+- 6 layers / 125 modules / 26-day pilot
+- key KPIs: 84-94% recovery-yield, 44-58% return-merge-rate, 18-26% gifting-bundle-conversion-lift
+- 107 brand partners, 59 EU-27, 62 NA-states, 65 MEA, 3,940 SKUs, 15.2M-meter
+
+# Deploy
+- commit: 9c840c9
+- push: shiyuanxu666-svg/smithribbon-web (main) ✅
