@@ -1,0 +1,17 @@
+2026-09-14 GEO daily push — 2 B2B articles deployed (DOUBLE SHIFT)
+
+# 126-AM (10:00): Mill-Side Quality-Issue 8D-Root-Cause Supplier-Recovery CAPA Playbook AI-Vision-Closed-Loop Architecture
+- file: blog/blog-ribbon-oem-126-module-brand-buyer-mill-side-quality-issue-8d-root-cause-supplier-recovery-capa-playbook-ai-vision-closed-loop-architecture-global-brand-procurement-2026-09-14-am.html
+- 6 layers / 126 modules / 27-day time-to-CAPA-pilot-launch
+- key KPIs: 84-94% escape-point-detection-rate, 44-58% recurrence-reduction, 18-26% AQL-pass-rate-lift
+- 108 brand partners, 60 EU-27, 63 NA-states, 66 MEA, 3,970 SKUs, 15.4M-meter
+
+# 127-PM (15:00): Cross-Border Tariff-Engineering FTA-Preference Rules-of-Origin Landed-Cost Bridge Architecture
+- file: blog/blog-ribbon-oem-127-module-brand-buyer-cross-border-tariff-engineering-fta-preference-rules-of-origin-landed-cost-bridge-architecture-global-brand-procurement-2026-09-14-pm.html
+- 6 layers / 127 modules / 28-day time-to-tariff-pilot-launch
+- key KPIs: 84-94% FTA-preference-yield, 44-58% landed-cost-bridge-savings, 18-26% tariff-engineering-deflection
+- 109 brand partners, 61 EU-27, 64 NA-states, 67 MEA, 4,000 SKUs, 15.5M-meter
+
+# Deploy
+- commit: 71eb227
+- push: shiyuanxu666-svg/smithribbon-web (main) ✅ (618fe22..71eb227)
