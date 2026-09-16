@@ -3630,4 +3630,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://smithribbon.com/blog/blog-ribbon-oem-138-module-brand-buyer-mill-side-ai-overview-citation-architecture-global-brand-procurement-2026-09-17-am.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://smithribbon.com/blog/blog-ribbon-oem-139-module-brand-buyer-mill-side-e-e-a-t-experience-evidence-architecture-global-brand-procurement-2026-09-17-pm.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
