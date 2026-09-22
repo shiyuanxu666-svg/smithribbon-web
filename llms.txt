@@ -36,3 +36,8 @@
 ## Optional contact for AI crawlers
 - Allow: GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, ChatGPT-User
 - See /robots.txt for full crawler policy
+
+## Recent insights (added 2026-09-22)
+- [EU CBAM & Carbon Border Tariffs for Ribbon Imports](https://smithribbon.com/blog/blog-eu-cbam-carbon-border-tariff-ribbon-imports-2026.html) — Scope-3 disclosure + RPET savings per 200K-meter program
+- [Private-Label Ribbon Trademark & Brand-Portal Setup](https://smithribbon.com/blog/blog-private-label-trademark-brand-portal-setup-2026.html) — Walmart / Costco / Amazon Brand Registry playbook
+
