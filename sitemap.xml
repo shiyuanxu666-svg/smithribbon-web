@@ -2742,4 +2742,17 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+
+    <url>
+        <loc>https://smithribbon.com/blog/blog-ribbon-oem-165-module-brand-buyer-mill-side-brand-initiated-coinnovation-lab-architecture-global-brand-procurement-2026-09-24-am.html</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://smithribbon.com/blog/blog-ribbon-oem-166-module-brand-buyer-mill-side-make-or-buy-bow-assembly-hand-tie-vs-pre-tied-architecture-global-brand-procurement-2026-09-24-pm.html</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 </urlset>
