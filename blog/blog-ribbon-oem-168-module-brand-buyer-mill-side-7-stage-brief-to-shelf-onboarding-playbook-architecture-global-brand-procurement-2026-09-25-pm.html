@@ -179,8 +179,84 @@ footer { background:var(--dark); color:#fff; padding:24px; text-align:center; fo
 <li><strong>No formal change-control between stages.</strong> Spec drift between Stage 2 and Stage 6 causes 5-15% cost. Always document change-control.</li>
 </ol>
 
-<h2>5. Connection to Multi-Supplier Resilience</h2>
-<p>Stages 5-7 should run in parallel with the secondary mill to validate dual-sourcing capability. Without parallel-stage validation, dual-sourcing collapses into visual-drift between mills; with it, dual-sourcing is anchored to a single validated process. The onboarding playbook is the structural foundation that makes multi-supplier resilience operationally viable.</p>
+<h2>5. Stage-Specific Deliverable Checklists</h2>
+<p>Each stage has a non-negotiable deliverable. Brands that skip or accept soft versions of these deliverables accumulate technical debt that compounds by Stage 6.</p>
+
+<h3>5.1 Stage 1 Deliverable Checklist</h3>
+<ul>
+<li>Fiber content declaration (polyester %, satin, rayon, nylon, cotton, RPET %).</li>
+<li>Width spec (mm and inch) with ±0.5mm tolerance.</li>
+<li>Edge treatment (cut-edge, woven-edge, wire-edge, picot-edge) with reference photo.</li>
+<li>Pantone TCX/TPX code OR physical reference swatch with delta EΔ tolerance (≤1.5 ideal, ≤2.5 acceptable).</li>
+<li>Print type and color count (rotary hot-stamp, screen print, digital print, woven).</li>
+<li>MOQ expectation with cost-per-meter target (FOB Xiamen).</li>
+<li>Delivery window (PO date, ex-works date, freight mode).</li>
+<li>Compliance requirements (OEKO-TEX, GRS, FSC, REACH, Prop 65, FDA-contact).</li>
+</ul>
+
+<h3>5.2 Stage 3 Pantone-Lock Deliverable</h3>
+<ul>
+<li>Spectrophotometer report (CIELAB L*a*b* values vs. reference).</li>
+<li>Delta EΔ measurement at D65 / 10° observer.</li>
+<li>Production-ready dye recipe (fiber-reactive, disperse, acid, or pigment class).</li>
+<li>Lab-dip sample (50×50 cm minimum).</li>
+<li>Lightfastness test (AATCC 16, ISO 105-B02) — grade 4 minimum for retail-display SKUs.</li>
+<li>Wash-fastness test if applicable (AATCC 61, ISO 105-C06) — grade 3-4 minimum.</li>
+</ul>
+
+<h3>5.3 Stage 5 PPAP Deliverable</h3>
+<ul>
+<li>AQL inspection report (1.5/4.0/6.5 sampling per ISO 2859-1).</li>
+<li>Critical defect list (color match, print registration, edge integrity).</li>
+<li>Major defect list (hand-feel, drape, weave density).</li>
+<li>Minor defect list (cosmetic, packaging).</li>
+<li>Certificate of Conformance (CoC) with lot traceability.</li>
+<li>Test reports (tensile, crock, lightfast if retail-display).</li>
+<li>First-article signed sample retained for 12 months.</li>
+</ul>
+
+<h2>6. Onboarding Timing — Compressed vs. Standard</h2>
+<p>The 90-day cadence is the standard for full-service onboarding. Compressed timelines for replenishment programs or simple SKU variants:</p>
+
+<table>
+<thead><tr><th>Scenario</th><th>Standard Timeline</th><th>Compressed Timeline</th><th>Trade-off</th></tr></thead>
+<tbody>
+<tr><td>New SKU, custom Pantone</td><td>90 days</td><td>60 days (skip Stage 4 PPS, fast-track PPAP)</td><td>5-10% higher defect risk</td></tr>
+<tr><td>New SKU, stock Pantone</td><td>75 days</td><td>45 days (skip Stage 3 color-lock)</td><td>Only viable with mill-side stock color</td></tr>
+<tr><td>Repeat SKU, color revision</td><td>60 days</td><td>35 days (combine Stages 2-3)</td><td>Mill must hold prior recipe</td></tr>
+<tr><td>Replenishment, identical SKU</td><td>30 days</td><td>14 days (combine Stages 5-6)</td><td>Brand accepts standing-tier risk</td></tr>
+</tbody>
+</table>
+
+<h2>7. Cross-Functional Handoff Between Stages</h2>
+<p>Each stage involves a cross-functional handoff between brand and mill teams. Brands that formalize the handoff (with named owners, sign-off timestamps, and document repository) move through onboarding 20-30% faster than brands that rely on informal email chains.</p>
+
+<h3>7.1 Recommended Handoff Owners</h3>
+<ul>
+<li><strong>Stage 1 → 2:</strong> Brand sourcing/procurement → mill sales engineer.</li>
+<li><strong>Stage 2 → 3:</strong> Brand design/merchandising → mill color lab technician.</li>
+<li><strong>Stage 3 → 4:</strong> Mill color lab → mill production manager.</li>
+<li><strong>Stage 4 → 5:</strong> Brand product developer → mill QA manager.</li>
+<li><strong>Stage 5 → 6:</strong> Brand QA → mill production scheduler.</li>
+<li><strong>Stage 6 → 7:</strong> Mill logistics → brand replenishment planner.</li>
+</ul>
+
+<h2>8. Vendor Scorecard — What to Measure</h2>
+<p>The Stage 7 vendor scorecard is the learning loop that makes the next onboarding faster. Six core KPIs:</p>
+<ol>
+<li><strong>On-Time-In-Full (OTIF):</strong> target ≥95%, measured monthly.</li>
+<li><strong>Defect Rate (PPM):</strong> target ≤2,000 PPM for premium SKU, ≤5,000 PPM for value SKU.</li>
+<li><strong>Color Consistency (delta EΔ):</strong> target ≤1.0 lot-to-lot, ≤1.5 across PO lifecycle.</li>
+<li><strong>Response Time (RFQ-to-Quote):</strong> target ≤24 hours, escalation if &gt;48 hours.</li>
+<li><strong>Surge Capacity Fulfillment:</strong> target ≥80% of invoked surge accepted.</li>
+<li><strong>Forecast Accuracy (Tier 2 brands):</strong> target ±15% across four quarters.</li>
+</ol>
+
+<h2>9. Connection to Multi-Supplier Resilience</h2>
+<p>Stages 5-7 should run in parallel with the secondary mill to validate dual-sourcing capability. Without parallel-stage validation, dual-sourcing collapses into visual-drift between mills; with it, dual-sourcing is anchored to a single validated process. The onboarding playbook is the structural foundation that makes multi-supplier resilience operationally viable. Brands running parallel onboarding report 15-25% faster secondary-mill qualification and 30-40% lower visual-drift between mills.</p>
+
+<h2>10. Onboarding ROI — Quantifying the Payoff</h2>
+<p>For a brand launching four new SKUs per year, the onboarding playbook returns measurable value: 30-50% reduction in time-to-shelf (vs. unstructured onboarding), 8-15% reduction in defect-cost floor (vs. under-sampled QA), and 50-70% reduction in stock-out windows (vs. ad-hoc replenishment). For a brand with $1M annual ribbon spend, the playbook typically saves $80-150K in launch-year costs and another $40-80K per year in replenishment efficiency. The playbook pays back its implementation cost within one launch cycle.</p>
 
 <div class="cta">
 <a href="/contact.html">Request the Brief-to-Shelf Onboarding Worksheet &rarr;</a>
