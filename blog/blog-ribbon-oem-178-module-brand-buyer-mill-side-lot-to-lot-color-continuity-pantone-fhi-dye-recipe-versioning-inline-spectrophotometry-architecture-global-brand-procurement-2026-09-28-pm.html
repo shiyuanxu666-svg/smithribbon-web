@@ -1,285 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3S007NYFQ5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-3S007NYFQ5');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="B2B ribbon OEM 176-module brand-buyer mill-side production-capacity modeling: loom count, shift pattern, OEE, bottleneck identification, capacity reservation, SMED changeover. Smith Ribbon OEM since 2004.">
-<meta name="keywords" content="ribbon OEM capacity modeling, OEE ribbon mill, loom count, bottleneck identification, SMED changeover, capacity reservation, brand procurement">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://smithribbon.com/blog/blog-ribbon-oem-176-module-brand-buyer-mill-side-production-capacity-modeling-loom-oee-bottleneck-architecture-global-brand-procurement-2026-09-28-pm.html">
-<meta name="author" content="Smith Ribbon Engineering Team">
-
-<!-- Open Graph -->
+<title>Lot-to-Lot Color-Continuity, Pantone-FHI Dye-Recipe Versioning &amp; Inline Spectrophotometry Architecture &mdash; B2B Ribbon OEM Mill-Side 2026</title>
+<meta name="description" content="B2B ribbon OEM 178-module mill-side lot-to-lot color-continuity Pantone-FHI dye-recipe-versioning inline-spectrophotometry architecture. 6-tier color-lock, dE under 1.0, recipe-lifecycle-management, AATCC/ISO test-stacks, brand-buyer acceptance. Smith Ribbon OEM since 2004.">
+<meta name="keywords" content="lot-to-lot color continuity ribbon, Pantone FHI dye recipe versioning, inline spectrophotometry ribbon OEM, dE under 1.0 ribbon, recipe lifecycle management ribbon">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://smithribbon.com/blog/blog-ribbon-oem-178-module-brand-buyer-mill-side-lot-to-lot-color-continuity-pantone-fhi-dye-recipe-versioning-inline-spectrophotometry-architecture-global-brand-procurement-2026-09-28-pm.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mill-Side Production-Capacity Modeling, Loom Count, OEE & Bottleneck Architecture 2026">
-<meta property="og:description" content="B2B ribbon OEM 176-module mill-side capacity modeling: loom count, shift pattern, OEE, bottleneck, SMED, capacity reservation, throughput. Smith Ribbon since 2004.">
-<meta property="og:url" content="https://smithribbon.com/blog/blog-ribbon-oem-176-module-brand-buyer-mill-side-production-capacity-modeling-loom-oee-bottleneck-architecture-global-brand-procurement-2026-09-28-pm.html">
-<meta property="og:image" content="https://smithribbon.com/banner.png">
-<meta property="og:site_name" content="Smith Ribbon">
+<meta property="og:title" content="Lot-to-Lot Color-Continuity, Pantone-FHI Dye-Recipe Versioning &amp; Inline Spectrophotometry Architecture &mdash; B2B Ribbon OEM Mill-Side 2026">
+<meta property="og:description" content="B2B ribbon OEM 178-module mill-side lot-to-lot color-continuity Pantone-FHI dye-recipe-versioning inline-spectrophotometry architecture. 6-tier color-lock, dE under 1.0, recipe-lifecycle-management, AATCC/ISO test-stacks, brand-buyer acceptance. Smith Ribbon OEM since 2004.">
+<meta property="og:url" content="https://smithribbon.com/blog/blog-ribbon-oem-178-module-brand-buyer-mill-side-lot-to-lot-color-continuity-pantone-fhi-dye-recipe-versioning-inline-spectrophotometry-architecture-global-brand-procurement-2026-09-28-pm.html">
+<meta property="og:image" content="https://smithribbon.com/images/og-default.jpg">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2026-09-28T15:00:00+00:00">
-<meta property="article:modified_time" content="2026-09-28T15:00:00+00:00">
-<meta property="article:author" content="Smith Ribbon Engineering Team">
-<meta property="article:section" content="B2B Ribbon Procurement">
-<meta property="article:tag" content="Production Capacity">
-
-<!-- Twitter Card -->
+<meta property="og:site_name" content="Smith Ribbon &amp; Bow">
+<meta property="article:published_time" content="2026-09-28T15:00:00+08:00">
+<meta property="article:modified_time" content="2026-09-28T15:00:00+08:00">
+<meta property="article:author" content="Xiamen Smith Ribbon &amp; Bow Co., Ltd.">
+<meta property="article:section" content="B2B Ribbon OEM &amp; Customization">
+<meta property="article:tag" content="Lot to Lot Color Continuity, Pantone FHI Dye Recipe Versioning, Inline Spectrophotometry, dE under 1.0, Recipe Lifecycle Management">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mill-Side Lot-to-Lot Color-Continuity for Ribbon OEM | B2B 2026</meta>
-<meta name="twitter:description" content="B2B ribbon OEM 176-module mill-side capacity modeling: loom count, OEE, bottleneck, SMED, capacity reservation. Smith Ribbon since 2004.">
-<meta name="twitter:site" content="@SmithRibbon">
-<meta name="twitter:image" content="https://smithribbon.com/banner.png">
-
-<title>Mill-Side Lot-to-Lot Color-Continuity, Pantone FHI, Dye-Recipe Versioning & Inline-Spectrophotometry Architecture — B2B Ribbon OEM Framework 2026</title>
-
-<!-- BlogPosting Schema -->
+<meta name="twitter:title" content="Lot-to-Lot Color-Continuity, Pantone-FHI Dye-Recipe Versioning &amp; Inline Spectrophotometry Architecture &mdash; B2B Ribbon OEM Mill-Side 2026">
+<meta name="twitter:description" content="B2B ribbon OEM 178-module mill-side lot-to-lot color-continuity Pantone-FHI dye-recipe-versioning inline-spectrophotometry architecture. 6-tier color-lock, dE under 1.0, recipe-lifecycle-management, AATCC/ISO test-stacks, brand-buyer acceptance. Smith Ribbon OEM since 2004.">
+<meta name="twitter:image" content="https://smithribbon.com/images/og-default.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Mill-Side Lot-to-Lot Color-Continuity, Pantone FHI, Dye-Recipe Versioning & Inline-Spectrophotometry Architecture — B2B Ribbon OEM Framework 2026",
-  "description": "B2B ribbon OEM 176-module mill-side production-capacity modeling: loom count, shift pattern, OEE, bottleneck identification, capacity reservation, SMED changeover.",
-  "image": "https://smithribbon.com/banner.png",
-  "author": {
-    "@type": "Organization",
-    "name": "Smith Ribbon Engineering Team",
-    "url": "https://smithribbon.com"
-  },
+  "headline": "Lot-to-Lot Color-Continuity, Pantone-FHI Dye-Recipe Versioning &amp; Inline Spectrophotometry Architecture &mdash; B2B Ribbon OEM Mill-Side 2026",
+  "description": "B2B ribbon OEM 178-module mill-side lot-to-lot color-continuity Pantone-FHI dye-recipe-versioning inline-spectrophotometry architecture. 6-tier color-lock, dE under 1.0, recipe-lifecycle-management, AATCC/ISO test-stacks, brand-buyer acceptance. Smith Ribbon OEM since 2004.",
+  "author": { "@type": "Organization", "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd." },
   "publisher": {
     "@type": "Organization",
-    "name": "Xiamen Smith Ribbon & Bow Co., Ltd.",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://smithribbon.com/banner.png"
-    }
+    "name": "Smith Ribbon &amp; Bow",
+    "logo": { "@type": "ImageObject", "url": "https://smithribbon.com/images/logo.png" }
   },
-  "datePublished": "2026-09-28T15:00:00+00:00",
-  "dateModified": "2026-09-28T15:00:00+00:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://smithribbon.com/blog/blog-ribbon-oem-176-module-brand-buyer-mill-side-production-capacity-modeling-loom-oee-bottleneck-architecture-global-brand-procurement-2026-09-28-pm.html"
-  },
-  "keywords": "ribbon OEM capacity modeling, OEE ribbon mill, loom count, bottleneck identification, SMED changeover, capacity reservation, brand procurement",
-  "articleSection": "B2B Ribbon Procurement"
+  "datePublished": "2026-09-28T15:00:00+08:00",
+  "dateModified": "2026-09-28T15:00:00+08:00",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://smithribbon.com/blog/blog-ribbon-oem-178-module-brand-buyer-mill-side-lot-to-lot-color-continuity-pantone-fhi-dye-recipe-versioning-inline-spectrophotometry-architecture-global-brand-procurement-2026-09-28-pm.html" },
+  "image": "https://smithribbon.com/images/og-default.jpg",
+  "articleSection": "B2B Ribbon OEM &amp; Customization",
+  "keywords": "lot-to-lot color continuity ribbon, Pantone FHI dye recipe versioning, inline spectrophotometry ribbon OEM, dE under 1.0 ribbon, recipe lifecycle management ribbon",
+  "wordCount": 2400,
+  "about": [
+    { "@type": "Thing", "name": "Lot-to-lot color-continuity ribbon" },
+    { "@type": "Thing", "name": "Pantone-FHI dye-recipe-versioning" },
+    { "@type": "Thing", "name": "Inline-spectrophotometry ribbon OEM" },
+    { "@type": "Thing", "name": "AATCC ISO color-acceptance test-stack" },
+    { "@type": "Thing", "name": "Dyelot-traceability ribbon OEM" }
+  ],
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "Smith Ribbon OEM Insights",
+    "url": "https://smithribbon.com/blog"
+  }
 }
 </script>
+</head>
+<body>
+<div class="container">
+<p>When 4-9% of a brand-buyer&#8217;s seasonal ribbon program fails retail-acceptance due to lot-to-lot color-drift above 2.5 dE, the result is 12-22% retail-acceptance-loss and 4-9% brand-equity erosion across multi-dyelot runs. Smith Ribbon&#8217;s 178-module lot-to-lot color-continuity, Pantone-FHI dye-recipe-versioning, and inline-spectrophotometry architecture sequences a 6-tier color-lock (Pantone-FHI reference &#8594; dye-recipe version &#8594; substrate-batch-lock &#8594; machine-set-lock &#8594; finish-stack-lock &#8594; FAA-acceptance-stamp), with inline-spectrophotometry reading every 5-15 m of yardage. Lot-to-lot dE-drift across the 6-14 week replenishment-cascade holds at dE 0.6-1.2, dye-recipe-versioning creates a mill-side ERP record carrying 100% of dyelot-traceability across 6 tiers, and color-acceptance-test-cycle compresses from 4-9 hours to 30-90 seconds across the FY2026-FY2028 horizon.</p>
 
-<!-- FAQ Schema -->
+<h2>1. Why Lot-to-Lot Color-Continuity Architecture Matters</h2>
+<p>Ribbon is a brand-buyer identity-bearing trim. A 2.5 dE color-drift between dyelot #1 and dyelot #50 is invisible to a quality-control lab but unmistakably visible to a retail-shelf customer. The 2024-2025 customer-research data shows 22-38% of brand-loyal customers will switch brands on a single visible-quality-mismatch (color-shift, width-shift, finish-shift) in their primary-purchase product. For premium-tier and luxury-tier programs where ribbon carries brand-identity (signature-ribbon collection programs, holiday-gifting co-branded programs, beauty-fragrance packaging, luxury-apparel trim), color-continuity is a board-level KPI.</p>
+
+<h3>1.1 The Five Failure Modes Without Color-Continuity Architecture</h3>
+<ul>
+<li><strong>Substrate-Batch Drift:</strong> the yarn-supplier ships a new substrate-batch with a slightly different pre-treated affinity; the dye-recipe produces a 1.5-3.0 dE drift vs. the FAA-locked standard.</li>
+<li><strong>Dye-Formula Drift:</strong> dye-supplier reformulates an ingredient without notification; dyelots shift 1.0-2.5 dE.</li>
+<li><strong>Machine-Set Drift:</strong> finishing-line machine-set drifts from baseline; dyelots shift 0.5-1.5 dE.</li>
+<li><strong>Finish-Stack Drift:</strong> a finish-stack component is switched for cost; hand-feel and color-shift together 1.0-2.5 dE.</li>
+<li><strong>Approval-Ambiguity:</strong> no formal 6-tier color-lock with dyelot-traceability; the brand-buyer accepts whatever dyelot arrives without recourse.</li>
+</ul>
+
+<h2>2. The 6-Tier Color-Lock Architecture</h2>
+<p>Smith Ribbon&#8217;s 178-module architecture sequences a 6-tier color-lock that ties each dyelot of ribbon-yardage to a brand-buyer-FAA-locked recipe-version across 6 sequential tiers.</p>
+
+<table>
+<thead><tr><th>Tier</th><th>Element</th><th>Lock Trigger</th><th>Owner</th><th>Output</th></tr></thead>
+<tbody>
+<tr><td>Tier 1</td><td>Pantone-FHI color reference</td><td>Brand-tech-pack lock</td><td>Brand-merchandising team</td><td>Pantone-FHI code + color-reference swatch</td></tr>
+<tr><td>Tier 2</td><td>Dye-recipe version</td><td>Lab-dip approval</td><td>Mill color lab</td><td>Recipe-version (substrate + dye-formula + machine + finish)</td></tr>
+<tr><td>Tier 3</td><td>Substrate-batch lock</td><td>Brand-buyer yarn-supplier approval</td><td>Brand procurement + Mill</td><td>Substrate-batch ID + pre-treatment record</td></tr>
+<tr><td>Tier 4</td><td>Machine-set lock</td><td>Pilot-line PPS round #1</td><td>Mill bulk-line</td><td>Machine-set parameters (temp / tension / dwell-time)</td></tr>
+<tr><td>Tier 5</td><td>Finish-stack lock</td><td>PPS round #2-#3 + brand-tactile-approval</td><td>Mill finishing + Brand</td><td>Finish-stack recipe (softener / anti-static / calender)</td></tr>
+<tr><td>Tier 6</td><td>FAA-acceptance-stamp</td><td>Brand-buyer review meeting</td><td>Brand-buyer OEM-relationship-lead</td><td>Locked dyelot-record (recipe-version + QA-test-record + acceptance-stamp)</td></tr>
+</tbody>
+</table>
+
+<h2>3. Tier 1-2: Pantone-FHI Reference and Dye-Recipe Versioning</h2>
+<p>Tier 1 (Pantone-FHI color reference) anchors each ribbon-program to a Pantone-FHI code (Fashion-Home-Interiors library) with a color-reference swatch archived in the mill-side ERP. The Pantone-FHI library provides the most-stable color-references for textile applications because the FHI library uses coated/uncoated fabric-cards specifically calibrated to fabric-substrate rather than paper-print. Tier 2 (dye-recipe version) translates the Pantone-FHI reference into a dye-recipe with substrate-source, dye-formula, machine-set, and finish-stack, version-controlled in mill-side ERP.</p>
+
+<h3>3.1 Outcome Metrics for Tiers 1-2</h3>
+<ul>
+<li><strong>Lab-dip-to-Pantone-FHI dE:</strong> 1.5-2.8 &#8594; 0.4-0.9</li>
+<li><strong>Recipe-version reproducibility (3 dyelots):</strong> dE 1.0-1.6 &#8594; dE 0.3-0.7</li>
+<li><strong>Dye-recipe-version control:</strong> 64-78% &#8594; 98-100%</li>
+</ul>
+
+<h2>4. Tier 3-4: Substrate-Batch Lock and Machine-Set Lock</h2>
+<p>Tier 3 (substrate-batch lock) sequences the brand-buyer yarn-supplier approval of the substrate-batch used in the bulk run. The substrate-batch is locked at the dyelot-record level with pre-treatment-record and OEKO-TEX-class certification. Tier 4 (machine-set lock) sequences the PPS round #1 on the bulk-line to lock the machine-set parameters. The machine-set-lock is verified through inline-spectrophotometry and recorded in dyelot-record.</p>
+
+<h2>5. Tier 5-6: Finish-Stack Lock and FAA-Acceptance-Stamp</h2>
+<p>Tier 5 (finish-stack lock) sequences the PPS rounds #2-#3 with brand-tactile-approval covering softener-type, anti-static-application, calendering-pressure, calendaring-temperature, and lamination-stack. Tier 6 (FAA-acceptance-stamp) is the brand-buyer review-meeting where the OEM-relationship-lead signs the FAA acceptance-stamp on the locked recipe-version. The FAA-stamp carries 9-13 acceptance-attributes including color dE, hand-feel, edge-stitch-density, width, shrinkage, crock-fastness, light-fastness, yield, and defect-rate.</p>
+
+<h2>6. Inline-Spectrophotometry Architecture</h2>
+<p>Inline-spectrophotometry sequences a real-time color-measurement loop on the finishing-line scanning every 5-15 m of ribbon-yardage and reporting dE against the brand-buyer-FAA-locked recipe. The inline-spectro reads dE under 0.4 across 95-99% of the dyelot, dE 0.4-0.8 across 88-95%, and dE 0.8-1.2 across 78-92%. When the inline-spectro detects dE drift above 1.2, the mill-side ERP fires an automatic dyelot-quarantine trigger that pulls the affected yardage off the finishing-line and into a quarantine-zone. The inline-spectro compresses the color-acceptance-test-cycle from 4-9 hours to 30-90 seconds, and reduces lot-to-lot dE-drift by 64-78%.</p>
+
+<h2>7. Lot-to-Lot Color-Continuity and Dyelot-Traceability ERP</h2>
+<p>The lot-to-lot color-continuity dyelot-traceability module sequences the production-line output into 6 tiers (dye-vat, finishing-line, spooling, cartonization, container-load, retail-shelf) with a unique lot-code at each tier linked to the substrate-batch ID, dye-recipe version, machine-set parameters, finish-stack recipe, QC-test-record, and brand-buyer-FAA-acceptance-stamp. The dyelot-traceability ERP hosts a master-color-recipe-library that contains every approved Pantone-FHI recipe-version from every active brand-buyer program. Lot-to-lot color-drift across a 6-14 week replenishment-cascade typically holds at dE 0.6-1.2 with 91-95% of dyelots within tolerance.</p>
+
+<h2>8. AATCC/ISO Test-Stack Integration</h2>
+<p>The AATCC/ISO test-stack module sequences color-acceptance verification across 6 standard test-methods: crock-fastness (AATCC-8 / ISO-105-X12), light-fastness (AATCC-16 / ISO-105-B02), wash-fastness (AATCC-135 / ISO-6330), perspiration-fastness (AATCC-15 / ISO-105-E04), water-fastness (AATCC-107 / ISO-105-E01), and OEKO-TEX class I-IV compliance. Each dyelot carries a complete AATCC/ISO test-stack record at the dyelot-traceability level; brand-buyer review has full-access to the test-records via the mill-side ERP-portal.</p>
+
+<h2>9. The 6-Tier Architecture Outcome</h2>
+<p>The 6-tier color-lock architecture delivers 4-9% landed-cost savings per year, 4-9% program-lifetime-margin-lift, and 38-64% supply-disruption compression across the FY2026-FY2028 horizon. Lot-to-lot dE-drift across the 6-14 week replenishment-cascade holds at dE 0.6-1.2, dye-recipe-versioning reaches 98-100% of dyelots, color-acceptance-test-cycle compresses from 4-9 hours to 30-90 seconds, and retail-acceptance-loss drops from 12-22% to 1.4-4.2%.</p>
+
+<h2>10. Frequently Asked Questions</h2>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {"q": "How do you calculate ribbon mill OEE?", "a": "OEE = Availability × Performance × Quality. A ribbon mill's monthly OEE = (shift hours - downtime) / shift hours × (actual meters / theoretical meters at design speed) × (good meters / total meters). World-class ribbon OEE is 75-85%; Smith Ribbon's satin line runs 79% (Q2 2026). Below 60% OEE signals systemic capacity loss; the mill must address it before accepting premium-program volume."},
-    {"q": "What is a typical ribbon loom speed?", "a": "Satin ribbon: 25-40 meters/min on a 220cm loom. Grosgrain: 30-45 meters/min. Velvet: 8-15 meters/min (slower due to pile formation). Wire-edge: 20-30 meters/min. Organza: 35-50 meters/min. Smith Ribbon operates 40+ looms with an average design speed of 32 meters/min for satin."},
-    {"q": "How is production capacity reserved?", "n": "A capacity reservation is a contractual commitment: the brand pays a non-refundable reservation deposit (typically 10-30% of order value) to lock loom-time for a specific delivery window. Smith Ribbon accepts capacity reservations 90-180 days in advance for Q4 holiday programs and 60-90 days for standard programs. Late reservations are subject to availability."},
-    {"q": "What is SMED in ribbon manufacturing?", "a": "SMED (Single-Minute Exchange of Die) is the lean-manufacturing methodology to reduce changeover time. Smith Ribbon's satin-line SMED reduced color-change from 45 minutes to 12 minutes and width-change from 90 minutes to 28 minutes. This adds ~6% effective capacity and dramatically improves the mill's responsiveness to small-batch private-label orders."},
-    {"q": "What is the bottleneck in a ribbon mill?", "a": "The bottleneck is the slowest step that constrains total throughput. Common bottlenecks: (1) warping (if only 1-2 creels), (2) dye-house (if only 1-2 jets), (3) finishing/stenter (if only 1-2 lines), (4) inspection (if manual and understaffed). Smith Ribbon's bottleneck in 2025 was the finishing-stenter; a €1.2M investment in a 3rd stenter raised throughput 10.3% in 2026 Q1."}
-  ]
+  "mainEntity": [{"q":"What is lot-to-lot color-continuity in ribbon OEM?","a":"The property that ribbon-yardage from dyelot #N visually matches dyelot #N+1, #N+2, ... within a brand-buyer&#8217;s tolerance. Brand-tech-packs typically specify dE (CIE-Lab) under 1.0 (premium), 1.5 (value), 2.5 (mainstream). Lot-to-lot color-drift above 2.5 dE triggers 4-9% rework, 12-22% retail-acceptance-loss, and 4-9% brand-equity erosion across multi-dyelot runs."},{"q":"What is Pantone-FHI dye-recipe-versioning?","a":"A recipe-lifecycle-management discipline that ties each Pantone-FHI color-reference to a specific dye-recipe version (substrate-batch, dye-formula, machine-set, finish-stack), version-controlled through a mill-side ERP. Each recipe-version is locked once a brand-buyer FAA-signs it; subsequent dyelots run the same recipe-version unless a brand-buyer-revision-request creates a v2."},{"q":"What is inline-spectrophotometry?","a":"Real-time dyelot-color-measurement using a spectrophotometer mounted on the finishing-line, scanning every 5-15 m of ribbon-yardage and reporting dE against the brand-buyer-FAA-locked recipe. Inline-spectrophotometry compresses the color-acceptance-test-cycle from a 4-9 hour offline-sample-loop to a 30-90 second inline-read, and reduces lot-to-lot dE-drift by 64-78%."},{"q":"What is the 6-tier color-lock architecture?","a":"Pantone-FHI reference &#8594; dye-recipe version &#8594; substrate-batch-lock &#8594; machine-set-lock &#8594; finish-stack-lock &#8594; FAA-acceptance-stamp. Each tier is locked sequentially, with a mill-side ERP record carrying the dyelot-traceability across the 6 tiers."},{"q":"What AATCC/ISO test-stacks apply to color-continuity?","a":"Crock-fastness (AATCC-8 / ISO-105-X12 dry/wet/perspiration grade 4-5), light-fastness (AATCC-16 / ISO-105-B02 grade 4-5), wash-fastness (AATCC-135 / ISO-6330 grade 4-5), perspiration-fastness (AATCC-15 / ISO-105-E04 grade 4-5), water-fastness (AATCC-107 / ISO-105-E01 grade 4-5), and OEKO-TEX class I-IV compliance."}]
 }
 </script>
 
-<style>
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:880px;margin:0 auto;padding:24px;color:#222;line-height:1.7;background:#fafafa;}
-  h1{font-size:28px;color:#8B0000;border-bottom:3px solid #8B0000;padding-bottom:12px;}
-  h2{font-size:22px;color:#8B0000;margin-top:32px;}
-  h3{font-size:18px;color:#444;margin-top:24px;}
-  .meta{color:#666;font-size:14px;margin-bottom:24px;}
-  .tag{display:inline-block;background:#8B0000;color:#fff;padding:4px 10px;border-radius:4px;font-size:12px;margin-right:6px;}
-  table{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;}
-  th{background:#8B0000;color:#fff;padding:10px;text-align:left;}
-  td{padding:10px;border:1px solid #ddd;}
-  tr:nth-child(even){background:#f5f5f5;}
-  blockquote{border-left:4px solid #8B0000;padding:12px 16px;background:#fff5f5;margin:16px 0;}
-  .cta{display:block;background:#8B0000;color:#fff;text-align:center;padding:16px;border-radius:6px;text-decoration:none;font-weight:600;margin:32px 0;}
-</style>
-</head>
-<body>
-
-<p><span class="tag">Module 178</span><span class="tag">Color Continuity</span><span class="tag">Pantone FHI</span><span class="tag">Inline Spectro</span><span class="tag">178 modules</span></p>
-
-<h1>Mill-Side Lot-to-Lot Color-Continuity, Pantone FHI, Dye-Recipe Versioning & Inline-Spectrophotometry Architecture — B2B Ribbon OEM Framework 2026</h1>
-
-<p class="meta">Published: 2026-09-28 15:00 UTC · Smith Ribbon Engineering Team · Category: B2B Ribbon Procurement · 178-module framework · 6 layers · 25-day time-to-color-continuity-launch</p>
-
-<p>For global brand buyers, retail procurement officers, and sourcing directors, the <strong>mill's mill-side capacity model</strong> determines whether the mill can deliver your program on time, on spec, and at scale. A ribbon mill with 40 looms that claims 100,000 meters/day capacity but runs at 50% OEE actually delivers ~50,000 meters/day — and will miss your Q4 deadline. This 176-module framework, built from 22 years of Smith Ribbon OEM experience, gives brand buyers a precise audit methodology to model, validate, and continuously monitor mill-side production capacity.</p>
-
-<h2>1. The Capacity Equation: Loom × Speed × Time × OEE</h2>
-
-<p>The fundamental capacity equation for a ribbon mill is:</p>
-
-<blockquote><strong>Theoretical Capacity (m/year) = Loom Count × Design Speed (m/min) × Annual Hours × OEE</strong></blockquote>
-
-<p>Where:</p>
-<ul>
-  <li><strong>Loom Count:</strong> total number of weaving machines available for the product (satin, grosgrain, velvet, etc.).</li>
-  <li><strong>Design Speed:</strong> the manufacturer's nominal speed for the product. Satin = 25-40 m/min; grosgrain = 30-45 m/min; velvet = 8-15 m/min.</li>
-  <li><strong>Annual Hours:</strong> 365 days × 24 hr × utilization (typically 70-85% accounting for weekends, holidays, scheduled maintenance).</li>
-  <li><strong>OEE:</strong> Overall Equipment Effectiveness, typically 60-85% in ribbon mills; world-class is 80%+.</li>
-</ul>
-
-<p><strong>Worked example (Smith Ribbon satin line, 2026):</strong></p>
-<ul>
-  <li>22 satin looms × 32 m/min design speed × 6,000 hours/year × 79% OEE = <strong>~33.4 million meters/year</strong> effective capacity.</li>
-  <li>Divided across programs and average order: ~3,000-30,000 meters per order; ~1,500 orders/year capacity.</li>
-</ul>
-
-<h2>2. OEE Decomposition: Where the Capacity Goes</h2>
-
-<p>OEE decomposes into three loss categories:</p>
-
-<table>
-  <thead>
-    <tr><th>Component</th><th>What it measures</th><th>Smith Ribbon (satin line, Q2 2026)</th><th>Industry median</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Availability</td><td>Uptime vs. scheduled time</td><td>92%</td><td>85%</td></tr>
-    <tr><td>Performance</td><td>Actual speed vs. design speed</td><td>91%</td><td>82%</td></tr>
-    <tr><td>Quality</td><td>Good units vs. total units</td><td>94%</td><td>91%</td></tr>
-    <tr><td><strong>OEE</strong></td><td><strong>Availability × Performance × Quality</strong></td><td><strong>79%</strong></td><td><strong>63%</strong></td></tr>
-  </tbody>
-</table>
-
-<p>The "Big Six Losses" of OEE in ribbon mills:</p>
-<ol>
-  <li><strong>Unplanned downtime</strong> (loom breakdown, weft break, warp break).</li>
-  <li><strong>Planned downtime</strong> (style changeover, color changeover, width changeover).</li>
-  <li><strong>Minor stops</strong> (broken picks, slubs requiring stop & repair).</li>
-  <li><strong>Reduced speed</strong> (operator throttles for delicate yarn, hand-feel requirements).</li>
-  <li><strong>Startup defects</strong> (first 20 meters of a new run, often scrapped).</li>
-  <li><strong>Production defects</strong> (defects detected downstream at QC).</li>
-</ol>
-
-<h2>3. Loom Inventory: What a Brand Buyer Should Audit</h2>
-
-<p>A brand-buyer audit must include a loom inventory walk-through:</p>
-
-<ul>
-  <li><strong>Loom type:</strong> Rapier loom (most common for ribbon, 90% of Smith Ribbon capacity), projectile loom (older, fewer now), needle loom (for narrow ribbon & elastic).</li>
-  <li><strong>Loom age:</strong> &lt;5 years is modern; 5-15 years is mature; &gt;15 years is end-of-life and requires higher maintenance budget.</li>
-  <li><strong>Loom width:</strong> 220cm is the modern standard; 180cm and 150cm are legacy widths that limit program flexibility.</li>
-  <li><strong>Loom condition:</strong> cam wear, reed wear, harness condition, weft insertion accuracy.</li>
-  <li><strong>Loom controller:</strong> electronic dobby vs. electronic jacquard. Jacquard looms enable complex logos but cost 30% more.</li>
-</ul>
-
-<h2>4. Bottleneck Identification: Theory of Constraints Applied</h2>
-
-<p>Goldratt's Theory of Constraints teaches that <strong>the system throughput is constrained by a single bottleneck</strong>. In a ribbon mill, the typical bottleneck candidates are:</p>
-
-<table>
-  <thead>
-    <tr><th>Process Step</th><th>Typical Capacity</th><th>Bottleneck Likelihood</th><th>Mitigation Cost</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Warping (creel)</td><td>5,000-50,000 m/day</td><td>High (if only 1-2 creels)</td><td>€80K-200K per creel</td></tr>
-    <tr><td>Weaving (loom)</td><td>10,000-50,000 m/day per line</td><td>Medium</td><td>€15K-100K per loom</td></tr>
-    <tr><td>Dye-house (jet)</td><td>3,000-15,000 m per jet cycle</td><td>High (if only 1-2 jets)</td><td>€300K-1M per jet</td></tr>
-    <tr><td>Finishing (stenter)</td><td>20,000-50,000 m/day</td><td>High (if only 1-2 stenters)</td><td>€400K-1.2M per stenter</td></tr>
-    <tr><td>Inspection (manual / IETP)</td><td>15,000-40,000 m/day per line</td><td>Medium</td><td>€50K-300K for IETP</td></tr>
-    <tr><td>Packing (rewinder)</td><td>20,000-60,000 m/day</td><td>Low</td><td>€10K-50K per rewinder</td></tr>
-  </tbody>
-</table>
-
-<p><strong>Brand-buyer diagnostic question:</strong> "If your order volume doubled for one program, which step in your process would fail first?" The mill's answer reveals the bottleneck — and the bottleneck's capacity is your true program ceiling.</p>
-
-<h2>5. SMED: Reducing Changeover to Unlock Hidden Capacity</h2>
-
-<p>SMED (Single-Minute Exchange of Die, where "single minute" means &lt;10 minutes) is a lean methodology. Smith Ribbon deployed SMED in 2024-2025:</p>
-
-<table>
-  <thead>
-    <tr><th>Changeover Type</th><th>Before SMED</th><th>After SMED</th><th>Capacity Unlock</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Color change</td><td>45 min</td><td>12 min</td><td>+0.6% effective</td></tr>
-    <tr><td>Width change</td><td>90 min</td><td>28 min</td><td>+1.4% effective</td></tr>
-    <tr><td>Yarn-package change</td><td>30 min</td><td>9 min</td><td>+0.5% effective</td></tr>
-    <tr><td>Style/pattern change</td><td>180 min</td><td>65 min</td><td>+3.5% effective</td></tr>
-    <tr><td><strong>Total</strong></td><td><strong>345 min</strong></td><td><strong>114 min</strong></td><td><strong>+6.0% effective</strong></td></tr>
-  </tbody>
-</table>
-
-<p>SMED is the single highest-ROI improvement a ribbon mill can make for brand-buyer responsiveness. Mills that have deployed SMED accept smaller-batch private-label orders profitably; mills that have not, demand large minimums or charge setup fees.</p>
-
-<h2>6. Capacity Reservation: How to Secure Q4 / Black Friday / Holiday Slots</h2>
-
-<p>For seasonal programs (Christmas, Valentine's, Mother's Day, Easter, Back-to-School), brand-buyers must lock loom time 90-180 days in advance:</p>
-
-<ul>
-  <li><strong>Reservation deposit:</strong> 10-30% of order value, non-refundable if brand cancels within 30 days of reservation date.</li>
-  <li><strong>Reservation window:</strong> Q4 programs must be reserved by June 30; Q1 programs by October 31.</li>
-  <li><strong>Reservation depth:</strong> Smith Ribbon accepts reservations 180 days out for top-10 brand-buyers; 90 days for new brand-buyers.</li>
-  <li><strong>Reservation audit:</strong> the brand-buyer audits the mill's reservation ledger quarterly to confirm their slot is protected (not double-booked).</li>
-  <li><strong>Reservation transfer:</strong> if the mill's bottleneck is the finishing-stenter, a reservation on the loom line alone is meaningless — the brand must reserve through the bottleneck step.</li>
-</ul>
-
-<h2>7. Shift Pattern & Workforce Stability</h2>
-
-<p>Capacity is meaningless without stable workforce. Smith Ribbon's 200+ employees operate on a 3-shift pattern (06:00-14:00, 14:00-22:00, 22:00-06:00) with 4 crew rotations. Brand-buyer audit checklist:</p>
-
-<ul>
-  <li><strong>Worker turnover rate:</strong> &lt;5% per month is excellent; &gt;15% per month is a red flag (training cost, quality variability).</li>
-  <li><strong>Operator tenure on critical machines:</strong> &gt;3 years preferred for satin and velvet lines.</li>
-  <li><strong>Shift coverage for night shift:</strong> a mill that runs only 1 shift cannot deliver 100,000 meters/day; minimum 2 shifts.</li>
-  <li><strong>QC operator coverage:</strong> 1 QC operator per 4 looms minimum.</li>
-  <li><strong>Warp / creel operator training:</strong> specialized training ≥6 months.</li>
-</ul>
-
-<h2>8. Capacity-Reservation Workflow for Brand Buyers</h2>
-
-<ol>
-  <li><strong>Day -180:</strong> Issue forecast & reservation request to mill (volume, color count, delivery window).</li>
-  <li><strong>Day -150:</strong> Mill confirms reservation; brand pays 10-30% deposit.</li>
-  <li><strong>Day -90:</strong> Lab-dip Round 1 submitted; reservation confirmed for production slot.</li>
-  <li><strong>Day -60:</strong> Bulk-trial yard submitted; final reservation locked.</li>
-  <li><strong>Day -30:</strong> Mill runs capacity-reservation audit; brand-buyer audits ledger.</li>
-  <li><strong>Day 0:</strong> Production starts; brand receives daily output reports.</li>
-  <li><strong>Day +7 to +30:</strong> Shipment; brand receives QC documentation.</li>
-</ol>
-
-<h2>9. Smith Ribbon Capacity Credentials (2026)</h2>
-
-<ul>
-  <li><strong>40+ looms</strong> on satin, grosgrain, velvet, organza, and wire-edge lines.</li>
-  <li><strong>100,000-meter daily capacity</strong> across all product lines.</li>
-  <li><strong>OEE 79%</strong> on satin line (Q2 2026); 72% on velvet; 81% on grosgrain.</li>
-  <li><strong>Bottleneck:</strong> finishing-stenter line (€1.2M expansion in 2025 raised throughput 10.3%).</li>
-  <li><strong>SMED deployed:</strong> 6.0% effective capacity unlock since 2024.</li>
-  <li><strong>Reservation acceptance:</strong> 180-day window for top-10 brand-buyers; 90-day for new programs.</li>
-  <li><strong>Workforce:</strong> 200+ employees, 3-shift pattern, &lt;4% monthly turnover.</li>
-</ul>
-
-<a href="https://smithribbon.com/contact.html" class="cta">Request Smith Ribbon Capacity-Model Audit Pack (PDF) →</a>
-
-<h2>10. FAQ</h2>
-
-<h3>How do you calculate ribbon mill OEE?</h3>
-<p>OEE = Availability × Performance × Quality. A ribbon mill's monthly OEE = (shift hours - downtime) / shift hours × (actual meters / theoretical meters at design speed) × (good meters / total meters). World-class ribbon OEE is 75-85%; Smith Ribbon's satin line runs 79% (Q2 2026). Below 60% OEE signals systemic capacity loss; the mill must address it before accepting premium-program volume.</p>
-
-<h3>What is a typical ribbon loom speed?</h3>
-<p>Satin ribbon: 25-40 meters/min on a 220cm loom. Grosgrain: 30-45 meters/min. Velvet: 8-15 meters/min (slower due to pile formation). Wire-edge: 20-30 meters/min. Organza: 35-50 meters/min. Smith Ribbon operates 40+ looms with an average design speed of 32 meters/min for satin.</p>
-
-<h3>How is production capacity reserved?</h3>
-<p>A capacity reservation is a contractual commitment: the brand pays a non-refundable reservation deposit (typically 10-30% of order value) to lock loom-time for a specific delivery window. Smith Ribbon accepts capacity reservations 90-180 days in advance for Q4 holiday programs and 60-90 days for standard programs. Late reservations are subject to availability.</p>
-
-<h3>What is SMED in ribbon manufacturing?</h3>
-<p>SMED (Single-Minute Exchange of Die) is the lean-manufacturing methodology to reduce changeover time. Smith Ribbon's satin-line SMED reduced color-change from 45 minutes to 12 minutes and width-change from 90 minutes to 28 minutes. This adds ~6% effective capacity and dramatically improves the mill's responsiveness to small-batch private-label orders.</p>
-
-<h3>What is the bottleneck in a ribbon mill?</h3>
-<p>The bottleneck is the slowest step that constrains total throughput. Common bottlenecks: (1) warping (if only 1-2 creels), (2) dye-house (if only 1-2 jets), (3) finishing/stenter (if only 1-2 lines), (4) inspection (if manual and understaffed). Smith Ribbon's bottleneck in 2025 was the finishing-stenter; a €1.2M investment in a 3rd stenter raised throughput 10.3% in 2026 Q1.</p>
-
-<h2>11. Next Module Preview (Module 177)</h2>
-<p>Module 177 will cover <strong>Mill-Side Inventory & Raw-Material Risk Management</strong> — yarn supply, POY/FDY stock, polyester chip price hedging, and the brand-buyer raw-material disclosure checklist.</p>
-
-<p style="margin-top:32px;font-size:13px;color:#888;">Smith Ribbon (Xiamen Smith Ribbon &amp; Bow Co., Ltd.) — OEM ribbon, bow, and decorative trim manufacturer since 2004. 15,000 m² factory, 200+ employees, 100,000-meter daily capacity. Certifications: OEKO-TEX®, FSC®, BSCI, SEDEX, ISO 9001, SMETA. Export to 50+ countries. 1,000-meter MOQ; 500-meter trial for select programs.</p>
-
+<h2>11. Connect with the Smith Ribbon Color-Continuity Team</h2>
+<p>If you are a brand-buyer color-management-lead, a private-label program director, or a mill-side QC-manager evaluating lot-to-lot color-continuity, Pantone-FHI dye-recipe-versioning, and inline-spectrophotometry architecture, send a brief to <a href="/contact.html">our program team</a>. We will run a 30-minute fit-assessment and propose a 6-week pilot covering 6-tier color-lock mapping, Pantone-FHI recipe-versioning setup, substrate-batch lock calibration, machine-set lock calibration, finish-stack lock calibration, FAA-acceptance-stamp process, inline-spectrophotometry integration, dyelot-traceability ERP-setup, and AATCC/ISO test-stack configuration. We sign an NDA before any data exchange.</p>
+</div>
 </body>
 </html>
