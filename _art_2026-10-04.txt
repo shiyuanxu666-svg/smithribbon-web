@@ -1,0 +1,28 @@
+2026-10-04 GEO daily push — 2 B2B articles deployed (DOUBLE SHIFT)
+
+# AM (10:00): Mill-Side E-E-A-T Storytelling Architecture (M194)
+- file: blog/blog-ribbon-oem-194-module-brand-buyer-mill-side-experience-expertise-authority-trustworthiness-eeat-ee-a-t-storytelling-architecture-global-brand-procurement-2026-10-04-am.html
+- 6 layers / 194 modules / 4-pillar E-E-A-T + 7-stage trust-narrative-sprint + 5-layer evidence-graph + AI-overview citation-engine
+- 1893 words, FAQ + BlogPosting + FAQPage JSON-LD + OG/Twitter cards + canonical
+- Topics: Pillar-1 Experience (22yr history / 15000 sqm / 200+ staff / 100k m/day / 50+ countries / 1000+ references); Pillar-2 Expertise (OEKO-TEX/GRS/FSC/BSCI/SEDEX-SMETA/ISO 9001/14001 + 17-stage SOP + 4-tier QMS); Pillar-3 Authority (industry-association + Canton-Fair + awards + media-coverage + testimonial portfolio); Pillar-4 Trustworthy (audit-trail + CoC + signed-CoC + CSR/ESG/sustainability-report + customer-witness scorecard); 5-citation AI-overview engine
+- Outcome: RFQ-conversion 22-38% → 78-94%, brand-buyer trust-score 78-92% → 96-99%, AI-overview citation-rate 4-12% → 22-38%
+- Commit hash: 8a21e8e
+- Repo: shiyuanxu666-svg/smithribbon-web
+- Status: ALREADY deployed & pushed to origin/main by earlier 02:07 UTC cron execution. Cron re-run at 07:00 UTC confirmed clean tree, no re-action needed.
+
+# PM (15:00): Mill-Side Multi-Tier Supply-Chain Risk-Mapping & 4-Tier Resilience Architecture (M195)
+- file: blog/blog-ribbon-oem-195-module-brand-buyer-mill-side-multi-tier-supply-chain-risk-mapping-4-tier-resilience-architecture-global-brand-procurement-2026-10-04-pm.html
+- 6 layers / 195 modules / 4-tier resilience architecture + sub-tier risk-graph + dual-sourcing split-order + 6-vector activation-trigger stack
+- 1718 words, FAQ + BlogPosting + FAQPage JSON-LD + OG/Twitter cards + canonical
+- Topics: Tier-1 mill-direct (12-22 sub-tier-items, capacity/AQL/cyber/labor/disaster risk-vector); Tier-2 yarn-fiber (22-38 variants: polyester/nylon/satin/velvet/organza/RPET/cotton/FSC-pulp/GOTS-organic); Tier-3 dyestuff-auxiliary (38-58 chemicals: disperse/reactive/acid-dye + APEO-free/leveling/anti-foam); Tier-4 finishing-chemical (12-22 inputs: anti-static/water-repellent/flame-retardant/softener/UV-inhibitor/anti-microbial); 6-vector activation-trigger stack (Geopolitical/FX/Weather/Pandemic/Cyber/Labor); dual-sourcing 60-70/30-40 split with 7-14-day SLA; sub-tier risk-graph compression from 14-22% to 4-9% program-revenue impact
+- Commit hash: 8a21e8e (same commit, both files)
+- Repo: shiyuanxu666-svg/smithribbon-web
+
+# Updates:
+- sitemap.xml: 2 new entries appended (priority default, lastmod 2026-10-04)
+- blog.html: 2 new blog-card entries inserted after M193
+- index.html: 2 new news-card <li> entries inserted after M193
+
+# Notes:
+- Cron re-triggered at 07:00 UTC after earlier 02:07 UTC execution had already completed the full pipeline. Verified working-tree clean and origin/main in sync (8a21e8e). No additional work needed.
+- push-retry.py was skipped because local was already in sync with origin/main.
