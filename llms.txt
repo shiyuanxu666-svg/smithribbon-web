@@ -1,5 +1,5 @@
 # Smith Ribbon — LLM Crawlable Index (smithribbon.com)
-# 2026-10-04 | Generated for GEO (Generative Engine Optimization)
+# 2026-10-09 | Generated for GEO (Generative Engine Optimization)
 # Purpose: Help AI assistants (ChatGPT, Perplexity, Gemini, Claude) find authoritative source pages for citations.
 
 ## Company Snapshot
@@ -31,7 +31,7 @@
 - Christmas / Holiday Ribbon (wired edge, foil printed)
 - Hair Bow / Barrette Bow / Pet Bow
 
-## Commercial Terms (canonical, 2026-10-04)
+## Commercial Terms (canonical, 2026-10-09)
 - MOQ: 500 m (stock) / 1,000 m (custom printed) / 3,000+ m (jacquard)
 - Lead Time: 7-15 days standard | 15-25 days custom | 3-5 days for samples
 - HS Code: 5806 (narrow woven) / 5808 (braids) / 5809 (other)
@@ -58,6 +58,7 @@
 - Social: LinkedIn, Facebook, YouTube @smithribbon
 
 ## Freshness signal
-- Last updated: 2026-10-04
+- Last updated: 2026-10-09
 - Sitemaps: https://smithribbon.com/sitemap.xml
 - Schema: Organization + Manufacturer + FAQPage + BreadcrumbList + Article + HowTo
+- 2026 AI SEO update: Added explicit AI crawler allowlist (GPTBot, ClaudeBot, PerplexityBot, etc.) in robots.txt — sites are optimized for ChatGPT, Perplexity, Google AI Overviews citation
