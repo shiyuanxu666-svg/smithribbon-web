@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""Build 2026-10-12 cron DOUBLE 2 B2B articles for smithribbon (modules 222 AM + 223 PM).
+
+Module 222 (AM): Mill-Calendar Production-Slot-Reservation & Brand-Buyer-Priority-Alignment
+Module 223 (PM): Brand-Asset Library (BAL), Asset-Lifecycle & Royalty-Allocation
+"""
+import os, re
+
+WEB = "/workspace/smithribbon-web"
+BLOG = os.path.join(WEB, "blog")
+SITE_URL = "https://smithribbon.com"
+ISO_AM = "2026-10-12T10:00:00+08:00"
+ISO_PM = "2026-10-12T15:00:00+08:00"
+
+FILE_222 = "blog/blog-ribbon-oem-222-module-brand-buyer-mill-side-mill-calendar-production-slot-reservation-brand-buyer-priority-alignment-architecture-global-brand-procurement-2026-10-12-am.html"
+TITLE_222 = "Mill-Side Mill-Calendar Production-Slot-Reservation & Brand-Buyer-Priority-Alignment Architecture for Global Brand Procurement 2026"
+DESC_222 = "B2B ribbon OEM 222-module mill-side mill-calendar production-slot-reservation & brand-buyer-priority-alignment architecture. 6-stage mill-calendar pipeline (slot-discovery-tracker + slot-document-prep + slot-evidence-repository + slot-walk-through-protocol + slot-corrective-action-plan + slot-renewal-pipeline), 4-pillar slot-governance (slot-map + line-supervisor-stewardship + evidence-custody + renewal-pipeline), slot-steward-to-line-supervisor linkage, and 3-tier brand-buyer-priority (Tier-1-Strategic-Partner / Tier-2-Recurring-Volume / Tier-3-Project-Order). Compresses brand-buyer 16-32% mill-slot-overbooking-rate and 14-28-day mill-slot-conflict-loop. Smith Ribbon OEM since 2004."
+TAGS_222 = "Mill Calendar Production Slot Reservation, Brand Buyer Priority Alignment, Tier 1 Strategic Partner Tier 2 Recurring Volume Tier 3 Project Order, Slot Document Prep, CAPA Corrective Action Plan, Line Supervisor Stewardship"
+KEYWORDS_222 = "ribbon OEM mill calendar production slot reservation, brand buyer priority alignment ribbon, Tier 1 Strategic Partner Tier 2 Recurring Volume Tier 3 Project Order ribbon, slot document prep ribbon, CAPA ribbon, line supervisor stewardship ribbon"
+
+FILE_223 = "blog/blog-ribbon-oem-223-module-brand-buyer-mill-side-brand-asset-library-bal-asset-lifecycle-royalty-allocation-architecture-global-brand-procurement-2026-10-12-pm.html"
+TITLE_223 = "Mill-Side Brand-Asset Library (BAL), Asset-Lifecycle & Royalty-Allocation Architecture for Global Brand Procurement 2026"
+DESC_223 = "B2B ribbon OEM 223-module mill-side brand-asset library (BAL), asset-lifecycle & royalty-allocation architecture. 6-stage brand-asset pipeline (asset-discovery-tracker + asset-document-prep + asset-evidence-repository + asset-walk-through-protocol + asset-corrective-action-plan + asset-renewal-pipeline), 4-pillar asset-governance (asset-map + legal-counsel-stewardship + evidence-custody + renewal-pipeline), asset-curator-to-legal-counsel linkage, and 3-tier asset-rights-class (Tier-1-Brand-Owned / Tier-2-Co-Developed / Tier-3-Mill-Library). Compresses brand-buyer 16-32% asset-rights-leakage-rate and 12-26-day asset-licensing-dispute-loop. Smith Ribbon OEM since 2004."
+TAGS_223 = "Brand Asset Library BAL, Asset Lifecycle Ribbon, Royalty Allocation Ribbon, Tier 1 Brand Owned Tier 2 Co Developed Tier 3 Mill Library, Asset Document Prep, CAPA Corrective Action Plan"
+KEYWORDS_223 = "ribbon OEM brand asset library BAL, asset lifecycle ribbon, royalty allocation ribbon, Tier 1 Brand Owned Tier 2 Co Developed Tier 3 Mill Library ribbon, asset document prep ribbon, CAPA ribbon"
+
+FAQS_222 = '[{"q":"What is mill-side ribbon OEM mill-calendar production-slot-reservation & brand-buyer-priority-alignment architecture?","a":"A 222-module integrated mill-calendar stack combining a 6-stage mill-calendar pipeline (slot-discovery-tracker + slot-document-prep + slot-evidence-repository + slot-walk-through-protocol + slot-corrective-action-plan + slot-renewal-pipeline), 4-pillar slot-governance (slot-map + line-supervisor-stewardship + evidence-custody + renewal-pipeline), slot-steward-to-line-supervisor linkage (slot-document-steward + line-supervisor-scheduling + line-supervisor-briefing + line-supervisor-follow-up), and 3-tier brand-buyer-priority (Tier-1-Strategic-Partner / Tier-2-Recurring-Volume / Tier-3-Project-Order). 222-module architecture compresses brand-buyer mill-slot-overbooking-rate from 16-32% to 2-6%, and mill-slot-conflict-loop from 14-28 days to 3-7 days across the FY2026-FY2028 horizon."},{"q":"What is the 6-stage mill-calendar pipeline?","a":"A 6-stage mill-calendar pipeline that translates mill-calendar production-slot-reservation into mill-side ribbon-OEM executive layer: (1) Stage-1 Slot-Discovery-Tracker (slot-map + slot-timeline + line-supervisor-roster + evidence-baseline); (2) Stage-2 Slot-Document-Prep (doc-template + doc-versioning + doc-translation + doc-watermark); (3) Stage-3 Slot-Evidence-Repository (photo-evidence + log-evidence + measurement-evidence + signature-evidence); (4) Stage-4 Slot-Walk-Through-Protocol (walk-route + walk-tempo + walk-narration + walk-Q&A); (5) Stage-5 Slot-Corrective-Action-Plan (CAPA-trigger + CAPA-timeline + CAPA-owner + CAPA-evidence); (6) Stage-6 Slot-Renewal-Pipeline (renewal-cadence + renewal-prep + renewal-line-supervisor + renewal-archive). 6-stage pipeline compresses brand-buyer mill-slot-conflict-loop from 14-28 days to 3-7 days."},{"q":"What is the 4-pillar slot-governance layer?","a":"A 4-pillar slot-governance layer that translates mill-calendar production-slot-reservation into mill-side ribbon-OEM governance layer: (1) Pillar-1 Slot-Map (slot-inventory + slot-expiry-calendar + slot-renewal-cadence + slot-renewal-prep); (2) Pillar-2 Line-Supervisor-Stewardship (line-supervisor-roster + line-supervisor-cadence + line-supervisor-briefing + line-supervisor-follow-up); (3) Pillar-3 Evidence-Custody (evidence-physical + evidence-digital + evidence-linkage + evidence-retention); (4) Pillar-4 Renewal-Pipeline (renewal-trigger + renewal-rounds + renewal-archive + renewal-audit). 4-pillar layer compresses brand-buyer mill-slot-overbooking-rate from 16-32% to 2-6%."},{"q":"What is the slot-steward-to-line-supervisor linkage layer?","a":"A slot-steward-to-line-supervisor linkage layer that translates mill-calendar production-slot-reservation into mill-side ribbon-OEM slot-system layer: (1) Slot-Steward (slot-document-steward + slot-photo-steward + slot-evidence-steward + slot-record-steward); (2) Line-Supervisor-Scheduling (line-supervisor-roster + line-supervisor-scheduling + line-supervisor-briefing + line-supervisor-follow-up); (3) Line-Supervisor-Briefing (line-supervisor-pre-briefing + line-supervisor-on-site-briefing + line-supervisor-Q&A-briefing + line-supervisor-follow-up-briefing); (4) Line-Supervisor-Follow-Up (line-supervisor-clarification + line-supervisor-correction + line-supervisor-acceptance + line-supervisor-archive). 4-layer linkage compresses brand-buyer brand-buyer-attrition-rate from 22-38% to 2-6%."},{"q":"What is the 3-tier brand-buyer-priority (Tier-1-Strategic-Partner / Tier-2-Recurring-Volume / Tier-3-Project-Order)?","a":"A 3-tier brand-buyer-priority (Tier-1-Strategic-Partner / Tier-2-Recurring-Volume / Tier-3-Project-Order) that translates mill-calendar production-slot-reservation into mill-side ribbon-OEM disposition layer: (1) Tier-1-Strategic-Partner-Slot (strategic-partner-slot-protocol + strategic-partner-slot-template + strategic-partner-slot-cadence + strategic-partner-slot-record); (2) Tier-2-Recurring-Volume-Slot (recurring-volume-slot-protocol + recurring-volume-slot-template + recurring-volume-slot-cadence + recurring-volume-slot-record); (3) Tier-3-Project-Order-Slot (project-order-slot-protocol + project-order-slot-template + project-order-slot-cadence + project-order-slot-record). 3-tier priority compresses brand-buyer reroute-delay from 16-28 days to 3-7 days."}]'
+
+FAQS_223 = '[{"q":"What is mill-side ribbon OEM brand-asset library (BAL), asset-lifecycle & royalty-allocation architecture?","a":"A 223-module integrated brand-asset stack combining a 6-stage brand-asset pipeline (asset-discovery-tracker + asset-document-prep + asset-evidence-repository + asset-walk-through-protocol + asset-corrective-action-plan + asset-renewal-pipeline), 4-pillar asset-governance (asset-map + legal-counsel-stewardship + evidence-custody + renewal-pipeline), asset-curator-to-legal-counsel linkage (asset-document-curator + legal-counsel-scheduling + legal-counsel-briefing + legal-counsel-follow-up), and 3-tier asset-rights-class (Tier-1-Brand-Owned / Tier-2-Co-Developed / Tier-3-Mill-Library). 223-module architecture compresses brand-buyer asset-rights-leakage-rate from 16-32% to 2-6%, and asset-licensing-dispute-loop from 12-26 days to 3-7 days across the FY2026-FY2028 horizon."},{"q":"What is the 6-stage brand-asset pipeline?","a":"A 6-stage brand-asset pipeline that translates brand-asset library (BAL), asset-lifecycle & royalty-allocation into mill-side ribbon-OEM executive layer: (1) Stage-1 Asset-Discovery-Tracker (asset-map + asset-timeline + legal-counsel-roster + evidence-baseline); (2) Stage-2 Asset-Document-Prep (doc-template + doc-versioning + doc-translation + doc-watermark); (3) Stage-3 Asset-Evidence-Repository (photo-evidence + log-evidence + measurement-evidence + signature-evidence); (4) Stage-4 Asset-Walk-Through-Protocol (walk-route + walk-tempo + walk-narration + walk-Q&A); (5) Stage-5 Asset-Corrective-Action-Plan (CAPA-trigger + CAPA-timeline + CAPA-owner + CAPA-evidence); (6) Stage-6 Asset-Renewal-Pipeline (renewal-cadence + renewal-prep + renewal-legal-counsel + renewal-archive). 6-stage pipeline compresses brand-buyer asset-licensing-dispute-loop from 12-26 days to 3-7 days."},{"q":"What is the 4-pillar asset-governance layer?","a":"A 4-pillar asset-governance layer that translates brand-asset library (BAL), asset-lifecycle & royalty-allocation into mill-side ribbon-OEM governance layer: (1) Pillar-1 Asset-Map (asset-inventory + asset-expiry-calendar + asset-renewal-cadence + asset-renewal-prep); (2) Pillar-2 Legal-Counsel-Stewardship (legal-counsel-roster + legal-counsel-cadence + legal-counsel-briefing + legal-counsel-follow-up); (3) Pillar-3 Evidence-Custody (evidence-physical + evidence-digital + evidence-linkage + evidence-retention); (4) Pillar-4 Renewal-Pipeline (renewal-trigger + renewal-rounds + renewal-archive + renewal-audit). 4-pillar layer compresses brand-buyer asset-rights-leakage-rate from 16-32% to 2-6%."},{"q":"What is the asset-curator-to-legal-counsel linkage layer?","a":"An asset-curator-to-legal-counsel linkage layer that translates brand-asset library (BAL), asset-lifecycle & royalty-allocation into mill-side ribbon-OEM asset-system layer: (1) Asset-Curator (asset-document-curator + asset-photo-curator + asset-evidence-curator + asset-record-curator); (2) Legal-Counsel-Scheduling (legal-counsel-roster + legal-counsel-scheduling + legal-counsel-briefing + legal-counsel-follow-up); (3) Legal-Counsel-Briefing (legal-counsel-pre-briefing + legal-counsel-on-site-briefing + legal-counsel-Q&A-briefing + legal-counsel-follow-up-briefing); (4) Legal-Counsel-Follow-Up (legal-counsel-clarification + legal-counsel-correction + legal-counsel-acceptance + legal-counsel-archive). 4-layer linkage compresses brand-buyer brand-buyer-attrition-rate from 22-38% to 2-6%."},{"q":"What is the 3-tier asset-rights-class (Tier-1-Brand-Owned / Tier-2-Co-Developed / Tier-3-Mill-Library)?","a":"A 3-tier asset-rights-class (Tier-1-Brand-Owned / Tier-2-Co-Developed / Tier-3-Mill-Library) that translates brand-asset library (BAL), asset-lifecycle & royalty-allocation into mill-side ribbon-OEM disposition layer: (1) Tier-1-Brand-Owned-Asset (brand-owned-asset-protocol + brand-owned-asset-template + brand-owned-asset-cadence + brand-owned-asset-record); (2) Tier-2-Co-Developed-Asset (co-developed-asset-protocol + co-developed-asset-template + co-developed-asset-cadence + co-developed-asset-record); (3) Tier-3-Mill-Library-Asset (mill-library-asset-protocol + mill-library-asset-template + mill-library-asset-cadence + mill-library-asset-record). 3-tier class compresses brand-buyer reroute-delay from 14-26 days to 3-7 days."}]'
+
+with open("/workspace/smithribbon-web/_body_222.html", "r", encoding="utf-8") as f:
+    BODY_222 = f.read()
+with open("/workspace/smithribbon-web/_body_223.html", "r", encoding="utf-8") as f:
+    BODY_223 = f.read()
+with open("/workspace/smithribbon-web/_html_template.html", "r", encoding="utf-8") as f:
+    HTML_TEMPLATE = f.read()
+
+def make_html(file_name, title, desc, kw, tags, iso, body_template, faq_json):
+    body = body_template.replace("__FAQ_X__", faq_json)
+    h = HTML_TEMPLATE
+    h = h.replace("__TITLE__", title)
+    h = h.replace("__DESC__", desc)
+    h = h.replace("__KW__", kw)
+    h = h.replace("__TAGS__", tags)
+    h = h.replace("__ISO__", iso)
+    h = h.replace("__CANONICAL__", SITE_URL + "/" + file_name)
+    h = h.replace("__SITE__", SITE_URL)
+    h = h.replace("__BODY__", body)
+    return h
+
+am_html = make_html(FILE_222, TITLE_222, DESC_222, KEYWORDS_222, TAGS_222, ISO_AM, BODY_222, FAQS_222)
+pm_html = make_html(FILE_223, TITLE_223, DESC_223, KEYWORDS_223, TAGS_223, ISO_PM, BODY_223, FAQS_223)
+
+os.makedirs(BLOG, exist_ok=True)
+am_path = os.path.join(WEB, FILE_222)
+pm_path = os.path.join(WEB, FILE_223)
+with open(am_path, "w", encoding="utf-8") as f:
+    f.write(am_html)
+with open(pm_path, "w", encoding="utf-8") as f:
+    f.write(pm_html)
+
+def word_count(html):
+    text = re.sub(r"<[^>]+>", " ", html)
+    text = re.sub(r"\s+", " ", text)
+    return len(text.split())
+
+print(f"[OK] AM file: {am_path} ({word_count(am_html)} words)")
+print(f"[OK] PM file: {pm_path} ({word_count(pm_html)} words)")
