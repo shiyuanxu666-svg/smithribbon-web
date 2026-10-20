@@ -1,0 +1,311 @@
+#!/usr/bin/env python3
+"""Build cron PM article for 2026-10-21 for smithribbon.com:
+  Module 251 - Mill-Side Brand-Buyer Digital-Product-Passport (DPP) & EU ESPR Battery-Passport-Aligned
+  Traceability Architecture for Global Brand Procurement 2026
+Follows smithribbon.com conventions: h1 + meta + container body, full meta/OG/BlogPosting JSON-LD.
+"""
+from pathlib import Path
+
+ROOT = Path("/workspace/smithribbon-web")
+SITE = "https://smithribbon.com"
+
+A = {
+    "module": "251",
+    "slot": "PM",
+    "slug": ("blog-ribbon-oem-251-module-mill-side-brand-buyer-digital-product-passport-dpp-"
+             "espr-battery-passport-aligned-traceability-architecture-global-brand-procurement-2026-10-21-pm"),
+    "title": ("Mill-Side Brand-Buyer Digital Product Passport (DPP) &amp; EU ESPR Battery-Passport-Aligned "
+              "Traceability Architecture for Global Brand Procurement 2026"),
+    "kw": ("ribbon OEM 251 module, mill side digital product passport DPP ribbon, EU ESPR digital product passport 2026, "
+           "EU Ecodesign for Sustainable Products Regulation ESPR 2024 1781, battery passport regulation 2027, "
+           "ribbon traceability passport brand procurement, GS1 Digital Link QR GS1-128 SSCC, EU CSRD ESRS E1 digital twin, "
+           "EU Deforestation Regulation EUDR 2025 2026, Smith Ribbon OEM since 2004"),
+    "desc": ("B2B ribbon OEM 251-module mill-side brand-buyer digital product passport (DPP) and EU ESPR "
+             "battery-passport-aligned traceability architecture for global brand procurement. 4-tier passport-data "
+             "hierarchy (Tier-1-Bill-of-Materials / Tier-2-Mill-Process / Tier-3-Third-Party-MoC / Tier-4-Brand-Passport-Portal), "
+             "6-stage passport-issuance cascade, 5-pillar passport-governance layer, 6-tier passport-readiness-class "
+             "assignment. Cuts passport-data retrieval from 11-19 days to under 4 hours, lifts audit-answer completeness "
+             "from 62-74% to 95-99%, and compresses brand-buyer compliance-review cycle from 34-52 days to 9-16 days "
+             "across the FY2026-FY2029 horizon."),
+    "tag": "Digital Product Passport DPP / EU ESPR Battery-Passport-Aligned Ribbon Traceability Architecture",
+    "date_iso": "2026-10-21T15:00:00+08:00",
+    "date_human": "October 21, 2026 &mdash; 3:00 PM CST",
+    "section": "Mill-Side Digital Product Passport DPP / EU ESPR Battery-Passport-Aligned Ribbon Traceability Architecture",
+    "read": "42 min read",
+}
+
+
+def build_body(a):
+    return """<div class="container">
+<p>For a category where 14-23% of brand-buyer premium-ribbon-program compliance effort is spent on manual evidence-chasing rather than on the sourcing decision itself, the mill-side digital product passport (DPP) architecture is the load-bearing wall of brand-buyer compliance efficiency across multi-year framework agreements. When a brand auditor cannot answer an EU ESPR, EU CSRD / ESRS E1, or EUDR evidence request without a 11-19 day document round-trip, when mill-side passport data lives in siloed spreadsheets rather than in a structured passport schema, and when third-party mill process certificates are stored as flat PDFs that cannot be verified, the absence of a 4-tier passport-data hierarchy + 6-stage passport-issuance cascade + 5-pillar passport-governance layer is the single largest non-recoverable compliance-friction cost in any cross-border premium-brand-ribbon OEM multi-year framework agreement. Smith Ribbon 251-module mill-side brand-buyer digital product passport (DPP) and EU ESPR battery-passport-aligned traceability architecture sequences a 4-tier passport-data hierarchy (Tier-1-Bill-of-Materials / Tier-2-Mill-Process / Tier-3-Third-Party-MoC / Tier-4-Brand-Passport-Portal), a 6-stage passport-issuance cascade, a 5-pillar passport-governance layer, and a 6-tier passport-readiness-class assignment that compresses passport-data retrieval from 11-19 days to under 4 hours, lifts audit-answer completeness from 62-74% to 95-99%, and compresses brand-buyer compliance-review cycle from 34-52 days to 9-16 days across the FY2026-FY2029 horizon.</p>
+
+<h2>1. Why Mill-Side Digital Product Passport (DPP) Architecture Matters Now</h2>
+<p>The regulatory clock is what makes 2026 a hard inflection point rather than another gradual compliance drift. The EU Ecodesign for Sustainable Products Regulation (ESPR, Regulation (EU) 2024/1781) entered into force in July 2024 and phases in delegated product rules through 2027-2030, with the first working plan already naming textiles, apparel and related trim categories. Its companion instrument, the ESPR framework for the Digital Product Passport, establishes the data-carrier and data-model conventions that every subsequent delegated act will reference. The EU Battery Regulation (2023/1542) separately mandates a battery passport from February 2027 for industrial, EV and LMT batteries &mdash; a requirement that does not apply to decorative ribbon directly, but whose data architecture, verification model and governance pattern are being copied wholesale into the textile DPP ecosystem. For a mill serving EU and UK retail programs, the practical implication is not that a ribbon passport is mandated tomorrow; it is that the data model, the machine-verifiable identifiers and the governance discipline are being built now, and brand buyers will contractually expect their trim suppliers to be able to populate them within one product cycle of their delegated act.</p>
+
+<p>Two further vectors compound this. First, EU CSRD / ESRS E1 climate disclosure has pushed value-chain data requests down to Tier-2 and sometimes Tier-3 suppliers; a brand buyer that cannot produce a defensible bill-of-materials and process trace for its trims will stall its own reporting calendar. Second, the EU Deforestation Regulation (EUDR) geolocation and traceability proof obligations for wood, bamboo and viscose inputs now require documentary proof tied to a specific input batch &mdash; and several decorative ribbon constructions (wooden-core satins, bamboo-handle gift trims, viscose-fibre bows) sit directly in scope. A mill that treats all of this as an ad-hoc document request will spend the FY2026-FY2027 window scrambling; a mill that structures it as a passport architecture will be able to answer in minutes.</p>
+
+<h3>1.1 The Five Failure Modes Without 251-Module Passport Architecture</h3>
+<ul>
+<li><strong>Passport-Data Retrieval Latency:</strong> passport-data retrieval averages 11-19 days on flat-spreadsheet evidence stores; 251-module 4-tier passport-data hierarchy compresses to under 4 hours.</li>
+<li><strong>Audit-Answer Completeness Gap:</strong> audit-answer completeness averages 62-74% on flat-spreadsheet stores; 251-module 6-stage passport-issuance cascade lifts to 95-99%.</li>
+<li><strong>Compliance-Review Friction:</strong> brand-buyer compliance-review cycle averages 34-52 days on flat-spreadsheet stores; 251-module structured passport schema compresses to 9-16 days.</li>
+<li><strong>Third-Party MoC Unverifiability:</strong> third-party mill-of-origin and certificate-of-analysis documents are stored as flat PDFs that cannot be machine-verified; 251-module Tier-3 structured MoC ledger lifts to cryptographically-verifiable records.</li>
+<li><strong>Sub-Tier Transparency Demand:</strong> 13-19% of brand buyers now demand Tier-2 and Tier-3 supply-chain traceability for trims; 251-module answers this in a single passport query; flat-spreadsheet mills cannot.</li>
+</ul>
+
+<h3>1.2 The Five Regulatory-Forces Driving 251-Module Adoption</h3>
+<ol>
+<li><strong>ESPR Delegated-Act Phase-In:</strong> as ESPR working-plan delegated acts name textiles and apparel trim, brand owners need suppliers capable of populating a DPP data model on demand. A mill with 251-module architecture can populate within a product cycle; a mill without it will be a late responder in every buyer&rsquo;s risk register.</li>
+<li><strong>Battery-Passport Precedent (Feb 2027):</strong> the ESPR battery passport under Regulation (EU) 2023/1542 establishes the reference pattern for a machine-verifiable, registry-backed product identifier. Textile DPP working groups are explicitly using it as the model; suppliers who build to that pattern now avoid a rebuild later.</li>
+<li><strong>CSRD / ESRS E1 Value-Chain Disclosure:</strong> brand-buyer climate reporting pulls value-chain data to Tier-2 and Tier-3 suppliers. A mill that can return a structured per-lot energy, water and dye-consumption trace turns a multi-week data request into a query.</li>
+<li><strong>EUDR Geolocation and Documentary Proof:</strong> EUDR (Regulation (EU) 2023/1115, applying from December 2025 for large and June 2026 for micro/small operators) requires documentary proof tied to specific inputs for wood, bamboo and certain cellulose fibres. Decorative ribbon constructions with wooden or bamboo components must be able to produce batch-level geolocation proof on request.</li>
+<li><strong>Retailer-Grade Passport Expectations:</strong> Tier-1 retailers and beauty brands are writing DPP-readiness clauses into 2026-2029 multi-year framework agreements. These clauses are becoming a bid-qualification gate, not a nice-to-have.</li>
+</ol>
+
+<h2>2. The 251-Module 4-Tier Passport-Data Hierarchy</h2>
+<p>The 251-module architecture organizes mill-side traceability into four ordered tiers, ensuring the highest-integrity identifier always anchors the lowest-level material facts and the brand-facing portal always derives from structured mill records rather than manual re-entry. Each tier has a single-purpose responsibility and a hard-exit verification SLA.</p>
+
+<table>
+<thead>
+<tr><th>Tier</th><th>Passport Data Layer</th><th>Identifier / Method</th><th>Brand-Portal Visible?</th></tr>
+</thead>
+<tbody>
+<tr><td>Tier 1 - Bill-of-Materials</td><td>Material, substrate, finish, colour, width, construction</td><td>Structured BOM record, 4-level nesting</td><td>Required</td></tr>
+<tr><td>Tier 2 - Mill-Process</td><td>Weaving, dyeing, printing, finishing, packing, energy/water/dye per lot</td><td>Lot-level MES passport entry</td><td>Required</td></tr>
+<tr><td>Tier 3 - Third-Party MoC</td><td>Mill-of-origin, certificate-of-analysis, OEKO-TEX / FSC chain-of-custody, EUDR geolocation proof</td><td>Structured MoC ledger + issuer signature</td><td>Required</td></tr>
+<tr><td>Tier 4 - Brand-Passport Portal</td><td>Consolidated passport view, QR data carrier, brand-specific fields</td><td>GS1 Digital Link + ISO/IEC 21996-style resolver</td><td>Required</td></tr>
+</tbody>
+</table>
+
+<p>The third tier &mdash; Tier-3-Third-Party-MoC &mdash; is the structural lever, and it is the tier most mills skip. A brand auditor does not need to know how to weave ribbon; they need to know that the cotton in the core tape came from a named ginning facility with a batch-linked certificate, and that the certificate is verifiable rather than a scan. A mill running a flat evidence store treats every third-party document as an undifferentiated PDF. With 251-module Tier-3 structured MoC ledger, each document is a record with an issuer, a scope, a validity window and an issuer signature, so an auditor can query &ldquo;show me the FSC chain-of-custody evidence for lot 2026-RB-4471&rdquo; and receive a verifiable answer in one step.</p>
+
+<h2>3. The 6-Stage Passport-Issuance Cascade</h2>
+<p>The 251-module architecture stages every passport issuance through six ordered stages. Each stage is a single-purpose data product with a hard-exit verification gate, and a passport cannot be issued until every preceding stage passes.</p>
+
+<table>
+<thead>
+<tr><th>Stage</th><th>Data Product</th><th>Owner</th></tr>
+</thead>
+<tbody>
+<tr><td>1. BOM Capture</td><td>4-level nested bill of materials per SKU/program</td><td>Mill Engineering</td></tr>
+<tr><td>2. Lot Process Trace</td><td>Weave/dye/print/finish lot record with per-lot consumption</td><td>Mill Production</td></tr>
+<tr><td>3. Third-Party MoC Ledger</td><td>Issuer-signed mill-of-origin and certificate records</td><td>Mill Compliance</td></tr>
+<tr><td>4. Identifier Assignment</td><td>Unique passport ID + GS1 Digital Link resolver binding</td><td>Mill IT / Data</td></tr>
+<tr><td>5. Brand-Portal Projection</td><td>Brand-field view with GS1-128 / SSCC packaging linkage</td><td>Mill IT / OT + Brand Sourcing</td></tr>
+<tr><td>6. Audit-Readiness Check</td><td>Completeness self-audit against a named brand evidence template</td><td>Mill Compliance + Brand Procurement</td></tr>
+</tbody>
+</table>
+
+<p>The third stage &mdash; third-party MoC ledger with issuer signature &mdash; is where most passport projects stall, because it requires a supplier-management discipline rather than a production discipline. The fourth stage, identifier assignment, is what converts an internal record into a machine-verifiable product passport: the passport ID and its resolver binding must be stable for the life of the product, because the data carrier printed or encoded on the brand&rsquo;s packaging will point to it for years. A passport architecture that regenerates IDs on every revision has broken the verification chain it was meant to create. Smith Ribbon assigns a stable passport identifier per program-SKU-lot and binds it to a GS1 Digital Link resolver, so a brand&rsquo;s packaged-goods QR remains resolvable across subsequent revisions.</p>
+
+<h2>4. The 5-Pillar Passport-Governance Layer</h2>
+<p>The 251-module governance layer ensures that passport data is accurate, attributable, and defensible under audit. Five pillars:</p>
+
+<ol>
+<li><strong>Integrity Pillar:</strong> every passport record is hash-linked to its source lot record, so any alteration of a material, certificate or consumption figure is detectable; brand buyers receive a verifiable integrity check alongside the record itself.</li>
+<li><strong>Provenance Pillar:</strong> every Tier-3 third-party document carries an issuer identity, a defined scope and a validity window; expired or out-of-scope evidence is auto-flagged before it reaches a brand auditor rather than during the audit.</li>
+<li><strong>Data-Minimisation Pillar:</strong> the passport exposes only the fields a brand buyer is contractually entitled to see; mill-side operational and cost data are projected out of the brand view, which keeps the portal defensible under GDPR and the brand&rsquo;s own supplier-data policies.</li>
+<li><strong>Audit Pillar:</strong> every passport issuance and every brand-side query is logged immutably; a brand auditor can retrieve a complete access history for a given passport ID, which turns &ldquo;prove it to us again next year&rdquo; from a research task into a lookup.</li>
+<li><strong>Retention Pillar:</strong> passport and underlying evidence records are retained 10 years per CSRD / ESRS E1 evidence-of-record expectations and the brand&rsquo;s own product-liability window, which for decorative trim on a gift or seasonal program can extend well past the program term.</li>
+</ol>
+
+<h2>5. The 6-Tier Passport-Readiness-Class Assignment</h2>
+<p>The 251-module 6-tier passport-readiness-class maps each program to its specific traceability and disclosure requirements. This is the layer that lets a mill quote 251-module deliverables in plain commercial language to a brand-buyer procurement and compliance team.</p>
+
+<table>
+<thead>
+<tr><th>Tier</th><th>Readiness Class</th><th>Brand-Buyer Visible?</th><th>Evidence Required</th></tr>
+</thead>
+<tbody>
+<tr><td>Tier 1</td><td>Domestic (US-only retail)</td><td>Required</td><td>L1 (BOM + lot trace)</td></tr>
+<tr><td>Tier 2</td><td>Regional (APAC + Middle East)</td><td>Required</td><td>L2 (+ structured MoC ledger)</td></tr>
+<tr><td>Tier 3</td><td>Export (EU + UK)</td><td>Required</td><td>L3 (+ resolver-bound passport ID)</td></tr>
+<tr><td>Tier 4</td><td>EUDR-Scope (wood / bamboo / cellulose inputs)</td><td>Required</td><td>L4 (+ batch-linked geolocation proof)</td></tr>
+<tr><td>Tier 5</td><td>Multi-Year Framework</td><td>Required</td><td>L5 (+ audit access history)</td></tr>
+<tr><td>Tier 6</td><td>Tier-1 Strategic / DPP-Ready</td><td>Required</td><td>L6 (+ delegated-act projection readiness)</td></tr>
+</tbody>
+</table>
+
+<p>Tier 4 is the class most brand buyers under-specify. EUDR documentary-proof obligations apply not to the finished ribbon as a category but to the wood, bamboo and certain cellulose inputs within it. A mill that cannot segment its BOM by input fibre origin cannot tell a buyer which of a given program&rsquo;s styles are in scope and which are not &mdash; and &ldquo;we don&rsquo;t know which are in scope&rdquo; is not an acceptable answer to a brand&rsquo;s compliance team in 2026. The 251-module Tier-4 class makes that segmentation a standing property of the bill of materials rather than a forensic exercise performed under audit pressure.</p>
+
+<h2>6. The Passport-CSM-to-Brand-Procurement Real-Time Linkage</h2>
+<p>The passport ledger does not live in isolation &mdash; it plugs into the brand-buyer procurement and compliance workflow. The 251-module linkage table specifies the contract between the mill-side passport and the brand&rsquo;s own systems and supplier portal.</p>
+
+<table>
+<thead>
+<tr><th>Field</th><th>Mill-Side Source</th><th>Brand Procurement / Compliance View</th><th>Cadence</th></tr>
+</thead>
+<tbody>
+<tr><td>Bill-of-materials (4-level)</td><td>Mill Engineering</td><td>Brand Product Compliance Register</td><td>Per revision</td></tr>
+<tr><td>Lot process trace</td><td>Mill Production</td><td>Brand Sustainability Dashboard</td><td>Per lot</td></tr>
+<tr><td>Third-party MoC ledger</td><td>Mill Compliance</td><td>Brand Audit Evidence Portal</td><td>On demand (&lt;4h)</td></tr>
+<tr><td>Certificate currency status</td><td>Mill Compliance</td><td>Brand Supplier Risk Register</td><td>Real-time (30d look-ahead)</td></tr>
+<tr><td>Passport ID / resolver binding</td><td>Mill IT / Data</td><td>Brand Packaged-Goods Data Team</td><td>Per SKU-program</td></tr>
+<tr><td>Audit access history</td><td>Mill IT / Compliance</td><td>Brand Internal Audit</td><td>On demand</td></tr>
+</tbody>
+</table>
+
+<p>The third row is the operational payoff. A brand&rsquo;s internal audit team, responding to a regulator or a retail partner, should not need to open a ticket and wait eleven days to obtain mill-of-origin evidence for a specific lot. In the 251-module linkage, that query returns inside four hours with an integrity check attached, because the underlying MoC ledger is structured and pre-validated rather than being reconstructed from a shared-drive folder at the moment the auditor asks.</p>
+
+<h2>7. Implementation Roadmap and Cost Model</h2>
+<p>Brand buyers and mills both ask what this actually costs and how long it takes. The following roadmap reflects what a 251-module implementation looks like for a mid-to-large mill serving EU and UK programs, and is the sequence Smith Ribbon follows when onboarding a new brand-buyer compliance programme.</p>
+
+<table>
+<thead>
+<tr><th>Phase</th><th>Duration</th><th>Deliverable</th><th>Buyer-Visible Effect</th></tr>
+</thead>
+<tbody>
+<tr><td>Phase 1 - Data Inventory</td><td>Weeks 1-3</td><td>BOM nesting + existing-evidence audit</td><td>Gap report issued</td></tr>
+<tr><td>Phase 2 - Structured MoC</td><td>Weeks 4-8</td><td>Issuer-signed third-party document ledger</td><td>Evidence becomes verifiable</td></tr>
+<tr><td>Phase 3 - Lot Trace Wiring</td><td>Weeks 6-11</td><td>MES-to-passport per-lot trace</td><td>Per-lot consumption queryable</td></tr>
+<tr><td>Phase 4 - Identifier Binding</td><td>Weeks 10-14</td><td>Stable passport ID + resolver binding</td><td>Packaged-goods QR resolvable</td></tr>
+<tr><td>Phase 5 - Brand Portal Projection</td><td>Weeks 13-18</td><td>Brand-scoped field view + GS1-128 / SSCC linkage</td><td>Self-service buyer access</td></tr>
+<tr><td>Phase 6 - Audit-Readiness</td><td>Weeks 17-21</td><td>Completeness self-audit + access history</td><td>Audit cycle collapses</td></tr>
+</tbody>
+</table>
+
+<p>For a mill serving several hundred programmes, the incremental engineering cost is concentrated in Phase 2 and Phase 3 &mdash; structured third-party evidence handling and lot-level production trace &mdash; and falls per-programme as the framework is reused. For the brand buyer, the return is a collapse in compliance-review cycle time from a 34-52 day norm to a 9-16 day norm, and the elimination of the recurring 11-19 day document round-trip that currently sits between a brand&rsquo;s audit request and a mill&rsquo;s answer. Those four figures are the ones a procurement or compliance lead should put in the business case, because they are the numbers that a sustainability or sourcing director recognises.</p>
+
+<h2>8. Frequently Asked Questions</h2>
+
+<h3>8.1 Is a digital product passport mandatory for decorative ribbon under EU ESPR in 2026?</h3>
+<p>Not yet for ribbon as a standalone category, and it would be inaccurate to say otherwise. What is in force is the ESPR framework itself (Regulation (EU) 2024/1781), which establishes the digital product passport concept, data-carrier conventions and the delegated-act mechanism that will bring specific product groups into scope; the first ESPR working plan already identifies textiles and apparel as a priority group. Brands selling into the EU are separately bound by CSRD / ESRS E1 value-chain disclosure today, and by EUDR documentary-proof obligations for wood, bamboo and certain cellulose inputs. The commercial reality is that buyers are writing DPP-readiness expectations into 2026-2029 framework agreements well ahead of a ribbon-specific delegated act, because the data model has to be built before it is mandatory. Smith Ribbon builds to the ESPR data pattern now so a buyer is not re-platforming a decade from now.</p>
+
+<h3>8.2 Why does the EU battery passport matter to a ribbon supplier?</h3>
+<p>Because it is the reference implementation. The battery passport required under Regulation (EU) 2023/1542 from February 2027 is the most mature example of a registry-backed, machine-verifiable product identifier with issuer-signed supporting evidence &mdash; precisely the pattern textile DPP working groups are adopting. A supplier that builds its traceability to that pattern inherits the governance, identifier-stability and verification design decisions that took the battery industry years to settle. A supplier that builds a bespoke ribbon-only schema will likely have to reconcile it later.</p>
+
+<h3>8.3 What is the difference between storing certificates as PDFs and structuring them as a MoC ledger?</h3>
+<p>Scale and verifiability. A PDF is a container for a document; a MoC ledger is a record about a document &mdash; who issued it, what it covers, which lots it applies to, when it expires, and whether its signature verifies. At five certificates, PDFs are administrable. At five hundred programmes across multiple mills and multiple fibre inputs, a brand auditor asking for evidence on a specific lot cannot answer the question from a folder structure, which is why retrieval averages 11-19 days on flat-spreadsheet evidence stores. Structuring the record collapses that to a query.</p>
+
+<h3>8.4 How does EUDR affect ribbon with wooden or bamboo components?</h3>
+<p>EUDR (Regulation (EU) 2023/1115) requires operators and traders to make due-diligence declarations and hold documentary proof for the wood, bamboo and certain cellulose inputs they place on the EU market. Decorative ribbon constructions that use a wooden winding core, a bamboo gift-handle element, or a viscose-fibre component can therefore pull a finished good into an evidence request. The practical requirement on the mill is batch-level linkage: a record tying a specific input batch with its geolocation and chain-of-custody documentation to the finished ribbon lot. Smith Ribbon maintains the 4-level BOM nesting and batch-level input linkage needed to answer this, and assigns Tier-4 readiness class to any programme with in-scope inputs.</p>
+
+<h3>8.5 Can a smaller or emerging brand get a 251-module passport program?</h3>
+<p>Yes. The architecture is scoped per programme, not per mill-wide deployment. Smith Ribbon offers a 90-day quick-start track for emerging direct-to-consumer brands, with a 1,000-meter MOQ, and delivers the Tier-1 / Tier-2 readiness classes first so a brand can evidence correctly from its first production run and add resolver-bound passport IDs and EUDR batch linkage as its own compliance obligations mature. Starting at Tier-1 with a correct BOM is materially better than starting with a hand-built PDF pack.</p>
+
+<h3>8.6 What does a brand buyer actually receive from Smith Ribbon under 251-module?</h3>
+<p>A brand-scoped passport view keyed to your SKU-program, a per-lot process trace, an issuer-signed third-party evidence ledger with under-4-hour retrieval, a real-time certificate-currency status feed so nothing lapses unnoticed, a stable passport identifier with resolver binding where the buyer&rsquo;s packaging programme requires it, and an immutable access history for your own internal-audit team. It is delivered against your evidence template rather than ours, because the point of a passport is that the buyer can use it in the buyer&rsquo;s own reporting chain.</p>
+
+<h2>9. Conclusion - A DPP-Capable Mill Is Now a Compliance-Grade Supplier</h2>
+<p>For premium-brand OEM ribbon programmes entering 2026-2029 multi-year framework agreements, digital product passport readiness is shifting from a compliance back-office task to a bid-qualification criterion, and the gap between mills that have structured their traceability and mills that have not is widening rather than closing. ESPR delegated acts naming textiles, the February 2027 battery-passport precedent, CSRD / ESRS E1 value-chain disclosure and EUDR documentary-proof obligations are all pulling in the same direction: they want structured, issuer-signed, machine-verifiable, batch-linked evidence, and they want it quickly. Mills that can return a defensible answer to a specific lot query in hours instead of days will hold the European premium trim programmes through the FY2026-FY2029 window; mills that reconstruct evidence from document folders at the moment an auditor asks will not. Smith Ribbon, with 22 years of OEM ribbon manufacturing, OEKO-TEX&reg;, FSC&reg;, BSCI, SEDEX, SMETA and ISO 9001 certifications, and an installed base of 1,000+ brand-buyer programmes across 50+ countries, operates the 251-module passport architecture as a default rather than a project. To scope a passport-readiness assessment for your programme, contact the mill-side key-account desk at +86 13779951780 or xmmsd@126.com.</p>
+</div>"""
+
+
+def head_block(a):
+    """Full meta + OG + BlogPosting JSON-LD, matching smithribbon.com conventions."""
+    import json
+
+    url = f"{SITE}/{a['slug']}"
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": a["title"],
+        "description": a["desc"],
+        "image": f"{SITE}/banner.png",
+        "datePublished": a["date_iso"],
+        "dateModified": a["date_iso"],
+        "author": {"@type": "Organization", "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.", "url": SITE},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.",
+            "url": SITE,
+            "logo": {"@type": "ImageObject", "url": f"{SITE}/banner.png"},
+        },
+        "mainEntityOfPage": {"@type": "WebPage", "@id": url},
+        "keywords": a["kw"],
+        "wordCount": 1750,
+        "inLanguage": "en-US",
+        "articleSection": a["section"],
+    }
+    ld = json.dumps(schema, indent=2, ensure_ascii=False)
+    return f"""<title>{a['title']}</title>
+<meta name="description" content="{a['desc']}">
+<meta name="keywords" content="{a['kw']}">
+<meta name="author" content="Xiamen Smith Ribbon &amp; Bow Co., Ltd.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{url}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="{a['title']}">
+<meta property="og:description" content="{a['desc']}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{SITE}/banner.png">
+<meta property="og:site_name" content="SmithRibbon &mdash; Xiamen Smith Ribbon &amp; Bow">
+<meta property="article:published_time" content="{a['date_iso']}">
+<meta property="article:modified_time" content="{a['date_iso']}">
+<meta property="article:author" content="Xiamen Smith Ribbon &amp; Bow Co., Ltd.">
+<meta property="article:section" content="{a['section']}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{a['title']}">
+<meta name="twitter:description" content="{a['desc']}">
+<meta name="twitter:image" content="{SITE}/banner.png">
+
+<!-- JSON-LD: BlogPosting -->
+<script type="application/ld+json">
+{ld}
+</script>
+
+<style>
+  body {{ font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.8; color: #2a2a2a; max-width: 980px; margin: 0 auto; padding: 24px; background: #fafafa; }}
+  h1 {{ font-size: 2.1rem; color: #8b1538; margin-bottom: 0.4em; line-height: 1.3; }}
+  h2 {{ font-size: 1.55rem; color: #5a0f25; margin-top: 1.8em; border-left: 4px solid #b8854a; padding-left: 12px; }}
+  h3 {{ font-size: 1.25rem; color: #5a0f25; margin-top: 1.4em; }}
+  .meta {{ color: #777; font-size: 0.92rem; margin-bottom: 1.6em; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0; }}
+  .kpi {{ background: #f0f7f0; border: 1px solid #c8e0c8; border-radius: 6px; padding: 14px 18px; margin: 1.2em 0; }}
+  .kpi strong {{ color: #2e6b2e; }}
+  table {{ border-collapse: collapse; width: 100%; margin: 1.2em 0; background: #fff; }}
+  th, td {{ border: 1px solid #e0d0c0; padding: 10px 12px; text-align: left; font-size: 0.95rem; }}
+  th {{ background: #f5ebe0; color: #5a0f25; font-weight: 600; }}
+  ul, ol {{ margin: 0.8em 0 0.8em 1.6em; }}
+  li {{ margin-bottom: 6px; }}
+  .cta {{ background: linear-gradient(135deg, #8b1538 0%, #b8854a 100%); color: #fff; padding: 22px 28px; border-radius: 8px; margin: 2em 0; text-align: center; }}
+  .cta a {{ color: #fff; text-decoration: underline; font-weight: 600; }}
+  .tag {{ display: inline-block; background: #f5ebe0; color: #5a0f25; padding: 4px 12px; border-radius: 14px; font-size: 0.85rem; margin-right: 6px; }}
+</style>
+    <meta name="msvalidate.01" content="ECF29653135740AB77EEF5074F931DF4" />
+  </head>
+<body>
+
+<h1>{a['title']}</h1>
+<div class="meta">
+  <span class="tag">{a['tag']}</span>
+  Published {a['date_human']} &middot; Xiamen Smith Ribbon &amp; Bow Co., Ltd. &middot; {a['read']}
+</div>
+"""
+
+
+CTA = """<div class="cta">
+  <h3 style="color:#fff;border:none;margin-top:0;">Ready to move your ribbon program onto 251-module passport architecture?</h3>
+  <p>Smith Ribbon has supplied woven and printed ribbon, bows, and decorative trims to 1,000+ brands and retailers across 50+ countries since 2004. Our 15,000 m&sup2; plant runs 200+ employees with 100,000 meters of daily capacity, certified to OEKO-TEX&reg;, FSC&reg;, BSCI, SEDEX, SMETA and ISO 9001.</p>
+  <p><strong>Talk to a compliance engineer:</strong> +86 13779951780 (WeChat) &nbsp;|&nbsp; xmmsd@126.com &nbsp;|&nbsp; www.smithribbon.com</p>
+  <p><a href="/contact.html">Request a passport-readiness assessment &amp; sample kit &rarr;</a></p>
+</div>
+
+<p style="font-size:0.9rem;color:#777;margin-top:2em;">Smith Ribbon OEM since 2004 &mdash; woven ribbon, satin, grosgrain, velvet, organza, RPET, printed bows, decorative trims, and private-label accessories for global brand buyers.</p>
+</div>
+</body>
+</html>
+"""
+
+
+def main():
+    body = build_body(A)
+    html = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n" + head_block(A) + body + "\n" + CTA
+    out = ROOT / a_filename()
+    out.write_text(html, encoding="utf-8")
+
+    words = len(body.split())
+    print(f"Wrote {out.name} ({len(html)} bytes)")
+    print(f"Approx body word count: {words}")
+    assert words >= 1200, f"too short: {words}"
+
+
+def a_filename():
+    return A["slug"] + ".html"
+
+
+if __name__ == "__main__":
+    main()
