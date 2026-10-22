@@ -7,6 +7,10 @@ SITE = "https://smithribbon.com"
 
 
 def head_block(a):
+    wc = a.get("word_count")
+    if not wc:
+        # Estimate from BODY when not supplied; callers may pass exact count.
+        wc = a.get("body_words", 1760)
     return f"""<title>{a['title']}</title>
 <meta name="description" content="{a['desc']}">
 <meta name="keywords" content="{a['kw']}">
@@ -61,7 +65,7 @@ def head_block(a):
     "@id": "{SITE}/{a['slug']}"
   }},
   "keywords": "{a['kw']}",
-  "wordCount": 1760,
+  "wordCount": {wc},
   "inLanguage": "en-US",
   "articleSection": "{a['section']}"
 }}
