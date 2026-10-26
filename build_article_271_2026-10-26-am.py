@@ -1,0 +1,395 @@
+#!/usr/bin/env python3
+"""Build smithribbon B2B module 271 (AM), 2026-10-26.
+
+Topic: mill-side VELVET / FLOCK PILE & CRUSH RECOVERY interlock -- how a brand
+buyer controls a pile-surface ribbon and bow trim whose performance depends on
+pile height, pile density, directional nap, crush behaviour and shedding, and
+how those five parameters interact with pack-down, transit and retail display.
+
+Distinct from every existing module: 263 covers dye colourfastness; 264 covers
+selvedge cut-edge quality; 269 covers metallic foil lamination; 270 covers
+fusible heat-seal adhesive. None covers a NAP-BEARING pile surface, where the
+colour of the ribbon is a function of pile direction and the "defect" is a
+crush mark that is invisible until it is lit from one side.
+"""
+from pathlib import Path
+import sys
+
+sys.path.insert(0, "/workspace/smithribbon-web")
+from sr_page import write_article
+
+SLUG = ("blog-ribbon-oem-271-module-mill-side-brand-buyer-velvet-flock-ribbon-pile-crush-recovery-directional-nap-"
+        "interlock-architecture-pile-height-density-shedding-pack-down-transit-display-2026-10-26-am")
+
+a = {
+    "title": "Mill-Side Brand-Buyer Velvet &amp; Flock Ribbon Pile Crush Recovery &amp; Directional Nap Interlock "
+             "Architecture &mdash; Pile Height, Pile Density, Shedding Control, Pack-Down and Transit Display 2026",
+    "desc": "B2B ribbon OEM 271-module velvet and flock pile crush-recovery and directional-nap interlock "
+            "architecture. 5-layer pile-surface authority ladder, 4-stage nap approval gate, 3-tier pile-defect "
+            "reconciliation ladder, and a crush-recovery + shedding audit. Smith Ribbon OEM since 2004.",
+    "kw": "velvet ribbon OEM, flock ribbon manufacturer, crushed velvet trim, pile height ribbon, "
+          "velvet crush recovery test, flock ribbon shedding, directional nap ribbon, velvet ribbon care label, "
+          "ribbon pile density specification, glitter velvet ribbon supplier, plush ribbon trim bulk, "
+          "velvet ribbon packaging, brand buyer velvet trim, ribbon pack-down transit, "
+          "velvet ribbon colour matching, flock ribbon fuzz shedding, luxury velvet ribbon China, "
+          "ribbon pile interlock, custom velvet ribbon OEM, ribbon crush mark defect, mill velvet trimming",
+    "author": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.",
+    "date_iso": "2026-10-26T02:00:00+00:00",
+    "date_human": "October 26, 2026",
+    "slug": SLUG,
+    "section": "Ribbon OEM Manufacturing",
+    "tag": "Ribbon OEM",
+    "read": "17 min read",
+    "word_count": 2650,
+}
+
+BODY = """
+<p class="lede">A velvet ribbon has two surfaces, and only one of them is the product. The reverse is a woven
+ground that behaves like any other ribbon. The face is a pile &mdash; a dense field of short fibres standing up off
+the ground, each one leaning in the same direction, each one holding light differently depending on which way it
+faces the viewer. That single fact creates an entire category of quality problems that no other trim has: colour that
+changes when the ribbon is turned, a shine that appears and disappears with the light, a mark that is not a stain but
+a set of crushed fibres, and a slow, invisible shedding of fibre into the customer's packaging, onto their clothing
+or into a product they are about to sell.</p>
+
+<p>All of these are controllable at the mill. All of them are decided at the mill. And all of them are invisible to
+a buyer who treats a velvet specification as a colour code and a width, which is the single most common way velvet
+trim programmes go wrong.</p>
+
+<blockquote style="border-left:4px solid #b8854a;padding:8px 16px;margin:1.2em 0;background:#faf6f1;">
+&quot;Velvet ribbon specification: 20&nbsp;mm wide, 100&nbsp;% polyester warp ground with a viscose/acrylic pile
+face, pile height 0.45&nbsp;mm nominal, pile density 220&nbsp;g/m&sup2; face weight, directional nap running
+lengthwise. Crush recovery: no visible directional crush mark after 24&nbsp;hours recovery following 8&nbsp;hours
+compressed storage at 1&nbsp;kPa, evaluated under 500&nbsp;lx diffuse light at a 45&deg; viewing angle. Shedding: no
+more than 5&nbsp;fibre counts per 10&nbsp;cm linear travel under a 500&nbsp;g finger rub on the pile face, and no
+more than 3&nbsp;counts on the reverse. Nap direction must run consistently in the same direction along the length of
+the roll and be marked on the core label. Pile adhesion: minimum 6&nbsp;N/25&nbsp;mm peel of the pile from the
+ground after 5&nbsp;wash cycles at 40&nbsp;&deg;C, EN ISO 6330. Colour: Pantone reference plus physical lab dip from
+the approved pile lot, viewed pile-forward under a fixed 500&nbsp;lx light box.&quot;
+</blockquote>
+
+<p>That specification has ten distinct requirements, and two of them &mdash; the crush recovery criterion and the
+shedding limit &mdash; are usually absent from a velvet brief. Both are the reason a velvet programme has a higher
+quality-control burden per order value than almost any other trim, and both are entirely controllable if they are
+written down before the first sample.</p>
+
+<div class="kpi">
+  <p><strong>Commercial significance:</strong> velvet and flock trim carries a much higher perceived value than its
+  material cost suggests, which means it is used on gift packaging, apparel trim, cosmetics and seasonal decoration
+  precisely where the buyer&rsquo;s brand image is most exposed. A crush mark that reads as a manufacturing defect
+  under retail lighting damages the brand on the shelf, and a shedding fibre in a premium gift box is a complaint
+  that arrives by photograph with no context and is very hard to defend.</p>
+</div>
+
+<h2>1. Why Velvet Is a Surface, Not a Colour</h2>
+
+<p>Conventional ribbon has a colour that is a property of the material. Velvet does not. A velvet surface is a
+carpet of fibres standing at an angle to the ground fabric, and the colour a viewer sees is produced by light
+reflecting off the tips of those fibres. When the pile direction and the viewing direction are aligned, the pile
+presents its full length to the light and the surface reads bright and saturated. When they are misaligned, the pile
+lies away and the surface reads darker, or it flashes a different tone altogether. The same physical roll of velvet
+can therefore be a deeper shade in one photograph and a brighter shade in another, without any change to the dye
+lot or the fibre content.</p>
+
+<p>This is why velvet colour approval cannot be done on a swatch viewed under office lighting, and why a colour
+approved from a photograph or a screen is worthless. It is also why the nap direction has to be a controlled
+specification attribute rather than an incidental property of the roll. A mill that produces velvet with the nap
+running lengthwise, consistently, is doing something quite different from a mill that produces velvet with the nap
+running in whatever direction the weaving allowed on the day.</p>
+
+<table>
+  <thead>
+    <tr><th>Surface type</th><th>What determines the colour</th><th>Directional sensitivity</th><th>Approval method</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Woven polyester satin</td><td>Fibre dye absorption</td><td>Very low</td><td>Physical swatch, standard light box</td></tr>
+    <tr><td>Printed polyester grosgrain</td><td>Pigment deposited on ground</td><td>None</td><td>Printed chip against standard</td></tr>
+    <tr><td>Velvet / pile face</td><td>Geometry of fibre tips to viewer</td><td>Extreme</td><td>Physical lab dip, pile-forward, fixed lux</td></tr>
+    <tr><td>Flocked ribbon</td><td>Fibre deposit on adhesive ground</td><td>Extreme</td><td>Physical swatch, pile-forward, fixed lux</td></tr>
+    <tr><td>Glitter / metallic pile</td><td>Reflective flake orientation</td><td>High</td><td>Physical swatch plus oblique light</td></tr>
+  </tbody>
+</table>
+
+<h2>2. The 5-Layer Pile-Surface Authority Model</h2>
+
+<p>Five layers govern a pile-surface trim, ordered from most frozen to most operational, each with a named owner and
+an explicit change threshold. The model exists because the most common velvet failure is not a bad pile. It is a
+pile that was approved for a different viewing condition, a different pack-out, or a different nap direction.</p>
+
+<table>
+  <thead>
+    <tr><th>Layer</th><th>Parameter</th><th>Owner</th><th>Change threshold</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>L1 End-use and viewing condition</td><td>Retail lighting, packaging type, wear surface, wash regime</td><td>Brand merchandising</td><td>Any change of channel, packaging or lighting environment</td></tr>
+    <tr><td>L2 Regulatory and chemical status</td><td>Restricted substances, colourfastness class, REACH / CPSIA fit</td><td>Brand compliance</td><td>Any market change or new finish</td></tr>
+    <tr><td>L3 Pile construction</td><td>Pile height, pile density, face weight, fibre mix, nap direction</td><td>Supplier engineering</td><td>Any change of fibre supplier, loom or finishing route</td></tr>
+    <tr><td>L4 Finishing and packing</td><td>Cutting, flocking, steaming, roll winding, pack-down pressure</td><td>Supplier production</td><td>Any change of finishing line, roll length or carton</td></tr>
+    <tr><td>L5 Presentation and appearance</td><td>Crush marks, sheen, shade variance, edge fray on the pile face</td><td>Supplier quality</td><td>Any new colour, width or lot</td></tr>
+  </tbody>
+</table>
+
+<p>The layer that gets missed most often is L4, and it is the one the mill controls most directly. A velvet ribbon that
+is perfectly made can be ruined by being wound too tightly, stored under heavy cartons for a month, or crushed in a
+transit container &mdash; and because the damage is a crushed fibre structure rather than a stain, it will not be
+caught by a colour measurement or a stain inspection. It will be caught, if at all, by a human looking at the ribbon
+under raking light.</p>
+
+<h2>3. The Four Pile Parameters That Actually Govern Performance</h2>
+
+<h3>3.1 Pile height</h3>
+
+<p>Pile height is the length of the standing fibre, and it governs both the depth of colour and the severity of the
+crush mark. A short pile, in the region of 0.2&nbsp;to&nbsp;0.3&nbsp;mm, crushes very little because the fibres
+are stiff relative to their length and recover almost immediately. A long pile, above roughly 0.6&nbsp;mm, produces
+the deep, light-absorbing velvet look that reads as premium, but it also crushes dramatically, holds the crushed
+shape for days, and is far more prone to matting at the edges of a folded bow. A glitter velvet or flock with a
+longer pile is the most fragile trim in this family and the one most often specified by a brand that has seen a
+sample photograph and has not seen a production roll.</p>
+
+<h3>3.2 Pile density and face weight</h3>
+
+<p>Density determines how much fibre is standing in a given area, and therefore how much light the surface can absorb
+or return. Two velvets of identical pile height and identical dye can look completely different if one is
+densely packed and the other is sparse, because in the sparse version the ground fabric shows through the pile and
+the colour appears duller and darker. Face weight is the commercial expression of density, quoted in
+g/m&sup2;, and it is the number a buyer should treat as a purchase specification rather than a production detail,
+because it is what makes the colour reproducible from one lot to the next.</p>
+
+<h3>3.3 Directional nap</h3>
+
+<p>Nap direction should be specified, controlled and marked. The convention in the trade is that pile runs lengthwise
+along the roll, which lets the bow maker orient every bow in a gift set consistently. An uncontrolled nap produces
+bow faces that read as slightly different shades from one to the next, which on a set of twelve bows looks like a
+supplier quality problem even when it is purely a directional artefact. Where nap direction is a real design
+variable &mdash; a reversible ribbon for a reversible bow, a two-tone ribbon for a contrast loop &mdash; it must be
+declared in the specification and confirmed on a physical sample, because it cannot be inferred from a swatch.</p>
+
+<h3>3.4 Pile adhesion</h3>
+
+<p>Pile adhesion is the strength of the bond between the standing fibre and the ground. On flocked ribbon, pile
+adhesion is set by the adhesive used to anchor the flock fibres, and it is the parameter that determines whether the
+trim survives a wash, a brush, or a season in a warehouse. On woven velvet, adhesion is a function of the
+construction and of the setting that locks the pile. Either way it should be quantified with a peel figure and a
+specified conditioning regime, because a pile that lifts is a defect the customer discovers at the point of use.</p>
+
+<h2>4. The Four-Stage Nap Approval Gate</h2>
+
+<p>Velvet approval proceeds in four stages, and each stage exists to catch a class of problem that the previous stage
+cannot see. Skipping a stage is the reason velvet programmes generate more than their share of rework.</p>
+
+<table>
+  <thead>
+    <tr><th>Stage</th><th>What is submitted</th><th>How it is judged</th><th>What it catches</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1. Construction review</td><td>Mill construction proposal: fibre mix, pile height, density, nap direction</td><td>Against the end use and the buyer's existing trim range</td><td>Structurally unsuitable pile selected before a sample exists</td></tr>
+    <tr><td>2. Physical lab dip</td><td>Cut lengths from the actual pile lot, marked with nap direction</td><td>Pile-forward under a fixed 500&nbsp;lx light box, alongside the approved reference</td><td>Shade drift caused by pile geometry rather than dye</td></tr>
+    <tr><td>3. Crush and shedding test</td><td>Production-length samples with their shipping carton</td><td>24-hour recovery under 500&nbsp;lx at 45&deg;; fibre count over 10&nbsp;cm travel</td><td>Pack-down damage and loose pile</td></tr>
+    <tr><td>4. Transit simulation</td><td>Packed carton, 6&nbsp;weeks compressed, unpacked and rested</td><td>Re-inspection of shade, crush and shed against the stage 3 baseline</td><td>Damage that only appears after real transit conditions</td></tr>
+  </tbody>
+</table>
+
+<p>Stage 4 is the stage most often skipped and most often regretted. A velvet ribbon can leave the mill in perfect
+condition, be compressed under twenty cartons in a container for six weeks, and emerge with a visible crush band
+across the width of every roll. Because the colour also reads slightly different while the pile is crushed, the
+customer's first impression is that the supplier sent the wrong shade &mdash; a misreading that is expensive to
+reverse, because the buyer's own goods-in team is now convinced the mill's colour control is unreliable.</p>
+
+<div class="kpi">
+  <p><strong>What this costs a buyer:</strong> a crush-mark claim on a container of velvet is typically resolved by
+  credit on the whole affected lot, because the buyer cannot prove whether the damage happened at the mill or in
+  transit without a stage 4 baseline record. Stage 3 and stage 4 records turn that argument into a documentation
+  question with an answer.</p>
+</div>
+
+<h2>5. The Three-Tier Pile-Defect Reconciliation Ladder</h2>
+
+<p>When a velvet complaint arrives, the triage sequence below resolves the large majority of cases without physical
+re-inspection, because most velvet complaints fall into one of three clearly distinguishable families.</p>
+
+<table>
+  <thead>
+    <tr><th>Tier</th><th>Signature</th><th>Likely cause</th><td>Resolution</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>T1 Shade / depth variation</td><td>Same dye lot, visibly different depth of colour; reverses when the ribbon is turned</td><td>Nap direction or pile density variation</td><td>Re-orient the ribbon. If the shade matches when reversed, it is a nap artefact, not a dye fault.</td></tr>
+    <tr><td>T2 Crush mark / permanent flat band</td><td>Matte, flattened band with no pile sheen; recovers slowly or not at all</td><td>Pack-down compression, over-winding, or transit crush</td><td>Steam and rest, then re-measure. Non-recovering bands indicate a pile-height or setting problem at the mill.</td></tr>
+    <tr><td>T3 Fibre shedding / pile lifting</td><td>Loose fibres on the packing tissue or in the gift box; surface rubs pale or thins</td><td>Low pile adhesion, over-brushing during finishing, or under-cured flock adhesive</td><td>Adhesion peel test against the reference. A failing peel is a lot-level quality issue, not a customer-handling issue.</td></tr>
+  </tbody>
+</table>
+
+<p>The Tier 1 test is worth remembering because it is free and it is decisive. If a velvet ribbon looks the wrong
+shade, turn it 180&deg; along its length. If the colour returns, nothing is wrong with the dye and the fault lies
+with nap orientation. If the colour does not return, it is a genuine dye or construction deviation and should be
+escalated as such.</p>
+
+<h2>6. Writing a Velvet Specification That Works</h2>
+
+<p>The elements below are the ones worth putting in a velvet or flock trim brief. Each one removes a specific
+category of dispute later in the programme.</p>
+
+<ul>
+  <li><strong>Face weight in g/m&sup2;</strong>, not just pile height. This is the reproducibility specification and
+  it is what allows a re-order to match the original.</li>
+  <li><strong>Nap direction stated explicitly</strong>, lengthwise or crosswise, and marked on the core label of
+  every roll.</li>
+  <li><strong>A crush recovery criterion</strong> stated as compressed storage conditions, recovery period, viewing
+  angle and light level, because &ldquo;no crush marks&rdquo; on its own is not testable.</li>
+  <li><strong>A shedding limit</strong> with the measurement method, the rub load and the travel distance written
+  down, so the count is reproducible between the mill and the buyer's goods-in team.</li>
+  <li><strong>Pile adhesion peel value</strong> with the conditioning regime, since a peel value without its
+  conditioning cannot be compared between mills.</li>
+  <li><strong>A physical lab dip as the colour standard</strong>, with the viewing condition written into the
+  approval record: pile-forward, 500&nbsp;lx, 45&deg;.</li>
+  <li><strong>A care and handling instruction</strong> for the finished goods: crush avoidance, storage stacking
+  limits and cleaning method, since a velvet that is mistreated by a downstream warehouse becomes a customer
+  claim.</li>
+  <li><strong>Winding and pack-down requirements</strong>: roll length, core, carton configuration and maximum
+  stacking weight, since the pack-down specification is what protects the crush performance in transit.</li>
+</ul>
+
+<h2>7. Working With a Velvet Trim Supplier</h2>
+
+<p>The relationship between a brand buyer and a velvet mill is different from the relationship with a printed ribbon
+mill, because the buyer has to supply more of the specification. A printed mill owns its own process completely; a
+velvet mill needs the buyer to specify the viewing condition, the packing regime and the care instruction, because
+the mill cannot know them. A buyer who sends a ribbon code and a Pantone number and expects a matching velvet will
+get a reasonable velvet in a colour that is not the colour they approved.</p>
+
+<p>The practical sequence that works is straightforward. Start with a construction conversation rather than a price
+request: agree the fibre mix, pile height, face weight, nap direction and end use before anyone quotes. Approve
+colour on a physical lab dip under a defined light condition, never on a swatch in an email. Run the crush and
+shedding test on production-length samples in their real shipping carton. Then simulate transit before the first
+production order, because a velvet that arrives crushed after a first shipment will be met with a colour complaint
+rather than a transit complaint, and the first shipment is the worst place to earn that distrust.</p>
+
+<p>At Smith Ribbon, velvet, glitter velvet and flock ribbon are produced on the same 15,000&nbsp;m&sup2; Xiamen plant
+that has supplied trims to brands and retailers in 50+ countries since 2004, with 100,000&nbsp;m of daily weaving
+capacity and certifications to OEKO-TEX&reg;, FSC&reg;, BSCI, SEDEX, SMETA and ISO&nbsp;9001. We are happy to run
+the crush and shedding tests against your own end-use conditions rather than ours, because that is the only test
+that predicts what happens on your shelf.</p>
+
+<h2>8. Frequently Asked Questions</h2>
+
+<h3>What is the difference between velvet ribbon and flocked ribbon?</h3>
+<p>Velvet is a woven construction: the pile is created during weaving, typically with a second warp system that
+loops over the face and is cut, leaving the standing fibre and the ground in one fabric. Flocking is a finishing
+process: short fibres are sprayed onto a pre-coated ground fabric and held by an adhesive, creating a pile on a
+ribbon that was woven separately. The practical difference for a buyer is durability. Woven velvet generally
+withstands handling and cleaning better, and its pile is integral to the fabric, so it cannot peel off in sheets.
+Flocked ribbon can achieve a longer, softer pile and a lower cost per metre, but it depends entirely on the
+adhesive bond, so pile adhesion has to be a specified and tested parameter rather than an assumed one, and flock is
+more likely to shed if it has been over-brushed during finishing. Where the trim will be handled hard, brushed or
+washed, woven velvet is normally the safer choice.</p>
+
+<h3>How do I test whether a velvet ribbon recovers from crushing?</h3>
+<p>Compress the ribbon under a defined load for a defined period, then let it rest, then inspect it under a fixed
+condition. A workable protocol is 8&nbsp;hours compressed at about 1&nbsp;kPa, 24&nbsp;hours of recovery, and
+inspection at 500&nbsp;lx diffuse light from a 45&deg; angle, comparing against the pre-compression baseline. The
+45&deg; angle matters, because a crush mark that is invisible under flat frontal light becomes obvious when the light
+rakes across the pile, which is exactly how a shopper sees a bow under a retail spotlight. The result should be
+recorded as a pass or fail against a written criterion rather than an impression, and the same protocol should be run
+on transit-simulated samples so that a mill baseline exists to compare a later claim against.</p>
+
+<h3>Why does my velvet ribbon look darker than the approved sample?</h3>
+<p>Turn the ribbon 180&deg; along its length. If the shade returns to the approved colour, the cause is nap
+direction and pile geometry, not dye. A pile surface reflects light differently depending on whether the fibre tips
+face the viewer or lie away, so the same roll can read as two shades. This happens when the ribbon has been reversed
+during winding, when the nap direction has been specified incorrectly, or when the ribbon has been crushed and has
+not recovered. If the shade does not return when the ribbon is turned, then it is a genuine dye deviation and
+should be handled as a dye fault, checked against the approved physical lab dip and the original dye lot rather than
+against a photograph.</p>
+
+<h3>Is velvet ribbon suitable for a product that will be washed?</h3>
+<p>It can be, but only with a specification. The trim needs a colourfastness class against the relevant wash regime,
+a pile adhesion peel value measured after the stated number of wash cycles, and an explicit care instruction. Velvet
+used on a garment that will be laundered should be tested for both colour and pile loss, because pile can lift and
+mat while the colour still passes. For gift packaging and decorative use with no wash exposure, the important tests
+are shedding, crush recovery and pack-down performance, and a heavier pile is usually the better commercial choice
+because it resists the handling of a fulfilment centre. At Smith Ribbon we can specify a care label matching the
+trim construction to the exact wash regime of the finished product.</p>
+
+<h3>What is the minimum order quantity for custom velvet ribbon?</h3>
+<p>At Smith Ribbon, custom velvet and flock ribbon typically start around 1,000&nbsp;m per width and colour on an
+existing construction, with a new pile height, a new fibre mix, a new colour or a new width adding normally ten to
+fifteen days on top of the standard 30&nbsp;to&nbsp;45&nbsp;days to production readiness. The binding constraint on
+a velvet programme is not the unit price but the number of distinct pile constructions, because each one needs its
+own lab dip, its own crush test and its own shedding test. It is worth rationalising the pile range early:
+consolidating four pile heights onto one construction usually saves more in approval and qualification time than it
+costs in unit price, and it also makes the finished range far easier to keep visually consistent on shelf.</p>
+
+<h3>How should velvet ribbon be packed and stored to protect the pile?</h3>
+<p>Treat pack-down as a specified parameter rather than a shipping detail. Rolls should be wound at a tension that
+does not crush the pile against the layer above, cartons should be filled so the rolls are not free to move, and the
+maximum stacking weight on top of the carton should be stated on the shipping document, because a warehouse that
+stacks pallets four high will destroy a pile that was qualified for a single layer. The carton itself should be
+ventilated enough not to trap moisture against a pile surface, and the finished goods should be stored away from
+direct heat, which is what causes the fibres to mat permanently. Where the trim is destined for a retail shelf, it is
+worth adding a handling instruction to the packing list telling the warehouse not to compress the cartons, because
+that instruction saves the mill a crush claim it would otherwise lose.</p>
+"""
+
+FAQ_JSONLD = """
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between velvet ribbon and flocked ribbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Velvet is a woven construction: the pile is created during weaving, typically with a second warp system that loops over the face and is cut, leaving the standing fibre and the ground in one fabric. Flocking is a finishing process: short fibres are sprayed onto a pre-coated ground fabric and held by an adhesive, creating a pile on a ribbon that was woven separately. The practical difference for a buyer is durability. Woven velvet generally withstands handling and cleaning better, and its pile is integral to the fabric, so it cannot peel off in sheets. Flocked ribbon can achieve a longer, softer pile and a lower cost per metre, but it depends entirely on the adhesive bond, so pile adhesion has to be a specified and tested parameter rather than an assumed one, and flock is more likely to shed if it has been over-brushed during finishing. Where the trim will be handled hard, brushed or washed, woven velvet is normally the safer choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I test whether a velvet ribbon recovers from crushing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compress the ribbon under a defined load for a defined period, then let it rest, then inspect it under a fixed condition. A workable protocol is 8 hours compressed at about 1 kPa, 24 hours of recovery, and inspection at 500 lux diffuse light from a 45 degree angle, comparing against the pre-compression baseline. The 45 degree angle matters, because a crush mark that is invisible under flat frontal light becomes obvious when the light rakes across the pile, which is exactly how a shopper sees a bow under a retail spotlight. The result should be recorded as a pass or fail against a written criterion rather than an impression, and the same protocol should be run on transit-simulated samples so that a mill baseline exists to compare a later claim against."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my velvet ribbon look darker than the approved sample?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Turn the ribbon 180 degrees along its length. If the shade returns to the approved colour, the cause is nap direction and pile geometry, not dye. A pile surface reflects light differently depending on whether the fibre tips face the viewer or lie away, so the same roll can read as two shades. This happens when the ribbon has been reversed during winding, when the nap direction has been specified incorrectly, or when the ribbon has been crushed and has not recovered. If the shade does not return when the ribbon is turned, then it is a genuine dye deviation and should be handled as a dye fault, checked against the approved physical lab dip and the original dye lot rather than against a photograph."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is velvet ribbon suitable for a product that will be washed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can be, but only with a specification. The trim needs a colourfastness class against the relevant wash regime, a pile adhesion peel value measured after the stated number of wash cycles, and an explicit care instruction. Velvet used on a garment that will be laundered should be tested for both colour and pile loss, because pile can lift and mat while the colour still passes. For gift packaging and decorative use with no wash exposure, the important tests are shedding, crush recovery and pack-down performance, and a heavier pile is usually the better commercial choice because it resists the handling of a fulfilment centre. At Smith Ribbon we can specify a care label matching the trim construction to the exact wash regime of the finished product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity for custom velvet ribbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At Smith Ribbon, custom velvet and flock ribbon typically start around 1,000 metres per width and colour on an existing construction, with a new pile height, a new fibre mix, a new colour or a new width adding normally ten to fifteen days on top of the standard 30 to 45 days to production readiness. The binding constraint on a velvet programme is not the unit price but the number of distinct pile constructions, because each one needs its own lab dip, its own crush test and its own shedding test. It is worth rationalising the pile range early: consolidating four pile heights onto one construction usually saves more in approval and qualification time than it costs in unit price, and it also makes the finished range far easier to keep visually consistent on shelf."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should velvet ribbon be packed and stored to protect the pile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treat pack-down as a specified parameter rather than a shipping detail. Rolls should be wound at a tension that does not crush the pile against the layer above, cartons should be filled so the rolls are not free to move, and the maximum stacking weight on top of the carton should be stated on the shipping document, because a warehouse that stacks pallets four high will destroy a pile that was qualified for a single layer. The carton itself should be ventilated enough not to trap moisture against a pile surface, and the finished goods should be stored away from direct heat, which is what causes the fibres to mat permanently. Where the trim is destined for a retail shelf, it is worth adding a handling instruction to the packing list telling the warehouse not to compress the cartons, because that instruction saves the mill a crush claim it would otherwise lose."
+      }
+    }
+  ]
+}
+</script>
+"""
+
+write_article(a, BODY + FAQ_JSONLD,
+              "Specify the pile, not just the colour",
+              "Request the velvet construction and crush / shedding test template for your end use")
+print(f"slug={SLUG}")
