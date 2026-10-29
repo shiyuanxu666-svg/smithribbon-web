@@ -197,6 +197,63 @@
   ]
 }
     </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a colour master batch in ribbon manufacturing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A colour master batch is the retained, fully compounded portion of dye &mdash; pigment, carrier and performance additives &mdash; used to produce the approved colour, normally dosed into the dye bath at a defined percentage. It matters because it moves dispersion variability upstream to the compounder, it can be retained and re-dosed for the life of a programme, and it carries the fastness properties along with the shade. A programme specified with master batch retention is re-run against a validated chemistry rather than re-matched by eye."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does ribbon colour drift between repeat orders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually because colour was specified as a reference rather than as a recipe. A Pantone number or a swatch describes the target but not the combination of master batch, substrate, bath chemistry, temperature, dwell time, liquor ratio and finishing route that produced it. When any one of those variables moves between the first and fourth reorder, the output moves with it &mdash; usually by an amount that is invisible against a paper reference and obvious between two rolls. The fix is a version-controlled colour recipe record plus retained master batch and retained production swatch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What delta E tolerance should we specify for ribbon colour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A delta E limit is the right instrument but is meaningless without the measurement and viewing conditions stated. Specify the limit together with illuminant (D65), observer, aperture and measurement position on the ribbon, and add two visual gates that the instrument cannot replace: a daylight visual comparison at approximately 5600K, and a visual comparison under the actual retail fixture lighting of the target market. The retail gate is what catches metameric failures, where a lot matches in the laboratory but not in the shop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should we keep a physical swatch from the production run?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it must be cut from the shipped ribbon rather than taken from a sample book. A sample book swatch is dyed in different conditions and will not be the reference the mill is matching against. Retain two or three production swatches from different production lots so you hold a picture of the programme's natural spread rather than a single point. Retention of both the production swatch and the master batch should be a contractual requirement for the life of the programme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if our yarn supplier changes mid-programme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on whether the change is colour-neutral. A different yarn supplier within a defined tolerance is a qualified deviation requiring a laboratory dip against the retained swatch, instrumental measurement, and a first production lot released only after the retail visual gate passes. A new substrate or a new dye house is an unqualified change and is effectively a new colour approval: new dip, new measurement, new three-condition visual gate, and written re-approval before the programme continues shipping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we keep ribbon colour traceable from roll to finished bow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Through five joins: master batch to dye lot, dye lot to ribbon lot, substrate to dye lot, ribbon lot to converted component, and component to finished good. The join most often lost is ribbon lot to converted component, because the slitting, cross-cutting and tipping operation does not always inherit the input lot reference. Ask each supplier in the chain what fields their lot documentation carries and whether a lot reference can be traced backwards to the master batch. Without that chain, scope 3 reporting on the ribbon in a brand's product cannot be substantiated."
+      }
+    }
+  ]
+}
+    </script>
 </main>
 </body>
 </html>
