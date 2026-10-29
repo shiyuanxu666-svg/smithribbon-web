@@ -83,7 +83,63 @@
   .tag { display: inline-block; background: #f5ebe0; color: #5a0f25; padding: 4px 12px; border-radius: 14px; font-size: 0.85rem; margin-right: 6px; }
 </style>
     <meta name="msvalidate.01" content="ECF29653135740AB77EEF5074F931DF4" />
-  </head>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "8.1 Is a digital product passport mandatory for decorative ribbon under EU ESPR in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet for ribbon as a standalone category, and it would be inaccurate to say otherwise. What is in force is the ESPR framework itself (Regulation (EU) 2024/1781), which establishes the digital product passport concept, data-carrier conventions and the delegated-act mechanism that will bring specific product groups into scope; the first ESPR working plan already identifies textiles and apparel as a priority group. Brands selling into the EU are separately bound by CSRD / ESRS E1 value-chain disclosure today, and by EUDR documentary-proof obligations for wood, bamboo and certain cellulose inputs. The commercial reality is that buyers are writing DPP-readiness expectations into 2026-2029 framework agreements well ahead of a ribbon-specific delegated act, because the data model has to be built before it is mandatory. Smith Ribbon builds to the ESPR data pattern now so a buyer is not re-platforming a decade from now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8.2 Why does the EU battery passport matter to a ribbon supplier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because it is the reference implementation. The battery passport required under Regulation (EU) 2023/1542 from February 2027 is the most mature example of a registry-backed, machine-verifiable product identifier with issuer-signed supporting evidence &mdash; precisely the pattern textile DPP working groups are adopting. A supplier that builds its traceability to that pattern inherits the governance, identifier-stability and verification design decisions that took the battery industry years to settle. A supplier that builds a bespoke ribbon-only schema will likely have to reconcile it later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8.3 What is the difference between storing certificates as PDFs and structuring them as a MoC ledger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scale and verifiability. A PDF is a container for a document; a MoC ledger is a record about a document &mdash; who issued it, what it covers, which lots it applies to, when it expires, and whether its signature verifies. At five certificates, PDFs are administrable. At five hundred programmes across multiple mills and multiple fibre inputs, a brand auditor asking for evidence on a specific lot cannot answer the question from a folder structure, which is why retrieval averages 11-19 days on flat-spreadsheet evidence stores. Structuring the record collapses that to a query."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8.4 How does EUDR affect ribbon with wooden or bamboo components?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EUDR (Regulation (EU) 2023/1115) requires operators and traders to make due-diligence declarations and hold documentary proof for the wood, bamboo and certain cellulose inputs they place on the EU market. Decorative ribbon constructions that use a wooden winding core, a bamboo gift-handle element, or a viscose-fibre component can therefore pull a finished good into an evidence request. The practical requirement on the mill is batch-level linkage: a record tying a specific input batch with its geolocation and chain-of-custody documentation to the finished ribbon lot. Smith Ribbon maintains the 4-level BOM nesting and batch-level input linkage needed to answer this, and assigns Tier-4 readiness class to any programme with in-scope inputs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8.5 Can a smaller or emerging brand get a 251-module passport program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The architecture is scoped per programme, not per mill-wide deployment. Smith Ribbon offers a 90-day quick-start track for emerging direct-to-consumer brands, with a 1,000-meter MOQ, and delivers the Tier-1 / Tier-2 readiness classes first so a brand can evidence correctly from its first production run and add resolver-bound passport IDs and EUDR batch linkage as its own compliance obligations mature. Starting at Tier-1 with a correct BOM is materially better than starting with a hand-built PDF pack."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8.6 What does a brand buyer actually receive from Smith Ribbon under 251-module?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A brand-scoped passport view keyed to your SKU-program, a per-lot process trace, an issuer-signed third-party evidence ledger with under-4-hour retrieval, a real-time certificate-currency status feed so nothing lapses unnoticed, a stable passport identifier with resolver binding where the buyer's packaging programme requires it, and an immutable access history for your own internal-audit team. It is delivered against your evidence template rather than ours, because the point of a passport is that the buyer can use it in the buyer's own reporting chain."
+      }
+    }
+  ]
+}
+</script>
+</head>
 <body>
 
 <h1>Mill-Side Brand-Buyer Digital Product Passport (DPP) &amp; EU ESPR Battery-Passport-Aligned Traceability Architecture for Global Brand Procurement 2026</h1>
