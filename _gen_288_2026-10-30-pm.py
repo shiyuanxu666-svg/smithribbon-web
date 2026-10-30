@@ -1,0 +1,432 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Generate smithribbon article 288 (PM) - 2026-10-30.
+
+Topic: Mill-Side Static-Control & Antistatic Ribbon Finish Interlock Architecture
+        - surface resistivity (ohms/square), conductive yarn count, carbon-fibre
+          vs stainless-steel vs conductive-polymer coating routes
+        - humidity dependence of static decay, triboelectric charging source control
+        - ESD packaging (electronics), cosmetics/atomiser, synthetic-fibre shedding
+          and cling, packaging-line jam reduction
+        - anti-static vs antistatic vs dissipative - the terminology that gets
+          contracts wrong
+
+Follows the established house template (287): full meta + OG + Twitter,
+BlogPosting + BreadcrumbList + FAQPage JSON-LD, visible FAQ section, CTA, footer.
+"""
+from pathlib import Path
+import json
+
+ROOT = Path("/workspace/smithribbon-web")
+DATE = "2026-10-30"
+FOOTER = ("&copy; 2026 Xiamen Smith Ribbon &amp; Bow Co., Ltd. | "
+          "Professional Ribbon Manufacturer Since 2004")
+ORG = "Xiamen Smith Ribbon &amp; Bow Co., Ltd."
+
+CSS = """  body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.8; color: #2a2a2a; max-width: 980px; margin: 0 auto; padding: 24px; background: #fafafa; }
+  h1 { font-size: 2.1rem; color: #8b1538; margin-bottom: 0.4em; line-height: 1.3; }
+  h2 { font-size: 1.55rem; color: #5a0f25; margin-top: 1.8em; border-left: 4px solid #b8854a; padding-left: 12px; }
+  h3 { font-size: 1.25rem; color: #5a0f25; margin-top: 1.4em; }
+  .meta { color: #777; font-size: 0.92rem; margin-bottom: 1.6em; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0; }
+  .kpi { background: #f0f7f0; border: 1px solid #c8e0c8; border-radius: 6px; padding: 14px 18px; margin: 1.2em 0; }
+  .kpi strong { color: #2e6b2e; }
+  table { border-collapse: collapse; width: 100%; margin: 1.2em 0; background: #fff; }
+  th, td { border: 1px solid #e0d0c0; padding: 10px 12px; text-align: left; font-size: 0.95rem; }
+  th { background: #f5ebe0; color: #5a0f25; font-weight: 600; }
+  ul, ol { margin: 0.8em 0 0.8em 1.6em; }
+  li { margin-bottom: 6px; }
+  .cta { background: linear-gradient(135deg, #8b1538 0%, #b8854a 100%); color: #fff; padding: 22px 28px; border-radius: 8px; margin: 2em 0; text-align: center; }
+  .cta a { color: #fff; text-decoration: underline; font-weight: 600; }
+  .tag { display: inline-block; background: #f5ebe0; color: #5a0f25; padding: 4px 12px; border-radius: 14px; font-size: 0.85rem; margin-right: 6px; }
+"""
+
+
+def slug_words(title):
+    import re
+    t = title.replace("&mdash;", " ").replace("&amp;", " ")
+    t = re.sub(r"[^a-zA-Z0-9 ]+", " ", t)
+    return re.sub(r"\s+", " ", t).strip().lower()
+
+
+def build(a):
+    fn = a["file"]
+    url = "https://smithribbon.com/" + fn
+    url_noh = url[:-5]
+    title = a["title"]
+    desc = a["desc"]
+    kw = a["keywords"]
+    words = a["wordcount"]
+    faq = a["faq"]
+    body = a["body"]
+    pub = a["pubtime"]
+
+    faq_schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": q,
+                "acceptedAnswer": {"@type": "Answer", "text": ans},
+            }
+            for q, ans in faq
+        ],
+    }
+
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": url + "#breadcrumb",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smithribbon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://smithribbon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": slug_words(title), "item": url},
+        ],
+    }
+
+    blogposting = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": desc,
+        "image": "https://smithribbon.com/banner.png",
+        "datePublished": pub,
+        "dateModified": pub,
+        "author": {"@type": "Organization", "name": ORG, "url": "https://smithribbon.com"},
+        "publisher": {
+            "@type": "Organization",
+            "name": ORG,
+            "url": "https://smithribbon.com",
+            "logo": {"@type": "ImageObject", "url": "https://smithribbon.com/banner.png"},
+        },
+        "mainEntityOfPage": {"@type": "WebPage", "id": url_noh},
+        "keywords": kw,
+        "wordCount": words,
+        "inLanguage": "en-US",
+        "articleSection": a["section"],
+    }
+
+    faq_html = "\n".join(
+        f"<h3>{q}</h3>\n<p>{ans}</p>" for q, ans in faq
+    )
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<meta name="keywords" content="{kw}">
+<meta name="author" content="{ORG}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{url_noh}">
+<meta name="msvalidate.01" content="ECF29653135740AB77EEF5074F931DF4" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{url_noh}">
+<meta property="og:image" content="https://smithribbon.com/banner.png">
+<meta property="og:site_name" content="SmithRibbon &mdash; Xiamen Smith Ribbon &amp; Bow">
+<meta property="article:published_time" content="{pub}">
+<meta property="article:modified_time" content="{pub}">
+<meta property="article:author" content="{ORG}">
+<meta property="article:section" content="{a['section']}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://smithribbon.com/banner.png">
+<!-- JSON-LD: BlogPosting -->
+<script type="application/ld+json">
+{json.dumps(blogposting, indent=2, ensure_ascii=False)}
+</script>
+
+<style>
+{CSS}</style>
+    <script type="application/ld+json">
+{json.dumps(breadcrumb, indent=2, ensure_ascii=False)}
+  </script>
+<script type="application/ld+json">
+{json.dumps(faq_schema, indent=2, ensure_ascii=False)}
+  </script>
+</head>
+<body>
+
+<h1>{title}</h1>
+<div class="meta">
+  <span class="tag">Ribbon OEM</span>
+  Published October 30, 2026 &middot; {ORG} &middot; {a['readtime']} min read
+</div>
+
+<p class="lede">{a['lede']}</p>
+
+{body}
+
+<h2 id="faq">Frequently Asked Questions</h2>
+{faq_html}
+
+<div class="cta">
+  <h3 style="color:#fff;border:none;margin-top:0;">{a['cta_h']}</h3>
+  <p>{a['cta_p']}</p>
+  <p><strong>Talk to a compliance engineer:</strong> +86 13779951780 (WeChat) &nbsp;|&nbsp; xmmsd@126.com &nbsp;|&nbsp; www.smithribbon.com</p>
+  <p><a href="/contact.html">{a['cta_link']} &rarr;</a></p>
+</div>
+
+<p style="font-size:0.85rem;color:#888;margin-top:1.4em;">{FOOTER}</p>
+<p style="font-size:0.9rem;color:#777;margin-top:2em;">Smith Ribbon OEM since 2004 &mdash; woven ribbon, satin, grosgrain, velvet, organza, RPET, printed bows, decorative trims, and private-label accessories for global brand buyers.</p>
+</body>
+</html>
+"""
+    (ROOT / fn).write_text(html, encoding="utf-8")
+    return fn, len(html.split()), html
+
+
+# ============================== ARTICLE 288 (PM) ==============================
+A288 = {
+    "file": ("blog-ribbon-oem-288-module-mill-side-brand-buyer-ribbon-static-control-antistatic-"
+             "dissipative-finish-interlock-architecture-surface-resistivity-conductive-yarn-"
+             "carbon-fibre-humidity-decay-triboelectric-charging-esd-packaging-2026-10-30-pm.html"),
+    "title": ("Mill-Side Brand-Buyer Static-Control &amp; Antistatic Ribbon Finish Interlock Architecture "
+              "&mdash; Surface Resistivity, Conductive Yarn, Humidity Decay and ESD Packaging Fit 2026"),
+    "desc": ("A mill-side brand-buyer guide to static-control and antistatic ribbon. Covers how surface "
+             "resistivity actually behaves on a woven textile, why conductive yarn construction is more "
+             "durable than a surface coating, how humidity changes every static measurement, why triboelectric "
+             "charging is a packaging-line problem before it is a product problem, how antistatic ribbon "
+             "behaves in ESD packaging and cosmetic atomiser programmes, and the specification that makes a "
+             "static-control claim defensible."),
+    "keywords": ("antistatic ribbon OEM, static control ribbon manufacturer, dissipative ribbon "
+                 "specification, surface resistivity ribbon test, conductive ribbon yarn construction, "
+                 "ESD packaging ribbon, antistatic ribbon humidity decay, triboelectric charging ribbon, "
+                 "static dissipative textile ribbon, antistatic bow manufacturing, static control ribbon "
+                 "brand buyer, conductive fibre ribbon OEM, static cling ribbon packaging problem, "
+                 "ribbon surface resistance ohms per square, ESD safe decorative trim, antistatic ribbon "
+                 "specification testing, private label antistatic ribbon, ribbon static discharge time test"),
+    "wordcount": 3200,
+    "pubtime": "2026-10-30T07:00:00+00:00",
+    "section": "Ribbon OEM Manufacturing",
+    "readtime": 16,
+    "lede": ("Static is one of those problems that never arrives as a specification request. It arrives as a "
+             "complaint from the packaging line that the ribbon clings to itself and jams the folder, as a "
+             "complaint from the distributor that the bows are welded together in a static carton, as an ESD "
+             "audit finding on a decorated electronics box, or as a quiet quality problem where the trim on a "
+             "mascot costume picks up dust in a retail window and the customer photographs it. By the time "
+             "anyone asks for antistatic ribbon, the programme has usually been running for a year with a "
+             "property that was never written down."),
+    "cta_h": "Let us spec your static-control ribbon properly",
+    "cta_p": ("Tell us the application - ESD packaging, cosmetics, synthetic fibre, bulk packing - the "
+              "environment the ribbon ships and is stored in, and the static problem you are trying to solve. "
+              "We will recommend the construction route (conductive yarn versus dissipative finish), the "
+              "measurement method, the conditioning standard, and the acceptance limits that make the "
+              "property verifiable rather than asserted."),
+    "cta_link": "Request a static-control ribbon quote",
+    "faq": [
+        ("What is the difference between antistatic and dissipative ribbon?",
+         "The distinction is resistance range, and it is worth being precise because contracts routinely get "
+         "it wrong. Dissipative materials have a surface resistance between roughly 10^6 and 10^9 ohms per "
+         "square, and they bleed a charge away slowly and safely. Antistatic materials sit around 10^9 to "
+         "10^12 ohms, and conductive materials below 10^6 ohms. The practical consequence is that the three "
+         "serve different purposes: a conductive ribbon is for grounding a component, a dissipative ribbon is "
+         "for wrapping and handling electronics in a controlled area, and an antistatic ribbon is for "
+         "preventing the nuisance static that causes clinging, dust attraction and jamming in general "
+         "handling. Writing 'antistatic' into a specification without a resistance range and a measurement "
+         "method leaves the requirement unfalsifiable."),
+        ("How is surface resistivity measured on ribbon, and why does the method matter so much?",
+         "The usual methods are the surface resistance meter (a cylindrical electrode of defined radius "
+         "pressed against the material with a defined applied voltage) and the ESD resistance meter at a "
+         "specified humidity and applied voltage. The results vary enormously with conditioning, applied "
+         "voltage, contact pressure, electrode geometry and the direction of measurement, which is why two "
+         "labs can report very different numbers for the same ribbon. The specification has to name the "
+         "method, the conditioning time and humidity, the applied voltage and the electrode, and it should "
+         "state that measurement is in the machine direction and the cross direction. Without those, a "
+         "passing result on paper tells you very little."),
+        ("Does humidity affect static-control performance, and how much?",
+         "Substantially, and it is the single biggest source of failed static-control programmes. Surface "
+         "resistance in most hygroscopic materials - which includes polyester, nylon, cotton and viscose - "
+         "falls sharply as relative humidity rises, because absorbed moisture provides the conduction path. "
+         "A ribbon that measures 10^11 ohms at 20 percent relative humidity can measure 10^8 ohms at 65 "
+         "percent. That means a static-control ribbon tested in a coastal factory in Fujian in June may "
+         "behave very differently from the same ribbon in a conditioned warehouse in Chicago in January. "
+         "Any ribbon that is specified for a controlled environment should specify the conditioning "
+         "standard, and any ribbon used in the general retail supply chain should be specified across a "
+         "humidity range rather than at a single point."),
+        ("Is a conductive yarn construction better than a surface coating for static control?",
+         "For most programmes, yes, and the reason is durability. A conductive yarn is a structural part of "
+         "the fabric - carbon fibre, stainless steel filament, or a metalised composite yarn running through "
+         "the weave - so the property cannot be washed off, abraded away or stripped by handling. A surface "
+         "coating or topical antistatic finish sits on the ribbon and will gradually lose performance with "
+         "abrasion, repeated washing, and handling at the folding and winding points, which in a ribbon "
+         "programme is most of the surface. Coatings also have a limited working life in humid conditions, "
+         "where they can absorb moisture and migrate. The trade-off is cost and handle: a conductive yarn is "
+         "more expensive, it can be stiffer, and for a very fine ribbon it may not be mechanically practical, "
+         "in which case a dissipative finish is the realistic answer for a short-life decorative application."),
+        ("How does triboelectric charging affect a ribbon packaging line, and what can the supplier do about it?",
+         "Triboelectric charging is the transfer of charge between two surfaces in contact and separation, "
+         "and it is the dominant charging mechanism in packaging operations. A ribbon unrolling from a roll "
+         "separates continuously from the roll surface, and the ribbon itself separates from guide rollers "
+         "and from the product as it is folded or applied. On a synthetic ribbon this generates charge that "
+         "does not dissipate quickly, and the results are the ones operators complain about: webbing that "
+         "wraps onto itself, folding jams, attracted dust and lint, and in an electronics environment, "
+         "component damage from an ESD event. The supplier-side controls are real but partial: conductive or "
+         "dissipative yarn lowers the charge generated, grounding the unwind and the converting equipment "
+         "removes it faster, and appropriate humidity management in the converting area does more than any "
+         "material change. A ribbon specification alone will not fix a line that is dry, dirty and "
+         "ungrounded, and a supplier who says otherwise is selling you a property you will not be able to "
+         "measure in your own building."),
+        ("Does antistatic ribbon work for cosmetic packaging and atomiser decoration?",
+         "It can, but the application has its own requirement that is different from electronics. In a "
+         "cosmetics programme the concern is generally not ESD damage to a component; it is product "
+         "protection and presentation. Static on a decorative ribbon around an atomiser bottle or a gift set "
+         "can pull loose fibres and dust toward the product, which is a visible quality problem, and it can "
+         "make an assembled bow cling to a moulded surface so that the set does not present neatly in the "
+         "cellophane. For that purpose a moderate antistatic or dissipative construction is usually enough, "
+         "and the mill should also be able to address it through yarn selection and handling discipline. The "
+         "practical point is that 'antistatic' in a cosmetics brief is usually a preference rather than a "
+         "compliance requirement, so the resistance range can be set pragmatically and the cost implication "
+         "discussed openly rather than defaulted to the most expensive conductive construction."),
+        ("How do you test that antistatic ribbon actually works on a finished bow or trim?",
+         "Test the finished article, not the raw ribbon, because converting changes the property. A bow that "
+         "has been folded, layered, glued, backed or over-sewn has a different surface resistivity at the "
+         "fold than the flat tape did, and adhesives and laminates can dominate the behaviour. The finished-"
+         "article tests that matter are a surface resistance measurement on the assembled bow, a charge "
+         "decay measurement recording how long the article takes to lose a placed charge, and a simple "
+         "clinging or attraction test where the bow is presented to a grounded or non-grounded surface to "
+         "see whether it lifts and holds. A practical evaluation plan is to build a pilot of ten assembled "
+         "articles from the production route, run these tests before and after a controlled ageing cycle, "
+         "and set the acceptance limit on the aged result rather than on the fresh one."),
+        ("Can you make normal polyester ribbon antistatic without changing its look or hand?",
+         "Usually to a point, and the trade-offs should be understood before the artwork is finalised. A "
+         "topical antistatic agent is essentially invisible and can be applied to a finished printed or "
+         "satin ribbon, but its performance decays with handling and it can interfere with some printing "
+         "and bonding adhesives, so it has to be specified before those processes rather than added at the "
+         "end. A conductive yarn construction is visible to the eye in some light colours and can change the "
+         "handle, which matters for a ribbon whose entire purpose is to look elegant. For most decorative "
+         "private-label programmes the sensible route is a dissipative construction at a resistance range "
+         "that solves the practical problem, tested on the finished article, rather than a high-conductivity "
+         "engineering material chosen for a specification that was never actually required."),
+    ],
+    "body": """
+<h2>Why Static Control Arrives as a Complaint Rather Than a Specification</h2>
+
+<p>Most ribbon programmes never write the word static anywhere. The specification gets built around what the ribbon looks like, how wide it is, what it weighs, how it prints and how it packs. Then the programme runs, and the static problem appears as something else entirely: a folder on the packaging line that will not release the web, a carton where twenty bows have welded themselves into a single mass, a retail window where the trim has drawn enough dust to read as a manufacturing fault, or an ESD audit that flags a line the auditor says was never qualified for the product.</p>
+
+<p>This is not a failure of attention. It is a predictable consequence of how the ribbon is built. Polyester, nylon and acrylic are all excellent insulators, and the more tightly woven and the more surface-finished the ribbon is, the better it holds a charge. A soft, matte, loosely woven ribbon generated in a dry room with grounded equipment is a completely different static proposition from a dense satin ribbon unwinding at speed onto an ungrounded machine in a dry warehouse. The buyer who has never had a static problem has no reason to specify against one.</p>
+
+<p>The problem with waiting is that static-related defects are expensive in a way that is easy to under-price. A jammed packaging line stops production. Bow welding turns a carton of trims into scrap. Dust attraction turns a premium gift set into a review. An ESD event can damage a component worth far more than the ribbon that was around it. And in every one of those cases the ribbon is the part that gets blamed, because the ribbon is what was visible in the failure.</p>
+
+<p>This module is about closing that gap. It sets out how static control actually works on a woven textile, which of the three construction routes to choose, how to specify it so it is verifiable, and how to test the finished article rather than the raw tape &mdash; because converting a ribbon into a bow changes its electrical behaviour more than most people expect.</p>
+
+<h2>Static Control on a Woven Textile: What You Are Actually Specifying</h2>
+
+<p>The word that matters on a purchase order is surface resistivity, measured in ohms per square. It is a material property of the finished textile, and it tells you how readily charge on the surface can move and dissipate. Higher numbers mean the surface holds its charge; lower numbers mean charge moves away quickly. Every specification for static-control ribbon eventually reduces to a resistance range, a measurement method, a conditioning environment, and an acceptance limit.</p>
+
+<p>Three ranges matter commercially, and they are conventionally written on this scale:</p>
+
+<table>
+  <tr><th>Range (ohms per square)</th><th>Convention</th><th>What it is for</th></tr>
+  <tr><td>Below 10^6</td><td>Conductive</td><td>Grounding a component, bonding a conductive layer, EMI shielding applications</td></tr>
+  <tr><td>10^6 to 10^9</td><td>Dissipative</td><td>ESD work areas, wrapping and handling electronics, controlled handling</td></tr>
+  <tr><td>10^9 to 10^12</td><td>Antistatic</td><td>General handling &mdash; preventing clinging, dust attraction, jamming and handling nuisance</td></tr>
+</table>
+
+<p>What sits between these is not a gray area to be argued about; it is a specification that has to be written precisely, because the difference between a dissipative ribbon and an antistatic one is roughly three orders of magnitude, and the difference between a dissipative ribbon and a conductive one is another three.</p>
+
+<p>Two properties sit alongside resistivity and are worth asking about, because they are what people actually mean when they say 'it antistatic'. The first is <strong>charge decay time</strong>: how long the article takes to lose a deliberately placed charge. A material can have a moderate surface resistivity and still decay quickly, or hold a low resistivity and decay slowly if it is poorly bonded. The second is <strong>triboelectric charging</strong>: how much charge the material generates when it is rubbed, separated or unrolled. This is the property that governs the packaging-line problem, and it is largely a function of material chemistry and surface energy rather than of resistivity alone. A ribbon can resist accepting a charge and still generate a strong one.</p>
+
+<div class="kpi">
+  <p><strong>Three properties that must appear together in any static-control specification:</strong></p>
+  <ul>
+    <li><strong>Surface resistivity</strong> &mdash; the range the ribbon must fall within</li>
+    <li><strong>Charge decay time</strong> &mdash; how fast a placed charge is lost, at a defined humidity and voltage</li>
+    <li><strong>Triboelectric charging tendency</strong> &mdash; how much charge the material generates on separation</li>
+  </ul>
+  <p>Specify only the first and you have specified a number on a bench, not a behaviour on a line.</p>
+</div>
+
+<h2>The Three Construction Routes: Conductive Yarn, Dissipative Finish, Topical Agent</h2>
+
+<p><b>Route 1: Conductive yarn in the weave.</b> A yarn with genuine electrical conductivity &mdash; carbon fibre, stainless steel filament, or a metalised composite yarn &mdash; is woven into the structure alongside the polyester or nylon. The property is structural. It cannot be washed off, it cannot be abraded off, and it does not degrade with handling. This is the route to specify when the ribbon must perform for years, when it is a permanent part of the product, when it needs to be grounded, and when the environment is genuinely controlled. The costs are real: the conductive yarn is more expensive than the textile yarn it replaces, it adds weight, and at fine widths it can make the ribbon stiff or difficult to weave, which affects the feel of a bow and the behaviour of a knot. Where the programme is a technical component rather than a decoration, this is the correct choice.</p>
+
+<p><b>Route 2: Dissipative or antistatic finish applied to the surface.</b> A topical treatment or a coating that gives the ribbon a controlled resistivity across the surface. This is the standard route for decorative and handling applications, because it preserves the look, the hand, the print and the cost of the base ribbon. Its limitation is lifetime. A surface treatment wears off where the ribbon is worked hardest &mdash; the edge of a bow, the fold, the edge of the roll as it unwinds, the crease of a package tie &mdash; and many agents are hygroscopic, so their behaviour drifts with ambient humidity. A finish is a reasonable specification for a decorative bow that has a defined service life, and a poor specification for a permanent trim that must be certified for ESD work.</p>
+
+<p><b>Route 3: Conductive additive in the spun yarn.</b> A carbon or metal-based additive compounded into the fibre before weaving. This sits between routes one and two: it is durable in the way a yarn-based route is, but it does not form a visible conductive path across the fabric, so the resistivity depends on the density of the additive and the geometry of the weave. It is a good technical route where full conductivity is not required but durability is, and it is a route worth asking a mill about when the requirement is dissipative rather than conductive.</p>
+
+<p>The practical question a brand buyer should ask a mill is not 'can you make it antistatic' but 'which route gets me the behaviour I need for the life of this article, at a price this programme can carry'. Those are different questions, and the honest answer from a good mill is usually that route two is sufficient for this and route one is necessary for that.</p>
+
+<h2>Humidity: The Variable That Decides Whether Your Specification Holds</h2>
+
+<p>Every number in a static-control specification has an implicit climate attached to it, and the climate is not optional. Polyester, nylon, cotton, viscose and acetate all absorb atmospheric moisture, and absorbed moisture is what provides a conduction path across the fibre surface. The relationship is steep: for most materials, surface resistance falls by roughly one order of magnitude for every ten percentage points of relative humidity increase, within the normal range a supply chain actually experiences.</p>
+
+<p>The practical implication is severe enough to change how you write the specification. A ribbon specified at 10^9 to 10^11 ohms and tested at 50 percent relative humidity may measure above 10^12 in a dry winter warehouse and below 10^9 in a humid summer container. If the ribbon is only ever handled in a conditioned environment, the specification is coherent and you can state the conditioning standard explicitly. If it travels through uncontrolled supply chains, sits in a container, and is stored in a retail back-room in a humid climate, then a single-point resistance specification is describing a laboratory condition that will rarely be met, and the honest engineering approach is to specify the behaviour across a humidity range rather than a single number.</p>
+
+<p>There is a second, less obvious consequence. A mill that tests at its own local humidity and reports a passing number has not necessarily produced a ribbon that performs in the buyer's warehouse. This is why the test method, the conditioning standard and the conditioning period all need to be named in the purchase order rather than left to convention. IEC 61340 and the ASTM D257 series are the frameworks normally referenced; what matters commercially is that the standard, the conditioning environment and the applied voltage are written down, so that the mill's report and the buyer's verification are testing the same thing.</p>
+
+<h2>Triboelectric Charging on the Packaging Line</h2>
+
+<p>Static is generated by separation, and a ribbon converting line separates things constantly. The ribbon unrolls from the roll, and the surface leaving the roll is separated from the surface that was in contact with it. The ribbon passes over guide rollers, each of which is a contact-and-separate event. The ribbon is applied to a product and pulled away. Every one of those events can transfer charge between two surfaces, and the direction of the transfer depends on the triboelectric series &mdash; a ranking of materials by how readily they give up or accept an electron.</p>
+
+<p>On a polyester ribbon running over nylon or acrylic guides, the charge tends to land on the ribbon, and it lands there fast enough to be useful for the problem. The operator experience is the familiar one: webbing that will not lie flat, a sheet that folds into itself, a bundle of bows that arrives as a single fused mass, a wrapper that tears because it has bonded to the product surface, and lint and dust drawn out of the air onto an otherwise clean product.</p>
+
+<p>The control hierarchy on a line is worth stating plainly, because it determines how much of the problem a ribbon choice can actually solve:</p>
+
+<ol>
+  <li><strong>Grounding the equipment</strong> &mdash; bonding the unwinder, guides and converting head to earth. This is the single most effective intervention and it is free.</li>
+  <li><strong>Humidity management in the converting area</strong> &mdash; holding relative humidity in a band that keeps charge dissipating. Dry air in winter is the enemy.</li>
+  <li><strong>Contact-and-separate minimisation</strong> &mdash; fewer guide rollers, gentler handling, lower unwind tension.</li>
+  <li><strong>Material choice</strong> &mdash; dissipative ribbon and antistatic finishes reduce charge generated and speed its removal. Genuinely useful, and last in the list for a reason.</li>
+</ol>
+
+<p>What this means for a ribbon buyer is that a mill which claims a ribbon will solve your static problem is over-promising, and a mill which asks what your line conditions are, what your humidity range is and what the actual symptom is, is telling you something more useful. The right output from a supplier conversation is a combined plan: a ribbon construction recommendation, a set of line recommendations, and an honest statement of which part of the problem the ribbon addresses.</p>
+
+<h2>Application Fit: ESD Packaging, Cosmetics, Bulk Packing and Synthetic Fibre</h2>
+
+<p><b>ESD packaging and electronics.</b> This is the strictest application and the one with the clearest standards. A decorated electronics box, a ribbon-wrapped device or a trim fitted to an assembly in a controlled area needs a specified resistivity range, a documented test method, and evidence that the property survives the life of the programme. Here the routing decision is usually a yarn-based construction, because the requirement is a permanent property of a shipped article rather than a nuisance-reduction measure. The specification has to address the finished article &mdash; the bow, the trim, the applied decoration &mdash; because adhesives, laminates and inks all contribute to the behaviour of the assembly and none of them are covered by the tape's certificate.</p>
+
+<p><b>Cosmetics and fragrance.</b> Here the driver is product protection and presentation rather than component protection. Static attracts lint and loose fibre toward an open product, and it makes a rigid decorative element cling to a moulded surface, which is exactly the wrong presentation for a premium gift set. A moderate antistatic or dissipative construction is usually sufficient, and because the requirement is functional rather than regulatory, the resistance band and the price can be discussed pragmatically. The one thing to watch is that the ribbon does not itself shed or have a surface that can mark a moulded surface under contact.</p>
+
+<p><b>Bulk packing and logistics.</b> Long-distance shipping in dry or conditioned containers, where humidity swings are large and where a bow may sit in a carton for months before it is used. Here the specification should be written across a humidity band and tested after an ageing cycle, not fresh from the line.</p>
+
+<p><b>Synthetic fibre and apparel trim.</b> A trim in contact with a garment in a dry retail environment can generate enough static to be objectionable, and on very high-modulus fibres there can be an effect on wearer comfort. The requirement here is usually about consumer experience rather than compliance, and it is best handled with a general antistatic construction or a controlled yarn selection.</p>
+
+<p>What unites all four is that the specification should name the failure the property is meant to prevent. 'Antistatic' on its own is a category; 'must not cling to a moulded PET surface at 45 percent relative humidity after 10 handling cycles' is a testable requirement, and it is the second form that lets a factory quote and a quality team verify.</p>
+
+<h2>Specification and Testing: Converting Changes the Answer</h2>
+
+<p>The most common technical error in static-control programmes is specifying and testing the raw tape while shipping an assembled bow. Converting is not electrically neutral. Folding creates a compression zone with a different surface condition to the flat tape. Adhesives at the fold can dominate the local behaviour. Backing, over-sewing, edge binding and tipping introduce new materials that are not specified anywhere in the tape's documentation. A plastic core or a wire insert in a wired-edge ribbon adds a conductor to a structure that may have been specified as a whole.</p>
+
+<p>The testing sequence that works is this: first, test the flat tape as produced, for process control and to confirm the construction route is performing. Second, test the finished article &mdash; the bow, the trim, the packaged assembly &mdash; using a surface resistance meter and a charge decay measurement at the specified voltage and humidity. Third, age the finished article through a defined cycle of handling, humidity and abrasion, then repeat. Fourth, set the acceptance limit on the aged result.</p>
+
+<p>That last point is where most specifications are weaker than the engineer who wrote them believes them to be. Setting the limit on a fresh sample means you are certifying the ribbon as it left the mill, not as it will arrive in your customer's warehouse. A specification that states the aged acceptance limit, the ageing cycle and the sample size is worth considerably more to a brand than one that states a resistance range alone.</p>
+
+<div class="kpi">
+  <p><strong>Static-control specification checklist &mdash; eight clauses</strong></p>
+  <ul>
+    <li>Surface resistivity range (ohms per square), by construction route</li>
+    <li>Measurement method and instrument class (IEC 61340-2-3 / ASTM D257 as applicable)</li>
+    <li>Conditioning environment: temperature, relative humidity and conditioning period</li>
+    <li>Applied voltage and charge decay acceptance limit</li>
+    <li>Direction of measurement: machine direction and cross direction</li>
+    <li>Finished-article test: the bow or assembly, not the flat tape alone</li>
+    <li>Ageing cycle, sample size and the acceptance limit set on the aged result</li>
+  </ul>
+</div>
+
+<h2>Cost, Trade-offs and the Question a Mill Should Ask You Back</h2>
+
+<p>Static control is not a binary option and it is not free. A yarn-based conductive construction on a 12 mm printed grosgrain will cost a multiple of a standard polyester tape, and it changes the hand of the finished bow. A dissipative finish on a satin ribbon is far more modest, but it has a working life and it has to be specified before the printing and bonding steps rather than added afterwards. A topical agent is the cheapest and the least durable, and it can interfere with some printing and adhesive systems. Any quote you receive should make the route explicit, because a price without a route is not comparable to another price without a route.</p>
+
+<p>There is also a question that good mills ask in return, and buyers are well advised to have an answer ready: what is the actual failure you are solving? It reframes the conversation from 'we need antistatic ribbon' to 'our folding line jams roughly three times a week when the humidity drops below 40 percent, and we believe it is the satin trim' - which is a problem the mill can help with, partly through material and partly through line advice. It also avoids the expensive outcome of specifying a conductive construction for what turns out to be a grounding problem on the machine.</p>
+
+<p>At Smith Ribbon, in Xiamen since 2004, we work with brand buyers on static-control trims for electronics packaging, cosmetics presentation and bulk packing. We will tell you honestly which construction route your requirement actually needs, what it will cost, and where a ribbon change will only partly fix a problem that actually lives in the converting area. We would rather have the difficult conversation before the pilot than after the first complaint.</p>
+
+
+"""
+}
+
+
+# ============================== BUILD ==============================
+if __name__ == "__main__":
+    fn, words, html = build(A288)
+    print(f"[OK] {fn}")
+    print(f"     words={words} chars={len(html)}")
