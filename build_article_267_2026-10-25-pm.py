@@ -1,0 +1,424 @@
+#!/usr/bin/env python3
+"""Build smithribbon B2B module 267 (PM), 2026-10-25.
+
+Topic: mill-side DRAWSTRING & CORD-COMPONENT interlock — how a brand buyer
+controls drawcord material, cord diameter, core style (cotton-wrapped vs
+polyester vs metallic), cordlock function, aglet/toggle finishing and the
+pull-force performance of a drawstring assembly.
+
+Distinct from every existing module: 265 covers the roll, core, winding and
+carton (the delivery unit); 266 covers the cut end (end finish). Neither
+covers the CORD COMPONENT — the drawcord itself, the lock that stops it and
+the aglet that terminates it. This is a distinct component with its own
+material, tolerance and functional specification.
+"""
+from pathlib import Path
+import sys
+
+sys.path.insert(0, "/workspace/smithribbon-web")
+from sr_page import write_article
+
+SLUG = ("blog-ribbon-oem-267-module-mill-side-brand-buyer-drawstring-cord-component-interlock-architecture-"
+        "cord-diameter-core-style-cordlock-aglet-pull-force-performance-global-brand-procurement-2026-10-25-pm")
+
+a = {
+    "title": "Mill-Side Brand-Buyer Drawstring &amp; Cord-Component Interlock Architecture &mdash; "
+             "Controlling Cord Diameter, Core Style, Cordlock Function, Aglet Finishing and Pull Force 2026",
+    "desc": "B2B ribbon OEM 267-module drawstring and cord-component interlock architecture. "
+            "5-layer cord-component authority ladder, 4-stage cord assembly approval gate, 3-tier cord-defect "
+            "reconciliation ladder, and a pull-force drift early-warning threshold. Smith Ribbon OEM since 2004.",
+    "kw": "ribbon drawstring OEM, drawcord specification, cordlock function, aglet finishing, "
+          "cord diameter tolerance, cotton wrapped drawcord, polyester drawcord, metallic drawcord, "
+          "pull force testing cord, toggle drawstring, custom drawcord supplier, "
+          "cinch bag drawstring, gift packaging drawcord, cord component interlock, ribbon OEM cord assembly, "
+          "private label drawstring, cordlock spring function, aglet crimp quality, "
+          "branded drawstring packaging, cord assembly pull force drift",
+    "author": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.",
+    "date_iso": "2026-10-25T07:00:00+00:00",
+    "date_human": "October 25, 2026",
+    "slug": SLUG,
+    "section": "Ribbon OEM Manufacturing",
+    "tag": "Ribbon OEM",
+    "read": "17 min read",
+    "word_count": 2700,
+}
+
+BODY = """
+<p class="lede">A ribbon programme and a cord programme are frequently quoted together and managed separately, which
+is how problems get created. The ribbon is the visible brand surface: it carries the colour, the weave, the print
+and the identity. The cord is the functional component: it opens the bag, closes it, carries the load, and is
+pulled by a customer with wet hands in a hurry. The cord is the part that fails functionally and the part that
+almost never gets a written specification.</p>
+
+<p>A drawstring assembly has four distinct components, and each one has its own tolerances, its own failure
+modes and its own owner. The <strong>cord</strong> is the material. The <strong>core style</strong> decides
+how that cord feels in the hand and whether it knots. The <strong>cordlock</strong> is the mechanism that stops
+the cord. The <strong>aglet or toggle</strong> is the termination that makes the pull possible. This module
+covers the assembly as a component, because that is how it is designed, how it is quoted and how it fails.</p>
+
+<h2>1. Why the Cord Is a Performance Component, Not a Trimming</h2>
+
+<p>The instinct is to treat a drawcord as a length of string that a factory threads through a channel. That
+viewpoint produces two predictable failures. The first is a cord that is too thin, which cuts into the bag
+fabric at the channel and wears through after a few hundred cycles. The second is a cord that is too stiff or
+too slippery, which means the user cannot tie it &mdash; and the moment a user cannot tie a bag, the bag becomes
+a disposable object rather than a reusable one, which destroys the entire premise of the packaging programme.</p>
+
+<p>There is a third failure that is purely a specification failure: the cord pulls out of the cordlock. The lock
+is specified by appearance and function in one sentence, and the pull-force requirement &mdash; the actual
+mechanical criterion &mdash; is never stated. Without a stated pull force, a lock that releases at 4&nbsp;N and
+a lock that releases at 22&nbsp;N are both compliant with the specification, and only one of them is a usable
+product.</p>
+
+<blockquote style="border-left:4px solid #b8854a;padding:8px 16px;margin:1.2em 0;background:#faf6f1;">
+&quot;Drawcord: 4&nbsp;mm round polyester, cotton-wrapped core, 2-ply. Tensile strength minimum
+ 55&nbsp;N. Pull force through the cordlock: 8&nbsp;N to 14&nbsp;N measured on the assembled
+ channel. Cordlock: spring toggle, two-hole body, matte and brand-debossed.
+ Aglets: aluminium, 12&nbsp;mm, crimped. Total cord length 1,600&nbsp;mm &plusmn;10&nbsp;mm,
+ including both aglets. Knot retention at the aglet: no pull-out above 30&nbsp;N.&quot;
+</blockquote>
+
+<p>That specification contains fourteen separate requirements. Fourteen, and it is still a simplified version of
+what a mature programme carries.</p>
+
+<div class="kpi">
+  <p><strong>Commercial significance:</strong> cord failures are functional failures, and functional failures
+  generate the most expensive class of complaint in packaging. A frayed ribbon end returns one unit. A cord that
+  pulls out of the lock returns a pallet, and it does so after the brand has already printed, filled and shipped
+  the entire run.</p>
+</div>
+
+<h2>2. The 5-Layer Cord-Component Authority Model</h2>
+
+<p>Five layers govern the cord assembly, ordered from most frozen to most operational, each with a named owner
+and a change threshold.</p>
+
+<table>
+  <thead>
+    <tr><th>Layer</th><th>Parameter</th><th>Owner</th><th>Change threshold</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>C1</td><td>Cord construction: material, core style, ply count, nominal diameter, whether the cord is
+        braided, twisted or wrapped</td>
+        <td>Brand, frozen at FAI</td>
+        <td>None. A cord construction change alters diameter, strength, hand-feel and knot behaviour together.</td></tr>
+    <tr><td>C2</td><td>Cordlock specification: mechanism type, body material, spring rate, hole spacing, cord
+        retention method, and the resulting pull-force band</td>
+        <td>Brand, frozen at FAI</td>
+        <td>None without a functional re-test on the assembled channel</td></tr>
+    <tr><td>C3</td><td>Termination: aglet or toggle type, material, length, crimp method, knot-retention
+        requirement at the cord-to-aglet joint</td>
+        <td>Brand, frozen at FAI</td>
+        <td>None. A termination change is a load-path change.</td></tr>
+    <tr><td>C4</td><td>Assembly tolerances: total length tolerance, aglet position, cordlock position from the
+        channel end, channel-end condition, cord-to-lock seating depth</td>
+        <td>Mill, brand co-sign</td>
+        <td>Any excursion beyond the signed band; any change to the channel specification</td></tr>
+    <tr><td>C5</td><td>Assembly method: crimp tool calibration, knot style, tension setting, operator sequence,
+        pull-force verification frequency</td>
+        <td>Mill, internal only</td>
+        <td>Mill informs brand on a change of crimp tool, knot style or verification interval</td></tr>
+  </tbody>
+</table>
+
+<p><strong>C1</strong> is where the diameter question is settled, and it should not be settled by the
+customer&rsquo;s memory of what the last supplier used. Cord diameter interacts with the channel in the bag
+panel, and the channel is usually a decision made months earlier by a packaging designer who was thinking about
+the graphic, not about the cord. A 4&nbsp;mm cord in a 3&nbsp;mm channel is a different product from a 4&nbsp;mm
+cord in a 5&nbsp;mm channel, and so is the same cord in a 6&nbsp;mm woven channel that allows it to slide at all.</p>
+
+<p><strong>C2</strong> is the layer most often left blank, and it is the one that decides whether the package
+works. Cordlock pull force is a measurable quantity and it should be specified as a band, not as a
+&ldquo;good quality&rdquo; adjective.</p>
+
+<p><strong>C3</strong> is the load path. The cordlock carries the tension when the bag is closed; the aglet
+carries the tension when the user pulls to open it. The failure at the aglet joint is the more common one and it
+is entirely a function of how the cord is knotted and how the aglet is crimped.</p>
+
+<p><strong>C5</strong> is where drift lives. A crimp tool that has been used past its calibration drifts
+gradually in retention force, and the drift is invisible until a pull test fails.</p>
+
+<h2>3. The 4-Stage Cord Assembly Approval Gate</h2>
+
+<h3>Stage 1 &mdash; Definition (before production)</h3>
+<p>Define the cord construction, the cordlock mechanism and pull-force band, the termination type and
+knot-retention requirement, the total length tolerance and the assembly positions, in writing on the purchase
+order and the technical pack.</p>
+
+<h3>Stage 2 &mdash; First-assembly verification (start of lot)</h3>
+<p>Assemble the first unit and verify it end to end: pull force through the lock, aglet retention at the joint,
+cord seating depth in the lock, cordlock position from the channel end, total length, and the behaviour of the
+cord through a full open-close cycle. This is the stage that catches a channel that was specified slightly too
+narrow, and it is the only stage at which that is cheap to fix.</p>
+
+<h3>Stage 3 &mdash; In-line pull-force audit (sampled through the lot)</h3>
+<p>Sample assemblies at defined intervals and re-measure pull force through the lock and aglet retention. This
+is where crimp-tool drift and spring-rate variation surface, because both develop progressively.</p>
+
+<h3>Stage 4 &mdash; Pack-out functional verification (before shipment)</h3>
+<p>Verify the shipped configuration functionally, not just dimensionally: pull a set number of units closed and
+open them, and confirm the lock holds, the cord does not slip in the channel, and the aglet does not rotate or
+pull free. A cord assembly that measures perfectly but slips in a polyester channel has failed.</p>
+
+<div class="kpi">
+  <p><strong>The Smith Ribbon cord rule:</strong> the cord assembly is verified dimensionally at the bench and
+  functionally at the pack-out. A cord programme is judged on whether the user can close the bag and open it
+  again without thinking about it &mdash; and that property can only be tested on the finished unit, never
+  on a cord sample in isolation.</p>
+</div>
+
+<h2>4. The Six Parameters That Define a Cord Assembly</h2>
+
+<table>
+  <thead>
+    <tr><th>Parameter</th><th>Typical specification</th><th>What it controls</th><th>Failure signature downstream</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Nominal cord diameter</td>
+        <td>3&nbsp;mm, 4&nbsp;mm, 5&nbsp;mm, 6&nbsp;mm, tolerance &plusmn;0.2&nbsp;mm</td>
+        <td>Whether the cord fits and slides in the channel, and how it feels in the hand</td>
+        <td>Cord jammed in the channel; or a loose cord that slips when the bag is loaded</td></tr>
+    <tr><td>Core style and construction</td>
+        <td>Cotton-wrapped polyester core, braided polyester, twisted rayon, metallic plastic film</td>
+        <td>Hand-feel, knot behaviour, abrasion resistance and printability</td>
+        <td>Slippery cord that will not knot; or an abrasive cord that damages the bag panel</td></tr>
+    <tr><td>Tensile strength</td>
+        <td>Minimum 45&nbsp;N to 80&nbsp;N depending on diameter</td>
+        <td>Whether the cord survives the load of a filled package</td>
+        <td>Cord snapping at the aglet or in the channel under weight</td></tr>
+    <tr><td>Cordlock pull force</td>
+        <td>8&nbsp;N to 14&nbsp;N for a spring toggle on a 4&nbsp;mm cord</td>
+        <td>Whether the bag closes securely and opens without a struggle</td>
+        <td>Bag falls open in transit; or the user cannot open a package they just received</td></tr>
+    <tr><td>Termination and knot retention</td>
+        <td>Aluminium aglet 12&nbsp;mm, crimped; knot retention minimum 30&nbsp;N</td>
+        <td>Whether the pull is transmitted to the cord rather than to the joint</td>
+        <td>Aglet pulls free in the user&rsquo;s hand; cord slips out of the terminal</td></tr>
+    <tr><td>Total length and assembly position</td>
+        <td>1,600&nbsp;mm &plusmn;10&nbsp;mm; cordlock 60&nbsp;mm from the channel end</td>
+        <td>Whether the assembly functions symmetrically and consistently</td>
+        <td>Asymmetric pull; cord too short to operate; lock positioned where it cannot be reached</td></tr>
+  </tbody>
+</table>
+
+<p>Diameter and pull force are the two parameters that decide whether the package works. Core style is the one
+that decides whether the customer likes it. All three must be written down, because none of them can be
+inferred from a photograph of the finished bag.</p>
+
+<h2>5. The 3-Tier Cord-Defect Reconciliation Ladder</h2>
+
+<ol>
+  <li><strong>Tier 1 &mdash; Isolate the level.</strong> Is the defect in the <em>cord</em>, the
+  <em>lock</em>, the <em>termination</em>, or the <em>assembly</em>? A cord-level defect (diameter out of band,
+  strength below spec, poor knot behaviour) points to C1 and to the yarn and construction. A lock-level defect
+  (pull force out of band, cord slipping inside the body, spring not holding) points to C2 and to the cordlock
+  supplier or its spring. A termination-level defect (aglet loose, crimp distorted, cord pulling free) points to
+  C3 and C5. An assembly-level defect (lock in the wrong position, cord twisted, channel end unfinished) points
+  to C4 and C5.</li>
+  <li><strong>Tier 2 &mdash; Isolate the mechanism.</strong> Establish whether the mechanism is
+  <em>component-driven</em> (a lock batch with a different spring rate, an aglet batch with inconsistent
+  dimensions, a cord lot with lower tenacity) or <em>process-driven</em> (crimp tool drift, knot style
+  inconsistent, assembly tension wrong). Component-driven faults are resolved by changing the component lot.
+  Process-driven faults are resolved in the setup, and they are the more common of the two.</li>
+  <li><strong>Tier 3 &mdash; Isolate the extent.</strong> Determine how many assemblies are affected and whether
+  the defect is concentrated at the start of the lot, the end, or spread through it. Concentrated at the start
+  points to a setup error. Concentrated at the end points to progressive tool wear or spring fatigue. Spread
+  through the lot points to a component lot change or to a channel-geometry problem that the first-assembly
+  verification did not catch.</li>
+</ol>
+
+<div class="kpi">
+  <p><strong>The Smith Ribbon closure rule:</strong> a cord-assembly incident is closed only when a rebuilt
+  sample from the corrected process is presented, measured for pull force, aglet retention, diameter and length,
+  and accompanied by a corrective action recorded against the specific level and mechanism identified in Tiers 1
+  and 2. Replacing the cordlock without understanding why it released is a substitution, not a corrective
+  action.</p>
+</div>
+
+<h2>6. The Pull-Force Drift Early-Warning Threshold</h2>
+
+<p>Cord failures are rarely visible on the line. The leading indicator is the <strong>drift in measured pull
+force</strong> across consecutive assemblies within a lot &mdash; the spread of measured values around the mean
+pull force, expressed as a percentage of the mean.</p>
+
+<p>The Smith Ribbon threshold: if the coefficient of variation of measured pull force across consecutive
+assemblies rises above <strong>12&nbsp;per cent</strong> within a lot, the assembly operation is treated as
+unstable and is corrected at Tier 1, even when every individual reading is still inside the signed 8&nbsp;N to
+14&nbsp;N band. The reason is that pull-force variance is the earliest observable proxy for crimp-tool drift and
+spring-rate variation, and it is what produces the field failure that a customer&rsquo;s own incoming inspection
+will not catch &mdash; a lock that releases at the bottom of the band on the unit that was assembled last.</p>
+
+<p>A second early indicator is the difference between bench pull force and pack-out pull force. If the pack-out
+figure is materially lower than the bench figure, the mechanism is cord slippage inside the channel rather than
+a lock problem, and the corrective action is at the channel specification.</p>
+
+<h2>7. Cords Against Channels &mdash; the Interface Nobody Owns</h2>
+
+<p>The most common cause of a cord programme failing is not the cord, the lock or the aglet. It is the channel
+&mdash; the sewn or welded passage through which the cord passes in the bag panel &mdash; and in most
+organisations it is owned by neither the packaging designer nor the trim supplier.</p>
+
+<p>Three channel characteristics decide whether a cord works. The first is <strong>internal dimension</strong>:
+a channel narrower than the cord by more than about 0.3&nbsp;mm creates friction that raises the pull force
+sharply and can wear the cord. The second is <strong>construction</strong>: a woven channel lets the cord move
+laterally, a sewn channel with a raw seam edge abrades the cord, and a heat-welded channel can partially
+fuse a low-melting fibre. The third is <strong>edge condition</strong>: a finished, bound or over-locked channel
+end protects the cord at exactly the point where it takes the highest load.</p>
+
+<blockquote style="border-left:4px solid #b8854a;padding:8px 16px;margin:1.2em 0;background:#faf6f1;">
+&quot;Channel: 6&nbsp;mm woven tape, internal dimension 4.6&nbsp;mm &plusmn;0.2&nbsp;mm, finished and bound
+ at both channel ends. Cord: 4.0&nbsp;mm &plusmn;0.2&nbsp;mm. Pull force measured through the
+ assembled channel, not on the bench. Minimum 20 open-close cycles without cord wear
+ &gt; 0.5&nbsp;mm in diameter at the channel exit.&quot;
+</blockquote>
+
+<p>The second line of that specification &mdash; pull force measured through the assembled channel, not on the
+bench &mdash; is the single most valuable sentence in the whole document. Bench pull force measures the lock.
+In-channel pull force measures the product. Most cordlock suppliers quote the first, and the brand is left with
+the second.</p>
+
+<h2>8. Implementation Path</h2>
+
+<h3>Stage A &mdash; State the pull force as a band on the purchase order</h3>
+<p>Move the pull-force band, the aglet retention minimum and the diameter tolerance onto the purchase order.
+These are functional requirements and they belong with the goods, not only in a technical pack.</p>
+
+<h3>Stage B &mdash; Pull-test through the actual channel</h3>
+<p>Never accept a cordlock pull-force figure that was measured on the bench alone. Run the first-assembly
+verification on the real channel, and measure through it.</p>
+
+<h3>Stage C &mdash; Track pull-force variance per lot</h3>
+<p>Record the coefficient of variation per lot, not just the pass/fail against the band. The variance leads the
+field failures by weeks.</p>
+
+<h3>Stage D &mdash; Audit the crimp tooling quarterly</h3>
+<p>Three rotating checks: crimp tool calibration against a retention standard, knot-style consistency across
+operators, and verification of the pull-test interval. None of these requires capital and together they account
+for most assembly-related variance.</p>
+
+<h3>Stage E &mdash; Document the channel, jointly</h3>
+<p>Where the mill supplies trims into a bag or box that the customer manufactures, agree the channel specification
+in writing with the customer&rsquo;s packaging team. It is the cheapest line in this document and it prevents the
+most expensive class of cord failure.</p>
+
+<h2>9. Conclusion</h2>
+
+<p>The cord is the part of the packaging that the user touches and the part that is almost never specified.
+Cord diameter, core style, pull force, termination type and knot retention are five parameters that cost nothing
+to state and that decide whether the package is reusable.</p>
+
+<p>The architecture here is functional rather than fashionable: five layers with named owners, four gates that
+verify dimensionally at the bench and functionally at the pack-out, six parameters defined explicitly, a
+three-tier ladder that separates cord faults from lock faults from termination faults from assembly faults, and a
+pull-force variance threshold that catches crimp and spring drift before a customer opens a box in a warehouse
+and finds the cord already pulled out.</p>
+
+<p>When you next qualify a trim supplier, ask: <em>Show me a cord assembly pulled through a real channel at the
+band we specified. Show me the aglet joint under tension. Show me the reference we signed, and tell me when you
+last calibrated the crimp tool.</em> A mill that can produce that on request has a cord system. A mill that
+answers with a cordlock catalogue has a distributor.</p>
+
+<h2>10. Frequently Asked Questions</h2>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What pull force should I specify for a drawcord cordlock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 4 mm round polyester cord with a spring toggle cordlock, a working band of 8 to 14 newtons measured through the assembled channel is typical. The lower bound exists so the package closes securely and does not reopen in transit; the upper bound exists so a user can open the package without a struggle, which is especially relevant for gift and e-commerce packaging. Smith Ribbon tracks the coefficient of variation of measured pull force across each lot and treats a figure above 12 per cent as an assembly-instability signal requiring correction, even when every individual reading is still inside the signed band, because crimp-tool drift and spring-rate variation show up as variance long before they show up as a field failure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I decide between a cotton-wrapped drawcord and a braided polyester cord?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A cotton-wrapped polyester core gives a soft, premium hand-feel, knits reliably and takes dye well, which makes it the usual choice for gift packaging, cosmetics and boutique retail, but it has lower abrasion resistance and a lower strength for its diameter. A braided polyester cord is tougher, more abrasion-resistant, more dimensionally stable and generally cheaper, which makes it the usual choice for utility bags, e-commerce shipping and reusable retail totes. Where a metallic or film-wrapped cord is used for a visual effect, note that the surface is slippery and knot behaviour must be re-verified. At Xiamen Smith Ribbon and Bow Co., Ltd. cord construction is a frozen C1 parameter in the cord-component authority model because diameter, strength, hand-feel and knot behaviour all change together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a reasonable minimum knot retention value for the cord-to-aglet joint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A minimum of 30 newtons at the cord-to-aglet joint is a workable standard for a 4 mm polyester drawcord, provided it is tested on the finished assembly rather than on the cord alone. Retention depends on three things: the knot style, the crimp method and the aglet internal dimension matching the cord. Aglet crimping with a correctly calibrated tool gives the most consistent result, because the retention then depends on tooling rather than on the operator. Smith Ribbon specifies termination type and knot retention as a frozen C3 parameter and verifies the joint at the first-assembly gate, at the in-line pull-force audit and again at pack-out functional verification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my drawcord work on the bench but slip in the finished bag?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost always the channel. Three channel characteristics decide whether a cord works: the internal dimension, which should exceed the cord diameter by roughly 0.3 mm rather than being narrower or tighter; the construction, since a woven channel lets the cord move laterally while a sewn channel with a raw seam edge abrades it and a heat-welded channel can partially fuse a low-melting fibre; and the edge condition at the channel end, where a bound or over-locked finish protects the cord at the point where it takes the highest load. This is why Smith Ribbon measures pull force through the assembled channel rather than on the bench, since a bench figure measures the lock while an in-channel figure measures the product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity and lead time for custom drawcords and cord assemblies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xiamen Smith Ribbon and Bow Co., Ltd. has manufactured ribbon and decorative trims since 2004 in a 15,000 square metre plant with 200+ employees and 100,000 meters of daily capacity. Cord assemblies typically start at 5,000 pieces per cordlock and aglet configuration, with 1,000 pieces for a simple pre-cut cord with a single termination, and custom cord constructions requiring a new cordlock tool or aglet dimension run from 10,000 pieces. A new cord programme normally adds ten to fifteen days on top of the standard 40 to 55 days to first production shipment because it requires cord construction trials, a cordlock and aglet sourcing cycle and a channel-dependent pull-force verification. OEKO-TEX, FSC, BSCI, SEDEX, SMETA and ISO 9001 certification are available."
+      }
+    }
+  ]
+}
+</script>
+
+<p>Below are the questions brand buyers most frequently raise when introducing a formal cord specification into an
+OEM trim relationship. If your question is not covered here, our compliance engineers will answer it directly.</p>
+
+<h3>What pull force should I specify for a drawcord cordlock?</h3>
+<p>For a 4&nbsp;mm round polyester cord with a spring toggle cordlock, a working band of 8 to 14 newtons measured
+through the assembled channel is typical. The lower bound exists so the package closes securely and does not
+reopen in transit; the upper bound exists so a user can open the package without a struggle, which is especially
+relevant for gift and e-commerce packaging. Smith Ribbon tracks the coefficient of variation of measured pull
+force across each lot and treats a figure above 12&nbsp;per cent as an assembly-instability signal requiring
+correction, even when every individual reading is still inside the signed band, because crimp-tool drift and
+spring-rate variation show up as variance long before they show up as a field failure.</p>
+
+<h3>How do I decide between a cotton-wrapped drawcord and a braided polyester cord?</h3>
+<p>A cotton-wrapped polyester core gives a soft, premium hand-feel, knits reliably and takes dye well, which makes
+it the usual choice for gift packaging, cosmetics and boutique retail, but it has lower abrasion resistance and a
+lower strength for its diameter. A braided polyester cord is tougher, more abrasion-resistant, more dimensionally
+stable and generally cheaper, which makes it the usual choice for utility bags, e-commerce shipping and reusable
+retail totes. Where a metallic or film-wrapped cord is used for a visual effect, note that the surface is slippery
+and knot behaviour must be re-verified. At Xiamen Smith Ribbon &amp; Bow Co., Ltd. cord construction is a frozen C1
+parameter in the cord-component authority model because diameter, strength, hand-feel and knot behaviour all change
+together.</p>
+
+<h3>What is a reasonable minimum knot retention value for the cord-to-aglet joint?</h3>
+<p>A minimum of 30 newtons at the cord-to-aglet joint is a workable standard for a 4&nbsp;mm polyester drawcord,
+provided it is tested on the finished assembly rather than on the cord alone. Retention depends on three things:
+the knot style, the crimp method and the aglet internal dimension matching the cord. Aglet crimping with a
+correctly calibrated tool gives the most consistent result, because the retention then depends on tooling rather
+than on the operator. Smith Ribbon specifies termination type and knot retention as a frozen C3 parameter and
+verifies the joint at the first-assembly gate, at the in-line pull-force audit and again at pack-out functional
+verification.</p>
+
+<h3>Why does my drawcord work on the bench but slip in the finished bag?</h3>
+<p>Almost always the channel. Three channel characteristics decide whether a cord works: the internal dimension,
+which should exceed the cord diameter by roughly 0.3&nbsp;mm rather than being narrower or tighter; the
+construction, since a woven channel lets the cord move laterally while a sewn channel with a raw seam edge abrades
+it and a heat-welded channel can partially fuse a low-melting fibre; and the edge condition at the channel end,
+where a bound or over-locked finish protects the cord at the point where it takes the highest load. This is why
+Smith Ribbon measures pull force through the assembled channel rather than on the bench, since a bench figure
+measures the lock while an in-channel figure measures the product.</p>
+
+<h3>What is the minimum order quantity and lead time for custom drawcords and cord assemblies?</h3>
+<p>Smith Ribbon has run production since 2004 with cord assemblies typically starting at 5,000 pieces per cordlock
+and aglet configuration, 1,000 pieces for a simple pre-cut cord with a single termination, and 10,000 pieces for a
+custom cord construction requiring a new cordlock tool or aglet dimension. A new cord programme normally adds ten
+to fifteen days on top of the standard 40&ndash;55 days to first production shipment because it requires cord
+construction trials, a cordlock and aglet sourcing cycle and a channel-dependent pull-force verification.
+OEKO-TEX, FSC, BSCI, SEDEX, SMETA and ISO 9001 certification are available.</p>
+"""
+
+write_article(a, BODY,
+              "Specify the cord, not just the ribbon",
+              "Request the cord-component specification template and a pull-force testing walkthrough")
+print(f"slug={SLUG}")

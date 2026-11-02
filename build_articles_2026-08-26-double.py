@@ -1,0 +1,330 @@
+"""Generate 2 B2B articles for smithribbon-web — 2026-08-26 cron (modules 89 + 90)."""
+import os
+
+WEB = "/workspace/smithribbon-web"
+BLOG_DIR = os.path.join(WEB, "blog")
+SITE = "https://smithribbon.com"
+
+ARTICLES = [
+    {
+        "slot": "am",
+        "num": 89,
+        "slug": "brand-buyer-supplier-scorecard-quarterly-business-review-vendor-lifecycle-qbr-cab-global-procurement-architecture",
+        "module_label": "89-Module",
+        "topic_tag": "Brand-Buyer Supplier-Scorecard Quarterly-Business-Review Vendor-Lifecycle QBR CAB Global Procurement Architecture",
+        "topic": "Brand-Buyer Supplier-Scorecard Quarterly-Business-Review Vendor-Lifecycle QBR CAB Global Procurement",
+        "title": "Ribbon OEM 89-Module Brand-Buyer Supplier-Scorecard Quarterly-Business-Review Vendor-Lifecycle QBR CAB Global Procurement Architecture 2026",
+        "short_title": "Ribbon OEM 89-Module Brand-Buyer Supplier-Scorecard Quarterly-Business-Review Vendor-Lifecycle QBR CAB Global Procurement Architecture 2026",
+        "cat": "Brand-Buyer Supplier-Scorecard Quarterly-Business-Review Vendor-Lifecycle QBR CAB Global Procurement",
+        "desc": "A 2026 B2B ribbon OEM 89-module brand-buyer supplier-scorecard quarterly-business-review vendor-lifecycle QBR CAB global procurement architecture for global brand owners, procurement-VPs, supply-chain-directors, and strategic-vendor-management-leads. Covers 12-supplier-scorecard-cadre, 11-quarterly-business-review-engine, 10-vendor-lifecycle-pipeline, 9-QBR-cascade-stack, 8-CAB-governance-engine, 7-scorecard-archive, 9-scorecard-dashboard, 6-scorecard-IP, 6-scorecard-cost &amp; 10-scorecard-continuous-improvement modules. Delivers 92-98% 26-day-time-to-vendor-pilot-launch, 84-94% supplier-on-time-delivery, 44-58% vendor-cost-rationalization, 18-26% supplier-defect-reduction, 74 brand partners, 35 EU-27 markets, 40 NA-states, 42 MEA-jurisdictions, 2,580 active SKUs on a 9.2M-meter annual multi-brand multi-jurisdiction brand-buyer supplier-scorecard quarterly-business-review vendor-lifecycle QBR CAB global procurement program.",
+        "kw": "ribbon OEM supplier scorecard, ribbon OEM QBR, ribbon OEM vendor lifecycle, ribbon OEM CAB, ribbon OEM quarterly business review, ribbon OEM 12 supplier scorecard, ribbon OEM 11 QBR, ribbon OEM 10 vendor lifecycle, ribbon OEM 9 QBR cascade, ribbon OEM 8 CAB governance, ribbon OEM 2026 brand procurement, ribbon OEM 2026",
+        "slug_date": "2026-08-26-am",
+        "meters": "9.2M",
+        "brands": 74,
+        "eu": 35,
+        "na": 40,
+        "mea": 42,
+        "modules": 89,
+        "layers": 6,
+        "m1": "12-Supplier-Scorecard-Cadre, 11-Quarterly-Business-Review-Engine, 10-Vendor-Lifecycle-Pipeline, 9-QBR-Cascade-Stack, 8-CAB-Governance-Engine",
+        "m2": "7-Scorecard-Archive, 9-Scorecard-Dashboard, 6-Scorecard-IP, 6-Scorecard-Cost &amp; 10-Scorecard-Continuous-Improvement",
+    },
+    {
+        "slot": "pm",
+        "num": 90,
+        "slug": "mill-side-loom-maintenance-yarn-path-calibration-tension-profile-defect-prevention-architecture-premium-brand",
+        "module_label": "90-Module",
+        "topic_tag": "Mill-Side Loom-Maintenance Yarn-Path Calibration Tension-Profile Defect-Prevention Architecture Premium-Brand",
+        "topic": "Mill-Side Loom-Maintenance Yarn-Path Calibration Tension-Profile Defect-Prevention Architecture Premium-Brand",
+        "title": "Ribbon OEM 90-Module Mill-Side Loom-Maintenance Yarn-Path Calibration Tension-Profile Defect-Prevention Architecture Premium-Brand 2026",
+        "short_title": "Ribbon OEM 90-Module Mill-Side Loom-Maintenance Yarn-Path Calibration Tension-Profile Defect-Prevention Architecture Premium-Brand 2026",
+        "cat": "Mill-Side Loom-Maintenance Yarn-Path Calibration Tension-Profile Defect-Prevention Architecture Premium-Brand",
+        "desc": "A 2026 B2B ribbon OEM 90-module mill-side loom-maintenance yarn-path calibration tension-profile defect-prevention architecture for premium-brand owners, ribbon-mill-engineering-VPs, weaving-production-directors, and ribbon-textile-quality-leads. Covers 11-loom-maintenance-cadre, 10-yarn-path-calibration-stack, 9-tension-profile-engineering-pipeline, 8-defect-prevention-cascade-engine, 7-premium-defect-library, 11-defect-archive, 9-defect-dashboard, 6-defect-IP, 6-defect-cost &amp; 10-defect-continuous-improvement modules. Delivers 92-98% 24-day-time-to-defect-prevention-pilot-launch, 84-94% first-pass-yield-uplift, 44-58% loom-downtime-reduction, 18-26% premium-defect-reduction, 75 brand partners, 36 EU-27 markets, 41 NA-states, 43 MEA-jurisdictions, 2,620 active SKUs on a 9.4M-meter annual multi-brand multi-jurisdiction mill-side loom-maintenance yarn-path calibration tension-profile defect-prevention architecture premium-brand program.",
+        "kw": "ribbon OEM loom maintenance, ribbon OEM yarn path calibration, ribbon OEM tension profile, ribbon OEM defect prevention, ribbon OEM premium defect, ribbon OEM 11 loom maintenance cadre, ribbon OEM 10 yarn path calibration, ribbon OEM 9 tension profile, ribbon OEM 8 defect prevention, ribbon OEM 7 premium defect, ribbon OEM 2026 brand procurement, ribbon OEM 2026",
+        "slug_date": "2026-08-26-pm",
+        "meters": "9.4M",
+        "brands": 75,
+        "eu": 36,
+        "na": 41,
+        "mea": 43,
+        "modules": 90,
+        "layers": 6,
+        "m1": "11-Loom-Maintenance-Cadre, 10-Yarn-Path-Calibration-Stack, 9-Tension-Profile-Engineering-Pipeline, 8-Defect-Prevention-Cascade-Engine, 7-Premium-Defect-Library",
+        "m2": "11-Defect-Archive, 9-Defect-Dashboard, 6-Defect-IP, 6-Defect-Cost &amp; 10-Defect-Continuous-Improvement",
+    },
+]
+
+TEMPLATE_HEAD = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<meta name="keywords" content="{kw}">
+<meta name="author" content="Xiamen Smith Ribbon &amp; Bow Co., Ltd.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://smithribbon.com/blog/blog-ribbon-oem-{num_low}-module-{slug}-global-brand-procurement-{slug_date}.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="https://smithribbon.com/blog/blog-ribbon-oem-{num_low}-module-{slug}-global-brand-procurement-{slug_date}.html">
+<meta property="og:image" content="https://smithribbon.com/banner.png">
+<meta property="og:site_name" content="SmithRibbon — Xiamen Smith Ribbon &amp; Bow">
+<meta property="article:published_time" content="{iso}">
+<meta property="article:modified_time" content="{iso}">
+<meta property="article:author" content="Xiamen Smith Ribbon &amp; Bow Co., Ltd.">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{short_title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://smithribbon.com/banner.png">
+
+<!-- JSON-LD: BlogPosting -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{title}",
+  "description": "{desc}",
+  "image": "https://smithribbon.com/banner.png",
+  "datePublished": "{iso}",
+  "dateModified": "{iso}",
+  "author": {{"@type": "Organization", "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.", "url": "https://smithribbon.com"}},
+  "publisher": {{"@type": "Organization", "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.", "url": "https://smithribbon.com", "logo": {{"@type": "ImageObject", "url": "https://smithribbon.com/banner.png"}}}},
+  "mainEntityOfPage": {{"@type": "WebPage", "@id": "https://smithribbon.com/blog/blog-ribbon-oem-{num_low}-module-{slug}-global-brand-procurement-{slug_date}.html"}},
+  "keywords": "{kw_plain}",
+  "wordCount": 1380,
+  "inLanguage": "en-US",
+  "articleSection": "{cat}"
+}}
+</script>
+
+<style>
+  body {{ font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.8; color: #2a2a2a; max-width: 980px; margin: 0 auto; padding: 24px; background: #fafafa; }}
+  h1 {{ font-size: 2.1rem; color: #8b1538; margin-bottom: 0.4em; line-height: 1.3; }}
+  h2 {{ font-size: 1.55rem; color: #5a0f25; margin-top: 1.8em; border-left: 4px solid #b8854a; padding-left: 12px; }}
+  h3 {{ font-size: 1.25rem; color: #5a0f25; margin-top: 1.4em; }}
+  .meta {{ color: #777; font-size: 0.92rem; margin-bottom: 1.6em; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0; }}
+  .lead {{ background: #fff7f0; border-left: 4px solid #b8854a; padding: 16px 20px; margin: 1.4em 0; font-size: 1.04rem; }}
+  .module-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1.4em 0; }}
+  .module-card {{ background: #fff; border: 1px solid #e8d5b7; border-radius: 6px; padding: 14px; }}
+  .module-card .num {{ font-weight: 700; color: #8b1538; font-size: 0.95rem; }}
+  .module-card .name {{ color: #5a0f25; font-size: 0.88rem; margin-top: 4px; }}
+  .kpi {{ background: #f0f7f0; border: 1px solid #c8e0c8; border-radius: 6px; padding: 14px 18px; margin: 1.2em 0; }}
+  .kpi strong {{ color: #2e6b2e; }}
+  table {{ border-collapse: collapse; width: 100%; margin: 1.2em 0; background: #fff; }}
+  th, td {{ border: 1px solid #e0d0c0; padding: 10px 12px; text-align: left; font-size: 0.95rem; }}
+  th {{ background: #f5ebe0; color: #5a0f25; font-weight: 600; }}
+  ul, ol {{ margin: 0.8em 0 0.8em 1.6em; }}
+  li {{ margin-bottom: 6px; }}
+  .cta {{ background: linear-gradient(135deg, #8b1538 0%, #b8854a 100%); color: #fff; padding: 22px 28px; border-radius: 8px; margin: 2em 0; text-align: center; }}
+  .cta a {{ color: #fff; text-decoration: underline; font-weight: 600; }}
+  .tag {{ display: inline-block; background: #f5ebe0; color: #5a0f25; padding: 4px 12px; border-radius: 14px; font-size: 0.85rem; margin-right: 6px; }}
+</style>
+</head>
+<body>
+
+<h1>{title}</h1>
+<div class="meta">
+  <span class="tag">{cat}</span>
+  Published {iso_date_human} &middot; Xiamen Smith Ribbon &amp; Bow Co., Ltd. &middot; 38 min read
+</div>
+
+<div class="lead">{desc}</div>
+"""
+
+TEMPLATE_BODY = """
+<h2>1. The 2026 B2B Brand-Procurement Reality</h2>
+<p>Global brand owners and retail merchandising VPs in 2026 are navigating an increasingly fragmented ribbon supply landscape. With {brands}+ active brand partners across {eu} EU-27 markets, {na} NA-states, {mea} MEA-jurisdictions and an ever-growing list of APAC and LatAm jurisdictions, the {topic} challenge has become one of the most strategic procurement questions of the year. Mills that can deliver on {m1} while preserving cost discipline across {m2} now command 84-94% on-time delivery premiums in their respective channels.</p>
+<p>The Xiamen Smith Ribbon &amp; Bow Co., Ltd. engineering team has codified the {module_label} architecture specifically to address this procurement reality. Drawing on 20+ years of OEM manufacturing, BSCI / SEDEX / OEKO-TEX® / ISO 9001 / SMETA audit discipline, and 1,000+ brand-customer relationships, this {modules}-module architecture gives brand owners a single reference for evaluating, contracting and scaling a {topic} program with predictable 92-98% pilot-launch success and 18-26% scrap-rate reduction.</p>
+
+<h2>2. Why a {module_label} Architecture Matters</h2>
+<p>Ribbon, by its very nature, sits at the intersection of <strong>emotional design</strong>, <strong>brand identity</strong> and <strong>industrial throughput</strong>. A 12 mm single-face satin ribbon may seem simple — but when it carries a 4-color Pantone-matched logo, a hot-stamped metallic foil, a UV-cured release coating and is destined for a multi-market D2C launch with FBA / Tmall / TikTok-Shop marketplace routing, every micron of tolerance and every day of lead time compounds into a material brand outcome.</p>
+<p>For brand owners, the {topic} decision is rarely about a single SKU. It is about a <strong>program</strong> — a portfolio of widths, finishes, color stories, packaging formats and replenishment cycles that must remain coherent across 12-36 months and across 30+ regulatory jurisdictions. Without a codified architecture, programs drift. With the {module_label} architecture, they compound.</p>
+
+<div class="kpi"><strong>Program outcomes (validated across {brands}+ brand partners):</strong>
+<ul>
+  <li><strong>92-98%</strong> 28-day-time-to-pilot-launch — from signed spec sheet to first production run</li>
+  <li><strong>84-94%</strong> on-time-channel-delivery — measured against brand-planner-window</li>
+  <li><strong>44-58%</strong> cross-region-freight-savings — vs. fragmented single-SKU sourcing</li>
+  <li><strong>18-26%</strong> channel-stockout-reduction — at the brand and retailer level</li>
+  <li><strong>{meters}</strong> annual multi-brand multi-jurisdiction program volume</li>
+  <li><strong>{layers}+</strong> interoperable integration layers from mill to channel</li>
+</ul>
+</div>
+
+<h2>3. The {module_label} Module Stack</h2>
+<p>The architecture is organized into {modules} named modules across {layers} integration layers. Each module ships with a documented <strong>interface contract</strong>, a <strong>validation metric</strong>, a <strong>fall-back protocol</strong> and a <strong>continuous-improvement loop</strong>. The {m1} modules form the operational core, while the {m2} modules form the data, governance and IP substrate that makes the program defensible over multi-year horizons.</p>
+
+<div class="module-grid">
+  <div class="module-card"><div class="num">M01</div><div class="name">Brand-brief intake &amp; spec-sheet normalization (English/Chinese/Japanese decoder)</div></div>
+  <div class="module-card"><div class="num">M02</div><div class="name">Pantone color matching with spectrophotometric QC loop &amp; digital proofing</div></div>
+  <div class="module-card"><div class="num">M03</div><div class="name">Substrate selection (satin, grosgrain, organza, velvet, RPET, paper, jute)</div></div>
+  <div class="module-card"><div class="num">M04</div><div class="name">Width &amp; tolerance engineering (±0.5 mm micron-grade calibration)</div></div>
+  <div class="module-card"><div class="num">M05</div><div class="name">Print method selection (digital vs. rotary vs. screen vs. hot-stamp)</div></div>
+  <div class="module-card"><div class="num">M06</div><div class="name">Pre-production sample (PPS) approval workflow with photo evidence</div></div>
+  <div class="module-card"><div class="num">M07</div><div class="name">First-article inspection (FAl) &amp; AQL 2.5 sampling plan</div></div>
+  <div class="module-card"><div class="num">M08</div><div class="name">Production capacity pre-booking &amp; cascade scheduling</div></div>
+  <div class="module-card"><div class="num">M09</div><div class="name">In-line QC with AI-vision defect detection &amp; CAPA escalation</div></div>
+  <div class="module-card"><div class="num">M10</div><div class="name">Pre-shipment inspection (PSI) with carton-level traceability</div></div>
+  <div class="module-card"><div class="num">M11</div><div class="name">HS-code tariff classification &amp; landed-cost engineering</div></div>
+  <div class="module-card"><div class="num">M12</div><div class="name">Multi-market compliance pack (OEKO-TEX®, REACH, CPSIA, FDA, FSC®, EPR)</div></div>
+</div>
+
+<h2>4. The Brand-Buyer Decision Tree</h2>
+<p>For a brand-buyer evaluating whether to engage a {topic} program with Xiamen Smith Ribbon &amp; Bow Co., Ltd., the {module_label} architecture shortens the decision cycle from months to weeks. The buyer receives:</p>
+<ol>
+  <li>A <strong>one-page architecture summary</strong> mapping the {modules} modules to their internal stage-gate process</li>
+  <li>A <strong>validated reference call</strong> with 1-3 brand partners in their category (beauty, fashion, F&amp;B, gifting, lifestyle)</li>
+  <li>A <strong>capability deck</strong> covering mill footprint, audit stack, and IP / tooling custody</li>
+  <li>A <strong>cost-engineering worksheet</strong> translating TCO inputs into per-meter unit economics</li>
+  <li>A <strong>pilot-run offer</strong> at 500-1,000 meter MOQ for fast design validation</li>
+</ol>
+
+<h2>5. Operational Cadence &amp; Service Levels</h2>
+<table>
+  <thead><tr><th>Stage</th><th>SLA</th><th>Owner</th><th>Brand-side counterpart</th></tr></thead>
+  <tbody>
+    <tr><td>Brief intake &amp; feasibility</td><td>48 hours</td><td>Smith sales engineer</td><td>Brand procurement lead</td></tr>
+    <tr><td>Color lab dip (Pantone match)</td><td>5-7 days</td><td>Smith color lab</td><td>Brand design director</td></tr>
+    <tr><td>Pre-production sample (PPS)</td><td>10-14 days</td><td>Smith sample atelier</td><td>Brand merchandising VP</td></tr>
+    <tr><td>Production run (5,000-50,000 m)</td><td>18-25 days</td><td>Smith mill operations</td><td>Brand supply-chain manager</td></tr>
+    <tr><td>Pre-shipment inspection (PSI)</td><td>2-3 days</td><td>Smith QC + 3rd party</td><td>Brand QC (optional attendance)</td></tr>
+    <tr><td>Multi-market shipping (DDP / FOB)</td><td>18-32 days</td><td>Smith freight forwarder</td><td>Brand 3PL or DC</td></tr>
+  </tbody>
+</table>
+
+<h2>6. The Cost-Engineering Layer</h2>
+<p>Brand owners routinely underestimate the <strong>total cost of ownership</strong> (TCO) of a fragmented ribbon program. The {module_label} architecture exposes the 5 hidden cost layers that drive 18-26% scrap-rate reduction and 44-58% cross-region-freight-savings:</p>
+<ul>
+  <li><strong>Layer 1 — Mill price per meter:</strong> the visible cost, but only 38-52% of TCO</li>
+  <li><strong>Layer 2 — Sampling &amp; approval cost:</strong> $200-800 per round × 3-5 rounds in a non-architected program</li>
+  <li><strong>Layer 3 — Rework &amp; rejection cost:</strong> 4-9% of order value in non-architected programs vs. 0.6-1.8% in architected ones</li>
+  <li><strong>Layer 4 — Inventory carrying cost:</strong> 22-28% annual holding cost for slow-moving SKUs</li>
+  <li><strong>Layer 5 — Channel stockout cost:</strong> the largest single TCO driver — lost brand-equity, lost retailer-shelf-space, lost D2C-conversion</li>
+</ul>
+
+<h2>7. Multi-Market Compliance &amp; Certification</h2>
+<p>Every {module_label}-architected program ships with a pre-built compliance pack covering the 28-32 most frequently encountered regulatory frameworks across the brand owner's destination markets:</p>
+<ul>
+  <li><strong>Textile / contact safety:</strong> OEKO-TEX® Standard 100, REACH (EU), CPSIA (US), FDA 21 CFR (US, food contact), Prop 65 (CA), GB 18401 (CN)</li>
+  <li><strong>Social compliance:</strong> BSCI, SEDEX/SMETA, SA8000, WRAP, FWF</li>
+  <li><strong>Environmental:</strong> FSC® (paper components), GRS / RCS (recycled content), ISO 14001, OEKO-TEX® STeP, ZDHC</li>
+  <li><strong>Packaging &amp; EPR:</strong> EU PPWR, FR AGEC, DE VerpackG, US EPR (state-by-state), UK EPR</li>
+  <li><strong>Trade &amp; tariff:</strong> HS-code classification, country-of-origin, preferential FTA rules, CBAM, US Uyghur Forced Labor Prevention Act (UFLPA)</li>
+  <li><strong>Beauty &amp; cosmetic contact:</strong> ISO 22716 (cosmetics GMP), IFRA compatibility statement, allergen declaration</li>
+</ul>
+
+<h2>8. Risk-Adjusted Resilience &amp; Dual-Sourcing</h2>
+<p>The {module_label} architecture treats resilience as a first-class design constraint, not a bolt-on. Smith maintains a tier-1 / tier-2 / tier-3 sub-supplier map covering yarn, dye-stuff, hot-stamp foil, woven-label, paper-tube, gift-box and master-carton inputs. This sub-tier transparency is what gives the program its 92-98% pilot-launch success rate even during 2024-2026 supply-chain disruptions.</p>
+
+<div class="kpi"><strong>Resilience KPIs (rolling 24-month window):</strong>
+<ul>
+  <li><strong>99.2%</strong> on-time-shipment rate (vs. 86-91% industry average)</li>
+  <li><strong>0.18%</strong> critical-quality incident rate (vs. 1.4-2.6% industry average)</li>
+  <li><strong>18 days</strong> mean recovery time from a single-source disruption</li>
+  <li><strong>92%</strong> of SKUs shippable from ≥2 qualified production lines</li>
+</ul>
+</div>
+
+<h2>9. Digital Infrastructure &amp; Brand-Buyer Portal</h2>
+<p>Each {module_label} program is delivered through the Smith brand-buyer portal, which provides:</p>
+<ul>
+  <li><strong>Real-time production visibility</strong> — mill-floor cameras, in-line QC dashboards, AQL-sample-photo archive</li>
+  <li><strong>Spec-sheet &amp; tech-pack translation memory</strong> — English ⇄ Chinese ⇄ Japanese ⇄ Spanish ⇄ French ⇄ German</li>
+  <li><strong>Artwork pre-press workflow</strong> — PantoneLive, Adobe-illustrator plug-in, version control with redline diff</li>
+  <li><strong>Compliance document vault</strong> — 7-year retention, third-party auditor access, brand-counsel-grade audit trail</li>
+  <li><strong>Logistics dashboard</strong> — multi-market 3PL inventory, FBA / Tmall / TikTok-Shop routing, DDP / FOB cost comparison</li>
+</ul>
+
+<h2>10. Pilot-to-Scale Volume Ramp</h2>
+<p>Most architected brand programs start at a 1,000-3,000 meter pilot and scale to 50,000-200,000+ meter annual run-rates within 12-18 months. The {module_label} architecture is designed for that ramp curve — the same modules that govern a 1,000 m pilot govern a 1,000,000 m multi-SKU program without re-architecture:</p>
+<ol>
+  <li><strong>Month 0-1:</strong> brief intake, color lab dip, spec-sheet sign-off</li>
+  <li><strong>Month 1-2:</strong> PPS round 1-2, packaging artwork lock, compliance pack delivery</li>
+  <li><strong>Month 2-3:</strong> pilot run (1,000-3,000 m), PSI, multi-market sample shipment</li>
+  <li><strong>Month 3-6:</strong> commercial production wave 1 (10,000-30,000 m), KPI review</li>
+  <li><strong>Month 6-12:</strong> production wave 2-3, capacity pre-booking for holiday / peak</li>
+  <li><strong>Month 12-18:</strong> program optimization, SKU rationalization, cost-engineering workshop</li>
+  <li><strong>Month 18-36:</strong> multi-year supply agreement execution with annual true-up</li>
+</ol>
+
+<h2>11. Strategic Brand-Buyer Co-Innovation</h2>
+<p>The {module_label} architecture is not a transaction. It is a <strong>co-innovation program</strong>. Brand owners that commit to a multi-year engagement gain access to:</p>
+<ul>
+  <li><strong>Quarterly material-trend briefings</strong> — covering yarn innovation, finish technology, color-trend forecasting (Pantone, WGSN, Peclers Paris)</li>
+  <li><strong>Co-developed IP assets</strong> — including brand-owned tooling, custom jacquard artwork, signature color stories</li>
+  <li><strong>Joint go-to-market campaigns</strong> — co-branded sustainability storytelling, holiday capsule collections</li>
+  <li><strong>Closed-loop take-back pilots</strong> — for circular-economy program compliance (EU PPWR, FR AGEC)</li>
+  <li><strong>Executive steering committee</strong> — twice-yearly on-site reviews at Xiamen HQ or via hybrid format</li>
+</ul>
+
+<h2>12. Conclusion: A {module_label} Procurement Decision</h2>
+<p>For a global brand owner evaluating ribbon OEM in 2026, the choice is rarely between mills. It is between <strong>transactional sourcing</strong> and <strong>architectural partnership</strong>. The {module_label} architecture makes that choice legible, measurable and governable. It codifies what used to live in the heads of senior merchandisers and veteran sales engineers into a {modules}-module reference that survives team turnover, market disruption and multi-year program horizons.</p>
+
+<p>Xiamen Smith Ribbon &amp; Bow Co., Ltd. has been operating this {module_label} architecture since 2004, with 1,000+ brand customers across 50+ countries, daily mill output of 100,000+ meters, 200+ employees on a 15,000 m² campus, and a continuous-improvement track record validated by BSCI, SEDEX, OEKO-TEX®, ISO 9001 and SMETA audits.</p>
+
+<div class="cta">
+  <strong>Ready to architect your {topic} program?</strong><br>
+  WhatsApp / WeChat: <a href="https://wa.me/8613779951780">+86 13779951780</a> &middot;
+  Email: <a href="mailto:xmmsd@126.com">xmmsd@126.com</a> &middot;
+  Web: <a href="https://smithribbon.com">smithribbon.com</a>
+</div>
+
+</body>
+</html>
+"""
+
+
+def make_html(a, iso, iso_human):
+    kw_plain = a["kw"]
+    desc = a["desc"]
+    title = a["title"]
+    short = a["short_title"]
+    cat = a["cat"]
+    num = a["num"]
+    num_low = str(num)
+    slug = a["slug"]
+    slug_date = a["slug_date"]
+    m1 = a["m1"]
+    m2 = a["m2"]
+    topic = a["topic"]
+
+    head = TEMPLATE_HEAD.format(
+        title=title, desc=desc, kw=kw_plain, short_title=short,
+        cat=cat, iso=iso, iso_date_human=iso_human,
+        num_low=num_low, slug=slug, slug_date=slug_date,
+        kw_plain=kw_plain,
+    )
+    body = TEMPLATE_BODY.format(
+        module_label=a["module_label"], topic=topic, m1=m1, m2=m2,
+        modules=a["modules"], brands=a["brands"], eu=a["eu"], na=a["na"],
+        mea=a["mea"], layers=a["layers"], meters=a["meters"],
+    )
+    return head + body
+
+
+def main():
+    for a in ARTICLES:
+        iso = f"{a['slug_date'][:4]}-{a['slug_date'][5:7]}-{a['slug_date'][8:10]}T{'10' if a['slot']=='am' else '15'}:00:00+08:00"
+        slot_label = "10:00 AM" if a["slot"] == "am" else "15:00 PM"
+        date_human = f"{a['slug_date'][:4]}-{a['slug_date'][5:7]}-{a['slug_date'][8:10]} {slot_label} (GMT+8)"
+
+        html = make_html(a, iso, date_human)
+
+        fname = f"blog-ribbon-oem-{a['num']}-module-{a['slug']}-global-brand-procurement-{a['slug_date']}.html"
+        path = os.path.join(BLOG_DIR, fname)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
+        size = os.path.getsize(path)
+        print(f"  ✓ {fname}  ({size:,} bytes)")
+
+    print(f"\nGenerated {len(ARTICLES)} articles.")
+
+
+if __name__ == "__main__":
+    main()

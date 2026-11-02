@@ -1,0 +1,304 @@
+#!/usr/bin/env python3
+"""Build smithribbon B2B article 275 (AM) 2026-10-28: metallised / foil / glitter metallic ribbon."""
+
+A275 = {
+    "fname": ("blog-ribbon-oem-275-module-mill-side-brand-buyer-metallised-hot-stamp-foil-glitter-"
+              "metallic-ribbon-interlock-architecture-foil-adhesion-metallic-pigment-basefilm-"
+              "abrasion-flex-crack-rub-2026-10-28-am.html"),
+    "slug": ("blog-ribbon-oem-275-module-mill-side-brand-buyer-metallised-hot-stamp-foil-glitter-"
+             "metallic-ribbon-interlock-architecture-foil-adhesion-metallic-pigment-basefilm-"
+             "abrasion-flex-crack-rub-2026-10-28-am"),
+    "title": ("Mill-Side Brand-Buyer Metallised &amp; Hot-Stamp Foil Metallic Ribbon Interlock Architecture "
+              "&mdash; Foil Adhesion, Metallic Pigment Base Film, Abrasion, Flex-Crack and Rub 2026"),
+    "desc": ("B2B ribbon OEM 275-module metallised and hot-stamp foil metallic ribbon construction. "
+              "4-layer foil-to-substrate adhesion ladder, 3-route metallisation decision tree, "
+              "5-defect flex-crack and abrasion atlas, and a metallic rub-fastness audit. "
+              "Smith Ribbon OEM since 2004."),
+    "keywords": [
+        "metallic ribbon OEM", "hot stamp foil ribbon manufacturer", "glitter ribbon bulk supplier",
+        "metallised ribbon wholesale", "foil ribbon gift packaging", "holographic metallic ribbon OEM",
+        "metallic ribbon abrasion rub test", "foil ribbon delamination adhesion", "glitter ribbon shedding",
+        "metallic ribbon flex crack test", "gold silver ribbon custom logo", "metallic ribbon substrate core",
+        "metallic ribbon vacuum metallised film", "copper rose gold ribbon OEM", "ribbon OEM China metallic",
+        "brand buyer metallic trim guide", "metallic ribbon print overprint", "glitter ribbon craft supply",
+    ],
+    "pub_iso": "2026-10-28T02:00:00+00:00",
+    "wordcount": 2600,
+    "section": "Ribbon OEM Manufacturing",
+    "cat_label": "Metallic &amp; Foil Ribbon Interlock",
+    "lede": ("Metallic ribbon is the one trim category where the buyer is usually approving the wrong thing. "
+             "A metallic ribbon is not a colour; it is a thin film of metal pigment or vacuum-deposited metal "
+             "adhered to a textile substrate, and everything that can go wrong with it goes wrong at the "
+             "interface between that film and the substrate. A ribbon can be a perfect colour match, cut to "
+             "the right width, wound correctly, and still be rejected because the foil lifts at the crease "
+             "where the ribbon is folded around a bow."),
+    "body": """
+<h2>Why metallic ribbon fails in the customer's hands and not in the sample</h2>
+<p>Almost every metallic ribbon complaint follows the same path. The sample was drawn from the head of a
+production roll, flat and unstressed. The failure appears after the ribbon has been folded, creased, pulled
+around a gift box, tied and untied, or carried in a handbag in summer heat. This is the single most important
+fact about metallic trim: <strong>the sample does not test the product</strong>. Metallic ribbon has to be
+tested in the deformed state, because that is the only state in which it lives.</p>
+
+<p>The four failure modes you will meet, in the order they usually appear, are:</p>
+<ol>
+  <li><strong>Edge lift and delamination</strong> - the metallic film separates from the substrate along the
+  cut edge, or along a fold, or along a stitch line.</li>
+  <li><strong>Flex cracking</strong> - the film itself develops a network of fine cracks, usually visible first
+  as a dulling of the reflectivity rather than as a colour change.</li>
+  <li><strong>Abrasion and rub wear</strong> - the metal particle layer is rubbed off, leaving a dull,
+  discoloured, sometimes non-metallic patch.</li>
+  <li><strong>Glitter shedding</strong> - for glitter constructions, loose particles drop out and contaminate
+  packaging, clothing or the product the bow is tied around.</li>
+</ol>
+
+<p>All four are interface problems. Understanding the interface is the whole job.</p>
+
+<h2>The 4-layer metallic ribbon stack</h2>
+<p>A metallised ribbon is a laminate. From the top down, the typical build is:</p>
+
+<table>
+  <tr><th>Layer</th><th>What it is</th><th>What it controls</th></tr>
+  <tr><td>1. Topcoat</td><td>Clear polyester, polyurethane or acrylate film, 5-20 microns</td>
+      <td>UV resistance, rub resistance, gloss, and the barrier that stops the metal layer oxidising</td></tr>
+  <tr><td>2. Metallic layer</td><td>Vacuum-deposited aluminium, or aluminium flake pigment in a binder</td>
+      <td>The reflective colour, the opacity, and the sparkle behaviour</td></tr>
+  <tr><td>3. Primer / tie-coat</td><td>Polyurethane or acrylic layer with functional groups</td>
+      <td>Adhesion to the substrate. This is the layer that decides whether the whole thing delaminates</td></tr>
+  <tr><td>4. Substrate</td><td>Polyester satin, grosgrain, organza, cotton tape, paper or film</td>
+      <td>Strength, hand, drape, width, and how the finished ribbon is used</td></tr>
+</table>
+
+<p>Three of these four layers are purchased, not made. Only the substrate is woven. That fact drives the entire
+commercial structure of the category and it is worth stating plainly: <strong>when you buy a metallised ribbon
+from a converter rather than from a weaver, you are buying somebody else's adhesion problem</strong>. The
+weaver controls the substrate. The converter controls the laminate. If the delaminates, both parties will point
+at the other, and the buyer in the middle is the one who has to resolve it.</p>
+
+<div class="kpi">
+  <p><strong>Rule of thumb:</strong> a metallised ribbon on a smooth, dense, low-elasticity substrate with a
+  proper polyurethane primer will outperform a metallised ribbon on a soft, stretchy, high-pile substrate with a
+  cheap acrylic adhesive, even when the second one is the newer and more expensive construction. The film is
+  not the variable. The interface is the variable.</p>
+</div>
+
+<h2>The 3-route metallisation decision tree</h2>
+<p>There are three practical ways to put metal on a ribbon, and a buyer should be able to say which one they
+are buying before they compare quotations.</p>
+
+<h3>Route 1 - Vacuum metallised film (true metallised)</h3>
+<p>A roll of polyester film is vacuum-deposited with aluminium in a vacuum chamber, then laminated to the
+textile substrate with a heat-activated or solvent-based adhesive. This produces a true mirror-like metallic
+with a very high, very even reflectivity and a real silver or gold appearance that cannot be replicated by
+pigment. It is also the most expensive and it has the strictest handling requirements. Vacuum metallised film
+shows its quality most clearly in the fold: a good metallised film, when the ribbon is folded sharply, either
+cracks visibly or holds a smooth crease line depending on the topcoat and the film thickness. The premium end
+of the gift wrap and premium packaging trade sits here.</p>
+
+<h3>Route 2 - Metallic pigment lamination (foil / pearlescent)</h3>
+<p>Aluminium flake pigment is dispersed in a binder and printed or laminated onto the substrate. This is the
+construction behind most "gold ribbon" and "silver ribbon" sold in the craft and general gift-wrap trade. It is
+cheaper, it is available in an enormous colour range including coppers, rose golds, champagne and holographic
+effects, and it is genuinely less reflective than a vacuum metallised film. The weakness is that the aluminium
+is in discrete flakes, so the surface reads as sparkle rather than as a mirror, and abrasion removes flakes
+individually - producing a speckled, dirty-looking wear rather than a clean dulling.</p>
+
+<h3>Route 3 - Glitter construction (loose or bonded particle)</h3>
+<p>Glitter ribbon carries discrete glitter particles - either loose in a film, or bonded onto the surface with
+an adhesive or a heat-seal. Bonded glitter can be printed; loose glitter cannot, or can only be overprinted with
+considerable difficulty. Glitter is the most visually dramatic and the least physically robust construction in
+the category. It sheds. This is not a defect, it is what glitter is, and the specification has to acknowledge
+it rather than hope it does not happen.</p>
+
+<table>
+  <tr><th>Route</th><th>Reflectivity</th><th>Colour range</th><th>Abrasion behaviour</th><th>Typical use</th></tr>
+  <tr><td>Vacuum metallised film</td><td>High, mirror</td><td>Silver, gold, limited</td>
+      <td>Clean dulling then crack</td><td>Premium gift wrap, luxury packaging, event</td></tr>
+  <tr><td>Metallic pigment lamination</td><td>Medium, sparkling</td><td>Very wide</td>
+      <td>Speckled flake loss</td><td>General gift wrap, craft, seasonal, party</td></tr>
+  <tr><td>Glitter particles</td><td>High, scattered sparkle</td><td>Very wide</td>
+      <td>Shedding, particle loss</td><td>Party, festival, seasonal craft, costume</td></tr>
+</table>
+
+<h2>The 5-defect flex-crack and abrasion atlas</h2>
+<p>These five defects account for almost every metallic ribbon rejection. Each has a distinctive cause, and each
+needs a different test method. A buyer who tests the wrong one will pass a ribbon that fails in service.</p>
+
+<table>
+  <tr><th>Defect</th><th>How it presents</th><th>Root cause</th><th>Correct test</th></tr>
+  <tr><td>Edge lift</td><td>Film peels from the cut edge; visible as a pale or dark line down the selvedge</td>
+      <td>Weak primer, or the edge was not sealed; the cut exposes the bond line</td>
+      <td>Edge tape peel on a conditioned specimen</td></tr>
+  <tr><td>Delamination at fold</td><td>Film separates at a crease, often after the product is assembled</td>
+      <td>Adhesive fails under repeated flex; the fold concentrates strain</td>
+      <td>Cyclic folding, then peel strength</td></tr>
+  <tr><td>Flex crack</td><td>Dulling, then a fine crack network visible at an angle under raking light</td>
+      <td>Film too thin or topcoat too brittle for the fold radius</td>
+      <td>Mandrel flex under raking-light inspection</td></tr>
+  <tr><td>Rub wear</td><td>Dull, discoloured patch where the ribbon contacts something repeatedly</td>
+      <td>Insufficient topcoat, or a pigment layer with a weak surface</td>
+      <td>Rub dry and wet, AATCC 8 or AATCC 116</td></tr>
+  <tr><td>Shedding</td><td>Loose particles in the pack; contamination of adjacent product</td>
+      <td>Glitter not fully bonded; or a finishing wash that releases particles</td>
+      <td>Shake or tumble test in a sealed bag, then count</td></tr>
+</table>
+
+<div class="kpi">
+  <p><strong>Inspection technique that matters:</strong> inspect metallic ribbon under raking light, not under
+  diffuse overhead light. Flex cracks and the early stages of delamination are essentially invisible in flat
+  lighting and obvious at a shallow angle, because what you are seeing is the change in surface reflection.
+  A ribbon that looks perfect under shop lighting can have a substantial crack network. This is also why the
+  factory side should never approve a metallic ribbon visually under standard workshop lighting alone.</p>
+</div>
+
+<h2>The 3-stage metallic ribbon approval gate</h2>
+
+<h3>Stage 1 - Substrate and construction confirmation</h3>
+<p>Before any metallic work begins, the substrate is fixed and written down: fibre (usually polyester), whether
+it is satin, grosgrain, organza or plain tape, the width, the finish (high-shine, matte, brushed) and the
+stretch. This decision constrains everything downstream, because a metallised organza will crack in a way a
+metallised grosgrain will not, and a metallised satin will take a high-gloss film that a matte tape cannot hold
+without a change in hand.</p>
+
+<h3>Stage 2 - Colour and effect approval</h3>
+<p>Metallic colours are the hardest colours in the ribbon trade to approve, because a metallic sample viewed flat,
+under warm light, in a showroom, is not the same object as a metallic sample in a photograph on a screen. Two
+matters need settling: the target finish (mirror, satin metallic, brushed, matte metallic, holographic) and the
+tolerance band, expressed as a permitted reference standard rather than as a colour code. Keep a physical
+reference swatch from the approved lot, sealed, labelled with the lot number and date. Screens are unreliable
+for metal and photobooks are unreliable for metal.</p>
+
+<h3>Stage 3 - Durability and handling confirmation</h3>
+<p>This is the gate most buyers skip and it is the one that would have prevented the complaint. The approval
+sample is put through the deformation it will see in service: folded, tied, untied, stretched, flexed, rubbed
+and conditioned. Only then is the ribbon approved. Approving a flat sample and a physical durability result
+separately, but at different times, defeats the purpose.</p>
+
+<h2>Why metallised ribbon needs a different lead time</h2>
+<p>A metallised ribbon lead time is not the weaving lead time. The weave may take three weeks. The metallisation
+itself takes days because the film has to be ordered, and the foil or metallised film supply is often the
+longest pole. Add a colour-matching approval cycle and the total is routinely six to nine weeks for a
+first-order custom metallised ribbon, against three to five for a printed ribbon of the same substrate.</p>
+
+<p>Two consequences follow, and both should be built into the buyer's calendar rather than discovered:</p>
+<ul>
+  <li>Peak season is when every buyer in the trade orders metallised ribbon at the same time, and the metallising
+  capacity is not the weaving capacity. The weaving mill can be free and the order still sits waiting for film.</li>
+  <li>A metallised ribbon should be booked earlier than its woven equivalents, not later. If the product needs to
+  be on shelf in October, the metallised ribbon order belongs in June.</li>
+</ul>
+
+<h2>Printing over a metallic surface</h2>
+<p>Printing onto metallic ribbon is possible but it changes the specification in two ways that buyers routinely
+forget to cost.</p>
+<p>First, the ink does not sit on the surface, it sits on the topcoat. If the topcoat is a polyester film, the
+ink has a very different adhesion profile from ink on a woven polyester surface, and a standard flexo ink system
+chosen for the substrate can fail on the laminate. Ask what ink system was qualified for the specific
+metallised construction rather than assuming the substrate qualification carries over.</p>
+<p>Second, a printed mark on a reflective surface is read by contrast, not by the printed colour itself. A
+white or black logo on a metallic surface can lose legibility depending on the reflection angle in the room, and
+what looked correct in the sample photograph can be unreadable under retail lighting. Where the brand mark is the
+point of the trim, specify the colour contrast requirement and test the assembled product in a retail
+environment.</p>
+
+<h2>Rub and abrasion: the number buyers should ask for</h2>
+<p>The single most useful specification on a metallic ribbon is a rub rating with a method and a substrate.
+"Resists abrasion" is not a specification. "Grade 4 dry rub after 8 cycles on cotton per AATCC 8" is. The
+method matters because a ribbon that is graded on wool will behave completely differently from the same ribbon
+graded on cotton, and the failure thresholds are not comparable between the two methods.</p>
+
+<div class="kpi">
+  <p><strong>Also specify the conditioning state.</strong> Metallic films are affected by humidity and
+  temperature more than most trim. A ribbon conditioned for 24 hours at 21 degrees C and 65 percent relative
+  humidity and then tested is a different material from one tested straight off the roll at 30 degrees C and
+  80 percent relative humidity, and the difference shows up most in the adhesion layer. Where the product ships
+  into a hot, humid market, the conditioning protocol should reflect that market, not the factory.</p>
+</div>
+
+<h2>A practical specification checklist for metallic ribbon</h2>
+<p>From the discussions above, a metallic ribbon specification that will not produce a dispute should state:</p>
+<ol>
+  <li>Substrate: fibre, construction, width, finish, stretch.</li>
+  <li>Metallisation route: vacuum metallised film, pigment lamination, or bonded glitter.</li>
+  <li>Finish: mirror, satin metallic, brushed, matte, or holographic.</li>
+  <li>Colour: with a physical reference standard, and a tolerance band expressed against it.</li>
+  <li>Topcoat type and thickness, and the UV rating claimed.</li>
+  <li>Adhesion: the standard, the conditioning protocol, and the pass threshold.</li>
+  <li>Flex cracking: the mandrel diameter tested and the inspection method.</li>
+  <li>Rub: the method, the number of cycles, the substrate, and the grading scale.</li>
+  <li>Shedding: the test method and the permitted particle count, where glitter is involved.</li>
+  <li>Edge treatment: sealed, hemmed, raw, or selvedge.</li>
+  <li>Packaging: and the expected contamination tolerance for the customer.</li>
+</ol>
+
+<h2>Working with the mill rather than the converter</h2>
+<p>The distinction between a mill and a converter matters commercially as well as technically. A mill that
+weaves and laminates in-house can hold the whole spec in one place, troubleshoot a delamination on the spot,
+and adjust the primer or the film to suit the substrate. A converter who laminates somebody else's woven ribbon
+has two suppliers and no control over either.</p>
+<p>At Smith Ribbon, weaving and finishing sit under one roof, so a metallised ribbon can be specified, woven,
+laminated and inspected as one process rather than as four hand-offs. That is worth a great deal when a
+delamination shows up eight weeks after the goods landed.</p>
+
+<p>For brand buyers who need a metallised ribbon that survives being folded, tied and shipped, the practical
+first step is to define the end use precisely - the fold radius, the abrasion exposure, the humidity range and
+whether the ribbon is visible in the finished product - and then let the mill propose the construction. A good
+mill will tell you when a requested effect is going to fail and offer a construction that will not. That
+conversation is worth more than a discount on the foil.</p>
+""",
+    "faq": [
+        ("What is the difference between metallised ribbon, metallic ribbon and foil ribbon?",
+         "Metallised ribbon is the specific term for ribbon carrying a vacuum-deposited aluminium layer, "
+         "which gives a true mirror reflectivity. Metallic ribbon is the general category and usually refers "
+         "to aluminium flake pigment laminated or printed onto a substrate, which sparkles rather than mirroring. "
+         "Foil ribbon refers to hot-stamp foil - a metal leaf on a carrier film transferred onto the surface by "
+         "heat and pressure - which is a decoration applied to an already-made ribbon rather than a construction "
+         "in its own right. The distinction matters commercially because the three behave very differently "
+         "under abrasion: a metallised film dulls cleanly, a pigment layer loses flakes and speckles, and hot-"
+         "stamp foil can lift or transfer entirely where the surface is abraded."),
+        ("Why does my metallic ribbon look dull after a few weeks in the pack?",
+         "Three causes, in order of likelihood. The first is abrasion in transit or during handling - a "
+         "metallic ribbon rubbed against cardboard, tissue or another roll loses reflectivity without any "
+         "adhesive failure, and the dulling is permanent. The second is a weak topcoat, where the protective "
+         "layer over the metal is too thin to withstand handling and is abraded rather than the metal itself. "
+         "The third is flex cracking, where the film develops a fine crack network that scatters light and "
+         "reads as dulling; this appears first at folds and at the point where the ribbon was wound onto the "
+         "core, because the winding puts the whole roll through a flex. The distinguishing observation is that "
+         "flex cracking is visible under raking light as a network of fine lines while simple abrasion is a "
+         "broad even dulling. Specify a rub rating with a stated method and conditioning protocol, and require "
+         "the topcoat specification, rather than accepting a generic abrasion claim."),
+        ("Can metallic ribbon be printed with my logo?",
+         "Yes, and it is common, but the ink system has to be qualified for the metallised construction rather "
+         "than for the underlying textile substrate. The printed ink sits on the protective topcoat, not on the "
+         "fibre, and an ink qualified for woven polyester will often adhere poorly to a film topcoat. Second, "
+         "legibility on a reflective surface depends on contrast against a moving reflection rather than "
+         "against a solid colour, so a logo that reads clearly in a sample photograph can be unreadable under "
+         "retail lighting. Where the brand mark is the purpose of the trim, ask for the assembled product to be "
+         "viewed under retail lighting, and specify a minimum contrast requirement in the tech pack."),
+        ("Does glitter ribbon shed, and can that be prevented?",
+         "Bonded glitter sheds far less than loose glitter, and a loose-glitter construction should not be "
+         "accepted for any application where the ribbon is handled, stored adjacent to other product, or "
+         "transported loose. Shedding is a physical property of the construction rather than a manufacturing "
+         "fault, so the honest approach is to specify a shedding tolerance and a test method rather than to "
+         "expect zero. Where a glitter surface is required for visual impact, specify a fully bonded glitter "
+         "with a protective topcoat and require the mill to state its tested particle-loss figure per unit "
+         "length under the agreed shake or tumble protocol. Glitter ribbon is widely used in party, festival "
+         "and seasonal craft applications precisely because the sparkle is the point, but it should never be "
+         "specified for a gift pack that will be handled, stored or shipped alongside other merchandise."),
+        ("Why does metallic ribbon cost more and take longer than a printed ribbon?",
+         "Two separate reasons, and they are usually conflated. The construction cost is higher because the "
+         "metallic layer, the topcoat and the primer are all purchased materials and add a lamination step to "
+         "the process, and because vacuum metallised film requires a minimum order quantity from a specialist "
+         "supplier. The lead time is longer because the film or foil must be ordered separately from the "
+         "weaving, and that supply chain is frequently the longest pole in the schedule - the weaving mill can "
+         "be completely free while the order still waits for film. For planning purposes, treat a first-order "
+         "custom metallised ribbon as a six-to-nine week item against three-to-five weeks for a printed ribbon "
+         "on the same substrate, and book it earlier than the equivalent plain trim rather than later."),
+    ],
+    "cta_title": "Specify the metallisation route, the topcoat and the rub method",
+    "cta_body": ("Smith Ribbon has supplied woven and printed ribbon, bows, and decorative trims to 1,000+ "
+                 "brands and retailers across 50+ countries since 2004. Our 15,000 m&sup2; plant runs 200+ "
+                 "employees with 100,000 meters of daily capacity, certified to OEKO-TEX&reg;, FSC&reg;, BSCI, "
+                 "SEDEX, SMETA and ISO 9001."),
+    "cta_link_text": "Ask for the metallised ribbon construction sheet with your substrate, finish and end use",
+}

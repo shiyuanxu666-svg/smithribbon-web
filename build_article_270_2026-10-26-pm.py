@@ -1,0 +1,449 @@
+#!/usr/bin/env python3
+"""Build smithribbon B2B module 270 (PM), 2026-10-26.
+
+Topic: mill-side RIBBON FUSIBLE / HEAT-SEAL ADHESIVE interlock — how a brand
+buyer controls a heat-activated fusible ribbon (iron-on backing, fusible web
+core) used for apparel trim, home-textile edging, luggage and gift-box
+assembly: the adhesive chemistry (PA / PES / EVA / PES-HD), the activation
+temperature window, the bond strength required after fusing, the laundering
+durability of the bond, and the substrate compatibility rule that decides
+whether the fusible can be applied to that particular fabric at all.
+
+Distinct from every existing module: 263 covers dye colourfastness; 262
+covers lace / elastic recovery; 269 covers metallic foil adhesion (a film
+bonded with a hot-melt or acrylic under thermal pressure, but a decorative
+surface layer, not a structural joining layer). None covers the fusible
+adhesive as a STRUCTURAL heat-joining layer that has to survive washing and
+peel off the substrate it was fused to.
+"""
+from pathlib import Path
+import sys
+
+sys.path.insert(0, "/workspace/smithribbon-web")
+from sr_page import write_article
+
+SLUG = ("blog-ribbon-oem-270-module-mill-side-brand-buyer-ribbon-fusible-heat-seal-adhesive-interlock-"
+        "architecture-activation-temperature-bond-strength-laundering-durability-substrate-compatibility-"
+        "2026-10-26-pm")
+
+a = {
+    "title": "Mill-Side Brand-Buyer Ribbon Fusible &amp; Heat-Seal Adhesive Interlock Architecture &mdash; "
+             "Activation Temperature Window, Bond Strength After Fusing, Laundering Durability and Substrate "
+             "Compatibility 2026",
+    "desc": "B2B ribbon OEM 270-module fusible and heat-seal adhesive interlock architecture. "
+            "5-layer fusible-layer authority ladder, 4-stage bond approval gate, 3-tier bond-failure "
+            "reconciliation ladder, and a wash-durability + peel-strength retention audit. Smith Ribbon OEM since 2004.",
+    "kw": "fusible ribbon OEM, heat seal ribbon manufacturer, iron on ribbon adhesive, fusible web trim, "
+          "ribbon fusible supplier China, heat activated adhesive ribbon, fusible bond strength test, "
+          "laundering durability fusible bond, ribbon heat seal temperature, PA PES EVA adhesive ribbon, "
+          "brand buyer fusible trim, apparel fusible ribbon, luggage trim heat seal, gift box assembly ribbon, "
+          "fusible ribbon substrate compatibility, ribbon fusing press temperature, OEM decorative trim fusible, "
+          "ribbon fusible peel test, heat seal ribbon interlock, custom fusible ribbon China",
+    "author": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.",
+    "date_iso": "2026-10-26T13:00:00+00:00",
+    "date_human": "October 26, 2026",
+    "slug": SLUG,
+    "section": "Ribbon OEM Manufacturing",
+    "tag": "Ribbon OEM",
+    "read": "17 min read",
+    "word_count": 2750,
+}
+
+BODY = """
+<p class="lede">A fusible ribbon is a piece of trim with an opinion about the future. It is a textile that carries a
+thermally activated adhesive layer, and that layer does nothing at all until heat is applied &mdash; and then it
+does something irreversible. The buyer receives a roll that looks and behaves like ordinary ribbon, presses it onto a
+panel at 140&nbsp;&deg;C, and has made a permanent structural decision about two materials. If that decision was
+wrong, the failure does not announce itself. It announces itself in the wash, or in the customer's laundry, or in
+the returned parcel, and by then the entire production run of that colour is finished goods.</p>
+
+<p>What makes fusible work genuinely different from every other trim specification is that it is not a component
+with a specification. It is a <em>process</em> with a specification, and the process is partly owned by the
+supplier and partly owned by the buyer, with a dangerous overlap in the middle. The supplier chooses the adhesive
+chemistry and controls the coating. The buyer owns the press, the dwell time, the pressure and the substrate. The
+fusing happens at the buyer's facility, or at the buyer's contract factory, or sometimes at a fabricator the buyer
+has never audited. The bond that results is therefore produced by a process that the supplier does not control and
+the buyer does not fully understand, and it is graded by both parties against a standard neither of them wrote.</p>
+
+<blockquote style="border-left:4px solid #b8854a;padding:8px 16px;margin:1.2em 0;background:#faf6f1;">
+&quot;Fusible ribbon specification: 25&nbsp;mm 100&nbsp;% polyester grosgrain base, 10&nbsp;mm width of
+coated fusible web on the reverse, PA (polyamide) adhesive chemistry, alkali-activated.
+Coating weight 60&nbsp;g/m&sup2; nominal. Activation temperature 125&ndash;140&nbsp;&deg;C,
+press dwell 8&ndash;12&nbsp;s, pressure 0.35&nbsp;bar. Bond strength after fusing: minimum
+12&nbsp;N/25&nbsp;mm 180&deg; peel, averaged over five specimens. Bond strength after five wash cycles
+at 40&nbsp;&deg;C: not less than 70&nbsp;% of the initial value. Wash condition: EN ISO 6330,
+5 cycles, 40&nbsp;&deg;C. No adhesive bleed-through to the face of the ribbon. No shadow marking on
+the face substrate. Substrate compatibility: permitted on cotton, polyester and cotton-polyester
+wovens; not permitted on nylon, elastane blends above 15&nbsp;% elastane, or water-repellent
+finishes without a pre-test.&quot;
+</blockquote>
+
+<p>That specification contains sixteen separate requirements, and the two that most often do not appear in a
+fusible brief are the most consequential: a laundering-durability retention floor, which is what separates a bond
+that survives the product's life from a bond that survives the shipping box, and the substrate compatibility rule,
+which is the requirement that prevents the most common fusible failure of all &mdash; fusing a heat-activated
+adhesive onto a substrate that cannot tolerate the heat at all.</p>
+
+<div class="kpi">
+  <p><strong>Commercial significance:</strong> a fusible bond failure is a total loss of the trim on that panel, not
+  a cosmetic defect. It is also a failure that is discovered late, at the consumer's laundry rather than in the
+  factory, which means it cannot be contained by a quality inspection. For a brand running a garment line, this is
+  the difference between a trim issue and a recall conversation.</p>
+</div>
+
+<h2>1. Why Fusible Is a Process, Not a Component</h2>
+
+<p>The mental model that causes most fusible failures is the one that treats the roll as a component with a set of
+properties. In fact the roll is a <em>bonding agent</em>, and the bond it forms is the product. The adhesive is
+designed to be inactive at ambient temperature and active in a narrow thermal window, and it activates by melting,
+flowing into the substrate's surface structure, and then cooling into a semi-crystalline solid that grips the fibres.
+That description sounds like a detail, and it explains almost every practical failure mode.</p>
+
+<p>First, the adhesive is dormant until heat is applied. This means the ribbon can sit in a warehouse at 30&nbsp;&deg;C
+or in a container at 40&nbsp;&deg;C without bonding to anything, which is why fusible trim can be stored
+indefinitely, and also why it must be stored away from direct heat sources. It also means the shelf life question is
+real: a fusible web will slowly oxidise and its activation temperature will drift upward over time, so a roll
+produced eighteen months ago may need a hotter press than the specification says.</p>
+
+<p>Second, the adhesive flows into the substrate. It does not sit on top of it and it does not chemically bond to it
+in the way a solvent adhesive does. It forms a mechanical interlock with the surface of the fabric, using the same
+mechanism as a heat-sealable lining. The consequence is that the substrate's surface structure is part of the bond.
+A tightly woven, calendared or coated surface gives the adhesive nothing to grip, and the bond will be weak even
+though every parameter on the press was correct. This is the single most common reason a fusible trim that worked
+perfectly on a sample fails on production fabric.</p>
+
+<p>Third, the bond is formed by cooling. The crystallisation happens as the material cools, and the cooling rate
+matters. A panel that is pulled off the press and immediately folded will still be hot and semi-fluid, and folding
+it at that point deforms the bond before it has set. A panel left under a weight until fully cold will have a bond
+stronger by a meaningful margin than one handled immediately.</p>
+
+<table>
+  <thead>
+    <tr><th>Factor</th><th>Buyer-controlled</th><th>Supplier-controlled</th><th>Shared failure</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Adhesive chemistry</td><td>No</td><td>Yes</td><td>Chemistry wrong for the substrate</td></tr>
+    <tr><td>Coating weight and uniformity</td><td>No</td><td>Yes</td><td>Low coating weight across the web</td></tr>
+    <tr><td>Activation temperature window</td><td>Yes</td><td>Yes</td><td>Press set below the activation point</td></tr>
+    <tr><td>Dwell time and pressure</td><td>Yes</td><td>No</td><td>Dwell too short for the coating weight</td></tr>
+    <tr><td>Substrate surface structure</td><td>Yes</td><td>No</td><td>Calendered or coated fabric</td></tr>
+    <tr><td>Cooling before handling</td><td>Yes</td><td>No</td><td>Panel folded while still hot</td></tr>
+  </tbody>
+</table>
+
+<h2>2. The 5-Layer Fusible-Layer Authority Model</h2>
+
+<p>Five layers govern the fusible bond, ordered from most frozen to most operational, each with a named owner and
+an explicit change threshold. The model exists because the most common fusible failure is not a bad bond. It is a
+bond that was correct for a different substrate, because the substrate changed and nobody told the trim
+specification.</p>
+
+<table>
+  <thead>
+    <tr><th>Layer</th><th>Parameter</th><th>Owner</th><th>Change threshold</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>L1 End-use and substrate declaration</td><td>Target fabric, fibre composition, use, wash regime</td><td>Brand technical function</td><td>Any fabric or construction change. Requires a new compatibility test.</td></tr>
+    <tr><td>L2 Adhesive chemistry and regulatory status</td><td>PA / PES / EVA class, restricted-substance status, REACH and CPSIA fit</td><td>Brand compliance function</td><td>Chemistry change or market change</td></tr>
+    <tr><td>L3 Bond specification</td><td>Coating weight, adhesive width, activation window, peel floor, retention floor</td><td>Supplier engineering</td><td>Any change of coating lot, web supplier or base ribbon</td></tr>
+    <tr><td>L4 Process control</td><td>Press temperature, dwell, pressure, cooling allowance, line speed</td><td>Buyer production or contract factory</td><td>Any change of press, fabric or operator</td></tr>
+    <tr><td>L5 Appearance and format</td><td>Bond shadow, bleed-through, edge coverage, adhesive residue</td><td>Supplier production</td><td>New size, new web width or new base ribbon</td></tr>
+  </tbody>
+</table>
+
+<p>The threshold in L1 is the one that breaks programmes. A garment team changes the main fabric from a cotton
+poplin to a cotton sateen because the handle is nicer, and the fusible trim specification is untouched because
+nothing about the trim changed. But sateen is calendered, its surface is smoother, and the adhesive has less to
+grip. The bond that was strong on poplin is now marginal on sateen, and it fails after three washes rather than
+immediately, which means it fails in the market.</p>
+
+<h2>3. Choosing the Adhesive Chemistry</h2>
+
+<p>The three chemistry families used in fusible web are not interchangeable, and the choice is constrained by the
+end use rather than by preference.</p>
+
+<p><strong>Polyamide (PA)</strong> is the most common choice for apparel and the most forgiving on the heat side.
+Polyamide web activates at a relatively low temperature, typically 125&ndash;140&nbsp;&deg;C, is tolerant of
+temperature variation in the press, and bonds well to a wide range of natural and synthetic fabrics including
+polyester. Its weaknesses are moisture sensitivity, which is why PA web needs a laundering-durability
+specification, and a relatively high re-softening temperature that limits repeated re-fusing.</p>
+
+<p><strong>Polyester (PES)</strong> activates at a higher temperature, typically 130&ndash;150&nbsp;&deg;C, and is
+the better choice where high-temperature laundering or industrial laundering is involved, because it has better
+hydrolysis resistance. It is stiffer, it has a narrower activation window, and it bonds less readily to very smooth
+polyester surfaces. It is also the more common choice in the automotive and technical textile markets where a
+press cycle is tightly controlled.</p>
+
+<p><strong>Ethylene-vinyl-acetate (EVA)</strong> activates at the lowest temperatures and is the most economical.
+It is the right choice for non-washable applications &mdash; gift box assembly, decorative rigid packaging, some
+non-textile gift items &mdash; and the wrong choice for anything that will be washed or that will sit in a warm
+warehouse. EVA is the chemistry most often misapplied because it is the default on a low-cost price list, and it is
+the chemistry most likely to be the reason a bond "worked in the sample room and failed in the field".</p>
+
+<p>There is a fourth option worth naming because it changes the economics of the programme rather than the
+performance: <strong>fusible-free trims</strong>, where the ribbon is supplied without any adhesive and the
+functional fixing is done by a different mechanism entirely, such as a sew-through construction with the fusible
+serving only as a positioning aid during assembly. For a high-visibility trim on a garment that will be washed
+hard, this is often more robust than any fusible, and it is worth evaluating rather than assuming.</p>
+
+<h2>4. The 4-Stage Bond Approval Gate</h2>
+
+<h3>Gate 1 &mdash; Compatibility confirmation on the actual production fabric</h3>
+
+<p>The compatibility gate is performed on the exact fabric from the production lot, not on a swatch from the design
+sample and never on a generic calico. The test fuses the trim to the fabric under the stated press conditions and
+reports peel strength. A single swatch test is not enough, because fabric finishing varies between lots and between
+suppliers, and the binding constraint is almost always the production fabric rather than the trim. A robust
+programme tests at least two production lots separated in time.</p>
+
+<h3>Gate 2 &mdash; Bond strength and coverage verification</h3>
+
+<p>The gate confirms that the adhesive web covers the specified width with no gaps, that the coating weight is
+within tolerance across the width and along the length, and that the finished bond meets the peel floor. Coverage
+matters as much as strength: a narrow adhesive web on a wide trim produces a bond that is strong at the centre and
+peels at the edges, and the buyer discovers it as a trim that lifts at one side in use. The report should state
+coverage as a minimum percentage of the specified web width, measured at defined intervals along the roll.</p>
+
+<blockquote style="border-left:4px solid #b8854a;padding:8px 16px;margin:1.2em 0;background:#faf6f1;">
+&quot;A fusible bond is not a single line. It is a strip of adhesive with two free edges, and those edges are where
+it fails first. Specify the web width, specify the minimum coverage, and specify the peel test on a specimen that
+includes the edge of the adhesive band, not one taken from the middle.&quot;
+</blockquote>
+
+<h3>Gate 3 &mdash; Laundering-durability retention</h3>
+
+<p>The gate runs the stated wash cycle and re-measures peel strength, reporting the retention ratio against the
+initial value. This is the gate that a programme built on a sample-room peel test has never run, and it is where most
+programmes discover a real problem. The mechanism is straightforward: PA adhesive is hygroscopic and loses a
+proportion of its bond strength with repeated wetting, so a bond that started at 14&nbsp;N/25&nbsp;mm may be at
+8&nbsp;N/25&nbsp;mm after five washes, which is a 57&nbsp;% retention and a failure against a 70&nbsp;% floor. The
+number is not a technicality; it is the difference between a trim that lasts and one that does not.</p>
+
+<h3>Gate 4 &mdash; Production-line trial on the buyer's own equipment</h3>
+
+<p>The final gate runs the programme on the buyer's own press, with the buyer's own operator, on the buyer's own
+production fabric, at production line speed. This gate exists because press conditions vary more than buyers
+expect. Two identical presses with the same nominal temperature can differ by fifteen degrees at the bed, because
+the temperature was set years ago against a thermometer that has since been replaced, or because the machine has not
+been recalibrated since its service. A programme that qualified on the supplier's press and then runs on the buyer's
+press without a trial is a programme that has assumed the press is correct.</p>
+
+<h2>5. The 3-Tier Bond-Failure Reconciliation Ladder</h2>
+
+<p>When a fusible bond fails in the market, the report almost always says "the trim came off". The three tiers
+below have different causes, different diagnostic evidence and different remedies, and distinguishing them is what
+prevents a repeat failure.</p>
+
+<table>
+  <thead>
+    <tr><th>Tier</th><th>Presentation</th><th>Probable cause</th><th>Diagnostic evidence</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>T1 Cohesive failure</td><td>Adhesive residue remains on both surfaces; the adhesive itself has split</td><td>Under-activated or under-cured bond; insufficient dwell for the coating weight</td><td>Residue on both faces; no transfer of substrate fibres</td></tr>
+    <tr><td>T2 Adhesive failure</td><td>Clean separation with no residue; the adhesive layer has released</td><td>Wrong chemistry for the substrate, or the bond exceeded its temperature capability</td><td>Clean release; no residue, no fibres</td></tr>
+    <tr><td>T3 Substrate failure</td><td>Fibres pulled from the fabric; the fabric itself is damaged</td><td>Adhesive bonded too well for the fabric &mdash; or the fabric was heat-damaged</td><td>Fabric fuzzing, scorched fibres, surface distortion</td></tr>
+  </tbody>
+</table>
+
+<p>Tier 2 is the one that gets misdiagnosed most often as tier 1, and the misdiagnosis is expensive because the
+remedies are opposite. If the adhesive releases cleanly with no residue, increasing dwell or raising temperature
+makes it worse &mdash; it will simply bond more completely to a substrate it should not be bonding to, and the
+release will still occur at the adhesive-substrate interface. The correct response to a tier 2 failure is a chemistry
+change or a substrate change, not a press change.</p>
+
+<p>Tier 3 is the one that damages the customer's product. An adhesive that is too aggressive for a delicate fabric
+will pull the surface with it, and the panel then shows a permanent bald patch. This is why the substrate
+compatibility rule exists, and why the rule should be enforced by the buyer rather than left to the supplier's
+judgement at the press.</p>
+
+<h2>6. The Washing-Durability and Peel-Strength Retention Audit</h2>
+
+<p>The retention audit is the single number that predicts field behaviour, and it should be reported on every
+fusible programme regardless of how simple the programme looks. Retention is the ratio of post-wash peel strength
+to initial peel strength, expressed as a percentage, and it is what separates a bond that survives the product's
+life from a bond that survives the packing box.</p>
+
+<p>The audit should also be paired with an assessment of the substrate's own condition after the wash cycle,
+because a bond can retain strength while the fabric beneath it has been degraded by the heat and the alkaline wash.
+This is a slow, cumulative damage that does not show as a bond failure and shows instead as a weakened seam or a
+bald patch in the garment after several washes. If the fusible is a polyamide chemistry and the wash regime is
+alkaline and hot, that combination should be on the audit list explicitly rather than assumed to be fine.</p>
+
+<div class="kpi">
+  <p><strong>How Smith Ribbon runs the programme:</strong> the fusible web width, coating weight and adhesive
+  chemistry are specified as a controlled combination bound to the base ribbon, with a peel floor expressed as a
+  minimum of five specimens and a retention floor of 70&nbsp;% after the stated wash cycle. Compatibility is
+  confirmed on the buyer's actual production fabric, never on a design swatch, and the programme file issued with
+  each shipment carries the compatibility record, the coverage report, the peel results and the retention result
+  together. Xiamen Smith Ribbon &amp; Bow Co., Ltd. has supplied woven, printed and fusible ribbon, bows and
+  decorative trims to 1,000+ brands and retailers across 50+ countries since 2004, from a 15,000&nbsp;m&sup2; plant
+  running 200+ employees with 100,000 metres of daily capacity, certified to OEKO-TEX&reg;, FSC&reg;, BSCI, SEDEX,
+  SMETA and ISO 9001.</p>
+</div>
+
+<h2>7. Writing the Fusible Brief</h2>
+
+<p>A fusible RFQ that does not specify the substrate cannot be quoted responsibly, and a supplier that quotes it
+anyway is telling you something. The brief needs these nine elements, and the first is non-negotiable:</p>
+
+<ol>
+  <li><strong>Target substrate</strong> &mdash; fibre composition, weave or knit, weight, finish, water-repellent
+  treatment, and a physical sample of the production fabric.</li>
+  <li><strong>End use and wash regime</strong> &mdash; washable or not, wash temperature, number of cycles, and
+  whether industrial laundering is involved.</li>
+  <li><strong>Adhesive chemistry class</strong> &mdash; PA, PES or EVA, with the alkali-activated or non-activated
+  distinction stated.</li>
+  <li><strong>Web width and coverage</strong> &mdash; the width of the coated adhesive band and the minimum coverage
+  as a percentage.</li>
+  <li><strong>Activation window</strong> &mdash; the permitted press temperature range, and the dwell and pressure
+  that go with it.</li>
+  <li><strong>Peel-strength floor</strong> &mdash; method, specimen count, conditioning, and the minimum value per
+  25&nbsp;millimetres.</li>
+  <li><strong>Retention floor</strong> &mdash; the minimum percentage of initial peel strength after the stated
+  wash cycle.</li>
+  <li><strong>Appearance criteria</strong> &mdash; no bleed-through to the face, no shadow marking on the face
+  substrate, and no adhesive residue at the trim edge.</li>
+  <li><strong>Change control</strong> &mdash; notification and re-qualification before any change of web supplier,
+  coating lot, base ribbon or adhesive chemistry.</li>
+</ol>
+
+<p>Written this way, two quotations are comparable and the difference between them is a difference in process. If a
+supplier cannot quote against all nine, the missing element is almost always the substrate, and that is exactly the
+element that determines whether the bond works.</p>
+
+<h2>8. Conclusion</h2>
+
+<p>Fusible ribbon is the one trim where the buyer's own production floor is part of the manufacturing process. That
+makes the specification unusual, and it makes the two requirements that matter most also the two most often
+missing: a laundering-durability retention floor, and an explicit substrate compatibility rule. Add the coating
+coverage requirement, specify the adhesive chemistry rather than accepting whatever is in stock, and run the
+compatibility test on the actual production fabric, and the bond stops being a gamble. It becomes a specified
+process with a measurable output, which is the only kind a brand buyer can actually manage.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between PA, PES and EVA fusible ribbon adhesive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Polyamide (PA) is the most common choice for apparel. It activates at a relatively low temperature, typically 125 to 140 degrees Celsius, tolerates press temperature variation well, and bonds to a wide range of natural and synthetic fabrics. Its weakness is moisture sensitivity, which is why a PA programme needs an explicit laundering-durability retention floor. Polyester (PES) activates higher, typically 130 to 150 degrees, and has better hydrolysis resistance, which makes it the better choice for high-temperature or industrial laundering, but it is stiffer, has a narrower activation window and bonds less readily to very smooth polyester surfaces. Ethylene-vinyl-acetate (EVA) activates at the lowest temperatures and is the most economical, but it is the wrong choice for anything that will be washed or that will sit in warm storage, and it is the chemistry most often misapplied because it is the default on a low-cost price list. Choose the chemistry from the end use rather than from the price list."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I test the bond strength of a fusible ribbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fuse the trim to the actual production fabric under the specified press conditions, condition the specimen, and measure peel strength with a 180 degree adhesive tape peel test, reporting the minimum of five specimens per 25 millimetres rather than the mean. Three details make the test meaningful. First, it must be run on the production fabric and not on a design swatch or a generic calico, because fabric finishing varies between lots and calendered surfaces give the adhesive almost nothing to grip. Second, the specimen should include the edge of the adhesive band rather than only the middle, because the free edges of the web are where a fusible bond peels first. Third, the report must state the press temperature, dwell time, pressure and cooling allowance used to produce the specimen, because a peel value without its process context cannot be compared to anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a fusible bond fail after washing when it passed the initial test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three causes are common. The first is that the adhesive chemistry is wrong for the substrate, so the initial bond formed adequately but the chemistry does not survive wetting, which is the classic behaviour of polyamide web and the reason a retention floor after the stated wash cycle should be part of the specification. The second is that the substrate surface structure gave the adhesive little to grip, because the production fabric is more tightly woven, calendered or coated than the sample used for qualification, so the bond was weak from the start and the wash exposed it. The third is heat damage to the substrate, where a press set too hot for a delicate fabric weakened the fibres so the bond took the fabric with it. The retention audit separates these: a bond that retains less than 70 per cent of its initial strength after the wash cycle is a chemistry or substrate problem, while a bond that retains strength but leaves fabric fuzzing is a substrate damage problem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can any fabric accept a fusible ribbon trim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and this is the requirement most often missing from a fusible brief. A heat-activated adhesive needs a substrate that will tolerate the press temperature without damage and has enough surface structure for the adhesive to grip. Calendered, coated, waxed and water-repellent-finished fabrics all reduce or eliminate the mechanical interlock the adhesive depends on, and elastane blends above roughly 15 per cent elastane soften and distort at fusing temperatures. Nylon is generally unsuitable because of its low heat tolerance. The safe approach is to treat compatibility as a tested list rather than an assumption: specify the fibre composition, the finish and the weight of every fabric the trim will be applied to, and require a compatibility test on a physical sample from the production lot before the programme is released. Where the substrate is outside the permitted list, the alternative is a sew-through construction in which the fusible serves only as a positioning aid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What press temperature and dwell time should I use for fusible ribbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The correct figures come from the adhesive chemistry and the coating weight, and they should be quoted by the trim supplier rather than guessed at the press. As a general guide, polyamide web activates in the 125 to 140 degree Celsius range, polyester web in the 130 to 150 degree range, and EVA web below that, with dwell times commonly between 8 and 12 seconds and pressures around 0.35 bar for apparel weight. Two operating rules matter more than the numbers themselves. First, the press should be verified with an independent temperature check rather than trusted from its original set point, because press calibration drifts and a machine that reads 140 degrees at the bed may actually be delivering 155. Second, the panel must be allowed to cool under constraint before it is folded or handled, because the bond crystallises as it cools and a panel handled while still hot will be deformed before it has set."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity for custom fusible ribbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At Smith Ribbon, custom fusible ribbon typically starts around 1,000 metres per width and colour for an existing base ribbon construction, with a new base weave, a new colour or a new adhesive web width adding normally ten to fifteen days on top of the standard 30 to 45 days to production readiness. The binding constraint on a fusible programme is not the unit price but the number of distinct base-ribbon and adhesive-web combinations, because each combination requires its own compatibility test on the buyer's production fabric and its own coverage and peel verification. For that reason it is worth rationalising the trim range early, since consolidating four widths of fusible trim onto one web width and one base construction usually saves more in setup and qualification time than it costs in unit price."
+      }
+    }
+  ]
+}
+</script>
+
+<h3>What is the difference between PA, PES and EVA fusible ribbon adhesive?</h3>
+<p>Polyamide (PA) is the most common choice for apparel. It activates at a relatively low temperature, typically 125
+to 140&nbsp;degrees Celsius, tolerates press temperature variation well, and bonds to a wide range of natural and
+synthetic fabrics. Its weakness is moisture sensitivity, which is why a PA programme needs an explicit
+laundering-durability retention floor. Polyester (PES) activates higher, typically 130 to 150&nbsp;degrees, and has
+better hydrolysis resistance, which makes it the better choice for high-temperature or industrial laundering, but it is
+stiffer, has a narrower activation window and bonds less readily to very smooth polyester surfaces.
+Ethylene-vinyl-acetate (EVA) activates at the lowest temperatures and is the most economical, but it is the wrong
+choice for anything that will be washed or that will sit in warm storage, and it is the chemistry most often misapplied
+because it is the default on a low-cost price list. Choose the chemistry from the end use rather than from the price
+list.</p>
+
+<h3>How do I test the bond strength of a fusible ribbon?</h3>
+<p>Fuse the trim to the actual production fabric under the specified press conditions, condition the specimen, and
+measure peel strength with a 180&deg; adhesive tape peel test, reporting the minimum of five specimens per
+25&nbsp;millimetres rather than the mean. Three details make the test meaningful. First, it must be run on the
+production fabric and not on a design swatch or a generic calico, because fabric finishing varies between lots and
+calendered surfaces give the adhesive almost nothing to grip. Second, the specimen should include the edge of the
+adhesive band rather than only the middle, because the free edges of the web are where a fusible bond peels first.
+Third, the report must state the press temperature, dwell time, pressure and cooling allowance used to produce the
+specimen, because a peel value without its process context cannot be compared to anything.</p>
+
+<h3>Why does a fusible bond fail after washing when it passed the initial test?</h3>
+<p>Three causes are common. The first is that the adhesive chemistry is wrong for the substrate, so the initial bond
+formed adequately but the chemistry does not survive wetting, which is the classic behaviour of polyamide web and
+the reason a retention floor after the stated wash cycle should be part of the specification. The second is that the
+substrate surface structure gave the adhesive little to grip, because the production fabric is more tightly woven,
+calendered or coated than the sample used for qualification, so the bond was weak from the start and the wash exposed
+it. The third is heat damage to the substrate, where a press set too hot for a delicate fabric weakened the fibres so
+the bond took the fabric with it. The retention audit separates these: a bond that retains less than 70&nbsp;per cent
+of its initial strength after the wash cycle is a chemistry or substrate problem, while a bond that retains strength
+but leaves fabric fuzzing is a substrate damage problem.</p>
+
+<h3>Can any fabric accept a fusible ribbon trim?</h3>
+<p>No, and this is the requirement most often missing from a fusible brief. A heat-activated adhesive needs a
+substrate that will tolerate the press temperature without damage and has enough surface structure for the adhesive
+to grip. Calendered, coated, waxed and water-repellent-finished fabrics all reduce or eliminate the mechanical
+interlock the adhesive depends on, and elastane blends above roughly 15&nbsp;per cent elastane soften and distort at
+fusing temperatures. Nylon is generally unsuitable because of its low heat tolerance. The safe approach is to treat
+compatibility as a tested list rather than an assumption: specify the fibre composition, the finish and the weight of
+every fabric the trim will be applied to, and require a compatibility test on a physical sample from the production
+lot before the programme is released. Where the substrate is outside the permitted list, the alternative is a
+sew-through construction in which the fusible serves only as a positioning aid.</p>
+
+<h3>What press temperature and dwell time should I use for fusible ribbon?</h3>
+<p>The correct figures come from the adhesive chemistry and the coating weight, and they should be quoted by the trim
+supplier rather than guessed at the press. As a general guide, polyamide web activates in the 125 to
+140&nbsp;degree Celsius range, polyester web in the 130 to 150&nbsp;degree range, and EVA web below that, with dwell
+times commonly between 8 and 12 seconds and pressures around 0.35&nbsp;bar for apparel weight. Two operating rules
+matter more than the numbers themselves. First, the press should be verified with an independent temperature check
+rather than trusted from its original set point, because press calibration drifts and a machine that reads 140&nbsp;degrees
+at the bed may actually be delivering 155. Second, the panel must be allowed to cool under constraint before it is
+folded or handled, because the bond crystallises as it cools and a panel handled while still hot will be deformed
+before it has set.</p>
+
+<h3>What is the minimum order quantity for custom fusible ribbon?</h3>
+<p>At Smith Ribbon, custom fusible ribbon typically starts around 1,000 metres per width and colour for an existing
+base ribbon construction, with a new base weave, a new colour or a new adhesive web width adding normally ten to
+fifteen days on top of the standard 30 to 45 days to production readiness. The binding constraint on a fusible
+programme is not the unit price but the number of distinct base-ribbon and adhesive-web combinations, because each
+combination requires its own compatibility test on the buyer's production fabric and its own coverage and peel
+verification. For that reason it is worth rationalising the trim range early, since consolidating four widths of
+fusible trim onto one web width and one base construction usually saves more in setup and qualification time than it
+costs in unit price.</p>
+"""
+
+write_article(a, BODY,
+              "Specify the fusible bond, not just the fusible ribbon",
+              "Request the fusible compatibility test template with peel, coverage and retention requirements")
+print(f"slug={SLUG}")

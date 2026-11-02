@@ -1,0 +1,25 @@
+2026-10-02 GEO daily push — 2 B2B articles deployed (DOUBLE SHIFT)
+
+# AM (10:00): Mill-Side Co-Innovation, Brand-Buyer Co-Design Collaboration & Capsule-Drop Joint-Development Architecture
+- file: blog/blog-ribbon-oem-188-module-brand-buyer-mill-side-co-innovation-brand-buyer-co-design-collaboration-capsule-drop-joint-development-architecture-global-brand-procurement-2026-10-02-am.html
+- 6 layers / 188 modules / 28-day time-to-capsule-launch-window
+- ~1400 words, FAQ + JSON-LD BlogPosting + OG/Twitter cards + canonical
+- Topics: 5-phase co-innovation governance (trend-scout → co-design-sprint → lab-dip-iteration → capsule-pilot-run → capsule-launch), 4-tower lab-dip iteration (color/substrate/finishing/geometric), designer-residency 14-day on-site, 3-layer IP-governance (mill-IP + brand-IP + named-designer-IP), 28-day capsule-launch window
+- Commit hash: c1c9d13
+- Repo: shiyuanxu666-svg/smithribbon-web
+
+# PM (15:00): Mill-Side Vendor-Managed-Inventory (VMI), Consignment-Stock & Auto-Replenishment Architecture
+- file: blog/blog-ribbon-oem-189-module-brand-buyer-mill-side-vendor-managed-inventory-vmi-consignment-stock-auto-replenishment-architecture-global-brand-procurement-2026-10-02-pm.html
+- 6 layers / 189 modules / 99% fill-rate ramp-target
+- ~1400 words, FAQ + JSON-LD BlogPosting + OG/Twitter cards + canonical
+- Topics: 5-stage inventory-throughput (VMI-onboarding → reorder-point-engineering → EDI-handshake-live → consignment-stock-set → auto-replenishment-live), 4-tier reorder-point engine (lead-time/demand-forecast/safety-stock/MOQ), hub-DC cross-dock 24-48h SLA, EDI-855/856/810 handshake (inbound/outbound/inventory), 99% fill-rate steady-state
+- Commit hash: c1c9d13 (same commit, both files)
+- Repo: shiyuanxu666-svg/smithribbon-web
+
+# Updates:
+- sitemap.xml: 2 new entries appended (priority default, lastmod 2026-10-02)
+- blog.html: 2 new blog-card entries inserted after M187
+- index.html: 2 new news-card <li> entries inserted after M187
+
+# Notes:
+- Used `git push origin main` directly from /workspace/smithribbon-web because /workspace/push-retry.py is hardcoded to ribbonbow123 repo (not smithribbon-web). Confirmed successful push: 2898ae6..c1c9d13  main -> main

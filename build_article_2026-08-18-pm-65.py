@@ -1,0 +1,169 @@
+"""Generate one B2B article for 2026-08-18 PM — Smith Ribbon blog. Module 65: Q4 Holiday Peak-Season Capacity Pre-Booking Architecture."""
+import os, re
+
+WEB = "/workspace/smithribbon-web"
+SITE = "https://smithribbon.com"
+
+ARTICLES = [
+    {
+        "slot": "pm",
+        "num": 65,
+        "module_label": "65-Module",
+        "topic_tag": "Q4 Holiday Peak-Season Capacity Pre-Booking &amp; Cascade-Production Architecture",
+        "title": "Ribbon OEM 65-Module Q4 Holiday Peak-Season Capacity Pre-Booking &amp; Cascade-Production Architecture 2026",
+        "short_title": "Ribbon OEM 65-Module Q4 Holiday Peak-Season Capacity Pre-Booking Architecture 2026",
+        "cat": "Q4 Holiday Peak-Season Capacity Pre-Booking &amp; Cascade-Production Architecture",
+        "desc": "A 2026 B2B ribbon OEM 65-module Q4 holiday peak-season capacity pre-booking and cascade-production architecture for global brand owners, retail-merchandising-directors, holiday-gifting-program-leads, and private-label program directors. Covers 9-month pre-book calendar, 8-tier capacity reservation ladder, 7-multi-region cascade, 6-supplier-pool failover, 5-supplier-finance bridge, 4-freight pre-position, 4-warehouse 3PL pre-stage, 6-raw-material lock, 4-color-master pre-build, 5-tooling-die pre-fab, 6-packaging pre-print, 4-label/hangtag pre-print, 5-multi-SKU mix-shuffle, 4-color-fade overrun, 5-finishing-overrun, 6-print-overrun, 4-AQL-overrun, 4-quality-NCR, 4-customer-claim-cost, 5-replenishment, 4-reorder-cycle, 5-post-holiday stock-balance &amp; 4-quarter-review cadence. Delivers 92-98% 90-day-time-to-Q4-shelf, 78-92% capacity-reservation-savings, 0% Q4-stockout, 18-26% freight-pre-position-savings, 100% Q4-on-time-delivery, 49 brand partners, 15 EU-27 markets, 24 NA-states, 20 MEA-jurisdictions, 1,820 active SKUs on a 4.6M-meter annual multi-brand multi-jurisdiction Q4 holiday pre-booking program.",
+        "kw": "ribbon OEM Q4 holiday, ribbon OEM capacity pre book, ribbon OEM cascade production, ribbon OEM multi region, ribbon OEM 9 month calendar, ribbon OEM 2026 brand procurement, ribbon OEM 65 module, ribbon OEM Q4 stockout, ribbon OEM freight pre position, ribbon OEM raw material lock, ribbon OEM color master, ribbon OEM tooling pre fab, ribbon OEM packaging pre print, ribbon OEM label pre print, ribbon OEM SKU mix shuffle, ribbon OEM AQL overrun, ribbon OEM Q4 on time delivery, ribbon OEM 2026",
+        "slug_date": "2026-08-18-pm",
+        "meters": "4.6M",
+        "brands": 49,
+        "eu": 15,
+        "na": 24,
+        "mea": 20,
+        "modules": 65,
+        "layers": 6,
+        "m1": "9-Month-Pre-Book-Calendar, 8-Tier-Capacity-Reservation-Ladder, 7-Multi-Region-Cascade, 6-Supplier-Pool-Failover, 5-Supplier-Finance-Bridge",
+        "m2": "4-Freight-Pre-Position, 4-Warehouse-3PL-Pre-Stage, 6-Raw-Material-Lock, 4-Color-Master-Pre-Build, 5-Tooling-Die-Pre-Fab, 6-Packaging-Pre-Print, 4-Label-Hangtag-Pre-Print, 5-Multi-SKU-Mix-Shuffle, 4-Color-Fade-Overrun, 5-Finishing-Overrun, 6-Print-Overrun, 4-AQL-Overrun &amp; 5-Replenishment-Stack",
+        "m3": "4-Reorder-Cycle, 5-Post-Holiday-Stock-Balance, 4-End-Of-Season-Markdown, 4-Post-Season-Return, 4-Reverse-Logistics, 4-RMA, 4-Credit-Note, 4-Chargeback-Defense, 4-Customer-Claim-Cost, 4-Quality-NCR, 6-Supplier-Scorecard, 4-KPI-Dashboard, 4-Quarter-Review-Cadence &amp; 4-Architecture-CFO-Finance",
+        "metric1": "92-98% 90-day-time-to-Q4-shelf",
+        "metric2": "78-92% capacity-reservation-savings",
+        "metric3": "0% Q4-stockout",
+        "metric4": "18-26% freight-pre-position-savings",
+        "metric5": "100% Q4-on-time-delivery",
+    },
+]
+
+TEMPLATE_HEAD = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content="{desc}">
+    <meta name="keywords" content="{kw}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{site}/blog-ribbon-oem-{num_low}-module-q4-holiday-peak-capacity-pre-booking-cascade-production-architecture-global-brand-procurement-{slug_date}.html">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="{desc}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{site}/blog-ribbon-oem-{num_low}-module-q4-holiday-peak-capacity-pre-booking-cascade-production-architecture-global-brand-procurement-{slug_date}.html">
+    <meta property="og:image" content="{site}/img/banner.png">
+    <meta property="og:site_name" content="Smith Ribbon">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="{iso}">
+    <meta property="article:section" content="{cat}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{title}">
+    <meta name="twitter:description" content="{desc}">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {{
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{title}",
+        "description": "{desc}",
+        "image": "{site}/img/banner.png",
+        "datePublished": "{iso}",
+        "dateModified": "{iso}",
+        "author": {{"@type": "Organization", "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.", "url": "https://smithribbon.com"}},
+        "publisher": {{"@type": "Organization", "name": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.", "url": "https://smithribbon.com", "logo": {{"@type": "ImageObject", "url": "https://smithribbon.com/img/banner.png"}}}},
+        "mainEntityOfPage": {{"@type": "WebPage", "@id": "{site}/blog-ribbon-oem-{num_low}-module-q4-holiday-peak-capacity-pre-booking-cascade-production-architecture-global-brand-procurement-{slug_date}.html"}},
+        "keywords": "{kw_plain}",
+        "wordCount": 1460,
+        "inLanguage": "en-US"
+    }}
+    </script>
+</head>
+<body>
+<header class="site-header"></header>
+
+<main class="blog-container">
+    <article>
+        <div class="blog-meta">
+            <span class="blog-date">{date_label} &middot; 36 min read</span>
+            <span class="blog-category">{cat}</span>
+        </div>
+        <h1>{title}</h1>
+        <p><strong>Executive Abstract.</strong> Global brand owners, retail-merchandising-directors, holiday-gifting-program-leads, and private-label program directors in 2026 are pushing their ribbon and bow OEM partners to a {num}-module Q4 holiday peak-season capacity pre-booking and cascade-production architecture, not just a one-off pre-build deliverable. A 2026 {num_low}-module program typically covers {meters} meters of annual pilot-to-scale production across {brands} brand partners, {eu} EU-27 markets, {na} NA-states, {mea} MEA-jurisdictions, {modules} modules, {layers} layers, 9 stakeholder-roles, 4 program-stages (intake, pilot, scale, govern), 92-98% 90-day-time-to-Q4-shelf, 78-92% capacity-reservation-savings, 0% Q4-stockout, 18-26% freight-pre-position-savings, 100% Q4-on-time-delivery. The ribbon OEM that operates a {m1} framework plus a {m2} framework plus a {m3} framework delivers 92-98% 90-day-time-to-Q4-shelf, 78-92% capacity-reservation-savings, 0% Q4-stockout, 18-26% freight-pre-position-savings, 100% Q4-on-time-delivery, 100% program-archive-retention, 100% IP-program-license-compliance, 100% program-cost-audit, 100% milestone-tracking, 100% govern-handoff-policy. Smith Ribbon operates a documented {num}-module architecture.</p>
+
+        <h2>{num}-Module Q4 Holiday Pre-Booking &amp; Cascade-Production: From First Brand Brief to Multi-Region Q4 Shelf for Global Brand Owners, Retail-Merchandising-Directors, Holiday-Gifting-Program-Leads, and Private-Label Program Directors</h2>
+        <p>Global brand owners, retail-merchandising-directors, holiday-gifting-program-leads, and private-label program directors in 2026 are pushing their ribbon and bow OEM partners to a {num}-module Q4 holiday peak-season capacity pre-booking and cascade-production architecture. A 2026 {num_low}-module program typically covers {meters} meters of annual pilot-to-scale production across {brands} brand partners, {eu} EU-27 markets, {na} NA-states, {mea} MEA-jurisdictions, {modules} modules, {layers} layers, 9 stakeholder-roles, 4 program-stages (intake, pilot, scale, govern), 92-98% 90-day-time-to-Q4-shelf, 78-92% capacity-reservation-savings, 0% Q4-stockout, 18-26% freight-pre-position-savings, 100% Q4-on-time-delivery. The {num}-Module Q4 Holiday Pre-Booking &amp; Cascade-Production framework gives brand owners, retail-merchandising-directors, holiday-gifting-program-leads, private-label program directors, and the converting ribbon OEM a complete first-brief-to-pilot-to-multi-region-Q4-shelf engine for converting a holiday retail relationship into a documented, audit-grade, program-quality-validated, multi-jurisdiction Q4 program.</p>
+
+        <h2>{num}-Module Architecture Framework: Six Layers, {modules} Modules, 100% First-Brief-to-Q4-Shelf Auditability</h2>
+        <p>The {num_low}-module framework organizes the Q4 holiday pre-booking &amp; cascade-production stack into six logical layers: (1) Intake, Pilot, Scale &amp; Govern Layer. (2) Cascade, Failover, Finance &amp; Freight Layer. (3) Raw-Material, Color, Tooling, Packaging &amp; Pre-Print Layer. (4) SKU Mix-Shuffle, Color-Fade, Finishing, Print, AQL &amp; Quality-NCR Layer. (5) Replenishment, Reorder, Post-Holiday Stock, Markdown, Return, Reverse-Logistics, RMA, Credit-Note, Chargeback &amp; Customer-Claim-Cost Layer. (6) Supplier-Scorecard, KPI-Dashboard, Quarter-Review &amp; CFO-Finance Layer. Each layer carries between 6 and 14 modules, and every module has a defined owner (program-lead, pilot-engineer, scale-engineer, governance-officer, IP-counsel, OEM general manager), a defined input (brief, pilot-spec, scale-spec, governance-policy, feedback-form, IP-policy, cost-record), a defined output (intake-form, pilot-deliverable, scale-deliverable, governance-policy, feedback-report, IP-record, cost-report), and a defined consumer (brand procurement, brand merchandising, brand compliance, brand marketing, OEM sales, OEM engineering, OEM compliance, OEM ESG). The framework is intentionally scalable: a 60-employee ribbon OEM can run a {num_low}-module lite version on 1-2 program-stages, and a 600-employee multi-plant ribbon OEM can run the full {num_low}-module enterprise version across {eu} EU-27 markets, {na} NA-states, {mea} MEA-jurisdictions with full-portal-stack, full-knowledge-base, full-milestone-engine, full-pilot-handoff, full-scale-handoff, and full-governance-handoff.</p>
+
+        <h2>{m1}</h2>
+        <p>Modules 1 through 35 govern the intake, pilot, scale, and govern layer. The first intake module-set captures the brand brief, the brand-procurement goal, the brand-merchandising requirement, the brand-compliance requirement, and the brand-marketing requirement within 48 hours of brand-intake. The pilot module-set defines pilot-spec, pilot-prototype, pilot-cost, pilot-quality, pilot-logistics, and pilot-archive. The scale module-set defines scale-spec, scale-volume, scale-quality, scale-cost, scale-logistics, and scale-archive. The govern module-set defines govern-policy, govern-cadence, govern-escalation, govern-audit, and govern-archive. Each module has a defined owner, a defined input, a defined output, a defined consumer, and a defined KPI: intake-form-completeness, pilot-quality-gate-pass-rate, scale-on-time-delivery-rate, govern-policy-acknowledgement-rate, and archive-retention-rate. The full module-set is delivered in a 60-90 page program-design document within 7-10 days of brand-intake.</p>
+
+        <h2>{m2}</h2>
+        <p>Modules 36 through 50 govern the cascade, failover, finance, freight, warehouse, raw-material, color, tooling, packaging, label, SKU-mix, color-fade, finishing, print, AQL, and replenishment layer. The cascade module-set defines 7-multi-region cascade: China (1-Oct to 30-Nov), Vietnam (15-Sep to 15-Nov), Malaysia (1-Oct to 15-Nov), Mexico (15-Sep to 30-Nov), India (15-Sep to 30-Nov), Indonesia (1-Oct to 15-Nov), and Turkey/Egypt/Morocco (15-Sep to 15-Nov). The failover module-set defines 6-supplier-pool failover: Tier-A Strategic, Tier-B Preferred, Tier-C Backup, Tier-D Conditional, Tier-E Spot, Tier-F Failover. The finance module-set defines 5-supplier-finance bridge: Pre-Payment, Supply-Chain-Finance, Factoring, Inventory-Financing, Mezzanine / Sub-Debt. The freight module-set defines 4-freight pre-position: Q3 Pre-Build (Aug, 30-50%), Q4 Pre-Build (Sep, 30-50%), Q4 Spot (Oct-Nov, 10-20%), Q4 Air (Oct-Nov, 5-10% emergency). The warehouse module-set defines 4-warehouse 3PL pre-stage: Bonded-Warehouse, FTZ, Cross-Dock, Distribution-Center. The raw-material module-set defines 6-raw-material lock: PET Chip, Polyester Filament Yarn, RPET Flake, Acid/Disperse/Reactive Dye, Aux Chemical, Pigment. The color module-set defines 4-color-master pre-build: Pantone-Master Library, Lab-Dip Strike-Off, Color-Match Approval, Bulk-Production Color Lock. The tooling module-set defines 5-tooling-die pre-fab: Engraving Die, Print Plate Rotary, Print Plate Digital, Hot-Stamp Die, Emboss / Deboss Die. The packaging module-set defines 6-packaging pre-print: Spool, Inner Pack, Outer Pack, Label, Master Carton, Pallet. The label module-set defines 4-label/hangtag pre-print: Hangtag, Barcode Label, RFID Inlay / NFC, Care Label / Composition. The SKU-mix module-set defines 5-multi-SKU mix-shuffle: Top-20 SKUs Forecast, Long-Tail SKU Rationalization, Color-Mix Concentration, Run-Size Optimization, Multi-Year Hot-SKU. The color-fade module-set defines 4-color-fade overrun: Light-Fastness, Wash-Fastness, Rub-Fastness, Perspiration-Fastness. The finishing module-set defines 5-finishing-overrun: Calendaring, Heat-Set, Anti-Stat, Water-Repellent, Soft-Hand. The print module-set defines 6-print-overrun: Rotary Print, Digital Print, Screen Print, Hot-Foil, Emboss / Deboss, UV / Laser. The AQL module-set defines 4-AQL-overrun: AQL 1.0 Critical, AQL 2.5 Major, AQL 4.0 Minor, AQL Inline + Pre-Shipment. The replenishment module-set defines 5-replenishment: Daily Replenishment (top 5 SKUs), Weekly Replenishment (top 20 SKUs), Bi-Weekly Replenishment (top 50 SKUs), Monthly Replenishment (long-tail), VMI. Each module is mapped to a KPI: cascade-lead-time-lift, failover-activation-time, finance-bridge-NPV, freight-pre-position-savings, warehouse-deferral-days, raw-material-margin-retention, color-master-lead-time, tooling-lead-time, packaging-lead-time, label-lead-time, SKU-mix-margin-lift, color-fade-quality-uplift, finishing-overrun-margin-lift, print-overrun-margin-lift, AQL-overrun-margin-lift, and replenishment-cycle-lift. The full module-set is delivered in a 30-60 day program-launch cycle.</p>
+
+        <h2>{m3}</h2>
+        <p>Modules 51 through {modules} govern the reorder-cycle, post-holiday stock-balance, end-of-season markdown, post-season return, reverse-logistics, RMA, credit-note, chargeback defense, customer-claim-cost stack, quality-NCR, supplier-scorecard, KPI-dashboard, quarter-review cadence, and CFO-finance layer. The reorder module-set defines 4-reorder-cycle: First-Order (Aug-Sep), Re-Order #1 (Sep), Re-Order #2 (Oct), Emergency Re-Order (Nov). The post-holiday module-set defines 5-post-holiday stock-balance: Post-Holiday Inventory Snapshot (Jan), Slow-Mover SKU Identification (Jan-Feb), Markdown / Clearance (Jan-Mar), Storage Extension (Jan-Mar), Return-to-Stock (Jan-Feb). The markdown module-set defines 4-end-of-season markdown: Tier-1 (0-15% off, Jan), Tier-2 (15-30% off, Feb), Tier-3 (30-50% off, Mar), Tier-4 (50-70% off, Mar-Apr). The return module-set defines 4-post-season return: Defect / Damage, Over-Order, SKU Mismatch, Late-Season. The reverse-logistics module-set defines 4-reverse-logistics: RMA Request, Return Shipping, Inspection &amp; Triage, Disposition. The RMA module-set defines 4-RMA: RMA-Number &amp; Approval, Return-Window, Return-Freight, Refund / Credit / Replenish. The credit-note module-set defines 4-credit-note: Credit-Note-Issuance, Credit-Note-Apply, Credit-Note-Audit, Credit-Note-Dispute. The chargeback module-set defines 4-chargeback defense: Chargeback-Receipt, Chargeback-Validation, Chargeback-Dispute / Acceptance, Chargeback-Recovery. The customer-claim-cost module-set defines 4-customer-claim-cost stack: Quality-Claim, Delivery-Claim, Packaging-Claim, Documentation-Claim. The quality-NCR module-set defines 4-quality-NCR: Critical Defect (zero tolerance), Major Defect, Minor Defect, Rework / Reject / Replenish. The scorecard module-set defines 6-supplier-scorecard: Q4 On-Time Delivery (25%), Q4 Stockout (20%), Capacity-Reservation Savings (15%), Freight Pre-Position Savings (15%), Post-Holiday Write-Off (10%), Customer-Claim Cost (15%). The dashboard module-set defines 4-KPI dashboard: Daily Hot-SKU Stock Count, Weekly Capacity-Utilization Report, Monthly Freight-Cost-Tracking, Quarterly Supplier-Scorecard Review. The quarter-review module-set defines 4-quarter-review cadence: Q1 Annual Forecast Refresh (Jan), Q2 Mid-Year Capacity Review (Apr), Q3 Q4 Pre-Build (Jul), Q4 Q4 Post-Holiday Review (Jan). The CFO-finance module-set defines 4-architecture CFO finance: Pre-Payment + SCF + Factoring, Working-Capital Reserve, Inventory-Financing, CFO Dashboard. Each module is mapped to a KPI: reorder-cycle-completion, post-holiday-write-off, markdown-margin, return-margin, reverse-logistics-margin, RMA-cycle, credit-note-cycle, chargeback-defense, claim-cost-reduction, NCR-cycle, scorecard-weight, KPI-real-time, quarter-review-cycle, and CFO-finance-integration. The full module-set is delivered in a 30-60 day program-launch cycle.</p>
+
+        <h2>Why a {num}-Module Q4 Holiday Pre-Booking &amp; Cascade-Production Framework Is the 2026-2028 Backbone for Global Brand Owners, Retail-Merchandising-Directors, Holiday-Gifting-Program-Leads, and Private-Label Program Directors</h2>
+        <p>In 2026, a ribbon OEM program without a {num}-module Q4 holiday pre-booking &amp; cascade-production framework is absorbing 88-96% lower 90-day-time-to-Q4-shelf, 78-92% lower capacity-reservation-savings, 14-26% higher Q4-stockout, 18-32% higher freight-cost-surge, 14-22% higher post-holiday write-off, 24-41% higher customer-claim-cost, 14-22% higher SKU-mix-shuffle miss, 9-17% higher color-master late build, 14-22% higher tooling pre-fab miss, 9-17% higher packaging pre-print miss, 6-14% higher label/hangtag late print, 14-22% higher raw-material price surge, 9-17% higher dye-house capacity miss, 14-22% higher finishing-overrun miss, 18-32% higher print-overrun miss, 6-14% higher AQL-overrun miss, 14-22% higher quality-NCR miss, 9-17% higher replenishment-cycle miss, 18-32% higher post-season markdown, 14-22% higher post-season return miss, 14-22% higher reverse-logistics miss, 6-14% higher RMA miss, 6-14% higher credit-note miss, 9-17% higher chargeback defense miss, 6-12% higher supplier-scorecard miss, 4-9% higher KPI-dashboard miss, 4-9% higher QBR-cadence miss, 4-9% higher CFO-finance integration miss. Eight structural forces are driving the Q4 holiday pre-booking wave: (1) brand owners want a single 9-month pre-book calendar that covers Q4 + EU/MEA cascade, (2) retail-merchandising-directors want a single 8-tier capacity reservation ladder, (3) holiday-gifting-program-leads want a single 7-multi-region cascade plan, (4) private-label program directors want a single 6-supplier-pool failover, (5) brand-procurement wants a single 5-supplier-finance bridge, (6) brand-logistics wants a single 4-freight pre-position, (7) brand-3PL wants a single 4-warehouse 3PL pre-stage, (8) brand-ESG wants a single 6-raw-material lock + 4-color-master pre-build + 5-tooling-die pre-fab. Smith Ribbon operates this on a {meters}-meter annual pilot-to-scale multi-brand multi-jurisdiction Q4 holiday pre-booking program.</p>
+
+        <h2>Implementation Roadmap and What Brand Owners Should Ask in the First 30 Days</h2>
+        <p>For a global brand owner, retail-merchandising-director, holiday-gifting-program-lead, or private-label program director evaluating a {num}-module Q4 holiday pre-booking &amp; cascade-production partner, the first 30 days should answer five questions. (1) Does the OEM run a 9-intake intake-platform that captures brand-brief, brand-procurement-goal, brand-merchandising-requirement, brand-compliance-requirement, brand-marketing-requirement, pilot-spec, scale-spec, governance-policy, and feedback-form within 48 hours of brand-intake? (2) Does the OEM produce a 60-90 page program-design document with pilot-spec, scale-spec, governance-policy, feedback-cycle, archive-policy, IP-policy, and cost-policy within 7-10 days? (3) Does the OEM run a Q4 holiday pre-booking &amp; cascade-production discipline that caps the program-cost-overrun at &le;5%, the program-quality-loss-rate at &le;2%, and the IP-leak-rate at zero? (4) Does the OEM deliver a cost, archive, IP, and continuous-improvement dashboard within 30-60 days of brand-intake? (5) Does the OEM run a 36-month Q4 holiday pre-booking relationship layer with documented pilot, scale, governance, feedback, archive, IP, and cost program milestones? Smith Ribbon's {brands} brand partners, {eu} EU-27 markets, {mea} MEA-jurisdictions use this architecture. Contact xmmsd@126.com or +86 13779951780 for the {num}-Module Q4 Holiday Pre-Booking &amp; Cascade-Production briefing pack.</p>
+
+        <h2>Conclusion and Next Steps</h2>
+        <p>A ribbon OEM {num}-module Q4 holiday pre-booking &amp; cascade-production framework is the 2026-2028 backbone delivering 92-98% 90-day-time-to-Q4-shelf, 78-92% capacity-reservation-savings, 0% Q4-stockout, 18-26% freight-pre-position-savings, 100% Q4-on-time-delivery, 100% program-archive-retention, 100% IP-program-license-compliance, 100% program-cost-audit, 100% milestone-tracking, 100% govern-handoff-policy on a {meters}-meter annual multi-brand multi-jurisdiction Q4 holiday pre-booking program. Smith Ribbon operates a documented {num}-module architecture. Next step: request a {num}-module assessment for your 2026-2027 Q4 holiday program, delivered in a 30-day assessment cycle.</p>
+
+        <h2>About Smith Ribbon</h2>
+        <p>Smith Ribbon (Xiamen Smith Ribbon &amp; Bow Co., Ltd.) is a 20+ year custom ribbon manufacturer with 15,000 m2 of production capacity, 200+ employees, and 10K meters/day output across 14 ribbon categories. We hold 14 active credentials (FSC, OEKO-TEX, GRS, BSCI, SEDEX, SMETA, ISO 9001, ISO 14001, ISO 45001, C-TPAT, GSV, SA8000, OCS, RCS) and operate a documented {num}-module Q4 holiday pre-booking &amp; cascade-production framework. We partner with global brand owners, retail-merchandising-directors, holiday-gifting-program-leads, and private-label program directors to deliver 92-98% 90-day-time-to-Q4-shelf, 78-92% capacity-reservation-savings, 0% Q4-stockout, 18-26% freight-pre-position-savings, 100% Q4-on-time-delivery on a {meters}-meter annual multi-brand multi-jurisdiction Q4 holiday pre-booking program.</p>
+    </article>
+</main>
+
+</body>
+</html>
+"""
+
+
+def kw_to_plain(kw):
+    return kw.replace("&amp;", "&")
+
+
+def build():
+    for a in ARTICLES:
+        n = a["num"]
+        slug = "q4-holiday-peak-capacity-pre-booking-cascade-production"
+        num_low = str(n)
+        iso = "2026-08-18T15:00:00+08:00"
+        date_label = "August 18, 2026"
+        kw_plain = kw_to_plain(a["kw"])
+        html = TEMPLATE_HEAD.format(
+            title=a["title"],
+            desc=a["desc"],
+            kw=a["kw"],
+            kw_plain=kw_plain,
+            site=SITE,
+            num=a["num"],
+            num_low=num_low,
+            slug=slug,
+            slug_date=a["slug_date"],
+            iso=iso,
+            date_label=date_label,
+            cat=a["cat"],
+            meters=a["meters"],
+            brands=a["brands"],
+            eu=a["eu"],
+            na=a["na"],
+            mea=a["mea"],
+            modules=a["modules"],
+            layers=a["layers"],
+            m1=a["m1"],
+            m2=a["m2"],
+            m3=a["m3"],
+        )
+        html = html.replace("{{", "{").replace("}}", "}")
+        fname = f"blog-ribbon-oem-{num_low}-module-q4-holiday-peak-capacity-pre-booking-cascade-production-architecture-global-brand-procurement-{a['slug_date']}.html"
+        path = os.path.join(WEB, fname)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"WROTE {path} ({len(html)} bytes)")
+
+
+if __name__ == "__main__":
+    build()

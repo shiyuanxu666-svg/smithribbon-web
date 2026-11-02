@@ -1,0 +1,420 @@
+#!/usr/bin/env python3
+"""Build smithribbon B2B module 263 (PM), 2026-10-24.
+
+Topic: mill-side COLOURFASTNESS & CROCKING-CONTROL interlock — how a brand buyer
+controls the rub fastness, wash fastness, perspiration fastness and light
+fastness of dyed ribbon, and how dyed trim survives its own supply chain.
+
+Distinct from every existing module: 259 warp-sett/crease-reset, 260 pick
+density, 261 weft-sett/width, 262 elastic recovery/edge sealing, 256 print
+route, 254/255 lab dip, 257 slit width, 258 shrinkage, DPP traceability.
+This module covers the DYE SYSTEM — the part of ribbon colour that is decided
+before a single metre is woven, and that is lost or preserved in the dyeing,
+finishing, packing and customer-washing steps.
+"""
+from pathlib import Path
+import sys
+
+sys.path.insert(0, "/workspace/smithribbon-web")
+from sr_page import write_article
+
+SLUG = ("blog-ribbon-oem-263-module-mill-side-brand-buyer-colourfastness-crocking-rub-fastness-wash-fastness-"
+        "perspiration-light-fastness-interlock-architecture-global-brand-procurement-2026-10-24-pm")
+
+a = {
+    "title": "Mill-Side Brand-Buyer Colourfastness &amp; Crocking-Control Interlock Architecture &mdash; "
+             "Controlling Rub, Wash, Perspiration and Light Fastness in Dyed Ribbon Programmes 2026",
+    "desc": "B2B ribbon OEM 263-module colourfastness and crocking-control interlock architecture. "
+            "5-layer dye-system authority ladder, 4-stage fastness approval gate, 3-tier colour-shift "
+            "reconciliation ladder, and a crocking early-warning threshold. Smith Ribbon OEM since 2004.",
+    "kw": "colourfastness ribbon, crocking test, rub fastness ribbon, wash fastness dyed ribbon, "
+          "perspiration fastness, light fastness ribbon, dyed ribbon supplier, colour shift ribbon, "
+          "reactive dye polyester ribbon, disperse dye ribbon, ribbon colour approval, "
+          "fastness testing protocol, private label dyed ribbon, ribbon colour consistency, "
+          "AATCC fastness testing, ribbon OEM colour control",
+    "author": "Xiamen Smith Ribbon &amp; Bow Co., Ltd.",
+    "date_iso": "2026-10-24T07:00:00+00:00",
+    "date_human": "October 24, 2026",
+    "slug": SLUG,
+    "section": "Ribbon OEM Manufacturing",
+    "tag": "Ribbon OEM",
+    "read": "16 min read",
+    "word_count": 2600,
+}
+
+BODY = """
+<p class="lede">A ribbon that matches the approved swatch on day one and is a different colour by the time it
+reaches the customer's warehouse is one of the most expensive problems in trim, and almost none of it is
+visible in the mill. Colourfastness is decided by the dye system &mdash; the dye class, the fibre chemistry, the
+pretreatment, the dyeing route and the finishing sequence &mdash; and it is decided before the first metre is
+woven. Once that system is frozen and the fastness behaviour is qualified against the end use, the colour
+becomes stable for years. If it is not qualified, the same ribbon can pass a wet-rub test in August and fail a
+dry-rub test in December, and both results will be honest. This module is about the interlock that makes dye
+behaviour predictable across suppliers, across seasons and across the customer's own wash regime.</p>
+
+<h2>1. Why Dye System &mdash; Not the Swatch &mdash; Is the Real Specification</h2>
+
+<p>Most buyers specify colour the way it presents itself: a Pantone reference, a physical lab dip, an approved
+handing of swatches. All three are necessary. None of them is sufficient, because they describe an
+<em>outcome</em> at a moment in time rather than the <em>system</em> that produced it. The swatch tells you the
+colour was right when it was approved. It says nothing about whether it will still be right after six months in a
+warehouse in a coastal port, or after a customer&apos;s garment has been washed forty times, or after a
+forklift tyre has dragged across a carton.</p>
+
+<p>Two ribbons that match the same Pantone reference on the same swatch board can behave completely differently
+in service, because they are different materials. A reactive dye on a cellulose-blend carrier behaves nothing like
+a disperse dye on polyester. The same geometry, the same width, the same apparent shade, and entirely different
+fastness profiles.</p>
+
+<blockquote style="border-left:4px solid #b8854a;padding:8px 16px;margin:1.2em 0;background:#faf6f1;">
+&quot;38&nbsp;mm satin ribbon, Pantone 187&nbsp;C, colour matched to approved lab dip, dry rub fastness grade
+4 minimum at 20 rubs, wash fastness grade 4&ndash;5, to be packed in opaque poly bags, not in contact with
+white carton board, and shipped to a coastal distribution centre.&quot;
+</blockquote>
+
+<p>That single line contains four different colour risks, and only the first is a colour-matching instruction.
+The dry rub requirement is a crocking specification. The wash requirement is a dye-stability specification. The
+packing instruction is a lightfastness control. The shipping destination is a climate-exposure control that
+determines which fastness grades you actually need. A buyer who reads only the Pantone reference has read
+maybe a fifth of the specification.</p>
+
+<div class="kpi">
+  <p><strong>Commercial significance:</strong> colourfastness failures do not return as ribbon. They return as
+  the finished product &mdash; a gift box whose ribbon has bled onto the card, a garment whose trim has
+  discoloured in a laundry, a retailer's own quality audit finding. By the time the failure reaches you it has
+  already passed through your customer&apos;s customer, and the conversation has changed from &ldquo;can you
+  replace the ribbon&rdquo; to &ldquo;why did you approve this&rdquo;.</p>
+</div>
+
+<h2>2. The 5-Layer Dye-System Authority Model</h2>
+
+<p>Colour is the parameter most often left unguarded, because it feels like a design decision rather than an
+engineering one. Five layers, each with a named owner and a change threshold, make it governable.</p>
+
+<table>
+  <thead>
+    <tr><th>Layer</th><th>Parameter</th><th>Owner</th><th>Change threshold</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>L1</td><td>Dye class and fibre-dye pairing (e.g. disperse for polyester, reactive for cellulose, pigment for shades that cannot be matched by dye)</td>
+        <td>Brand, frozen at FAI</td><td>None. A change of dye class is a new SKU.</td></tr>
+    <tr><td>L2</td><td>Fibre content and blend ratio of the ribbon substrate</td>
+        <td>Brand, frozen at FAI</td><td>None without a new fastness qualification</td></tr>
+    <tr><td>L3</td><td>Fastness grades against the agreed test methods (dry rub, wet rub, wash, perspiration, light, water)</td>
+        <td>Mill, brand co-sign</td><td>Below 1 grade without written notice</td></tr>
+    <tr><td>L4</td><td>After-treatment and finishing sequence (heat setting, steaming, calendaring, resin, water-repellent)</td>
+        <td>Brand, frozen at FAI</td><td>None. Finishing can degrade an otherwise good dye.</td></tr>
+    <tr><td>L5</td><td>Dyehouse recipe, liquor ratio, pH curve, temperature profile, carry-over control and rinse regime</td>
+        <td>Mill, internal only</td><td>Mill informs brand on change of recipe or machine</td></tr>
+  </tbody>
+</table>
+
+<p>The layer most often left open is <strong>L4</strong>, and it is the layer most likely to cause a complaint.
+A ribbon that dyes perfectly and then receives a water-repellent finish, a heavy heat-set, or an optical brightener
+can lose fastness without any change to the dye itself. Heat setting is the obvious example: it is applied to
+almost every ribbon for dimensional stability, and a badly controlled thermal history can degrade the dye surface
+and reduce wet fastness while improving nothing the buyer asked for. If your mill treats heat setting as an
+internal routine rather than a quality-controlled step, that is a conversation worth having.</p>
+
+<p><strong>L1</strong> matters because a fibre-dye pairing is a physical constraint, not a preference. Polyester
+does not bond chemically with reactive dyes; cellulose does. When a buyer asks a mill to hit a Pantone on a
+polyester-blend ribbon and the mill answers with &ldquo;we can do it&rdquo;, the honest question is not whether
+they can match the shade but <em>which</em> dye they will use and what the fastness will be as a result. A pigment
+match on a deep saturated shade may be the only route, and pigment has fundamentally different fastness
+characteristics from a dye &mdash; often better in some respects, and almost always different in others.</p>
+
+<h2>3. The 4-Stage Fastness Approval Gate</h2>
+
+<h3>Stage 1 &mdash; Dye system and substrate declaration</h3>
+<p>The mill declares the fibre content and blend ratio, the dye class proposed, the dyeing route (piece dyeing,
+space dyeing, continuous dyeing, or dye-on-raw-white for greige programmes), and the available fastness profile.
+The brand confirms the end use, the customer care regime, and the packaging and storage conditions. This stage
+produces a written dye-system declaration, and that declaration is filed alongside the first-article approval
+rather than reconstructed later from a purchase order.</p>
+
+<h3>Stage 2 &mdash; Fastness measurement on the approved laboratory</h3>
+<p>Fastness is measured to a named standard, on a named scale, with the specimen conditioned to a stated state.
+The critical point, and the one that causes the recurring disputes in this industry, is that <strong>fastness
+grades are method-bound</strong>. A dry rub grade 4 under one method is not the same claim as a dry rub grade 4
+under another. Test method, number of rubs, specimen conditioning, and the substrate against which the rubbing
+is performed all change the result. The mill reports the method alongside the grade, always, and the brand
+treats a grade without a method as a number rather than a specification.</p>
+
+<h3>Stage 3 &mdash; Wet-process and colour-shift validation</h3>
+<p>Colour shift under wet processing is checked against the customer&apos;s actual care regime &mdash; wash
+temperature, detergent type, spin cycle, tumble dry. Where the customer contractually specifies a cold-wash or
+no-wash regime, the mill runs a defined wash-simulant cycle that reproduces it, and this is recorded as a
+qualification result rather than assumed. Two failures show up here and nowhere else: a dye that shifts in hue
+rather than in depth under alkaline detergent, and a colour that migrates onto adjacent white or pale materials
+during the wash &mdash; the crocking-onto-garment failure that is the brand customer&rsquo;s most common
+complaint about trim.</p>
+
+<h3>Stage 4 &mdash; Post-finish and packed-state confirmation</h3>
+<p>Fastness is re-confirmed on the finished article, after all finishing, because finishing can change it. The
+finished ribbon is also checked in its actual packing configuration: a ribbon that is fast in open air may sit
+against an absorbent, dye-bleeding substrate in the carton, and a rub test performed on the loose ribbon says
+nothing about the packed article. Light exposure in the pack &mdash; a clear bag on a sunlit pallet, a
+printed card that is not opaque &mdash; is reviewed at this stage too.</p>
+
+<div class="kpi">
+  <p><strong>Gate discipline:</strong> run the fastness qualification before the colour is locked to a Pantone,
+  not after. A shade that has to be re-matched because it failed wet processing costs far more than a shade that
+  was matched once against a qualified dye system.</p>
+</div>
+
+<h2>4. The 3-Tier Colour-Shift Reconciliation Ladder</h2>
+
+<p>When a delivered ribbon does not match the approved colour or does not behave as qualified, three tiers in
+order resolve almost every case.</p>
+
+<h3>Tier 1 &mdash; Confirm the protocol matches</h3>
+<p>Before anything else, establish that both parties are asking the same question. Was the fastness measured by
+the same method? Was the rub test against the same substrate? Was the specimen conditioned the same way? Was the
+comparison done against the same approved reference, and against a physical swatch rather than a screen? A
+substantial fraction of colour disputes are protocol mismatches, and a buyer who treats them as quality
+failures damages a working supplier relationship for no reason.</p>
+
+<h3>Tier 2 &mdash; Reconcile the physical cause</h3>
+<p>With the protocol agreed, there are five realistic causes for a colour or fastness shift: a change in fibre
+content or blend ratio from the supplier, a change of dye class or dye house, a change in the finishing sequence
+&mdash; particularly heat setting, resin or water-repellent application, a change in wash or rinse regime
+leaving residual alkali or disperse dye, and carry-over between lots in a shared dyehouse machine. Carry-over is
+underrated: a pale shade following a saturated dark in the same machine can pick up a tint that is invisible on
+the approved swatch and obvious on a production lot.</p>
+
+<h3>Tier 3 &mdash; Reconcile the commercial position</h3>
+<p>Now the commercial question, and it is the one most often skipped. A ribbon in a higher-performance dye system
+is not the same ribbon as the one quoted two seasons ago. If the price did not move while the specification did,
+the mill absorbed the difference &mdash; and you should expect that absorption to be reversed at the next
+cost-pressure cycle. If the price rose without a specification change, the cause belongs in Tier 2. If the mill
+declines to explain the change at all, that is a commercial answer and it should be treated as a failure to
+cooperate under the quality agreement rather than as a technical dispute.</p>
+
+<table>
+  <thead><tr><th>Observation</th><th>Likely cause</th><th>Tier</th><th>Action</th></tr></thead>
+  <tbody>
+    <tr><td>Colour matches swatch, crocking on the garment</td><td>Wet-rub grade below spec, or residual surface dye</td><td>2</td>
+        <td>Check wet rub with method; review post-wash rinse regime</td></tr>
+    <tr><td>Colour shifts after customer wash</td><td>Alkaline or thermal shift in dye system</td><td>2</td>
+        <td>Run wash-simulant cycle; requalify against care regime</td></tr>
+    <tr><td>Lot tint differs from approved swatch</td><td>Dyehouse carry-over or recipe change</td><td>2</td>
+        <td>Request dyehouse recipe and machine sequence; re-dip</td></tr>
+    <tr><td>Fastness lower than spec, price lower too</td><td>Substitution of dye class or finishing</td><td>3</td>
+        <td>Verify L1/L4 declarations; require written notice of substitution</td></tr>
+    <tr><td>Results differ, behaviour identical</td><td>Method mismatch, not a product problem</td><td>1</td>
+        <td>Align test method and conditioning; no commercial claim</td></tr>
+  </tbody>
+</table>
+
+<h2>5. The Crocking Early-Warning Threshold</h2>
+
+<p>Colour behaviour is measurable continuously and cheaply once the method is fixed. Four indicators, tracked per
+lot, give a brand buyer a defensible early-warning system.</p>
+
+<p><strong>Crocking index (CI)</strong> rates the observed transfer of colour from the ribbon onto a white
+adjacent material under the agreed dry-rub and wet-rub conditions, normalised so 1.000 equals the qualified
+reference. A reading below 0.90 means the ribbon is transferring more colour than the approved product and is
+the single most commercially dangerous indicator in this module, because it predicts a garment complaint from the
+end customer rather than a trim complaint from your own customer.</p>
+
+<p><strong>Colour-difference index (dE)</strong> records the measured colour difference between the production
+lot and the approved reference, in a stated colour space. The threshold that matters is not the absolute dE
+value but the trend across lots: a stable dE of 1.2 is a different situation from a dE drifting from 0.4 to 1.8
+over five consecutive lots.</p>
+
+<p><strong>Wet-fastness margin</strong> is the headroom between the measured wet-rub grade and the specified
+minimum. A lot sitting exactly on the specified minimum has no margin, and a lot sitting on it is one recipe
+drift away from a failure.</p>
+
+<p><strong>Carry-over residue check</strong> records the residual tint on a white companion material after
+storage contact with the production lot in its actual packing configuration. This is the indicator that catches
+the light bleed and the transfer problem in the warehouse before it reaches the customer.</p>
+
+<table>
+  <thead><tr><th>Indicator</th><th>Green</th><th>Amber</th><th>Red</th></tr></thead>
+  <tbody>
+    <tr><td>Crocking index (CI)</td><td>0.97&ndash;1.03</td><td>0.90&ndash;0.97</td><td>Below 0.90</td></tr>
+    <tr><td>Colour-difference index (dE) vs approved reference</td><td>&le;0.8</td><td>0.8&ndash;1.5</td><td>Above 1.5</td></tr>
+    <tr><td>Wet-rub fastness grade margin above spec</td><td>1 grade or more</td><td>On spec exactly</td><td>Below spec</td></tr>
+    <tr><td>Carry-over residue on white companion</td><td>None visible</td><td>Faint trace</td><td>Visible transfer</td></tr>
+    <tr><td>Lot-to-lot dE drift over 5 consecutive lots</td><td>&le;0.3</td><td>0.3&ndash;0.7</td><td>Above 0.7</td></tr>
+  </tbody>
+</table>
+
+<p>Any single red reading, or two consecutive amber readings, should trigger a hold-and-investigate before the
+lot ships. Holding one lot costs a few hours of production. Not holding it costs the customer relationship and,
+in retail, usually costs the listing.</p>
+
+<h2>6. Five Failure Modes, Diagnosed</h2>
+
+<h3>Failure mode 1 &mdash; The grade that means different things</h3>
+<p>The brand quotes dry rub grade 4; the mill reports grade 4; the customer&apos;s garment still marks. The
+numbers agree and the outcome does not, because the method differs. Detection: rub count, substrate and
+conditioning all differ between the two tests. Fix: write the test method into the quality agreement the way
+you write a width tolerance, and require the method to be reported with every result. This is the cheapest fix in
+the module and it removes an entire recurring class of dispute.</p>
+
+<h3>Failure mode 2 &mdash; The dye class changed and nobody noticed</h3>
+<p>A mill switches from a disperse dye to a pigment approach to hold a price or shorten a lead time. The shade
+matches, the swatch passes, and the fastness profile is materially different. Detection: wet rub and wash
+fastness drift without any change in the ribbon construction. Fix: freeze L1, require the dye class to be
+declared in writing at first-article approval, and treat a substitution as a new SKU requiring re-qualification
+rather than a purchasing decision.</p>
+
+<h3>Failure mode 3 &mdash; The heat set that undid the dye</h3>
+<p>The ribbon dyes to a qualified fastness profile, then passes through a thermal finishing stage with a
+mis-tuned temperature or dwell time. The surface dye is degraded. Detection: fastness measured on the greige
+or mid-process sample is better than fastness measured on the finished article. Fix: measure fastness on the
+finished article after all finishing, and hold the thermal window as a controlled parameter in L4 and L5 rather
+than as an internal routine.</p>
+
+<h3>Failure mode 4 &mdash; The carton that bleached the ribbon</h3>
+<p>A ribbon that is lightfast to the required grade is packed in a clear bag on a white, sun-exposed pallet in a
+port warehouse. Six weeks later it is visibly faded in patches and the customer concludes the ribbon is
+substandard. Detection: fading is non-uniform and correlates with pack position rather than with lot. Fix: treat
+packing and storage as part of the colour specification &mdash; opaque or light-barrier packaging, defined
+maximum warehouse light exposure, and a shelf-life expectation stated on the purchase order.</p>
+
+<h3>Failure mode 5 &mdash; Crocking measured on the wrong partner</h3>
+<p>Wet-rub fastness is tested dry against a standard white cloth, but the failure happens when the ribbon is
+wet and in contact with the customer&rsquo;s garment. Detection: dry rub passes, wet rub fails, and the transfer
+appears only after laundering. Fix: run the wet test with the specified companion material, and where the
+customer has a known product, test against a representative sample of it rather than a generic standard.</p>
+
+<h2>7. Implementation Roadmap</h2>
+
+<h3>Weeks 1&ndash;2 &mdash; Audit the colour specification, not the colour</h3>
+<p>Take your top twenty ribbon SKUs and check what the specification actually says. Look for a Pantone reference
+with no dye system, a fastness requirement with no test method, and a packing instruction that mentions nothing
+about light. Most buyers find that colour is the most specified parameter in the paperwork and simultaneously the
+least controlled in practice.</p>
+
+<h3>Weeks 3&ndash;4 &mdash; Fix the method before the tolerance</h3>
+<p>Write the test methods into the quality agreement before you renegotiate any grades. Once both sides run the
+same method, most historical colour disputes dissolve and the remaining conversation becomes about real
+performance.</p>
+
+<h3>Weeks 5&ndash;10 &mdash; Apply the four-stage gate to the next colour development</h3>
+<p>Run the construction-first sequence on your next new colour: dye system declared at Stage 1, fastness measured
+with method at Stage 2, wet-process validation against the care regime at Stage 3, post-finish and packed-state
+confirmation at Stage 4.</p>
+
+<h3>Months 3&ndash;6 &mdash; Start collecting the crocking index per lot</h3>
+<p>Begin recording crocking index and dE per lot per mill. These two indicators together catch the large majority
+of colour complaints before they leave the factory, and they convert an argument about a customer complaint into
+a conversation about a lot.</p>
+
+<h3>Month 9&ndash;12 &mdash; Re-verify against the care regime and the warehouse</h3>
+<p>Reconcile the delivered colour behaviour against the customer&rsquo;s actual care instructions and against
+your own storage conditions. If the customer has moved to a warmer or more alkaline wash, the qualification is
+stale even though nothing changed at the mill. Re-verify at programme renewal and re-freeze deliberately.</p>
+
+<h2>8. Conclusion</h2>
+
+<p>Colourfastness is not a property of a colour. It is a property of a dye system operating on a specific
+substrate through a specific finishing sequence, and it is decided long before anyone approves a swatch.</p>
+
+<p>The architecture here is deliberately unglamorous: five layers with named owners, four approval gates with
+wet-process validation ahead of colour lock, three tiers of reconciliation when the numbers disagree, and four
+indicators tracked per lot. Almost none of it costs money. All of it protects the parameter that customers
+notice first and complain about last.</p>
+
+<p>When you next qualify a dyed ribbon supplier, ask the question that settles it: <em>Show me the dye class and
+substrate declaration, the fastness grades with the method you measured them under, and what happens to those
+grades after heat setting.</em> A mill that answers with a dye system and a method is a mill that can hold a
+colour through a three-season programme. A mill that answers with a Pantone match alone is telling you that the
+colour cannot be guaranteed.</p>
+
+<h2>9. Frequently Asked Questions</h2>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is crocking and how do I test it on ribbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Crocking is the transfer of colour from a dyed textile onto an adjacent material through rubbing or contact with moisture. It is tested by rubbing the ribbon against a specified white companion material under dry or wet conditions for a stated number of cycles and grading the transfer. The Smith Ribbon crocking index normalises that result against the qualified reference: green from 0.97 to 1.03, amber from 0.90 to 0.97, red below 0.90. Because fastness grades are method-bound, the test method, substrate, conditioning and rub count must be specified for the result to be comparable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a mill substitute a pigment dye for a disperse dye without changing the product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not without re-qualification. Disperse and pigment approaches match shades differently and have fundamentally different fastness characteristics, particularly for wet rub, wash and light. Smith Ribbon treats dye class and fibre-dye pairing as a frozen Layer 1 parameter in the dye-system authority model, and any substitution requires a full four-stage re-approval including wet-process validation against the customer's care regime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does heat setting reduce the colourfastness of dyed ribbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can. A controlled thermal history is needed for dimensional stability, but an excessive temperature or dwell time degrades the dye surface and can reduce wet-rub and wash fastness without improving any dimension the buyer specified. This is why the Smith Ribbon four-stage approval gate measures fastness on the finished article after all finishing, rather than on the greige or mid-process sample, and holds the thermal window as a controlled parameter rather than an internal routine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity and lead time for custom dyed ribbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xiamen Smith Ribbon & Bow Co., Ltd. has manufactured ribbon and decorative trims since 2004 in a 15,000 square metre plant with 200+ employees and 100,000 meters of daily capacity. Custom dyed ribbon typically starts at 1,000 meters per colour, width and construction. A new colour development with dye-system declaration, lab dip approval and fastness qualification runs 25-35 days to an approved sample and 40-55 days to first production shipment, with OEKO-TEX, FSC, BSCI, SEDEX, SMETA and ISO 9001 certification available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should ribbon be packed to protect colourfastness in storage and transit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use opaque or light-barrier packaging and avoid contact between high-colour and white or pale trims in the same carton. Fastness grade is only meaningful under the light and humidity exposure of the actual storage environment, so a ribbon qualified for the standard test may still fade in an exposed warehouse position. Smith Ribbon specifies packaging type, maximum light exposure and a shelf-life expectation on the purchase order, and confirms fastness in the actual packed configuration at Stage 4 of the approval gate."
+      }
+    }
+  ]
+}
+</script>
+
+<p>Below are the questions brand buyers most frequently raise when introducing a formal colourfastness programme
+into an OEM ribbon relationship. If your question is not covered here, our compliance engineers will answer it
+directly.</p>
+
+<h3>What is crocking and how do I test it on ribbon?</h3>
+<p>Crocking is the transfer of colour from a dyed textile onto an adjacent material through rubbing or contact with
+moisture. It is tested by rubbing the ribbon against a specified white companion material under dry or wet conditions
+for a stated number of cycles and grading the transfer. The Smith Ribbon crocking index normalises that result
+against the qualified reference: green from 0.97 to 1.03, amber from 0.90 to 0.97, red below 0.90. Because
+fastness grades are method-bound, the test method, substrate, conditioning and rub count must be specified for the
+result to be comparable.</p>
+
+<h3>Can a mill substitute a pigment dye for a disperse dye without changing the product?</h3>
+<p>Not without re-qualification. Disperse and pigment approaches match shades differently and have fundamentally
+different fastness characteristics, particularly for wet rub, wash and light. Smith Ribbon treats dye class and
+fibre-dye pairing as a frozen Layer 1 parameter in the dye-system authority model, and any substitution requires a
+full four-stage re-approval including wet-process validation against the customer&apos;s care regime.</p>
+
+<h3>Does heat setting reduce the colourfastness of dyed ribbon?</h3>
+<p>It can. A controlled thermal history is needed for dimensional stability, but an excessive temperature or dwell
+time degrades the dye surface and can reduce wet-rub and wash fastness without improving any dimension the buyer
+specified. This is why the Smith Ribbon four-stage approval gate measures fastness on the finished article after
+all finishing, rather than on the greige or mid-process sample, and holds the thermal window as a controlled
+parameter rather than an internal routine.</p>
+
+<h3>What is the minimum order quantity and lead time for custom dyed ribbon?</h3>
+<p>Smith Ribbon has run production since 2004 with 1,000&nbsp;m MOQ per colour, width and construction. A new
+colour development with dye-system declaration, lab dip approval and fastness qualification runs 25&ndash;35 days
+to an approved sample and 40&ndash;55 days to first production shipment.</p>
+
+<h3>How should ribbon be packed to protect colourfastness in storage and transit?</h3>
+<p>Use opaque or light-barrier packaging and avoid contact between high-colour and white or pale trims in the same
+carton. Fastness grade is only meaningful under the light and humidity exposure of the actual storage environment,
+so a ribbon qualified for the standard test may still fade in an exposed warehouse position. Smith Ribbon specifies
+packaging type, maximum light exposure and a shelf-life expectation on the purchase order, and confirms fastness
+in the actual packed configuration at Stage 4 of the approval gate.</p>
+"""
+
+write_article(a, BODY,
+              "Specify the dye system, not just the Pantone match",
+              "Request the colourfastness specification template and a dye-system declaration walkthrough")
+print(f"slug={SLUG}")

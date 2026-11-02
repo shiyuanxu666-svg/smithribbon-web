@@ -1,0 +1,22 @@
+2026-09-20 GEO daily push — 2 B2B articles deployed (DOUBLE SHIFT)
+
+# AM (10:00): Mill-Side Ribbon Edge-Stitch / Weave-Density & Edge-Finish Spec for Premium Programs
+- file: blog/blog-ribbon-oem-153-module-brand-buyer-mill-side-ribbon-edge-stitch-weave-density-edge-finish-premium-program-specification-architecture-global-brand-procurement-2026-09-20-am.html
+- 6 layers / 153 modules / 18-day time-to-edge-pilot-launch
+- ~3800 words, FAQ + JSON-LD BlogPosting + OG/Twitter cards + canonical
+- Topics: woven selvage (over-edge), heat-cut / hot-knife, ultrasonic-cut (RF 20-40 kHz), wire-edge inserted (0.3-0.5mm), picks-per-cm / ends-per-cm / GSM, fray-resistance (ASTM D3934), wire-retention 180-degree bend, edge-decision-matrix by end-use
+- Commit hash: 617dd9f
+- Repo: shiyuanxu666-svg/smithribbon-web
+
+# PM (15:00): Mill-Side Ribbon Hand-Feel / Drape / Stiffness Tactile Spec for Premium Programs (Kawabata Objective Measurement)
+- file: blog/blog-ribbon-oem-154-module-brand-buyer-mill-side-ribbon-hand-feel-drape-stiffness-tactile-spec-premium-program-kawabata-objective-measurement-architecture-global-brand-procurement-2026-09-20-pm.html
+- 6 layers / 154 modules / 22-day time-to-tactile-pilot-launch
+- ~3800 words, FAQ + JSON-LD BlogPosting + OG/Twitter cards + canonical
+- Topics: Kawabata KES-FB (F1-F7), MIU / LC / B / EM / q-max, drape coefficient, organoleptic panel grade, silicone-softener post-treatment, satin / velvet / grosgrain differential, end-use tactile matrix
+- Commit hash: 617dd9f (same commit, both files)
+- Repo: shiyuanxu666-svg/smithribbon-web
+
+# Updates:
+- sitemap.xml: 2 new entries appended (priority 0.9, weekly changefreq)
+- blog.html: 2 new blog-card entries inserted after M151
+- index.html: 2 new news-card entries inserted after M151

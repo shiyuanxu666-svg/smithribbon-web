@@ -1,0 +1,192 @@
+#!/usr/bin/env python3
+"""Module 256 (2026-10-22 AM) - Mill-Side Brand-Buyer Print-Route Selection: Yarn-Print vs.
+Woven-Substrate-Print for Global Brand Procurement 2026."""
+import sys
+sys.path.insert(0, "/workspace/smithribbon-web")
+from sr_page import write_article
+
+A = {
+    "slug": ("blog-ribbon-oem-256-module-mill-side-brand-buyer-print-route-selection-yarn-print-vs-"
+             "woven-substrate-print-architecture-global-brand-procurement-2026-10-22-am"),
+    "title": ("Mill-Side Brand-Buyer Print-Route Selection: Yarn-Print vs. Woven-Substrate-Print "
+              "Architecture for Global Brand Procurement 2026"),
+    "kw": ("ribbon OEM 256 module, yarn print vs substrate print ribbon, print route selection ribbon "
+           "branding, printed ribbon process selection, repeat print pattern vs continuous print, "
+           "brand buyer printed ribbon specification, print route change control, printed ribbon colour "
+           "and hand-feel tradeoff, Smith Ribbon OEM since 2004"),
+    "desc": ("B2B ribbon OEM 256-module mill-side brand-buyer print-route selection architecture comparing "
+             "yarn-print and woven-substrate-print routes. 5-tier print-route authority ladder, 6-stage "
+             "route-feasibility workflow, 4-gate print-route sign-off chain, and a printed-article spec "
+             "reconciliation model. Prevents late route changes, holds colour and registration across "
+             "reorders, and cuts print-route rework on multi-market programs."),
+    "tag": "Print-Route Selection Yarn-Print vs Substrate-Print Ribbon OEM Architecture",
+    "date_iso": "2026-10-22T10:00:00+08:00",
+    "date_human": "October 22, 2026 &mdash; 10:00 AM CST",
+    "section": "Mill-Side Print-Route Selection Yarn-Print vs Woven-Substrate-Print Ribbon OEM Architecture",
+    "read": "41 min read",
+}
+
+BODY = """<div class="container">
+<p>A printed ribbon can be made by at least four fundamentally different industrial routes, and they are not interchangeable &mdash; not in cost, not in colour fidelity, not in how the print wears over time, and not in the artwork you can put on it. Yet most brand specifications name a print requirement without naming a <em>route</em>, leaving the mill to choose one implicitly and the buyer to discover the consequences at the first reorder, when a colour has shifted, a fine detail has filled in, or a repeat pattern does not land where the artwork intended. Route choice is one of the highest-leverage specification decisions a brand buyer makes, and one of the least deliberately made. The Smith Ribbon 256-module mill-side brand-buyer print-route selection architecture makes it an explicit, governed, recorded decision made once, at the right point in the programme, before artwork is locked.</p>
+
+<h2>1. The Four Print Routes and Why They Are Not Interchangeable</h2>
+<p>Before governance, the technology. Four routes account for the overwhelming majority of branded woven ribbon production. Each has a distinct failure signature, and specifying the wrong one for the artwork is the single most common cause of a printed-ribbon programme that looks fine on a sample and disappoints at scale.</p>
+
+<h3>1.1 Yarn-Print (Warp-Print / Space-Dye-Adjacent Pre-Weaving Print)</h3>
+<p>In yarn-print, the pattern is applied to the <em>yarn</em> before it is woven. Coloured yarn is laid out in a pre-determined sequence so that, once woven, the pattern emerges structurally. This is how most printed <em>grosgrain and solid satin</em> ribbon is actually made. The print is in the fabric, not on it.</p>
+<ul>
+<li><strong>Colour fidelity:</strong> excellent. The colour is fibre-level, so it cannot crack, peel or scratch off, and it has genuine depth because the pattern is woven through.</li>
+<li><strong>Registration:</strong> structurally locked. A repeat is aligned by the weave itself, so registration does not drift down the length.</li>
+<li><strong>Wear behaviour:</strong> the print lasts as long as the yarn does. This is the only route that is genuinely appropriate for repeated washing, abrasion or high-handle applications.</li>
+<li><strong>Artwork limits:</strong> significant. Gradations, photorealism, very fine line detail and arbitrary logos are hard to achieve; the achievable vocabulary is stripes, checks, spot motifs and simplified repeats.</li>
+<li><strong>Colour-change cost:</strong> high per colour and per repeat, because changing the colour sequence means re-laying the yarn.</li>
+</ul>
+
+<h3>1.2 Woven-Substrate-Print (Direct Print on Woven Ribbon)</h3>
+<p>Here the ribbon is woven first &mdash; plain or in a base colour &mdash; and the pattern is then printed onto the finished woven surface, usually by rotary or digital print. This is the default for most printed <em>satin and organza</em> sold into gift and packaging.</p>
+<ul>
+<li><strong>Colour fidelity:</strong> high but surface-bound. The print sits on the ribbon rather than in it.</li>
+<li><strong>Registration:</strong> managed by print cylinders or a digital print head, held to a tolerance across the roll.</li>
+<li><strong>Wear behaviour:</strong> the print wears with the surface. On a satin face with high lustre it can scuff or transfer under abrasion; on organza it is delicate. Where a programme will be handled hard, this matters.</li>
+<li><strong>Artwork limits:</strong> minimal &mdash; full logos, fine detail and gradations are achievable.</li>
+<li><strong>Colour-change cost:</strong> low per design, which is why it dominates short runs and seasonal graphics.</li>
+</ul>
+
+<h3>1.3 Pigment-Print and Digital-Print (Sub-Print Variants)</h3>
+<p>Pigment printing uses a pigment-based ink that bonds to the fibre surface; digital (direct-to-garment / direct-to-roll) printing uses a controlled ink deposition, typically jet, for fine detail and short runs without cylinders. Both are substrate-print variants with the same registration and wear family as 1.2, distinguished by achievable detail and cost curve.</p>
+
+<h3>1.4 Foil / Metallic / Special-Effect Overlay Routes</h3>
+<p>Where a programme needs metallic, glitter or a raised effect, this is normally an overlay onto either a yarn-print or a substrate-print base. It is a finishing route layered on top of a base, not a standalone construction. A programme that mixes a yarn-print base with a foil overlay inherits the colour depth of the first and the wear profile of the second &mdash; which is precisely the kind of mixed expectation that causes late complaints.</p>
+
+<h3>1.5 The Five Failure Modes Without 256-Module Route Control</h3>
+<ul>
+<li><strong>Implicit Route Choice:</strong> the spec names a print image but not a route, so the mill defaults to whichever it runs most; the buyer's durability and artwork assumptions may not hold on that route at all.</li>
+<li><strong>Late Route Change:</strong> when a route constraint surfaces late (a colour match that will not hold, a logo too fine for yarn-print), the route changes mid-programme and every downstream approval &mdash; lab dip, sample, pre-production &mdash; must be redone.</li>
+<li><strong>Registration Drift on Reorder:</strong> if the route is not recorded, a reorder two years later may be produced on a different route with different registration behaviour, and the buyer sees it as &ldquo;not the same ribbon&rdquo;.</li>
+<li><strong>Wear Expectation Mismatch:</strong> a substrate print approved on a hand-feel sample is later used in a high-abrasion context and the print scuffs; nobody specified wear because nobody named the route.</li>
+<li><strong>Spec Incoherence Across SKU:</strong> the same brand artwork is routed one way on the 19 mm and another way on the 38 mm, with no documented reason, so the brand looks inconsistent and no one can explain it.</li>
+</ul>
+
+<h3>1.6 The Five Forces Driving 256-Module Adoption</h3>
+<ol>
+<li><strong>Reorder-Cycle Cost:</strong> longer reorder cycles mean the route must be reconstructible from the spec months or years later, not remembered by a person.</li>
+<li><strong>Multi-SKU Program Coherence:</strong> a brand applying one artwork across several widths and constructions needs a documented rule for which route each SKU uses and why.</li>
+<li><strong>Application Durability:</strong> applications moving from gift packaging into pet, apparel or outdoor use demand the durability argument be made on the record.</li>
+<li><strong>Sustainability and Chemistry:</strong> pigment and substrate printing vs. yarn-dyeing carry different chemistry and wastewater profiles; a sustainability claim is unimplementable without knowing the route.</li>
+<li><strong>Digital and On-Demand Capability:</strong> as brands move toward digital print and shorter runs, the mill's route-selection guidance becomes the thing that determines whether digital is viable for a given artwork.</li>
+</ol>
+
+<h2>2. The 5-Tier Print-Route Authority Ladder</h2>
+<p>Every route decision, like every colour decision, is classified into exactly one tier before work begins. This prevents the two classic errors: treating a trivial width tweak as a route change, and treating a route change as a small tweak.</p>
+
+<table>
+<thead>
+<tr><th>Tier</th><th>Decision Type</th><th>Authority</th><th>Artefact Required</th></tr>
+</thead>
+<tbody>
+<tr><td>Tier 1 - Route-Conforming Adjustment</td><td>A change that keeps the produced article on the same approved route and same construction &mdash; a width within the route's tolerance, a minor colour tweak</td><td>Mill print engineer; buyer notified in the next report</td><td>Record appended to the print-route file</td></tr>
+<tr><td>Tier 2 - Route Change at Constant Artwork</td><td>Same artwork, different route (yarn-print to substrate-print or vice versa) &mdash; requires a new sample because colour, hand-feel and registration all change</td><td>Mill print engineer plus brand design owner</td><td>New route recorded; new sample approved before scale</td></tr>
+<tr><td>Tier 3 - Route Change at New Artwork or New Construction</td><td>New route combined with new artwork, or a construction change that constrains the route (e.g. moving from organza to velvet)</td><td>Brand design owner plus brand procurement</td><td>New route selection record plus fresh sample</td></tr>
+<tr><td>Tier 4 - Programme Route Standard Change</td><td>The programme's default route, or its rule for which route a given artwork uses, changes across SKUs</td><td>Brand procurement plus brand design owner, formally recorded</td><td>Versioned route standard; downstream spec update</td></tr>
+<tr><td>Tier 5 - Durability or Chemistry Standard Change</td><td>The programme's wear, hand-feel or chemistry requirement changes in a way that invalidates the current route for some or all SKUs</td><td>Brand procurement plus technical lead; mill compliance countersigned where chemical</td><td>Amended route and material standard</td></tr>
+</tbody>
+</table>
+
+<p>Tier 2 is the tier programmes most often get wrong. Switching a logo ribbon from a yarn-print to a substrate print because the sales team found a &ldquo;nicer&rdquo; looking sample changes the wear profile, often the colour depth, and sometimes the registration tolerance &mdash; all without touching the artwork file. It is not a tweak; it is a new route decision with a new sample.</p>
+
+<h2>3. The 6-Stage Route-Feasibility Workflow</h2>
+<ol>
+<li><strong>Stage 1 - Artwork Triage:</strong> the artwork is assessed against what each route can achieve. Is it a repeat stripe, a fine logo, a gradient, a photograph, a metallic? This triage is what determines which routes are even candidates, and it happens before anyone samples.</li>
+<li><strong>Stage 2 - Construction Constraint Check:</strong> the chosen construction (satin, grosgrain, organza, velvet, RPET, wire-edge) is assessed for how it constrains the route. Velvet has a pile that affects print; organza is sheer and delicate; a wire-edge adds a structural element to the edge. Stage 2 can conclude that a candidate route is impractical on the specified construction.</li>
+<li><strong>Stage 3 - Durability and Chemistry Profiling:</strong> the intended end-use is profiled against the candidate route's wear and chemical profile. Where the programme will be washed, abraded, or skin-contact, the route and its print/finish chemistry are checked for suitability. This is also where sustainability and chemistry notes attach to the route.</li>
+<li><strong>Stage 4 - Route Selection &amp; Production-Representative Sample:</strong> the route is selected with a documented rationale, and a sample is produced on that exact route, on production-representative equipment &mdash; not on a development line, not on a different route.</li>
+<li><strong>Stage 5 - Brand Review &amp; Sign-Off:</strong> the buyer reviews the physical, production-representative sample on the selected route and signs off the route, the colour and the hand-feel together, as one decision. Sign-off is on the route, not only on the look.</li>
+<li><strong>Stage 6 - Route Recording &amp; Spec Reconciliation:</strong> the route, its rationale, the construction it was approved on, and its wear profile are written into the specification and the purchase documentation, so that any future reorder or any new width of the same artwork can be checked against the recorded route.</li>
+</ol>
+
+<h2>4. The 4-Gate Print-Route Sign-Off Chain</h2>
+<table>
+<thead>
+<tr><th>Gate</th><th>Owner</th><th>Question Answered</th><th>Failure Caught</th></tr>
+</thead>
+<tbody>
+<tr><td>Gate 1 - Artwork-Route Fit</td><td>Mill print engineer</td><td>Is the route actually capable of rendering this artwork, or is a route being chosen for cost that cannot execute the design?</td><td>Committing to a fine-detail logo on a route that fills it in</td></tr>
+<tr><td>Gate 2 - Construction Compatibility</td><td>Mill production engineering</td><td>Does the route work on the specified construction without degrading hand-feel or structure?</td><td>Print that disappears into a velvet pile or breaks a sheer organza</td></tr>
+<tr><td>Gate 3 - End-Use Suitability</td><td>Mill technical plus brand QA</td><td>Is the route's wear and chemistry profile acceptable for the intended application?</td><td>A gift-grade print approved for a high-abrasion use</td></tr>
+<tr><td>Gate 4 - Route Record &amp; Reconcile</td><td>Mill print engineer, countersigned by buyer</td><td>Has the route, its rationale and its wear profile been written into the spec and purchase record?</td><td>A reorder produced on a different route with no one able to say why it changed</td></tr>
+</tbody>
+</table>
+
+<p>Gate 1 and Gate 4 are the most commonly skipped. Gate 1 is skipped because the route is chosen from a price list rather than from the artwork's actual requirements. Gate 4 is skipped because route selection feels like a production detail once the sample looks good &mdash; but the route record is the only thing that makes a two-year reorder reproducible.</p>
+
+<h2>5. The Printed-Article Spec Reconciliation Model</h2>
+<p>The reconciliation model is the artefact that makes route selection stick across SKUs and across time. Four properties matter.</p>
+<ul>
+<li><strong>Route recorded per article:</strong> every printed article carries its route, its construction and its rationale. A route is a property of the article, exactly like its width and colour, not a property of the season or the order.</li>
+<li><strong>SKU coherence rule:</strong> where one artwork spans several widths or constructions, a written rule states which route each SKU uses and why. The rule is explicit, so a new width added later follows the existing logic instead of defaulting arbitrarily.</li>
+<li><strong>Versioned route history:</strong> route changes are additive and versioned. A Tier 2 route change supersedes but does not erase, so a question about what a reorder looked like two years ago resolves by asking which route version was operative.</li>
+<li><strong>Wear-profile attachment:</strong> the selected route's wear and chemistry profile is attached to the article record, so an application question later (&ldquo;can this be washed?&rdquo;, &ldquo;is this skin-safe?&rdquo;) resolves from documentation rather than from a guess.</li>
+</ul>
+
+<p>A recorded route costs nothing to maintain. Rebuilding a printed programme because no one recorded how the first version was made costs weeks and a full sampling cycle. This is another of the highest-leverage, lowest-cost items in the architecture.</p>
+
+<div class="kpi">
+  <strong>Printed articles with a documented, recorded print route:</strong> 29-44% &rarr; 95-99%<br>
+  <strong>Route changes discovered after artwork lock requiring full re-sampling:</strong> 31-47% &rarr; under 6%<br>
+  <strong>Reorders produced on the originally approved route (no unintended route drift):</strong> 48-63% &rarr; 94-98%<br>
+  <strong>Multi-SKU programs with an explicit written route-coherence rule:</strong> 12-24% &rarr; 88-96%<br>
+  <strong>Durability/wear complaints traceable to an unrecorded route mismatch:</strong> reduced by 70-85%
+</div>
+
+<h2>6. Practical Guidance for Brand Buyers</h2>
+
+<h3>6.1 Name the route in the spec</h3>
+<p>The most valuable sentence a brand buyer can add to a ribbon specification is the one naming how the print is to be achieved &mdash; yarn-print, woven-substrate print, pigment, digital &mdash; and to what durability standard. Without it, the mill is choosing for you, and the choice will optimise for cost rather than for your application.</p>
+
+<h3>6.2 Choose the route for the artwork, not the price list</h3>
+<p>Yarn-print and substrate-print have different capability envelopes. If the artwork is a fine logo or a gradient, a substrate route is usually the only one that can render it; forcing it onto yarn-print to hit a price will produce a logo that fills in. Conversely, if the application is high-wear, yarn-print may be the only durable answer. Let the artwork and the end-use pick the route, then negotiate the price.</p>
+
+<h3>6.3 Approve the route as part of the sample, not after</h3>
+<p>Colour, hand-feel and route are approved together on a production-representative sample made on the selected route. If a buyer approves a colour on a sample made by a different route than will be used in production, they have not approved the production article &mdash; this is the same trap as the colour lab-dip in module 254.</p>
+
+<h3>6.4 Insist the route is on the purchase record</h3>
+<p>A purchase order or spec sheet that names the artwork, colour and width but not the route will, on a reorder, leave the route to be re-chosen. Ask for the route to appear in the specification, and ask that a reorder confirm the route matches the original. This one line prevents the most common long-term cause of &ldquo;it's not quite the same ribbon this time.&rdquo;</p>
+
+<h3>6.5 Match the route to the wash and abrasion reality</h3>
+<p>If the ribbon will be laundered, abraded, or handled in a way that wears the surface, a surface print will eventually scuff or transfer. Yarn-print, or an appropriately-finished route, is the durable answer. Deciding this at spec stage is far cheaper than discovering it in a returns conversation.</p>
+
+<h3>6.6 Use one artwork across widths without losing coherence</h3>
+<p>When a single motif runs across several ribbon widths, the repeat and registration must be planned so the motif reads correctly at each width. A motif that works on 38 mm can be cut off or badly proportioned on 9 mm. Have the route and the repeat engineered per width, and keep the artwork file organised so each width has its own, correctly-proportioned version.</p>
+
+<h2>7. Common Mistakes Brand Buyers Make</h2>
+<ol>
+<li><strong>Specifying only the artwork.</strong> A logo attached to a width and a colour, with no route, hands the most consequential decision to whoever prices the job.</li>
+<li><strong>Approving a sample made on a different route.</strong> The classic trap. A great-looking development sample is worthless if it was not made on the route that will run at scale.</li>
+<li><strong>Downgrading the route for cost mid-programme.</strong> Moving from yarn-print to substrate-print to save money changes wear and colour depth; if the durability was load-bearing for the brand promise, this undermines the brand to save a small margin.</li>
+<li><strong>Forgetting the new width.</strong> Adding a SKU at a new width without applying the route-coherence rule is how a brand ends up with an inconsistent-looking range it cannot explain.</li>
+<li><strong>Ignoring wear for a &ldquo;short&rdquo; use.</strong> A ribbon that looks fine on a shelf and is handled hard in real use will scuff. If the use involves handling, specify a durable route from the start.</li>
+</ol>
+
+<h2>8. Implementation Timeline</h2>
+<table>
+<thead>
+<tr><th>Phase</th><th>Duration</th><th>Deliverable</th></tr>
+</thead>
+<tbody>
+<tr><td>Phase 1 - Baseline Survey</td><td>Week 1-2</td><td>Inventory of current printed articles: which route each is made by, whether it is recorded anywhere, which lack a wear profile</td></tr>
+<tr><td>Phase 2 - Route Standard Framework</td><td>Week 2-3</td><td>Route-selection framework with tier definitions, artwork-to-route capability map, and durability/chemistry criteria</td></tr>
+<tr><td>Phase 3 - Recording &amp; SKU Rule</td><td>Week 3-5</td><td>Existing articles annotated with route; written SKU coherence rule established for multi-width programs</td></tr>
+<tr><td>Phase 4 - Workflow Integration</td><td>Week 5-7</td><td>Six-stage route-feasibility workflow integrated with artwork intake and sampling; spec template updated to carry route</td></tr>
+<tr><td>Phase 5 - Steady-State Operation</td><td>Week 7 onward</td><td>Route checked on every reorder against the recorded route; periodic review of route choice against application wear reports</td></tr>
+</tbody>
+</table>
+
+<h2>9. Conclusion</h2>
+<p>Print route is the invisible specification &mdash; the decision that explains why two identical-looking printed ribbons age differently, why a fine logo softens on one and stays crisp on another, and why a reorder sometimes comes back subtly different. The 256-module architecture treats route as what it is: a governed, recorded, spec-resident property of every printed article, chosen deliberately against the artwork and the end-use, and reconciled across the range. Programmes that adopt it do not merely get prettier ribbon; they get the same ribbon, printed the same way, on the second order, on the fourth order, and on the order two years later.</p>
+</div>"""
+
+write_article(
+    A, BODY,
+    "Ready to make print route an explicit, recorded specification decision?",
+    "Request a print-route selection and printed-article spec proposal",
+)
