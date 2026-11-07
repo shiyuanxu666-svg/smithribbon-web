@@ -1,1 +1,13 @@
 __pycache__/
+
+# --- SEO daily task 2026-11-07: prevent build-artifact redeploy ---
+# Build scripts, scratch text and content fragments must never be deployed.
+*.py
+*.txt
+*.bak
+*.bak-*
+_body_*.html
+_jsonld_fix_report.json
+
+# scratch dir for article body fragments (never deployed)
+_scratch/
