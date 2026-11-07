@@ -6,6 +6,10 @@ __pycache__/
 *.txt
 *.bak
 *.bak-*
+# CRITICAL: the above *.txt rule must never swallow these live site files.
+# They were untracked by the 2026-11-07 artifact cleanup -> robots.txt 404'd live.
+!robots.txt
+!llms.txt
 _body_*.html
 _jsonld_fix_report.json
 
