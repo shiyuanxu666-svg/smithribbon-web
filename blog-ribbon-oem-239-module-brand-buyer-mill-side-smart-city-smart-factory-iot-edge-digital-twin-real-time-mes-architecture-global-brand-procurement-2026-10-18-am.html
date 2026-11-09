@@ -35,55 +35,80 @@
 
     <!-- Schema: FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Is smart-city / smart-factory IoT-edge digital-twin real-time MES architecture mandatory for ribbon OEM programs in 2026?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "It is not yet regulatory-mandatory, but Tier-1 retailers and beauty brands in the EU, UK, and US are inserting contractual IoT-edge MES-data clauses into 2026-2027 RFQs. ISO 23247 (Digital Twin), OPC UA 10000, and ISA-95 are the de-facto reference standards. Smith Ribbon operates IoT-edge digital-twin real-time MES on every production line and can plug into brand-procurement portals within 90 days."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What is the difference between OPC UA, MQTT, and ISA-95 in the 239-module stack?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "OPC UA is the data-exchange protocol between mill stations and the MES layer. MQTT is the lightweight publish-subscribe used for low-bandwidth IoT-edge sensors. ISA-95 / B2MML is the integration standard between MES and ERP / supply-chain systems. The 239-module architecture uses OPC UA at the gateway, MQTT at the edge sensor layer, and ISA-95 / B2MML at the MES-to-ERP boundary."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How does Module 239 architecture interact with ISO 23247 digital-twin standard?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "ISO 23247 defines a four-layer digital-twin reference architecture (object, data, service, integration). The 239-module IoT-edge MES maps cleanly onto ISO 23247: stages 1-2 of the 6-stage pipeline are the object layer, stages 3-4 are the data layer, stage 5 is the service layer, and stage 6 is the integration layer. Brand-buyer digital-twin consumers can query the 239-module ledger through standard ISO 23247 service interfaces."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can a small brand get a Module 239 IoT-edge MES premium program?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes &mdash; Smith Ribbon offers a 90-day quick-start track for emerging-direct-to-consumer brands doing one seasonal program. MOQ is 1,000 meters and the IoT-edge MES portal is per-order, not per-EDI-installation."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How does Module 239 protect mill-side OT cyber-security?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "IEC 62443 zones-and-conduits is enforced at every gateway, OPC-UA security mode is enabled, MES-to-portal data is read-only and signed, and brand-procurement credentials never reach the OT network. Smith Ribbon operates an air-gapped OT-IT bridge with strict whitelisting."
-                }
-            }
-        ]
+      "@type": "Question",
+      "name": "Is smart-city / smart-factory IoT-edge digital-twin real-time MES architecture mandatory for ribbon OEM programs in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is not yet regulatory-mandatory, but Tier-1 retailers and beauty brands in the EU, UK, and US are inserting contractual IoT-edge MES-data clauses into 2026-2027 RFQs. ISO 23247 (Digital Twin), OPC UA 10000, and ISA-95 are the de-facto reference standards. Smith Ribbon operates IoT-edge digital-twin real-time MES on every production line and can plug into brand-procurement portals within 90 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between OPC UA, MQTT, and ISA-95 in the 239-module stack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OPC UA is the data-exchange protocol between mill stations and the MES layer. MQTT is the lightweight publish-subscribe used for low-bandwidth IoT-edge sensors. ISA-95 / B2MML is the integration standard between MES and ERP / supply-chain systems. The 239-module architecture uses OPC UA at the gateway, MQTT at the edge sensor layer, and ISA-95 / B2MML at the MES-to-ERP boundary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Module 239 architecture interact with ISO 23247 digital-twin standard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ISO 23247 defines a four-layer digital-twin reference architecture (object, data, service, integration). The 239-module IoT-edge MES maps cleanly onto ISO 23247: stages 1-2 of the 6-stage pipeline are the object layer, stages 3-4 are the data layer, stage 5 is the service layer, and stage 6 is the integration layer. Brand-buyer digital-twin consumers can query the 239-module ledger through standard ISO 23247 service interfaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a small brand get a Module 239 IoT-edge MES premium program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes &mdash; Smith Ribbon offers a 90-day quick-start track for emerging-direct-to-consumer brands doing one seasonal program. MOQ is 1,000 meters and the IoT-edge MES portal is per-order, not per-EDI-installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Module 239 protect mill-side OT cyber-security?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IEC 62443 zones-and-conduits is enforced at every gateway, OPC-UA security mode is enabled, MES-to-portal data is read-only and signed, and brand-procurement credentials never reach the OT network. Smith Ribbon operates an air-gapped OT-IT bridge with strict whitelisting."
+      }
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/blog-ribbon-oem-239-module-brand-buyer-mill-side-smart-city-smart-factory-iot-edge-digital-twin-real-time-mes-architecture-global-brand-procurement-2026-10-18-am.html#faq"
+}
+</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smithribbon.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://smithribbon.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Mill-Side Smart-City / Smart-Factory IoT-Edge Digital-Twin Real-Time MES Architecture for Global Brand Procurement 2026", "item": "https://smithribbon.com/blog-ribbon-oem-239-module-brand-buyer-mill-side-smart-city-smart-factory-iot-edge-digital-twin-real-time-mes-architecture-global-brand-procurement-2026-10-18-am.html"}]}
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smithribbon.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://smithribbon.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Mill-Side Smart-City / Smart-Factory IoT-Edge Digital-Twin Real-Time MES Architecture for Global Brand Procurement 2026",
+      "item": "https://smithribbon.com/blog-ribbon-oem-239-module-brand-buyer-mill-side-smart-city-smart-factory-iot-edge-digital-twin-real-time-mes-architecture-global-brand-procurement-2026-10-18-am.html"
+    }
+  ],
+  "@id": "https://smithribbon.com/blog-ribbon-oem-239-module-brand-buyer-mill-side-smart-city-smart-factory-iot-edge-digital-twin-real-time-mes-architecture-global-brand-procurement-2026-10-18-am.html#breadcrumb"
+}
 </script>
 
 
@@ -111,7 +136,8 @@
     "@type": "WebPage",
     "@id": "https://smithribbon.com/smart-city-smart-factory-iot-edge-digital-twin-real-time-mes-architecture-global-brand-procurement-2026-10-18-am.html"
   },
-  "inLanguage": "en"
+  "inLanguage": "en",
+  "@id": "https://smithribbon.com/blog-ribbon-oem-239-module-brand-buyer-mill-side-smart-city-smart-factory-iot-edge-digital-twin-real-time-mes-architecture-global-brand-procurement-2026-10-18-am.html#article"
 }
 </script>
 

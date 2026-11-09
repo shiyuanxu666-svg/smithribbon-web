@@ -32,81 +32,115 @@
 
     <!-- Schema: BlogPosting -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Digital Product Passport (DPP) & QR-Traceability for Ribbon OEM: ESPR, GS1, EUDAMED Architecture",
-        "description": "How ribbon OEM mills architect a Digital Product Passport (DPP) program aligned with EU ESPR 2024/1781, GS1 Digital Link, and EUDAMED. QR generation at greige / print / bow-assembly stages, B2B wholesale DPP variants, supplier scorecard.",
-        "image": "https://smithribbon.com/img/banner.png",
-        "author": {
-            "@type": "Organization",
-            "name": "Smith Ribbon",
-            "url": "https://smithribbon.com"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Smith Ribbon",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://smithribbon.com/img/banner.png"
-            }
-        },
-        "datePublished": "2026-10-17",
-        "dateModified": "2026-10-17",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://smithribbon.com/blog-ribbon-oem-238-module-mill-side-brand-buyer-digital-product-passport-dpp-qr-traceability-gs1-espr-eudamed-architecture-ribbon-oem-program-resilience-2026-10-17-am.html"
-        },
-        "articleSection": "B2B OEM Program Resilience",
-        "keywords": ["Digital Product Passport ribbon", "DPP ribbon OEM", "ESPR ribbon compliance", "GS1 Digital Link ribbon", "QR traceability ribbon manufacturer", "EUDAMED ribbon", "ribbon supply chain transparency"],
-        "wordCount": 1580,
-        "inLanguage": "en"
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Digital Product Passport (DPP) & QR-Traceability for Ribbon OEM: ESPR, GS1, EUDAMED Architecture",
+  "description": "How ribbon OEM mills architect a Digital Product Passport (DPP) program aligned with EU ESPR 2024/1781, GS1 Digital Link, and EUDAMED. QR generation at greige / print / bow-assembly stages, B2B wholesale DPP variants, supplier scorecard.",
+  "image": "https://smithribbon.com/img/banner.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Smith Ribbon",
+    "url": "https://smithribbon.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Smith Ribbon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://smithribbon.com/img/banner.png"
     }
-    </script>
+  },
+  "datePublished": "2026-10-17",
+  "dateModified": "2026-10-17",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://smithribbon.com/blog-ribbon-oem-238-module-mill-side-brand-buyer-digital-product-passport-dpp-qr-traceability-gs1-espr-eudamed-architecture-ribbon-oem-program-resilience-2026-10-17-am.html"
+  },
+  "articleSection": "B2B OEM Program Resilience",
+  "keywords": [
+    "Digital Product Passport ribbon",
+    "DPP ribbon OEM",
+    "ESPR ribbon compliance",
+    "GS1 Digital Link ribbon",
+    "QR traceability ribbon manufacturer",
+    "EUDAMED ribbon",
+    "ribbon supply chain transparency"
+  ],
+  "wordCount": 1580,
+  "inLanguage": "en",
+  "@id": "https://smithribbon.com/blog-ribbon-oem-238-module-mill-side-brand-buyer-digital-product-passport-dpp-qr-traceability-gs1-espr-eudamed-architecture-ribbon-oem-program-resilience-2026-10-17-am.html#article"
+}
+</script>
 
     <!-- Schema: FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Is the EU Digital Product Passport (DPP) currently mandatory for ribbon and ornamental trim products?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "As of Q4 2026, the DPP requirement under ESPR (Regulation 2024/1781) is not yet in force for HTS/CN 5806 narrow woven fabrics or 5808 ornamental trimmings. The European Commission has signaled that textile-component DPP delegated acts will apply from 2028-2030, with pilot reporting starting in 2027. However, leading EU retailers and beauty brands are already requesting DPP records from their trim suppliers as a contractual requirement for 2026-2027 programs. Smith Ribbon is running DPP-enabled programs today for brands selling into France, Germany, the Nordics, and the Netherlands."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What data fields does a ribbon DPP record need to contain?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A B2B ribbon DPP record typically contains 18-26 data fields across six blocks: (1) Provenance (mill ID, country of origin, yarn source), (2) Composition (fiber content %, additives, colorants), (3) Compliance (OEKO-TEX, FSC, GRS, GOTS, REACH, RSL status), (4) Carbon (yarn-to-gate kgCO2e per meter, CBAM Phase 2 embedded emissions), (5) Social (BSCI/SEDEX/SMETA audit ID, last audit date), and (6) End-of-life (recyclability, RPET content, take-back program). A consumer-facing variant typically shows 6-8 fields with a QR scan."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can ribbon DPP records use GS1 Digital Link or do they require a separate QR standard?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "GS1 Digital Link is the de-facto standard for EU DPP and is the recommended format for ribbon OEM. It encodes the GTIN (Global Trade Item Number), batch/lot, serial, and a URI structure that resolves to a JSON-LD or Web card describing the product. The same QR can serve brand-internal traceability, customs documentation, and consumer-facing transparency. For B2B wholesale ribbons that are component-trim (not standalone SKUs), a GS1 Component / Part Identifier (CPID) or GIAI (Global Individual Asset Identifier) is used."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How is DPP data generated on the ribbon production line without slowing throughput?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Modern DPP architecture runs as a passive MES (Manufacturing Execution System) hook. Each greige batch receives a roll-level QR at the winding station. Each printed-batch receives a lot-level QR at the printing line. Each bow-assembly batch receives a carton-level QR at the bow-tying station. QRs are printed inline on the carton label or on a tear-off card included in the polybag. Throughput impact is under 0.4 seconds per carton. Smith Ribbon's Xiamen mill runs a 4-station DPP data capture (greige wind, print QA, hot-cut, bow-assembly) integrated to MES + GS1 resolver."
-                }
-            }
-        ]
+      "@type": "Question",
+      "name": "Is the EU Digital Product Passport (DPP) currently mandatory for ribbon and ornamental trim products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As of Q4 2026, the DPP requirement under ESPR (Regulation 2024/1781) is not yet in force for HTS/CN 5806 narrow woven fabrics or 5808 ornamental trimmings. The European Commission has signaled that textile-component DPP delegated acts will apply from 2028-2030, with pilot reporting starting in 2027. However, leading EU retailers and beauty brands are already requesting DPP records from their trim suppliers as a contractual requirement for 2026-2027 programs. Smith Ribbon is running DPP-enabled programs today for brands selling into France, Germany, the Nordics, and the Netherlands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What data fields does a ribbon DPP record need to contain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A B2B ribbon DPP record typically contains 18-26 data fields across six blocks: (1) Provenance (mill ID, country of origin, yarn source), (2) Composition (fiber content %, additives, colorants), (3) Compliance (OEKO-TEX, FSC, GRS, GOTS, REACH, RSL status), (4) Carbon (yarn-to-gate kgCO2e per meter, CBAM Phase 2 embedded emissions), (5) Social (BSCI/SEDEX/SMETA audit ID, last audit date), and (6) End-of-life (recyclability, RPET content, take-back program). A consumer-facing variant typically shows 6-8 fields with a QR scan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can ribbon DPP records use GS1 Digital Link or do they require a separate QR standard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GS1 Digital Link is the de-facto standard for EU DPP and is the recommended format for ribbon OEM. It encodes the GTIN (Global Trade Item Number), batch/lot, serial, and a URI structure that resolves to a JSON-LD or Web card describing the product. The same QR can serve brand-internal traceability, customs documentation, and consumer-facing transparency. For B2B wholesale ribbons that are component-trim (not standalone SKUs), a GS1 Component / Part Identifier (CPID) or GIAI (Global Individual Asset Identifier) is used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is DPP data generated on the ribbon production line without slowing throughput?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modern DPP architecture runs as a passive MES (Manufacturing Execution System) hook. Each greige batch receives a roll-level QR at the winding station. Each printed-batch receives a lot-level QR at the printing line. Each bow-assembly batch receives a carton-level QR at the bow-tying station. QRs are printed inline on the carton label or on a tear-off card included in the polybag. Throughput impact is under 0.4 seconds per carton. Smith Ribbon's Xiamen mill runs a 4-station DPP data capture (greige wind, print QA, hot-cut, bow-assembly) integrated to MES + GS1 resolver."
+      }
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/blog-ribbon-oem-238-module-mill-side-brand-buyer-digital-product-passport-dpp-qr-traceability-gs1-espr-eudamed-architecture-ribbon-oem-program-resilience-2026-10-17-am.html#faq"
+}
+</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smithribbon.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://smithribbon.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Digital Product Passport (DPP) &amp; QR-Traceability for Ribbon OEM: ESPR, GS1, EUDAMED Architecture 2026-2027", "item": "https://smithribbon.com/blog-ribbon-oem-238-module-mill-side-brand-buyer-digital-product-passport-dpp-qr-traceability-gs1-espr-eudamed-architecture-ribbon-oem-program-resilience-2026-10-17-am.html"}]}
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smithribbon.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://smithribbon.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Digital Product Passport (DPP) &amp; QR-Traceability for Ribbon OEM: ESPR, GS1, EUDAMED Architecture 2026-2027",
+      "item": "https://smithribbon.com/blog-ribbon-oem-238-module-mill-side-brand-buyer-digital-product-passport-dpp-qr-traceability-gs1-espr-eudamed-architecture-ribbon-oem-program-resilience-2026-10-17-am.html"
+    }
+  ],
+  "@id": "https://smithribbon.com/blog-ribbon-oem-238-module-mill-side-brand-buyer-digital-product-passport-dpp-qr-traceability-gs1-espr-eudamed-architecture-ribbon-oem-program-resilience-2026-10-17-am.html#breadcrumb"
+}
 </script>
 
 

@@ -37,97 +37,136 @@
 
     <!-- BreadcrumbList Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smithribbon.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://smithribbon.com/#blog"},
-        {"@type": "ListItem", "position": 3, "name": "Ribbon AI Forecasting 2026", "item": "https://smithribbon.com/blog-ribbon-ai-demand-forecasting-supply-planning-2026.html"}
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smithribbon.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://smithribbon.com/#blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ribbon AI Forecasting 2026",
+      "item": "https://smithribbon.com/blog-ribbon-ai-demand-forecasting-supply-planning-2026.html"
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/blog-ribbon-ai-demand-forecasting-supply-planning-2026.html#breadcrumb"
+}
+</script>
 
     <!-- BlogPosting Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Ribbon AI Demand Forecasting & Supply Planning Playbook 2026: Machine-Learning SKU Clustering, Holiday Peak Modeling & Multi-Supplier Allocation for Global Brand Procurement",
-      "description": "A 2026 playbook for global brand procurement teams on applying AI-driven demand forecasting, machine-learning SKU clustering, and capacity-planning algorithms to custom ribbon programs. Covers forecast model selection, holiday peak modeling, MOQ-aware production scheduling, multi-supplier allocation, and the 6 most common AI-forecasting failure modes in seasonal ribbon sourcing.",
-      "image": "https://smithribbon.com/img/banner.png",
-      "author": {"@type": "Organization", "name": "Smith Ribbon Operations Team", "url": "https://smithribbon.com"},
-      "publisher": {
-        "@type": "Organization",
-        "name": "Smith Ribbon",
-        "logo": {"@type": "ImageObject", "url": "https://smithribbon.com/img/banner.png"}
-      },
-      "datePublished": "2026-06-28",
-      "dateModified": "2026-06-28",
-      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://smithribbon.com/blog-ribbon-ai-demand-forecasting-supply-planning-2026.html"},
-      "keywords": "AI ribbon demand forecasting, ribbon supply planning, ribbon demand sensing, ribbon SKU clustering, ribbon holiday peak forecasting, ribbon production scheduling, ribbon capacity planning, ribbon forecasting machine learning 2026, ribbon replenishment algorithm, ribbon demand planning B2B",
-      "about": {"@type": "Thing", "name": "Ribbon AI Demand Forecasting"},
-      "locationCreated": {"@type": "Place", "name": "Xiamen, Fujian, China", "geo": {"@type": "GeoCoordinates", "latitude": "24.4798", "longitude": "118.0894"}}
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Ribbon AI Demand Forecasting & Supply Planning Playbook 2026: Machine-Learning SKU Clustering, Holiday Peak Modeling & Multi-Supplier Allocation for Global Brand Procurement",
+  "description": "A 2026 playbook for global brand procurement teams on applying AI-driven demand forecasting, machine-learning SKU clustering, and capacity-planning algorithms to custom ribbon programs. Covers forecast model selection, holiday peak modeling, MOQ-aware production scheduling, multi-supplier allocation, and the 6 most common AI-forecasting failure modes in seasonal ribbon sourcing.",
+  "image": "https://smithribbon.com/img/banner.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Smith Ribbon Operations Team",
+    "url": "https://smithribbon.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Smith Ribbon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://smithribbon.com/img/banner.png"
     }
-    </script>
+  },
+  "datePublished": "2026-06-28",
+  "dateModified": "2026-06-28",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://smithribbon.com/blog-ribbon-ai-demand-forecasting-supply-planning-2026.html"
+  },
+  "keywords": "AI ribbon demand forecasting, ribbon supply planning, ribbon demand sensing, ribbon SKU clustering, ribbon holiday peak forecasting, ribbon production scheduling, ribbon capacity planning, ribbon forecasting machine learning 2026, ribbon replenishment algorithm, ribbon demand planning B2B",
+  "about": {
+    "@type": "Thing",
+    "name": "Ribbon AI Demand Forecasting"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Xiamen, Fujian, China",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "24.4798",
+      "longitude": "118.0894"
+    }
+  },
+  "@id": "https://smithribbon.com/blog-ribbon-ai-demand-forecasting-supply-planning-2026.html#article"
+}
+</script>
 
     <!-- FAQPage Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Which AI model is best for ribbon demand forecasting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "There is no single best model — the right choice depends on data history, SKU count, and channel mix. For brands with 24+ months of SKU-level ribbon sales history and 50+ active SKUs, gradient-boosted tree ensembles (XGBoost, LightGBM) typically outperform deep-learning models because they handle small datasets and irregular cadence better. For brands with 100+ SKUs and multiple years of history across multiple markets, Temporal Fusion Transformers (TFT) or N-BEATS provide stronger long-horizon forecasts. Prophet remains a strong baseline for brands with less than 18 months of data."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How far ahead should ribbon demand forecasts look?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A 2026 ribbon planning horizon has four layers: (1) SKU-level point forecast 90 days out for procurement execution; (2) family-level forecast 6 months out for greige goods reservation; (3) program-level forecast 12 months out for dye-lot planning; (4) portfolio-level directional forecast 24 months out for capacity strategy. The 90-day forecast should drive PO timing, the 6-month forecast should drive factory capacity reservation, the 12-month forecast should drive dye-lot decisions, and the 24-month forecast should drive whether you add a second supplier."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you cluster SKUs for ribbon forecasting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cluster ribbon SKUs along four dimensions: (1) substrate (satin, grosgrain, organza, velvet, paper, RPET); (2) finish (printed, woven/jacquard, plain, foil-stamped); (3) lifecycle stage (new launch, growth, mature, decline, seasonal); and (4) demand pattern (steady, holiday-peaked, event-peaked, fad). Models trained per-cluster outperform a single global model by 25-40% on MAPE for ribbon programs with more than 50 SKUs, because each cluster has a different seasonality and trend signature."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you forecast ribbon demand for new SKUs with no history?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "New ribbon SKUs need a different approach. Use the hierarchical forecast method: pull the parent product's forecast (e.g., gift box, fragrance SKU, holiday capsule) and apply a ribbon attach rate based on either historical analogs from similar SKUs or a deliberate cannibalization assumption. For genuinely novel SKUs (no analog), combine a structured expert judgment (Delphi) with a small-volume pilot run to generate the first 60 days of demand signal before scaling forecast confidence."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the typical MAPE for AI-driven ribbon forecasting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A well-tuned 2026 ribbon forecasting system achieves 20-30% MAPE at the 90-day horizon for steady SKUs and 35-50% MAPE for holiday-peaked SKUs at the same horizon. For new SKUs, expect 50-80% MAPE in the first 90 days and convergence to steady-state MAPE within 6 months. Forecast bias (over- vs under- forecasting) is more important than MAPE — a 25% MAPE with consistent 5% under-forecast will silently drain inventory, while a 30% MAPE with zero bias will be operationally manageable."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does multi-supplier allocation work for ribbon programs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Multi-supplier allocation in a ribbon program uses a primary-secondary-reserve structure: 60-70% of volume to a primary OEM (deepest capacity, lowest unit cost, full IP ownership), 20-30% to a secondary OEM (validated equivalent, used for risk balancing and peak-season overflow), and 5-10% to a reserve supplier (lower-volume, used for emergency replenishment and benchmark). The AI rebalances quarterly based on supplier on-time delivery, AQL pass rate, and capacity utilization."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "Which AI model is best for ribbon demand forecasting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no single best model — the right choice depends on data history, SKU count, and channel mix. For brands with 24+ months of SKU-level ribbon sales history and 50+ active SKUs, gradient-boosted tree ensembles (XGBoost, LightGBM) typically outperform deep-learning models because they handle small datasets and irregular cadence better. For brands with 100+ SKUs and multiple years of history across multiple markets, Temporal Fusion Transformers (TFT) or N-BEATS provide stronger long-horizon forecasts. Prophet remains a strong baseline for brands with less than 18 months of data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far ahead should ribbon demand forecasts look?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 2026 ribbon planning horizon has four layers: (1) SKU-level point forecast 90 days out for procurement execution; (2) family-level forecast 6 months out for greige goods reservation; (3) program-level forecast 12 months out for dye-lot planning; (4) portfolio-level directional forecast 24 months out for capacity strategy. The 90-day forecast should drive PO timing, the 6-month forecast should drive factory capacity reservation, the 12-month forecast should drive dye-lot decisions, and the 24-month forecast should drive whether you add a second supplier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you cluster SKUs for ribbon forecasting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cluster ribbon SKUs along four dimensions: (1) substrate (satin, grosgrain, organza, velvet, paper, RPET); (2) finish (printed, woven/jacquard, plain, foil-stamped); (3) lifecycle stage (new launch, growth, mature, decline, seasonal); and (4) demand pattern (steady, holiday-peaked, event-peaked, fad). Models trained per-cluster outperform a single global model by 25-40% on MAPE for ribbon programs with more than 50 SKUs, because each cluster has a different seasonality and trend signature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you forecast ribbon demand for new SKUs with no history?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "New ribbon SKUs need a different approach. Use the hierarchical forecast method: pull the parent product's forecast (e.g., gift box, fragrance SKU, holiday capsule) and apply a ribbon attach rate based on either historical analogs from similar SKUs or a deliberate cannibalization assumption. For genuinely novel SKUs (no analog), combine a structured expert judgment (Delphi) with a small-volume pilot run to generate the first 60 days of demand signal before scaling forecast confidence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical MAPE for AI-driven ribbon forecasting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A well-tuned 2026 ribbon forecasting system achieves 20-30% MAPE at the 90-day horizon for steady SKUs and 35-50% MAPE for holiday-peaked SKUs at the same horizon. For new SKUs, expect 50-80% MAPE in the first 90 days and convergence to steady-state MAPE within 6 months. Forecast bias (over- vs under- forecasting) is more important than MAPE — a 25% MAPE with consistent 5% under-forecast will silently drain inventory, while a 30% MAPE with zero bias will be operationally manageable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does multi-supplier allocation work for ribbon programs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multi-supplier allocation in a ribbon program uses a primary-secondary-reserve structure: 60-70% of volume to a primary OEM (deepest capacity, lowest unit cost, full IP ownership), 20-30% to a secondary OEM (validated equivalent, used for risk balancing and peak-season overflow), and 5-10% to a reserve supplier (lower-volume, used for emergency replenishment and benchmark). The AI rebalances quarterly based on supplier on-time delivery, AQL pass rate, and capacity utilization."
+      }
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/blog-ribbon-ai-demand-forecasting-supply-planning-2026.html#faq"
+}
+</script>
 
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 820px; margin: 0 auto; padding: 24px; color: #222; line-height: 1.7; }

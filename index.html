@@ -119,7 +119,8 @@
         "BSCI",
         "SEDEX",
         "SMETA"
-      ]
+      ],
+      "@id": "https://smithribbon.com/#organization"
     },
     {
       "@context": "https://schema.org",
@@ -137,22 +138,39 @@
         "@type": "Organization",
         "name": "Smith Ribbon",
         "logo": "https://smithribbon.com/banner.png"
-      }
+      },
+      "@id": "https://smithribbon.com/#website"
     }
   ]
 }
 </script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smithribbon.com"},
-            {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://smithribbon.com/product-printed-ribbons.html"},
-            {"@type": "ListItem", "position": 3, "name": "Contact", "item": "https://smithribbon.com/#contact"}
-        ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smithribbon.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Products",
+      "item": "https://smithribbon.com/product-printed-ribbons.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Contact",
+      "item": "https://smithribbon.com/#contact"
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/index.html#breadcrumb"
+}
+</script>
     
     <style>
         * {
@@ -1055,68 +1073,218 @@
     </style>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Smith Ribbon Product Catalog",
+  "description": "Professional ribbon and bow products - satin ribbons, printed ribbons, jacquard ribbons, gift bows, organza ribbons, velvet ribbons",
+  "url": "https://smithribbon.com",
+  "numberOfItems": 6,
+  "itemListElement": [
     {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Smith Ribbon Product Catalog",
-        "description": "Professional ribbon and bow products - satin ribbons, printed ribbons, jacquard ribbons, gift bows, organza ribbons, velvet ribbons",
-        "url": "https://smithribbon.com",
-        "numberOfItems": 6,
-        "itemListElement": [
-            {"@type": "Product", "position": 1, "name": "Christmas Glitter Ribbon", "description": "6.3cm wide polyester wired-edge glitter ribbon for holiday decorations", "brand": {"@type": "Brand", "name": "Smith Ribbon"}, "manufacturer": {"@type": "Organization", "name": "Xiamen Smith Ribbon & Bow Co., Ltd."}, "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "minOrderQuantity": "1000", "unitCode": "MTR"}},
-            {"@type": "Product", "position": 2, "name": "Custom Logo Printed Ribbon", "description": "OEM/ODM custom logo printed ribbons, MOQ 1000 yards, multiple materials", "brand": {"@type": "Brand", "name": "Smith Ribbon"}, "manufacturer": {"@type": "Organization", "name": "Xiamen Smith Ribbon & Bow Co., Ltd."}, "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "minOrderQuantity": "1000", "unitCode": "MTR"}},
-            {"@type": "Product", "position": 3, "name": "Custom Satin Ribbon", "description": "Premium satin ribbon with single-side custom print, perfect for luxury gift packaging", "brand": {"@type": "Brand", "name": "Smith Ribbon"}, "manufacturer": {"@type": "Organization", "name": "Xiamen Smith Ribbon & Bow Co., Ltd."}, "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}},
-            {"@type": "Product", "position": 4, "name": "Poly Pull Bow", "description": "Polypropylene self-adhesive pull bows, multiple sizes from 1-1/4 to 6 inch", "brand": {"@type": "Brand", "name": "Smith Ribbon"}, "manufacturer": {"@type": "Organization", "name": "Xiamen Smith Ribbon & Bow Co., Ltd."}, "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}},
-            {"@type": "Product", "position": 5, "name": "Wired Organza Ribbon", "description": "Transparent organza with double-sided wired edge, 25 yards per roll", "brand": {"@type": "Brand", "name": "Smith Ribbon"}, "manufacturer": {"@type": "Organization", "name": "Xiamen Smith Ribbon & Bow Co., Ltd."}, "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}},
-            {"@type": "Product", "position": 6, "name": "Eco-friendly Paper Ribbon", "description": "Biodegradable eco-friendly ribbon for sustainable packaging", "brand": {"@type": "Brand", "name": "Smith Ribbon"}, "manufacturer": {"@type": "Organization", "name": "Xiamen Smith Ribbon & Bow Co., Ltd."}, "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}}
-        ]
+      "@type": "Product",
+      "position": 1,
+      "name": "Christmas Glitter Ribbon",
+      "description": "6.3cm wide polyester wired-edge glitter ribbon for holiday decorations",
+      "brand": {
+        "@type": "Brand",
+        "name": "Smith Ribbon"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Xiamen Smith Ribbon & Bow Co., Ltd."
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "minOrderQuantity": "1000",
+        "unitCode": "MTR"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 2,
+      "name": "Custom Logo Printed Ribbon",
+      "description": "OEM/ODM custom logo printed ribbons, MOQ 1000 yards, multiple materials",
+      "brand": {
+        "@type": "Brand",
+        "name": "Smith Ribbon"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Xiamen Smith Ribbon & Bow Co., Ltd."
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "minOrderQuantity": "1000",
+        "unitCode": "MTR"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 3,
+      "name": "Custom Satin Ribbon",
+      "description": "Premium satin ribbon with single-side custom print, perfect for luxury gift packaging",
+      "brand": {
+        "@type": "Brand",
+        "name": "Smith Ribbon"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Xiamen Smith Ribbon & Bow Co., Ltd."
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 4,
+      "name": "Poly Pull Bow",
+      "description": "Polypropylene self-adhesive pull bows, multiple sizes from 1-1/4 to 6 inch",
+      "brand": {
+        "@type": "Brand",
+        "name": "Smith Ribbon"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Xiamen Smith Ribbon & Bow Co., Ltd."
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 5,
+      "name": "Wired Organza Ribbon",
+      "description": "Transparent organza with double-sided wired edge, 25 yards per roll",
+      "brand": {
+        "@type": "Brand",
+        "name": "Smith Ribbon"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Xiamen Smith Ribbon & Bow Co., Ltd."
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 6,
+      "name": "Eco-friendly Paper Ribbon",
+      "description": "Biodegradable eco-friendly ribbon for sustainable packaging",
+      "brand": {
+        "@type": "Brand",
+        "name": "Smith Ribbon"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Xiamen Smith Ribbon & Bow Co., Ltd."
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/index.html#itemlist"
+}
+</script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {"@type": "Question", "name": "What is your minimum order quantity?", "acceptedAnswer": {"@type": "Answer", "text": "Our MOQ is typically 1000 meters (1000 yards) for custom printed ribbons. Small batch orders of 500m are available for some standard products."}},
-            {"@type": "Question", "name": "Do you offer OEM/ODM services?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we offer full OEM/ODM services including custom logo printing, custom packaging, and product design. We have 20+ years of experience serving global brands."}},
-            {"@type": "Question", "name": "What certifications do you have?", "acceptedAnswer": {"@type": "Answer", "text": "We are certified with ISO 9001, OEKO-TEX Standard 100, FSC, BSCI, SEDEX, and SMETA. Our factory undergoes regular third-party audits."}},
-            {"@type": "Question", "name": "What is your production capacity?", "acceptedAnswer": {"@type": "Answer", "text": "Our 15,000 sqm factory employs 200+ staff with a daily production capacity of 100,000+ meters of ribbon products."}},
-            {"@type": "Question", "name": "Which countries do you export to?", "acceptedAnswer": {"@type": "Answer", "text": "We export to 50+ countries including the US, UK, Germany, France, Italy, Spain, Australia, Canada, Japan, and Southeast Asian markets."}}
-        ]
+      "@type": "Question",
+      "name": "What is your minimum order quantity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our MOQ is typically 1000 meters (1000 yards) for custom printed ribbons. Small batch orders of 500m are available for some standard products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer OEM/ODM services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer full OEM/ODM services including custom logo printing, custom packaging, and product design. We have 20+ years of experience serving global brands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What certifications do you have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are certified with ISO 9001, OEKO-TEX Standard 100, FSC, BSCI, SEDEX, and SMETA. Our factory undergoes regular third-party audits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your production capacity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our 15,000 sqm factory employs 200+ staff with a daily production capacity of 100,000+ meters of ribbon products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which countries do you export to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We export to 50+ countries including the US, UK, Germany, France, Italy, Spain, Australia, Canada, Japan, and Southeast Asian markets."
+      }
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/index.html#faq"
+}
+</script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Choose the Right Ribbon for Your Project",
+  "description": "A step-by-step guide to selecting the perfect ribbon type, width, material and finish for gift packaging, fashion accessories, home décor and crafts.",
+  "totalTime": "PT10M",
+  "step": [
     {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to Choose the Right Ribbon for Your Project",
-        "description": "A step-by-step guide to selecting the perfect ribbon type, width, material and finish for gift packaging, fashion accessories, home décor and crafts.",
-        "totalTime": "PT10M",
-        "step": [
-            {
-                "@type": "HowToStep",
-                "name": "Step 1: Define Your Application",
-                "text": "Determine whether you need ribbon for gift wrapping, fashion accessories, home décor, wedding decorations, or industrial use. Each application has specific material and width requirements."
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Step 2: Choose the Right Material",
-                "text": "Satin for luxury packaging; Grosgrain for durability; Organza for elegance; Velvet for premium feel; Polyester for cost-effective bulk use; Jacquard for patterned decorative effects."
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Step 3: Select the Correct Width",
-                "text": "Hair bows: 1-3cm; Gift wrapping: 2-5cm; Floral arrangements: 2-4cm; Wine bottle packaging: 3-5cm; Large gift boxes: 5-10cm."
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Step 4: Decide on Customization",
-                "text": "Plain ribbon for standard use; Custom printed ribbon with your logo for branding (MOQ 1000m); Jacquard weave for custom patterns (MOQ 3000m)."
-            }
-        ]
+      "@type": "HowToStep",
+      "name": "Step 1: Define Your Application",
+      "text": "Determine whether you need ribbon for gift wrapping, fashion accessories, home décor, wedding decorations, or industrial use. Each application has specific material and width requirements."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Step 2: Choose the Right Material",
+      "text": "Satin for luxury packaging; Grosgrain for durability; Organza for elegance; Velvet for premium feel; Polyester for cost-effective bulk use; Jacquard for patterned decorative effects."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Step 3: Select the Correct Width",
+      "text": "Hair bows: 1-3cm; Gift wrapping: 2-5cm; Floral arrangements: 2-4cm; Wine bottle packaging: 3-5cm; Large gift boxes: 5-10cm."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Step 4: Decide on Customization",
+      "text": "Plain ribbon for standard use; Custom printed ribbon with your logo for branding (MOQ 1000m); Jacquard weave for custom patterns (MOQ 3000m)."
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/index.html#howto"
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

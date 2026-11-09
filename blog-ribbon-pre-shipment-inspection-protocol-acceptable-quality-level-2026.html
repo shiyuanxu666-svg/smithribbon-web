@@ -37,81 +37,120 @@
 
     <!-- BreadcrumbList Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://smithribbon.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://smithribbon.com/#blog"},
-        {"@type": "ListItem", "position": 3, "name": "Ribbon PSI Protocol 2026", "item": "https://smithribbon.com/blog-ribbon-pre-shipment-inspection-protocol-acceptable-quality-level-2026.html"}
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smithribbon.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://smithribbon.com/#blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ribbon PSI Protocol 2026",
+      "item": "https://smithribbon.com/blog-ribbon-pre-shipment-inspection-protocol-acceptable-quality-level-2026.html"
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/blog-ribbon-pre-shipment-inspection-protocol-acceptable-quality-level-2026.html#breadcrumb"
+}
+</script>
 
     <!-- BlogPosting Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Ribbon Pre-Shipment Inspection Protocol: AQL Sampling & Defect Classification Guide for 2026",
-      "description": "Master the ribbon pre-shipment inspection (PSI) protocol used by top global brands in 2026. Includes AQL sampling tables, defect classification, on-site checklist, and a 24-hour defect triage workflow.",
-      "image": "https://smithribbon.com/img/banner.png",
-      "author": {"@type": "Organization", "name": "Smith Ribbon QC Team", "url": "https://smithribbon.com"},
-      "publisher": {
-        "@type": "Organization",
-        "name": "Smith Ribbon",
-        "logo": {"@type": "ImageObject", "url": "https://smithribbon.com/img/banner.png"}
-      },
-      "datePublished": "2026-06-27",
-      "dateModified": "2026-06-27",
-      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://smithribbon.com/blog-ribbon-pre-shipment-inspection-protocol-acceptable-quality-level-2026.html"},
-      "keywords": "ribbon pre-shipment inspection, ribbon PSI protocol, ribbon AQL sampling, ribbon quality inspection checklist, ribbon defect classification, ribbon QC protocol 2026, ribbon inspection AQL 2.5",
-      "about": {"@type": "Thing", "name": "Ribbon Pre-Shipment Inspection"},
-      "locationCreated": {"@type": "Place", "name": "Xiamen, Fujian, China", "geo": {"@type": "GeoCoordinates", "latitude": "24.4798", "longitude": "118.0894"}}
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Ribbon Pre-Shipment Inspection Protocol: AQL Sampling & Defect Classification Guide for 2026",
+  "description": "Master the ribbon pre-shipment inspection (PSI) protocol used by top global brands in 2026. Includes AQL sampling tables, defect classification, on-site checklist, and a 24-hour defect triage workflow.",
+  "image": "https://smithribbon.com/img/banner.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Smith Ribbon QC Team",
+    "url": "https://smithribbon.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Smith Ribbon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://smithribbon.com/img/banner.png"
     }
-    </script>
+  },
+  "datePublished": "2026-06-27",
+  "dateModified": "2026-06-27",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://smithribbon.com/blog-ribbon-pre-shipment-inspection-protocol-acceptable-quality-level-2026.html"
+  },
+  "keywords": "ribbon pre-shipment inspection, ribbon PSI protocol, ribbon AQL sampling, ribbon quality inspection checklist, ribbon defect classification, ribbon QC protocol 2026, ribbon inspection AQL 2.5",
+  "about": {
+    "@type": "Thing",
+    "name": "Ribbon Pre-Shipment Inspection"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Xiamen, Fujian, China",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "24.4798",
+      "longitude": "118.0894"
+    }
+  },
+  "@id": "https://smithribbon.com/blog-ribbon-pre-shipment-inspection-protocol-acceptable-quality-level-2026.html#article"
+}
+</script>
 
     <!-- FAQPage Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the standard AQL level used for ribbon inspection?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most global brands specify AQL 2.5 for general ribbon inspection and AQL 1.0 for critical defects (color, dimension, print registration) under ISO 2859-1 normal inspection. Luxury and beauty brands often tighten to AQL 1.5 / AQL 0.65. Holiday and seasonal programs sometimes use AQL 4.0 for non-critical visual defects to keep inspection feasible inside compressed lead times."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When should pre-shipment inspection happen in the ribbon production cycle?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PSI should occur when 80-100% of the order is finished, packed, and at least 10% has been loaded or staged for shipping. Inspecting earlier (DUPRO at 30-50%) catches most issues but allows time for re-work; PSI is the last gate before the goods leave the factory. For custom-printed ribbon, an additional 10% inspection on the print registration is standard."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you classify ribbon defects during inspection?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ribbon defects fall into three categories: Critical (color off-spec beyond Delta E 1.5, dimension beyond ±2mm tolerance, print misregistration visible at 30cm viewing distance), Major (visible weave defects, broken selvage, dye streaks longer than 5cm, smudge >3mm), and Minor (loose end wefts shorter than 2cm, slight uneven selvage, minor dye variation within Delta E 1.0). A single Critical or accumulation of Majors triggers a rejection."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can pre-shipment inspection be done remotely for ribbon orders?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — remote PSI via live video is now widely accepted for orders under 50,000 meters and for established supplier relationships. The inspector joins a video call, watches the factory team pull random cartons, and inspects samples in real time. Critical color and dimensional checks still require calibrated instruments, which the factory must operate under remote guidance. For first orders or high-value programs, on-site PSI remains the gold standard."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "What is the standard AQL level used for ribbon inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most global brands specify AQL 2.5 for general ribbon inspection and AQL 1.0 for critical defects (color, dimension, print registration) under ISO 2859-1 normal inspection. Luxury and beauty brands often tighten to AQL 1.5 / AQL 0.65. Holiday and seasonal programs sometimes use AQL 4.0 for non-critical visual defects to keep inspection feasible inside compressed lead times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should pre-shipment inspection happen in the ribbon production cycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PSI should occur when 80-100% of the order is finished, packed, and at least 10% has been loaded or staged for shipping. Inspecting earlier (DUPRO at 30-50%) catches most issues but allows time for re-work; PSI is the last gate before the goods leave the factory. For custom-printed ribbon, an additional 10% inspection on the print registration is standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you classify ribbon defects during inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ribbon defects fall into three categories: Critical (color off-spec beyond Delta E 1.5, dimension beyond ±2mm tolerance, print misregistration visible at 30cm viewing distance), Major (visible weave defects, broken selvage, dye streaks longer than 5cm, smudge >3mm), and Minor (loose end wefts shorter than 2cm, slight uneven selvage, minor dye variation within Delta E 1.0). A single Critical or accumulation of Majors triggers a rejection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can pre-shipment inspection be done remotely for ribbon orders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — remote PSI via live video is now widely accepted for orders under 50,000 meters and for established supplier relationships. The inspector joins a video call, watches the factory team pull random cartons, and inspects samples in real time. Critical color and dimensional checks still require calibrated instruments, which the factory must operate under remote guidance. For first orders or high-value programs, on-site PSI remains the gold standard."
+      }
     }
-    </script>
+  ],
+  "@id": "https://smithribbon.com/blog-ribbon-pre-shipment-inspection-protocol-acceptable-quality-level-2026.html#faq"
+}
+</script>
 
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 820px; margin: 0 auto; padding: 24px; color: #222; line-height: 1.7; }
