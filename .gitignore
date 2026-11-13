@@ -15,3 +15,14 @@ _jsonld_fix_report.json
 
 # scratch dir for article body fragments (never deployed)
 _scratch/
+
+# --- SEO daily 2026-11-13: hard guard for build artifacts ---
+# `_backup_*/` holds pre-sync HTML copies (853 files locally as of 2026-11-13).
+# These are internal snapshots and must never be deployed to the live site.
+_backup_*/
+_backup_
+**/_backup_*/
+_backup_*/
+_backup_*/
+_backup_
+**/_backup_*/
