@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Ribbon Purchase Order Guide &mdash; How to Write an Order That Prevents Disputes Before They Start 2026</title>
-<meta name="description" content="A ribbon purchase order guide: the twelve clauses that decide outcomes when something goes wrong, what to attach to every order, and how to make acceptance criteria testable.">
+<title>Ribbon Purchase Order Guide &mdash; How to Write an Order</title>
+<meta name="description" content="A ribbon purchase order guide: the twelve clauses that decide outcomes when something goes wrong, what to attach to every order, and how to make">
 <meta name="keywords" content="ribbon purchase order, ribbon PO template, ribbon order terms, ribbon acceptance criteria, ribbon order specification attachment, ribbon purchase order clauses, ribbon claim window, ribbon order amendments, ribbon procurement documentation, ribbon purchase order checklist, ribbon reorder terms, ribbon order acknowledgement, ribbon brand procurement, ribbon supplier order process">
 <meta name="author" content="Xiamen Smith Ribbon &amp; Bow Co., Ltd.">
 <meta name="robots" content="index, follow">
@@ -86,12 +86,13 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Xiamen Smith Ribbon & Bow Co., Ltd.",
+        "name": "Xiamen Smith Ribbon&Bow Co., Ltd.",
         "url": "https://smithribbon.com/",
         "logo": {
           "@type": "ImageObject",
           "url": "https://smithribbon.com/logo.png"
-        }
+        },
+        "@id": "https://smithribbon.com/#organization"
       },
       "image": "https://smithribbon.com/banner.png"
     },
@@ -99,103 +100,104 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the minimum information a ribbon purchase order must contain?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "At minimum: the mill's legal entity name and the buying entity name; a precise product description that identifies the construction, material, width and colour; the quantity in metres and the number of rolls; the unit price and the currency; the delivery date and destination with the Incoterm named; the payment terms; the applicable specification reference and version; the inspection and acceptance method; the certification evidence required; and the claim notification window. An order that leaves any of these to custom or to a separate conversation is an order whose meaning is still being negotiated after the goods are made."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Should the technical specification be attached to the purchase order?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, always, and it should be version-controlled. The purchase order should carry a reference identifier and revision date for the specification document it relies on, and both parties should hold the same revision. The order itself should never attempt to restate the full technical specification in body text, because a summary in an email or in an order line inevitably loses detail, and the detail that is lost tends to be exactly the tolerance that later becomes the argument."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What makes an acceptance criterion testable?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A criterion is testable when three things are named: the attribute being measured, the method used to measure it, and the threshold that constitutes acceptance. 'Good colour matching' is not testable. 'Colour judged against the retained lab dip reference using visual assessment under D65 daylight simulation, with a tolerance of no visible more than one CIEDE2000 unit under instrumental measurement, is accepted or rejected' is testable. Every criterion that will be applied at incoming inspection should have been written in this form before the order was placed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long should a claim notification window be?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For a manufactured product with measurable characteristics, a window measured in weeks rather than months is right, and thirty to ninety days from delivery is a common working range. Ribbons are frequently difficult to assess once they have been cut, sewn into a pack, or held in retail packaging for several months, because the characteristics most likely to be disputed are only properly observable in the delivered form and under the delivery conditions. A long window creates uncertainty for the supplier that quietly increases their price, while a window that is too short makes the buyer's own inspection process meaningless."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens when the specification changes after the order is placed?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It depends entirely on whether the change was defined in the order. If the purchase order contains a change-control clause naming who may authorise a change, how it must be raised, how the revised price and revised date are confirmed, and the point at which the change becomes binding, then the change is a controlled event with a record. If it does not, the change becomes an informal instruction, the supplier absorbs the disruption, and the schedule and cost consequences surface later as a dispute. The clause is not about preventing changes; it is about making them visible."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Should the order specify how disputes will be resolved, and where?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, and it should be specific rather than generic. A useful clause states the evidence each side must provide to support its position, identifies the retained sample or golden sample that will serve as the reference, names the method and standard that will be used to assess the disputed characteristic, and identifies the location and language of the assessment. Where a third-party laboratory is contemplated, the clause should specify how it is appointed and how the cost is allocated when the finding is disputed. Generic arbitration language that names no standard and no evidence is difficult to use and encourages the dispute to widen rather than narrow."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do repeat orders need a full purchase order each time?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A simplified order is workable if the original order established a standing specification and a schedule, and if the repeat order references that specification identifier and revision explicitly. What must never happen is a repeat order issued with only a product name and a quantity, because the specification that governs it then depends entirely on what both parties remember, and recollection is the least reliable control in the entire process. The safest practice is a short repeat-order form that carries forward the specification reference, the approved colour standard, the tolerance method and the delivery window as explicit fields."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it reasonable for a buyer to require the supplier to acknowledge the order in writing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. An order acknowledgement that restates the key commercial terms, the delivery date and the specification reference performs a real function: it catches transcription errors while they are still cheap to fix. Many buyers treat the acknowledgement as a formality and never read it, which wastes the single best opportunity in the process to detect a misread quantity, a wrong width or an unachievable date at a moment when no material effort has been spent."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should the order handle packaging and carton configuration?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Explicitly, because packaging format changes the landed cost and the freight calculation without changing the product. Roll length, core diameter and material, winding direction, maximum roll weight, carton dimensions, pieces per carton, cartons per pallet, and the master carton specification for container loading all belong in the order, because each one alters how many units fit into a container and therefore what the effective freight cost per metre becomes. An order silent on carton configuration will produce a shipment that is technically compliant and commercially unhelpful."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between an order, an order amendment and a verbal instruction?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An order creates the commercial relationship for a defined quantity at a defined price. An order amendment changes one of those parameters and should carry a revised price or date where applicable. A verbal instruction is a request that has not yet been accepted, and it has no effect on the order unless it is confirmed in writing and accepted. Most disputes about changes trace back to a verbal instruction that was acted on but never documented, and the fix is procedural rather than commercial: require that no change is effective until it is confirmed in writing with a revised delivery date."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long should a supplier keep the order documentation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Long enough to cover the period in which a claim could still be raised and assessed, plus a reasonable margin, and long enough to survive a customer or regulatory audit. For repeat-order products this is normally three to five years from the last delivery against a given specification, and it should be consistent with the retention period for the retained colour standard, the golden sample and the inspection records that support it. If the specification cannot be evidenced after three years, the specification is not really being controlled at all."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should a buyer do when the order is not acknowledged within a reasonable time?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Escalate it as a process failure rather than a commercial one, and record the date. An unacknowledged order means the supplier has not confirmed that they have read it, so no commitment to the delivery date exists yet. Buyers frequently accept a delivery date because it appeared in their own purchase order, without ever establishing that the supplier accepted it. A simple clause requiring acknowledgement within two working days, with the order deemed not yet accepted until it is received, removes that gap entirely."
-      }
-    }
-      ]
+        {
+          "@type": "Question",
+          "name": "What is the minimum information a ribbon purchase order must contain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At minimum: the mill's legal entity name and the buying entity name; a precise product description that identifies the construction, material, width and colour; the quantity in metres and the number of rolls; the unit price and the currency; the delivery date and destination with the Incoterm named; the payment terms; the applicable specification reference and version; the inspection and acceptance method; the certification evidence required; and the claim notification window. An order that leaves any of these to custom or to a separate conversation is an order whose meaning is still being negotiated after the goods are made."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should the technical specification be attached to the purchase order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, always, and it should be version-controlled. The purchase order should carry a reference identifier and revision date for the specification document it relies on, and both parties should hold the same revision. The order itself should never attempt to restate the full technical specification in body text, because a summary in an email or in an order line inevitably loses detail, and the detail that is lost tends to be exactly the tolerance that later becomes the argument."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes an acceptance criterion testable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A criterion is testable when three things are named: the attribute being measured, the method used to measure it, and the threshold that constitutes acceptance. 'Good colour matching' is not testable. 'Colour judged against the retained lab dip reference using visual assessment under D65 daylight simulation, with a tolerance of no visible more than one CIEDE2000 unit under instrumental measurement, is accepted or rejected' is testable. Every criterion that will be applied at incoming inspection should have been written in this form before the order was placed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long should a claim notification window be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a manufactured product with measurable characteristics, a window measured in weeks rather than months is right, and thirty to ninety days from delivery is a common working range. Ribbons are frequently difficult to assess once they have been cut, sewn into a pack, or held in retail packaging for several months, because the characteristics most likely to be disputed are only properly observable in the delivered form and under the delivery conditions. A long window creates uncertainty for the supplier that quietly increases their price, while a window that is too short makes the buyer's own inspection process meaningless."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when the specification changes after the order is placed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends entirely on whether the change was defined in the order. If the purchase order contains a change-control clause naming who may authorise a change, how it must be raised, how the revised price and revised date are confirmed, and the point at which the change becomes binding, then the change is a controlled event with a record. If it does not, the change becomes an informal instruction, the supplier absorbs the disruption, and the schedule and cost consequences surface later as a dispute. The clause is not about preventing changes; it is about making them visible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should the order specify how disputes will be resolved, and where?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and it should be specific rather than generic. A useful clause states the evidence each side must provide to support its position, identifies the retained sample or golden sample that will serve as the reference, names the method and standard that will be used to assess the disputed characteristic, and identifies the location and language of the assessment. Where a third-party laboratory is contemplated, the clause should specify how it is appointed and how the cost is allocated when the finding is disputed. Generic arbitration language that names no standard and no evidence is difficult to use and encourages the dispute to widen rather than narrow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do repeat orders need a full purchase order each time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A simplified order is workable if the original order established a standing specification and a schedule, and if the repeat order references that specification identifier and revision explicitly. What must never happen is a repeat order issued with only a product name and a quantity, because the specification that governs it then depends entirely on what both parties remember, and recollection is the least reliable control in the entire process. The safest practice is a short repeat-order form that carries forward the specification reference, the approved colour standard, the tolerance method and the delivery window as explicit fields."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it reasonable for a buyer to require the supplier to acknowledge the order in writing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. An order acknowledgement that restates the key commercial terms, the delivery date and the specification reference performs a real function: it catches transcription errors while they are still cheap to fix. Many buyers treat the acknowledgement as a formality and never read it, which wastes the single best opportunity in the process to detect a misread quantity, a wrong width or an unachievable date at a moment when no material effort has been spent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should the order handle packaging and carton configuration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Explicitly, because packaging format changes the landed cost and the freight calculation without changing the product. Roll length, core diameter and material, winding direction, maximum roll weight, carton dimensions, pieces per carton, cartons per pallet, and the master carton specification for container loading all belong in the order, because each one alters how many units fit into a container and therefore what the effective freight cost per metre becomes. An order silent on carton configuration will produce a shipment that is technically compliant and commercially unhelpful."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an order, an order amendment and a verbal instruction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An order creates the commercial relationship for a defined quantity at a defined price. An order amendment changes one of those parameters and should carry a revised price or date where applicable. A verbal instruction is a request that has not yet been accepted, and it has no effect on the order unless it is confirmed in writing and accepted. Most disputes about changes trace back to a verbal instruction that was acted on but never documented, and the fix is procedural rather than commercial: require that no change is effective until it is confirmed in writing with a revised delivery date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long should a supplier keep the order documentation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Long enough to cover the period in which a claim could still be raised and assessed, plus a reasonable margin, and long enough to survive a customer or regulatory audit. For repeat-order products this is normally three to five years from the last delivery against a given specification, and it should be consistent with the retention period for the retained colour standard, the golden sample and the inspection records that support it. If the specification cannot be evidenced after three years, the specification is not really being controlled at all."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a buyer do when the order is not acknowledged within a reasonable time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Escalate it as a process failure rather than a commercial one, and record the date. An unacknowledged order means the supplier has not confirmed that they have read it, so no commitment to the delivery date exists yet. Buyers frequently accept a delivery date because it appeared in their own purchase order, without ever establishing that the supplier accepted it. A simple clause requiring acknowledgement within two working days, with the order deemed not yet accepted until it is received, removes that gap entirely."
+          }
+        }
+      ],
+      "@id": "https://smithribbon.com/blog-ribbon-oem-342-module-brand-buyer-ribbon-purchase-order-guide-how-to-write-an-order-that-prevents-disputes-acceptance-criteria-purchase-order-terms-spec-attachment-claim-window-global-brand-procurement-2026-11-13-am.html#faq"
     }
   ]
 }
