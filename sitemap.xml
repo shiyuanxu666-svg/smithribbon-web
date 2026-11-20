@@ -5503,4 +5503,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://smithribbon.com/blog/blog-ribbon-oem-export-packing-specification-carton-optimisation-sea-freight-2026-11-20-am.html</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://smithribbon.com/blog/blog-ribbon-oem-supplier-evaluation-sample-comparison-cost-per-use-methodology-2026-11-20-pm.html</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
