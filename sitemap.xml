@@ -5533,4 +5533,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://smithribbon.com/blog/blog-ribbon-oem-certification-compliance-oeko-tex-grs-bsci-fsc-sedex-verification-2026-11-22-am.html</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://smithribbon.com/blog/blog-ribbon-oem-factory-audit-supplier-capability-assessment-mill-evaluation-2026-11-22-pm.html</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
